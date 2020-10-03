@@ -1,6 +1,6 @@
 # WhenToClass :books:
 
-![logo](https://github.com/antoniocuadros/WhenToClass/blob/master/documentos/logo.jpg)
+![logo](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/logo.jpg)
 
 ## :notebook: ¿Qué problema se pretende resolver?
 Con este proyecto se pretende dar solución a un problema al que nos enfrentamos en la actualidad los estudiantes de Ingeniería Informática, este problema consiste en saber qué días debemos ir a clases y a qué horas debido a la semipresencialidad con la que nos encontramos debido a la situación actual.
