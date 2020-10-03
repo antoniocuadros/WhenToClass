@@ -5,8 +5,8 @@
 ## :notebook: ¿Qué problema se pretende resolver?
 Con este proyecto se pretende dar solución a un problema al que nos enfrentamos en la actualidad los estudiantes de Ingeniería Informática, este problema consiste en saber qué días debemos ir a clases y a qué horas debido a la semipresencialidad con la que nos encontramos debido a la situación actual.
 Así se pretende crear un microservicio REST que permita responder a las siguientes preguntas muy frecuentes entre los estudiantes hoy en día:
--¿Qué horario tiene la asignatura X?
--¿Qué días tengo que ir si soy del grupo Y de la asignatura X?
+- ¿Qué horario tiene la asignatura X?
+- ¿Qué días tengo que ir si soy del grupo Y de la asignatura X?
 
 ## :wrench: Herramientas
 - **Lenguaje de programación:** he decidido elegir Ruby debido a que es un lenguaje con el que estoy familiarizado y me gustaría profundizar más en él.
