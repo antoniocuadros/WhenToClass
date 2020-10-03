@@ -5,8 +5,8 @@ class Asignatura
 	attr_reader:nombre
 	attr_reader:horario_teoria 		#será un struct con dia, hora inicio, hora fin
 	attr_reader:horario_practicas  	#será un struct con dia, hora inicio, hora fin
-	attr_reader:turno_presencialidad 	#Matriz con el la primera columna los 
-						#grupos 1, 2 y resto de columnas los días de 
+	attr_reader:turno_presencialidad 	#Matriz en la primera columna los 
+						#turnos: 1, 2... y resto de columnas los días de 
 						#cada grupo
 	
 	def initialize(nombre_asignatura, h_teoria, h_practicas, group, t_presencialidad)
