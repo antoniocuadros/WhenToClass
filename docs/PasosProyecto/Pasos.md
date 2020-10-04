@@ -1,7 +1,7 @@
 # Pasos a llevar a cabo para completar el proyecto :walking:
-> Con cada hito se irá completando en este documento hasta llegar al último hito
+> Con cada hito se irá completando en este documento hasta llegar al último hito.
 
-Para completar este proyecto se utiliza como guía los distintos Hitos que se nos proponen en la asignatura que van desde una descripción muy general del proyecto hasta la creación de una infraestructura virtual, uso de herramientas de configuración, pruebas, despliegue... conforme avancen los hitos.
+Para completar este proyecto se utilizan como guía los distintos Hitos que se nos proponen en la asignatura que van desde una descripción muy general del proyecto hasta la creación de una infraestructura virtual, uso de herramientas de configuración, pruebas, despliegue... conforme avancen los hitos.
 
 De esta forma este documento sirve para de un vistazo rápido poder visualizar el camino de trabajo que seguiremos para poder alcanzar los objetivos a realizar hito a hito (desde el hito 1 se referencia cada hito con su correspondiente milestone).
 
@@ -22,7 +22,7 @@ De esta forma este documento sirve para de un vistazo rápido poder visualizar e
 - [Mejoras al README añadiendo motivación](https://github.com/antoniocuadros/WhenToClass/issues/7).
 - Creación del [archivo iv.yaml](https://github.com/antoniocuadros/WhenToClass/issues/3)
 - Creación de [historias de usuario](https://github.com/antoniocuadros/WhenToClass/issues/11) como issues y además incluidas como documentación.
-    - Documentación adicional como este documento.  
+    - Documentación adicional como este documento.
 
 ## Hito 2: Integración continua
 La realización de este hito consiste en añadir integración continua al proyecto. APrender como describir la versión del lenguaje de programación que se está utilizando y la infraestructura necesaria para funcionar así como la eleccion de un sistema y sitio para integración continua y su configuración.
