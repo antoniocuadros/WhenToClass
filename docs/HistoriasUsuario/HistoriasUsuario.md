@@ -1,8 +1,14 @@
 # Historias de usuario :black_nib: :boy:
+En este documento se irán añadiendo las historias de usuario necesarias para ir completando el proyecto. De forma que en todo momento se tenga una idea de que se quiere lograr con la realización de este proyecto en un rápido vistado a este documento.
 
-## HU1: Como usuario quiero obtener el horario de una asignatura
+## [HU1](https://github.com/antoniocuadros/WhenToClass/issues/8): Como usuario quiero obtener el horario de una asignatura
 
-## HU2: Como usuario quiero poder consultar los turnos de presencialidad de una asignatura
+![imagen1](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/HistoriasUsuario/Im%C3%A1genes/HU1.png)
+
+## [HU2](https://github.com/antoniocuadros/WhenToClass/issues/9): Como usuario quiero poder consultar los turnos de presencialidad de una asignatura
+![imagen2](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/HistoriasUsuario/Im%C3%A1genes/HU2.png)
 
 
-## HU3: Como usuario quiero poder obtener información de la evaluación de una asignatura
+## [HU3](https://github.com/antoniocuadros/WhenToClass/issues/10): Como usuario quiero poder obtener información de la evaluación de una asignatura
+![imagen3](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/HistoriasUsuario/Im%C3%A1genes/HU3.png)
+
