@@ -32,5 +32,8 @@ Como ya se ha comentado anteriormente, en la actualidad los estudiantes de Infor
 ### Fichero clase
 [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/asignatura.rb) se puede consultar la clase actual, en este momento los métodos no están implementados, se pretende dar una visión general de lo que se quiere lograr con la misma.
 
+## Fichero iv.yaml
+[En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/iv.yaml) se puede consultar el fichero iv.yaml.
+
 ### Autor
 [Antonio Cuadros Lapresta](https://github.com/antoniocuadros)
