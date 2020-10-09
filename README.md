@@ -29,5 +29,8 @@ Como ya se ha comentado anteriormente, en la actualidad los estudiantes de Infor
 ### Pasos en la realización del proyecto
 [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/PasosProyecto/Pasos.md) puede consultarse documentación adicional acerca de los pasos que se llevarán acabo para completar el proyecto.
 
+### Fichero clase
+[En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/asignatura.rb) se puede consultar la clase actual, en este momento los métodos no están implementados, se pretende dar una visión general de lo que se quiere lograr con la misma.
+
 ### Autor
 [Antonio Cuadros Lapresta](https://github.com/antoniocuadros)
