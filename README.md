@@ -30,9 +30,9 @@ Como ya se ha comentado anteriormente, en la actualidad los estudiantes de Infor
 [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/PasosProyecto/Pasos.md) puede consultarse documentación adicional acerca de los pasos que se llevarán acabo para completar el proyecto.
 
 ### Fichero clase
-[En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/asignatura.rb) se puede consultar la clase actual, en este momento los métodos no están implementados, se pretende dar una visión general de lo que se quiere lograr con la misma.
+[En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/asignatura.rb) se puede consultar la clase actual, en este momento los métodos no están implementados, se pretende dar una visión general de lo que se quiere lograr con la misma. (Si se aprecian menos métodos get, es debido a que en ruby los métodos get se consiguen de forma sencilla anteponiendo en la declaración del atributo la palabra: attr_reader)
 
-## Fichero iv.yaml
+### Fichero iv.yaml
 [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/iv.yaml) se puede consultar el fichero iv.yaml.
 
 ### Autor
