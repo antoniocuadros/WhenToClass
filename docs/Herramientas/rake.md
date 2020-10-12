@@ -3,6 +3,6 @@ Para la realización de este proyecto se está utilizando como herramienta de au
 ### ¿Por qué RAKE?
 Se ha elegido rake debido a que es una herramienta muy potente para trabajar con Ruby y además está escrito también en este lenguaje.  Además es muy útil ya que permite especificar tareas con requisitos previos y además que la sintaxis sea la estándar de Ruby hace que sea muy sencillo de utilizar y aprender. Por otra parte, cuenta con una gran cantidad de documentación lo que facilita el aprendizaje y su uso. De esta forma rake es una herramienta muy potente para Ruby ya que nos permite automatizar todas las tareas que necesitemos.
 ### Como instalar RAKE
-La instalación de RSPEC es muy sencilla:
+La instalación de rake es muy sencilla:
 
 `gem install rake`
