@@ -14,10 +14,13 @@ Como ya se ha comentado anteriormente, en la actualidad los estudiantes de Infor
 
 ## :wrench: Herramientas
 - **Lenguaje de programación:** Se utilizará Ruby como lenguaje de programación debido a que lo he usado en otras asignaturas, me parece muy útil y me gustaría seguir profundizando en él.
-- **Gestor de versiones:** Se utiliza RVM como gestor de versiones, se puede consultar más documentación [aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Herramientas/rvm.md)
 - **Framework para aplicaciones web:** Se utilizará debido a la baja complejidad del proyecto un framework sencillo, como por ejemplo es el caso de [Sinatra](http://sinatrarb.com/) que se describe así mismo como "Sinatra is a DSL for quickly creating web applications in Ruby with minimal effort" y además posee una gran cantidad de documentación tanto [oficial](http://sinatrarb.com/documentation.html) como por parte de la comunidad.
 - **Base de datos:** La aplicación deberá obtener la información solicitada por los usuario de una determinada base de datos que puede ser tanto local (haciendo uso de ficheros JSON) como remota haciendo uso de bases de datos relacionales o no relacionales como MongoDB en este último caso.
 - **Sistema de logs:** Tal y como se menciona [aquí](https://jj.github.io/curso-tdd/temas/servicios.html) el sistema de logs es uno de los servicios más importantes ya que nos permite registrar los eventos que ocurren para posteriormente analizarlos en busca de problemas tanto del servicio en sí como de prestaciones y otros muchos más aspectos.
+
+### Herramientas específicas de ruby
+- **Gestor de versiones:** Se utiliza RVM como gestor de versiones, se puede consultar más información [aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Herramientas/rvm.md) en la documentación.
+- **Herramienta de pruebas:** Se utiliza RSPEC como herramienta de pruebas, se puede consultar más información [aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Herramientas/rspec.md) en la documentación.
 
 ## :hammer: Documentación
 ### Configuración Inicial
