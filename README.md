@@ -20,6 +20,7 @@ Como ya se ha comentado anteriormente, en la actualidad los estudiantes de Infor
 ### Herramientas específicas de ruby
 - **Gestor de versiones:** Se utiliza RVM como gestor de versiones, se puede consultar más información [aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Herramientas/rvm.md) en la documentación.
 - **Herramienta de pruebas:** Se utiliza RSPEC como herramienta de pruebas, se puede consultar más información [aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Herramientas/rspec.md) en la documentación.
+- **Herramienta de pruebas:** Se utiliza Bundler como herramienta de gestión de dependencias, se puede consultar más información [aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Herramientas/bundler.md) en la documentación.
 - **Framework para aplicaciones web:** Se utilizará debido a la baja complejidad del proyecto un framework sencillo, como por ejemplo es el caso de [Sinatra](http://sinatrarb.com/) que se describe así mismo como "Sinatra is a DSL for quickly creating web applications in Ruby with minimal effort" y además posee una gran cantidad de documentación tanto [oficial](http://sinatrarb.com/documentation.html) como por parte de la comunidad.
 
 ## :hammer: Documentación
