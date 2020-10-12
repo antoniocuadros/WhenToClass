@@ -7,16 +7,27 @@ Se ha elegido como gestor de versiones RVM ya que aporta una gran flexibilidad m
 ### Como instalar RVM
 
 En primer lugar debemos instalar las claves GPG que se utilizarán para verificar el paquete de instalación:
+
 `gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB`
+
 Ahora instalamos la versión estable con: 
+
 `\curl -sSL https://get.rvm.io | bash -s stable --ruby`
+
 Hacemos (en mi caso):
+
 `source /home/antculap/.rvm/scripts/rvm`
+
 Y ya tenemos instalado RVM.
 ### Como usar RVM
 En primer lugar listamos las versiones disponibles de Ruby:
+
 `rvm list known`
+
 Para instalar una versión:
+
 `rvm install X` siendo X la versión que queremos instalar.
+
 Par usar por defecto una versión hacemos:
+
 `rvm --default use X` siendo X la versión que queremos por defecto.
