@@ -129,6 +129,7 @@ class Asignatura
 			hoy = Time.now
 
 			dia =  hoy.day
+			#tres primeras letras del mes
 			mes =  hoy.strftime("%B")[0].downcase + hoy.strftime("%B")[1] + hoy.strftime("%B")[2]
 			
 			#Obtenemos todos los turnos de este mes
