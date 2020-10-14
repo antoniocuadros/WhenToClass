@@ -109,5 +109,22 @@ class TestAsignaturas < Minitest::Test
 		assert_equal "Error: El mes no es válido.", @asignatura.obtenerDiasPresenciales("1", "mayo"), "Fallo al saltar error debido a mes no valido"
 	end
 	
+	#TEST 3
+	#Si se le pasan bien los datos se tiene que comprobar que:
+	# -Se obtiene un vector de longitud al menos > 1
+	# -En cada componente del vector devuelto existe la palabra pasada como mes
+	def test_that_obtenerDiasPresenciales_method_return_valores_correctos
+		dias_presenciales = @asignatura.obtenerDiasPresenciales("1", "oct")
+		
+		#Se comprueba que para el mes de octubre el grupo 1 tiene más de una semana a la
+		#que asistir
+		assert_operator dias_presenciales.length(), :>=, 1, "Fallo al obtener los días presenciales"
+		
+		#Se comprueba que cada componente del vector contiene el mes dado como palabra
+		for i in 0..dias_presenciales.length() - 1 do
+			assert_match /.*oct*./,  dias_presenciales[i]
+		end
+	end
+	
 	
 end
