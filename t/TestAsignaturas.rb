@@ -141,4 +141,11 @@ class TestAsignaturas < Minitest::Test
 		assert_equal "Error: El turno debe ser numérico y menor que 2.", @asignatura.tengoQueIrEstaSemana("13"), "Fallo al saltar error debido a turno no valido"
 	end
 	
+	#TEST 2
+	#Se comprueba que el metodo devuelve true o false en función de si hay que ir esta semana
+	def test_that_tengoQueIrEstaSemana_method_return_valores_correctos
+		DateTime.stub(:now, Date.new(2020,10,13)) do
+			assert_equal true, @asignatura.tengoQueIrEstaSemana("1")
+		end
+	end
 end
