@@ -77,8 +77,20 @@ class Asignatura
 		end
 	end
 	
-	#Método que dado un turno de presencialidad devuelve que días corresponden ir
-	def obtenerDiasPresenciales(turno)
+	#####################################################################################
+	#
+	#Método obtenerDiasPresenciales
+	#
+	#####################################################################################
+	
+	#Método que dado un turno de presencialidad y un mes devuelve que días corresponden ir en 
+	#ese mes
+	def obtenerDiasPresenciales(turno, mes)
+		#Comprobamos que el turno que se nos pasa es un número entre 1 y 4
+		#Comprobamos que el turno es un número
+		if(!/[1-9]/.match(turno) or turno.to_i > @turno_presencialidad.length() or turno.to_i < 0)
+			return "Error: El turno debe ser numérico y menor que " + @turno_presencialidad.length().to_s + "."
+		end
 	
 	end
 end
