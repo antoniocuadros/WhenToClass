@@ -146,6 +146,7 @@ class TestAsignaturas < Minitest::Test
 	#TEST 2
 	#Se comprueba que el metodo devuelve true o false en función de si hay que ir esta semana
 	def test_that_tengoQueIrEstaSemana_method_return_valores_correctos
+		#necesario ya que dependía del día actual puede cambiar el resultado
 		DateTime.stub(:now, Date.new(2020,10,13)) do
 			assert_equal true, @asignatura.tengoQueIrEstaSemana("1")
 		end
