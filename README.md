@@ -35,7 +35,7 @@ Como ya se ha mencionado anteriormente, se ha utilizado rake para automatizar es
 
 Para poder ejecutar ésto es necesario tener instalado rake (`gem install rake`).
 
-## Instalar las dependencias
+### Instalar las dependencias
 Para poder instalar las dependencias será necesario ejecutar:
 
 `rake test`
