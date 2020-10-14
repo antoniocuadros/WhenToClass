@@ -1,3 +1,4 @@
+## Clase asignatura
 [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/asignatura.rb) se puede consultar la clase asignatura. 
 Una asignatura tendrá la siguiente información:
 - **nombre:** representado por la variable @nombre.

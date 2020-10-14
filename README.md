@@ -26,6 +26,7 @@ Herramientas específicas de Ruby:
 ## Clase asignatura
 La clase asignatura representa una asignatura como una cualquiera que podemos tener en nuestra carrera, podremos obtener información de cada asignatura en cuanto a cuestiones temporales se refiere como por ejemplo saber si tenemos que ir esta semana, poder obtener el horario de prácticas de nuestro grupo y de teoría de forma ordenada temporalmente o saber que días de un determinado mes tengo que ir a clase si soy por ejemplo del grupo de presencialidad 1. Se puede consultar la implementación de la clase [aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/asignatura.rb) así como un struct utilizado [aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/horarioasignatura.rb).
 
+Se pueden consultar más detalles de la clase [aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Clases/asignatura.md)
 ## :hammer: Documentación
 
 ### Herramientas
