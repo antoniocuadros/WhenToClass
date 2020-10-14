@@ -49,6 +49,7 @@ class TestAsignaturas < Minitest::Test
 	#
 	#####################################################################################
 	
+	#TEST 1 obtenerHorario
 	#Si el horario de teoría o prácticas o ambos están vacíos debería dar error
 	#todas las asignaturas tienen tanto prácticas como teoría
 	def test_that_obtenerHorario_method_return_error_if_horario_vacio
@@ -57,11 +58,13 @@ class TestAsignaturas < Minitest::Test
 		assert_equal "Error: Horario de teoría o prácticas vacío.", @asignaturaSinHorario.obtenerHorario("P1"), "Fallo al saltar error debido a horario vacio"
 	end
 
+	#TEST 2 obtenerHorario
 	#Si el grupo de prácticas proporcionado como argumento no existe debería dar un error
 	def test_that_grupopracticas_existe_en_obtenerHorario_method
 		assert_equal "Error: Solo hay 2 grupos de prácticas", @asignatura.obtenerHorario("P12"), "Fallo al saltar error debido a grupo proporcionado no válido"
 	end
 	
+	#TEST 3 obtenerHorario
 	#Si tanto el grupo proporcionado como el objeto asignatura es correcto para llamar a este 
 	#método:
 	# -Deberíamos obtener un vector de tamaño >= 2 (horario de practicas y de teoria)
