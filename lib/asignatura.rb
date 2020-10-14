@@ -113,6 +113,17 @@ class Asignatura
 			end
 			return dias
 		end
-		
 	end
+	
+	#####################################################################################
+	#
+	#Método obtenerDiasPresenciales
+	#
+	#####################################################################################
+	
+	#Método que nos indica si tenemos que o no esta semana a una asignatura
+	def tengoQueIrEstaSemana(turno_pr)
+	
+	end
+	
 end
