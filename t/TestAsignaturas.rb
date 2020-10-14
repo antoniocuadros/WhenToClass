@@ -151,4 +151,53 @@ class TestAsignaturas < Minitest::Test
 			assert_equal true, @asignatura.tengoQueIrEstaSemana("1")
 		end
 	end
+
+
+	##
+	#
+	#Tests básicos
+	#
+	##
+	
+	#####################################################################################
+	#Con los siguientes tests vamos a comprobar básicamente que el constructor
+	#ha hecho bien las asignaciones al tratarse de asignaciones de matrices y
+	#estructuras, vamos a obtener los datos que hemos incluido al objeto para
+	#comprobar que es correcto a través de los métodos get
+	#####################################################################################
+	
+	#TEST 1
+	#Nombre de la asignatura
+	def test_that_return_nombre_asignatura
+		assert_equal "Infraestructura Virtual", @asignatura.nombre, "Fallo al obtener el nombre de la asignatura"
+	end
+	
+	#TEST 2
+	#Horario de teoría
+	def test_that_return_horario_teoria
+		assert_equal "2-Martes", @asignatura.horario_teoria.dia, "Fallo al obtener el día de teoría"
+		assert_equal "11:30", @asignatura.horario_teoria.hora_inicio, "Fallo al obtener el horario inicio de teoría"
+		assert_equal "13:30", @asignatura.horario_teoria.hora_fin, "Fallo al obtener el horario fin de teoría"
+		assert_equal "T", @asignatura.horario_teoria.grupo, "Fallo al obtener el grupo de teoría"
+	end
+	
+	#TEST 3
+	#Horario de prácticas
+	def test_that_return_horario_practicas
+		assert_equal "2-Martes", @asignatura.horario_practicas[0].dia, "Fallo al obtener el día de prácticas"
+		assert_equal "9:30", @asignatura.horario_practicas[0].hora_inicio, "Fallo al obtener el horario inicio de prácticas"
+		assert_equal "11:30", @asignatura.horario_practicas[0].hora_fin, "Fallo al obtener el horario fin de prácticas"
+		assert_equal "P1", @asignatura.horario_practicas[0].grupo, "Fallo al obtener el grupo de prácticas"
+
+		assert_equal "5-Viernes", @asignatura.horario_practicas[1].dia, "Fallo al obtener el día de prácticas"
+		assert_equal "9:30", @asignatura.horario_practicas[1].hora_inicio, "Fallo al obtener el horario inicio de prácticas"
+		assert_equal "11:30", @asignatura.horario_practicas[1].hora_fin, "Fallo al obtener el horario fin de prácticas"
+		assert_equal "P2", @asignatura.horario_practicas[1].grupo, "Fallo al obtener el grupo de prácticas"
+	end
+	
+	#TEST 4
+	#Grupo
+	def test_that_return_grupo
+		assert_equal "A", @asignatura.grupo, "Fallo al obtener el grupo de la asignatura"
+	end
 end
