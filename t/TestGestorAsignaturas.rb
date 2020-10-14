@@ -76,6 +76,22 @@ class TestGestorAsignaturas < Minitest::Test
 	#
 	#####################################################################################
 	
+	#TEST1
+	#Se comprueba que si se quiere eliminar una asignatura que no existe, el tamaño del vector
+	#no varía
+	def test_that_eliminarAsignatura_method_no_borra_no_existe
+		@gestor.anadirAsignatura(@asignatura1)
+		@gestor.eliminarAsignatura("DAI")
+		assert_equal 1, @gestor.contarAsignaturas(), "Fallo al borrar elemento, no se podía borrar"
+	end
+	
+	#TEST2
+	#Se comprueba que se borra un elemento que existe
+	def test_that_eliminarAsignatura_method_borra_si_existe
+		@gestor.anadirAsignatura(@asignatura1)
+		@gestor.eliminarAsignatura("Infraestructura Virtual")
+		assert_equal 0, @gestor.contarAsignaturas(), "Fallo al borrar elemento"
+	end
 	
 	
 end
