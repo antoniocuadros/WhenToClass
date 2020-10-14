@@ -102,4 +102,12 @@ class TestAsignaturas < Minitest::Test
 	def test_that_obtenerDiasPresenciales_method_return_error_si_grupo_no_existe
 		assert_equal "Error: El turno debe ser numérico y menor que 2.", @asignatura.obtenerDiasPresenciales("12", "oct"), "Fallo al saltar error debido a grupo no valido"
 	end
+	
+	#TEST 2 obtenerDiasPresenciales
+	#Se comprueba que si el mes proporcionado no es válido da error
+	def test_that_obtenerDiasPresenciales_method_return_error_si_mes_no_valido
+		assert_equal "Error: El mes no es válido.", @asignatura.obtenerDiasPresenciales("1", "mayo"), "Fallo al saltar error debido a mes no valido"
+	end
+	
+	
 end
