@@ -123,6 +123,11 @@ class Asignatura
 	
 	#Método que nos indica si tenemos que o no esta semana a una asignatura
 	def tengoQueIrEstaSemana(turno_pr)
+		if(!/[1-9]/.match(turno_pr) or turno_pr.to_i > @turno_presencialidad.length() or turno_pr.to_i < 0)
+			return "Error: El turno debe ser numérico y menor que " + @turno_presencialidad.length().to_s + "."
+		else
+		
+		end	
 	
 	end
 	
