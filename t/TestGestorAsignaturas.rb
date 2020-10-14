@@ -37,13 +37,14 @@ class TestGestorAsignaturas < Minitest::Test
 		#Si le pasamos mal el objeto
 		assert_equal "Error: No se puede añadir, no es un objeto Asignatura", @gestor.anadirAsignatura("IV"), "Fallo al saltar error debido a parametro debe ser objeto Asignatura"
 	end
-=begin
+
 	#TEST2
 	#Comprueba que se incrementa  el tamaño del vector al añadir elementos
 	def test_that_anadirAsignatura_method_anade_correctamente
 		
 		@gestor.anadirAsignatura(@asignatura1)
-		assert_equal 1, @gestor.anadirAsignatura("IV"), "Fallo al saltar error debido a parametro debe ser objeto Asignatura"
+		@gestor.anadirAsignatura(@asignatura2)
+		assert_equal 2, @gestor.contarAsignaturas(), "Fallo al añadir elemento"
 	end
-=end
+
 end
