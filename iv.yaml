@@ -1,1 +1,4 @@
 entidad: lib/asignatura.rb
+lenguaje: ruby
+test: t/TestAsignaturas.rb
+taskfile: Rakefile
