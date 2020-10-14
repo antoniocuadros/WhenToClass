@@ -39,6 +39,32 @@ class Asignatura
 			#que el grupo que le pasemos exista)
 			if(!/P[1-3]/.match(grupo_practicas) or grupo_practicas.scan(/\d+/).first.to_i > horario_practicas.length())
 				return "Error: Solo hay " + horario_practicas.length().to_s + " grupos de prácticas"
+			else
+				#metemos todo en un vector
+				clases = Array.new
+				clases << @horario_teoria
+				for i in 0..@horario_practicas.length()-1
+					if(horario_practicas[i].grupo == grupo_practicas)
+						clases << @horario_practicas[i]
+					end
+				end
+				
+				#Ordenamos por día de la semana (los dias en primera posición tienen un número)
+				for i in 1..clases.length()-1
+					valor_a_ordenar = clases[i]
+					posicion = i
+					while posicion > 0 and clases[posicion-1].dia[0] > valor_a_ordenar.dia[0] do
+						clases[posicion] = clases[posicion - 1]
+						posicion = posicion - 1
+					end
+
+					clases[posicion] = valor_a_ordenar
+				end
+				#En este punto tenemos ya los días ordenados de lunes a viernes
+				#de la asignatura
+				#Ahora devolvemos el vector de clases ordenado para que le sea
+				#más fácil de consultar
+				return clases
 			end
 		end
 	end
