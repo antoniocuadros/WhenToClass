@@ -117,7 +117,7 @@ class Asignatura
 	
 	#####################################################################################
 	#
-	#Método obtenerDiasPresenciales
+	#Método tengoQueIrEstaSemana
 	#
 	#####################################################################################
 	
@@ -126,7 +126,55 @@ class Asignatura
 		if(!/[1-9]/.match(turno_pr) or turno_pr.to_i > @turno_presencialidad.length() or turno_pr.to_i < 0)
 			return "Error: El turno debe ser numérico y menor que " + @turno_presencialidad.length().to_s + "."
 		else
-		
+			hoy = Time.now
+
+			dia =  hoy.day
+			mes =  hoy.strftime("%B")[0].downcase + hoy.strftime("%B")[1] + hoy.strftime("%B")[2]
+			
+			#Obtenemos todos los turnos de este mes
+			dias_presenciales = obtenerDiasPresenciales(turno_pr, mes)
+			
+			#En este punto ya tenemos el día y el mes actual
+			#Para cada pareja leemos el día y el mes de inicio y fin
+			ir = false
+			
+			for i in 0..dias_presenciales.length() - 1 do
+				#Obtenemos el día de inicio y fin de la semana
+				inicio_semana = dias_presenciales[i].scan(/\d+/).first
+				fin_semana = (dias_presenciales[i].scan(/\s\d+/).first).strip
+				
+				#caso: final mes, inicio del siguiente
+				if(inicio_semana > fin_semana)
+					j = inicio_semana.to_i
+						while j.to_i < 30
+							if(j == dia)
+								return true
+							end
+							j += 1
+						end
+						
+						j = 1
+						
+						while j.to_i < fin_semana.to_i
+							if(j == dia)
+								return true
+							end
+							j += 1
+						end
+				else
+					#caso: en medio del mes
+					if(inicio_semana < fin_semana)
+						j = inicio_semana.to_i
+						while  j.to_i < fin_semana.to_i
+							if(j == dia)
+								return true
+							end
+							j += 1
+						end
+					end
+				end
+			end
+			return ir
 		end	
 	
 	end
