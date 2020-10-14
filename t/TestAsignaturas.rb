@@ -18,4 +18,21 @@ class TestAsignaturas < Minitest::Test
 					["5oct - 9oct", "19oct - 23oct", "2nov - 6nov","16nov - 20nov", "30nov - 4dec", "14dec - 18dec", "8jan y 11jan - 14jan"]],
 					)
 	end
+	
+	#####################################################################################
+	#Con los siguientes tests vamos a comprobar si funciona correctamente el método
+	#que nos permite obtener tanto el horario de prácticas como el de teoría
+	#ordenado por el día de la semana
+	#
+	#Método: obtenerHorario
+	#
+	#####################################################################################
+	
+	#Si el horario de teoría o prácticas o ambos están vacíos debería dar error
+	#todas las asignaturas tienen tanto prácticas como teoría
+	def test_that_obtenerHorario_method_return_error_if_horario_vacio
+		assert_equal "Error: Horario de teoría o prácticas vacío.", @asignaturaSinHorarioTeoria.obtenerHorario("P1"), "Fallo al saltar error debido a horario vacio"
+		assert_equal "Error: Horario de teoría o prácticas vacío.", @asignaturaSinHorarioPracticas.obtenerHorario("P1"), "Fallo al saltar error debido a horario vacio"
+		assert_equal "Error: Horario de teoría o prácticas vacío.", @asignaturaSinHorario.obtenerHorario("P1"), "Fallo al saltar error debido a horario vacio"
+	end
 end
