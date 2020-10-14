@@ -153,12 +153,8 @@ class TestAsignaturas < Minitest::Test
 	end
 
 
-	##
-	#
-	#Tests básicos
-	#
-	##
 	
+	#Tests básicos
 	#####################################################################################
 	#Con los siguientes tests vamos a comprobar básicamente que el constructor
 	#ha hecho bien las asignaciones al tratarse de asignaciones de matrices y
