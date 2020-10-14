@@ -1,4 +1,5 @@
 #Antonio Cuadros Lapresta
+require_relative "horarioasignatura.rb"
 
 ##############################################################################################
 #												#
@@ -9,12 +10,11 @@ class Asignatura
 	#Métodos get
 	attr_reader:nombre
 	attr_reader:horario_teoria 		#será un struct con dia, hora inicio, hora fin
-	attr_reader:horario_practicas  	#será un struct con dia, hora inicio, hora fin
+	attr_reader:horario_practicas  	#será un vector de struct con dia, hora inicio, hora fin
 	attr_reader:turno_presencialidad 	#Matriz en la primera columna los 
 						#turnos: 1, 2... y resto de columnas los días de 
 						#cada grupo
-	attr_reader:evaluacion			#Cadena de texto que indica como va la evaluación de
-						#de la asignatura
+	attr_reader:grupo			#Carácter (A, B, C, ...)
 	
 	def initialize(nombre_asignatura, h_teoria, h_practicas, group, t_presencialidad)
 		@nombre = nombre_asignatura
