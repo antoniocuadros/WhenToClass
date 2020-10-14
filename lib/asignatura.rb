@@ -91,6 +91,15 @@ class Asignatura
 		if(!/[1-9]/.match(turno) or turno.to_i > @turno_presencialidad.length() or turno.to_i < 0)
 			return "Error: El turno debe ser numérico y menor que " + @turno_presencialidad.length().to_s + "."
 		end
-	
+		
+		#comprobamos que el mes es válido
+		meses = ["sep", "oct", "nov", "dec", "jan"]
+		
+		if(!meses.include?(mes))
+			return "Error: El mes no es válido."
+		else
+		
+		end
+		
 	end
 end
