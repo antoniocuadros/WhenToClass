@@ -125,7 +125,7 @@ class TestAsignaturas < Minitest::Test
 		
 		#Se comprueba que cada componente del vector contiene el mes dado como palabra
 		for i in 0..dias_presenciales.length() - 1 do
-			assert_match /.*oct*./,  dias_presenciales[i]
+			assert_match (/.*oct*./),  dias_presenciales[i]
 		end
 	end
 	
