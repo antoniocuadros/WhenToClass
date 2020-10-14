@@ -21,6 +21,8 @@ class GestorAsignaturas
 	#Método obtenerAsignatura
 	#
 	#####################################################################################
+	
+	#Se corresponde con el HU4
 	def obtenerAsignatura(nombre)
 		encontrado = false
 		asignatura = nil
