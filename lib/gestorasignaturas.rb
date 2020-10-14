@@ -9,7 +9,6 @@ require_relative "asignatura.rb"
 ##############################################################################################
 
 class GestorAsignaturas
-	@asignaturas
 	
 	#Constructor sin parámetros que indica que la variable asignaturas es un array
 	def initialize()
