@@ -127,5 +127,18 @@ class TestAsignaturas < Minitest::Test
 		end
 	end
 	
+	#####################################################################################
+	#Con los siguientes tests vamos a comprobar si funciona correctamente el método
+	#que nos permite saber si debemos ir esta semana a una asignatura
+	#
+	#Método: tengoQueIrEstaSemana
+	#
+	#####################################################################################
+	
+	#TEST 1
+	#Se comprueba que si el turno proporcionado no existe da error
+	def test_that_tengoQueIrEstaSemana_method_return_error_si_grupo_no_existe
+		assert_equal "Error: El turno debe ser numérico y menor que 2.", @asignatura.tengoQueIrEstaSemana("13"), "Fallo al saltar error debido a turno no valido"
+	end
 	
 end
