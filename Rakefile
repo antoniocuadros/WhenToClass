@@ -10,6 +10,4 @@ end
 Rake::TestTask.new do |t|
 	t.name = "test"
 	t.test_files = FileList['t/TestAsignaturas.rb']
-
-	
 end
