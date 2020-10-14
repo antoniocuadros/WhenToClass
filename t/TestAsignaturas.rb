@@ -1,4 +1,6 @@
 require "minitest/autorun"
+require "minitest/mock"
+require "date"
 require_relative "../lib/asignatura.rb"
 require_relative "../lib/horarioasignatura.rb"
 
