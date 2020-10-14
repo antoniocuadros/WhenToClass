@@ -101,8 +101,11 @@ class Asignatura
 			#Si no hay errores en los argumentos añadimos a un vector
 			#los intervalos de tiempo a los que hay que asistir a clase
 			dias = Array.new
+			
+			#Se añaden todos
 			turno_seleccionado = @turno_presencialidad[turno.to_i-1]
 			
+			#a dias solo se le añaden los del mes
 			for i in 0..turno_seleccionado.length() - 1 do
 				if(turno_seleccionado[i].include? mes)
 					dias << turno_seleccionado[i]
