@@ -17,7 +17,7 @@ Como ya se ha comentado anteriormente, en la actualidad los estudiantes de Infor
 - **Base de datos:** La aplicación obtendrá la información de un fichero en formato JSON.
 - **Sistema de logs:** Para registrar los eventos que ocurren para posteriormente analizarlos en busca de problemas tanto del servicio en sí como de prestaciones y otros muchos más aspectos.
 
-Herramientas específicas de ruby:
+Herramientas específicas de Ruby:
 - **Gestor de versiones:** Se utiliza RBENV como gestor de versiones, se puede consultar más información [aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Herramientas/rbenv.md) en la documentación del proyecto.
 - **Herramienta de pruebas:** Se utiliza minitest como herramienta de pruebas, se puede consultar más información [aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Herramientas/minitest.md) en la documentación del proyecto.
 - **Herramienta de gestión de dependencias:** Se utiliza Bundler como herramienta de gestión de dependencias, se puede consultar más información [aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Herramientas/bundler.md) en la documentación del proyecto.
@@ -38,7 +38,7 @@ Herramientas específicas de ruby:
 [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/PasosProyecto/Pasos.md) puede consultarse documentación adicional acerca de los pasos que se llevarán acabo para completar el proyecto.
 
 ### Fichero clase
-[En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/asignatura.rb) se puede consultar la clase actual, en este momento los métodos no están implementados, se pretende dar una visión general de lo que se quiere lograr con la misma. (Si se aprecian menos métodos get, es debido a que en ruby los métodos get se consiguen de forma sencilla anteponiendo en la declaración del atributo la palabra: attr_reader)
+[En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/asignatura.rb) se puede consultar la clase actual, en este momento los métodos no están implementados, se pretende dar una visión general de lo que se quiere lograr con la misma. (Si se aprecian menos métodos get, es debido a que en Ruby los métodos get se consiguen de forma sencilla anteponiendo en la declaración del atributo la palabra: attr_reader)
 
 ### Fichero iv.yaml
 [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/iv.yaml) se puede consultar el fichero iv.yaml.
