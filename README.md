@@ -26,7 +26,24 @@ Herramientas específicas de Ruby:
 ## Clase asignatura
 La clase asignatura representa una asignatura como una cualquiera que podemos tener en nuestra carrera, podremos obtener información de cada asignatura en cuanto a cuestiones temporales se refiere como por ejemplo saber si tenemos que ir esta semana, poder obtener el horario de prácticas de nuestro grupo y de teoría de forma ordenada temporalmente o saber que días de un determinado mes tengo que ir a clase si soy por ejemplo del grupo de presencialidad 1. Se puede consultar la implementación de la clase [aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/asignatura.rb) así como un struct utilizado [aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/horarioasignatura.rb).
 
-Se pueden consultar más detalles de la clase [aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Clases/asignatura.md)
+Se pueden consultar más detalles de la clase [aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Clases/asignatura.md).
+
+### Testear la clase asignatura
+Como ya se ha mencionado anteriormente, se ha utilizado rake para automatizar este tipo de tareas, por ello, para testear la clase asignatura tendremos que hacer:
+
+`rake test`
+
+Para poder ejecutar ésto es necesario tener instalado rake.
+
+## Instalar las dependencias
+Para poder instalar las dependencias será necesario ejecutar:
+
+`rake test`
+
+Ésto instalará las dependencias de nuestro proyecto, dichas dependencias se encuentran especificadas en el [Gemfile](https://github.com/antoniocuadros/WhenToClass/blob/master/Gemfile) y [Gemfile.lock](https://github.com/antoniocuadros/WhenToClass/blob/master/Gemfile.lock). 
+- **Gemfile:** es un fichero donde especificamos que gemas queremos usar. 
+- **Gemfile.lock:** es un fichero donde Bundler graba las versiones exactas que tenemos instaladas de nuestras gemas y que será utilizado cuando se haga bundle install en la tarea rake test para instalar las dependencias junto al fichero Gemfile para saber de donde obtener las gemas.
+
 ## :hammer: Documentación
 
 ### Herramientas
