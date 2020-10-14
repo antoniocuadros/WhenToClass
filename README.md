@@ -28,12 +28,16 @@ La clase asignatura representa una asignatura como una cualquiera que podemos te
 
 Se pueden consultar más detalles de la clase [aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Clases/asignatura.md).
 
+Adicionalmente se ha creado la clase GestorAsignaturas que permite trabajar con grupos de asignaturas. Se puede ver la implementación [aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/gestorasignaturas.rb).
+
 ### Testear la clase asignatura
 Como ya se ha mencionado anteriormente, se ha utilizado rake para automatizar este tipo de tareas, por ello, para testear la clase asignatura tendremos que hacer:
 
 `rake test`
 
 Para poder ejecutar ésto es necesario tener instalado rake (`gem install rake`).
+
+Con esto se ejecutan tanto los tests para la clase Asignatura como para la clase GestorAsignaturas.
 
 ### Instalar las dependencias
 Para poder instalar las dependencias será necesario ejecutar:
@@ -52,9 +56,11 @@ Se instalarán las dependencias de nuestro proyecto, dichas dependencias se encu
 [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Herramientas/herramientas.md) se pueden consultar todas las herramientas utilizadas tanto generales como específicas de Ruby.
 
 ### Ficheros relevantes
-- [Clase asignatura](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/asignatura.rb).
+- [Clase Asignatura](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/asignatura.rb).
+- [Clase GestorAsignaturas](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/gestorasignaturas.rb).
 - [Struct horarioAsignatura](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/horarioasignatura.rb).
 - [Tests de clase Asignaturas](https://github.com/antoniocuadros/WhenToClass/blob/master/t/TestAsignaturas.rb).
+- [Tests de la clase GestorAsignaturas](https://github.com/antoniocuadros/WhenToClass/blob/master/t/TestGestorAsignaturas.rb).
 
 ### Historias de Usuario
 [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/HistoriasUsuario/HistoriasUsuario.md) puede consultarse las diversas historias de usuarios que hay activas en cada momento.
