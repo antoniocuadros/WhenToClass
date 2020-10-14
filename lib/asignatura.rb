@@ -24,6 +24,12 @@ class Asignatura
 		@turno_presencialidad = t_presencialidad
 	end
 	
+	#####################################################################################
+	#
+	#Método obtenerHorario
+	#
+	#####################################################################################
+	
 	#Método que devuelve un vector de structs donde cada struct será un día de prácticas
 	#o de teoría
 	#Devuelve los structs ordenados en un vector de tal manera que en primera posición
