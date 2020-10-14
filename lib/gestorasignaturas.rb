@@ -72,6 +72,14 @@ class GestorAsignaturas
 	
 	end
 	
+	#####################################################################################
+	#
+	#Método contarAsignaturas
+	#
+	#####################################################################################
+	def contarAsignaturas()
+		return @asignaturas.length()	
+	end
 end
 
 
