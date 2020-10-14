@@ -50,4 +50,11 @@ class TestAsignaturas < Minitest::Test
 		assert_equal "Error: Horario de teoría o prácticas vacío.", @asignaturaSinHorarioPracticas.obtenerHorario("P1"), "Fallo al saltar error debido a horario vacio"
 		assert_equal "Error: Horario de teoría o prácticas vacío.", @asignaturaSinHorario.obtenerHorario("P1"), "Fallo al saltar error debido a horario vacio"
 	end
+	
+	#Si el grupo de prácticas proporcionado como argumento no existe debería dar un error
+	def test_that_grupopracticas_existe_en_obtenerHorario_method
+		assert_equal "Error: Solo hay 2 grupos de prácticas", @asignatura.obtenerHorario("P12"), "Fallo al saltar error debido a grupo proporcionado no válido"
+	end
+	
+	
 end
