@@ -98,7 +98,17 @@ class Asignatura
 		if(!meses.include?(mes))
 			return "Error: El mes no es válido."
 		else
-		
+			#Si no hay errores en los argumentos añadimos a un vector
+			#los intervalos de tiempo a los que hay que asistir a clase
+			dias = Array.new
+			turno_seleccionado = @turno_presencialidad[turno.to_i-1]
+			
+			for i in 0..turno_seleccionado.length() - 1 do
+				if(turno_seleccionado[i].include? mes)
+					dias << turno_seleccionado[i]
+				end
+			end
+			return dias
 		end
 		
 	end
