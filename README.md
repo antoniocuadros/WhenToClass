@@ -24,9 +24,6 @@ Herramientas específicas de Ruby:
 - **Framework para aplicaciones web:** Se utilizará debido a la baja complejidad del proyecto un framework sencillo, como por ejemplo es el caso de Sinatra.
 
 ## :hammer: Documentación
-### Configuración Inicial
-
-[En este enlace](https://github.com/antoniocuadros/ejercicios-apuntes-IV/blob/master/Configuraci%C3%B3n%20gitHub/ConfiguracionGit.md) se puede comprobar la configuración de GitHub.
 
 ### Herramientas
 [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Herramientas/herramientas.md) se pueden consultar todas las herramientas utilizadas tanto generales como específicas de Ruby.
@@ -42,6 +39,10 @@ Herramientas específicas de Ruby:
 
 ### Fichero iv.yaml
 [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/iv.yaml) se puede consultar el fichero iv.yaml.
+
+### Configuración Inicial
+
+[En este enlace](https://github.com/antoniocuadros/ejercicios-apuntes-IV/blob/master/Configuraci%C3%B3n%20gitHub/ConfiguracionGit.md) se puede comprobar la configuración de GitHub.
 
 ### Autor
 [Antonio Cuadros Lapresta](https://github.com/antoniocuadros)
