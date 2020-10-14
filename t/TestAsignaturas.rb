@@ -56,5 +56,28 @@ class TestAsignaturas < Minitest::Test
 		assert_equal "Error: Solo hay 2 grupos de prácticas", @asignatura.obtenerHorario("P12"), "Fallo al saltar error debido a grupo proporcionado no válido"
 	end
 	
+	#Si tanto el grupo proporcionado como el objeto asignatura es correcto para llamar a este 
+	#método:
+	# -Deberíamos obtener un vector de tamaño >= 2 (horario de practicas y de teoria)
+	# -Deberíamos obtener un vector donde cada posición es un Struct horarioasignatura
+	# -Deberíamos obtener un vector ordenado de las clases que tocan de esa asignatura
+	#  ordenado de lunes a viernes
+	def test_that_obtenerHorario_method_return_valores_correctos_si_no_hay_errores
+		horario_asignatura = @asignatura.obtenerHorario("P1")
+		#Se comprueba que al menos hay horario de teoría y horario de prácticas
+		assert_operator horario_asignatura.length(), :>=, 2, "Fallo al obtener los horarios de prácticas y teoría"
+		#Para cada elemento del vector, se comprueba que es una instacia de HorarioAsignatura (nuestra estructura)
+		for i in 0..horario_asignatura.length() - 1 do
+			assert_instance_of HorarioAsignatura, horario_asignatura[i]
+		end
+		
+		#Ahora comprobamos que lo devuelve en orden (Lunes, Martes, ...)
+		for i in 0..horario_asignatura.length() - 1 do
+			if(i != horario_asignatura.length() - 1)
+				assert_operator horario_asignatura[i].dia[0].to_i, :<=, horario_asignatura[i+1].dia[0].to_i
+			end
+		end
+	end
+	
 	
 end
