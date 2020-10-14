@@ -3,7 +3,7 @@
 - **Base de datos:** La aplicación deberá obtener la información solicitada por los usuario de una determinada base de datos que puede ser tanto local (haciendo uso de ficheros JSON) como remota haciendo uso de bases de datos relacionales o no relacionales como MongoDB en este último caso.
 - **Sistema de logs:** Tal y como se menciona [aquí](https://jj.github.io/curso-tdd/temas/servicios.html) el sistema de logs es uno de los servicios más importantes ya que nos permite registrar los eventos que ocurren para posteriormente analizarlos en busca de problemas tanto del servicio en sí como de prestaciones y otros muchos más aspectos.
 
-## :wrench: Herramientas específicas de ruby
+## :wrench: Herramientas específicas de Ruby
 ### Gestor de versiones
 #### rbenv
 Para la realización de este proyecto se está utilizando el gestor de versiones RBENV, podemos consultar la página oficial de este manejador de versiones en este [enlace](https://github.com/rbenv/rbenv) que nos lleva a su repositorio oficial apoyado por la comunidad.
