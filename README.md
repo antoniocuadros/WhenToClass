@@ -17,7 +17,7 @@ Como ya se ha comentado anteriormente, en la actualidad los estudiantes de Infor
 - **Base de datos:** La aplicación obtendrá la información de un fichero en formato JSON.
 - **Sistema de logs:** Para registrar los eventos que ocurren para posteriormente analizarlos en busca de problemas tanto del servicio en sí como de prestaciones y otros muchos más aspectos.
 
-### Herramientas específicas de ruby
+Herramientas específicas de ruby:
 - **Gestor de versiones:** Se utiliza RBENV como gestor de versiones, se puede consultar más información [aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Herramientas/rbenv.md).
 - **Herramienta de pruebas:** Se utiliza minitest como herramienta de pruebas, se puede consultar más información [aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Herramientas/minitest.md).
 - **Herramienta de gestión de dependencias:** Se utiliza Bundler como herramienta de gestión de dependencias, se puede consultar más información [aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Herramientas/bundler.md).
