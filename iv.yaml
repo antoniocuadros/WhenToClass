@@ -1,4 +1,8 @@
-entidad: lib/asignatura.rb
+entidad: 
+  - lib/asignatura.rb
+  - lib/gestorasignaturas.rb
 lenguaje: ruby
-test: t/TestAsignaturas.rb
+test: 
+  - t/TestAsignaturas.rb
+  - t/TestGestorAsignaturas.rb
 taskfile: Rakefile
