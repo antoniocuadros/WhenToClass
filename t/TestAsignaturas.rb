@@ -114,6 +114,7 @@ class TestAsignaturas < Minitest::Test
 	# -Se obtiene un vector de longitud al menos > 1
 	# -En cada componente del vector devuelto existe la palabra pasada como mes
 	def test_that_obtenerDiasPresenciales_method_return_valores_correctos
+		#obtenemos los días que hay que ir en octubre
 		dias_presenciales = @asignatura.obtenerDiasPresenciales("1", "oct")
 		
 		#Se comprueba que para el mes de octubre el grupo 1 tiene más de una semana a la
