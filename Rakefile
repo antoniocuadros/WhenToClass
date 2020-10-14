@@ -1,4 +1,7 @@
-desc "ejecuta todos los tests unitarios"
-task :tests do
+
+
+
+desc "Instala todas las dependencias"
+task :install do
 	exec "bundle install"
 end
