@@ -9,7 +9,67 @@ require_relative "asignatura.rb"
 ##############################################################################################
 
 class GestorAsignaturas
-
-
-
+	@asignaturas
+	
+	#Constructor sin parámetros que indica que la variable asignaturas es un array
+	def initialize()
+		@asignaturas = Array.new
+	end
+	
+	#####################################################################################
+	#
+	#Método obtenerAsignatura
+	#
+	#####################################################################################
+	def obtenerAsignatura(nombre)
+		encontrado = false
+		asignatura = nil
+		i = 0
+		
+		while i < @asignaturas.length() and !encontrado
+			if(@asignaturas[i].nombre == nombre)
+				encontrado = true
+				asignatura = @asignaturas[i]
+			end
+			i +=1
+		end
+		
+		return asignatura
+	end
+	
+	#####################################################################################
+	#
+	#Método añadirAsignatura
+	#
+	#####################################################################################
+	def anadirAsignatura(asignatura)
+		if(asignatura.instance_of? Asignatura)
+			@asignaturas << asignatura
+		else
+			return "Error: No se puede añadir, no es un objeto Asignatura"
+		end
+	
+	end
+	
+	#####################################################################################
+	#
+	#Método eliminarAsignatura
+	#
+	#####################################################################################
+	def eliminarAsignatura(nombre)
+		i = 0
+		encontrado = false
+		
+		while i < @asignaturas.length() and !encontrado
+			if(@asignaturas[i].nombre == nombre)
+				encontrado = true
+				@asignaturas.delete_at(i)
+			end
+			i +=1
+		end
+	
+	end
+	
 end
+
+
