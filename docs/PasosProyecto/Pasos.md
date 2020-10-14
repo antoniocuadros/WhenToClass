@@ -14,7 +14,7 @@ De esta forma este documento sirve para de un vistazo rápido poder visualizar e
 - Elección del lenguaje de programación.
 - Configuración correcta de git.
 
-## Hito 1: Esctructura general del proyecto
+## [Hito 1](https://github.com/antoniocuadros/WhenToClass/milestone/1): Esctructura general del proyecto
 - Creación de una primera [clase sin implementar](https://github.com/antoniocuadros/WhenToClass/issues/6).
 - [Crear el subdirectorio docs](https://github.com/antoniocuadros/WhenToClass/issues/2) para contener documentación adicional.
 - Añadir una [descripción general de las herramientas](https://github.com/antoniocuadros/WhenToClass/issues/1) que se pretenden utilizar en un proyecto de este tipo.
@@ -24,7 +24,7 @@ De esta forma este documento sirve para de un vistazo rápido poder visualizar e
 - Creación de [historias de usuario](https://github.com/antoniocuadros/WhenToClass/issues/11) como issues y además incluidas como documentación.
     - Documentación adicional como este documento.
 
-## Hito 2: Tests
+## [Hito 2](https://github.com/antoniocuadros/WhenToClass/milestone/2): Tests
 La realización de este hito consiste en entender la necesidad de los tests unitarios como herramienta fundamental en el desarrollo software. Además se deben realizar los tests para cada una de las funciones e implementarlas.
 - Implementar tests para cada una de las funciones del código:
     - [Método obtenerHorario](https://github.com/antoniocuadros/WhenToClass/issues/14)
