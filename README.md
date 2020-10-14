@@ -38,7 +38,7 @@ Para poder ejecutar ésto es necesario tener instalado rake (`gem install rake`)
 ### Instalar las dependencias
 Para poder instalar las dependencias será necesario ejecutar:
 
-`rake test`
+`rake install`
 
 Se instalarán las dependencias de nuestro proyecto, dichas dependencias se encuentran especificadas en el [Gemfile](https://github.com/antoniocuadros/WhenToClass/blob/master/Gemfile) y [Gemfile.lock](https://github.com/antoniocuadros/WhenToClass/blob/master/Gemfile.lock). 
 - **Gemfile:** es un fichero donde especificamos que gemas queremos usar. 
