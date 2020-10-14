@@ -9,7 +9,7 @@ Una asignatura tendrá la siguiente información:
 
 Además contamos con los siguientes métodos:
 
-- **ObtenerHorario:** se le pasa un grupo de prácticas (cadena de texto) y devuelve un vector de  estructuras mencionadas anteriormente y además están ordenadas de lunes a viernes, se devolverá tanto la información temporal de la teoría como la de las prácticas del grupo proporcionado como argumento.
+- **obtenerHorario:** se le pasa un grupo de prácticas (cadena de texto) y devuelve un vector de  estructuras mencionadas anteriormente y además están ordenadas de lunes a viernes, se devolverá tanto la información temporal de la teoría como la de las prácticas del grupo proporcionado como argumento.
 - **obtenerDiasPresenciales:** Método que dado un turno de presencialidad (1, 2, ...) y un mes (sep, oct, nov, dec, jan, ...) devuelve que días tenemos que ir presencialmente en ese mes y para ese turno.
 - **tengoQueIrEstaSemana:** Método que proporcionando un turno de presencialidad (1, 2, ...) devuelve verdadero si tenemos que ir esta semana o falso en caso contrario. 
 
