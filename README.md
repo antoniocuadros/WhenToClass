@@ -51,8 +51,8 @@ Para poder instalar las dependencias será necesario ejecutar:
 
 ### Ficheros relevantes
 - [Clase asignatura](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/asignatura.rb).
-- [Struct horarioasignatura](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/horarioasignatura.rb).
-- [Tests de clase Asignaturas](https://github.com/antoniocuadros/WhenToClass/blob/master/t/TestAsignaturas.rb)
+- [Struct horarioAsignatura](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/horarioasignatura.rb).
+- [Tests de clase Asignaturas](https://github.com/antoniocuadros/WhenToClass/blob/master/t/TestAsignaturas.rb).
 
 ### Historias de Usuario
 [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/HistoriasUsuario/HistoriasUsuario.md) puede consultarse las diversas historias de usuarios que hay activas en cada momento.
