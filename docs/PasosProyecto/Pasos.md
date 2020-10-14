@@ -24,8 +24,22 @@ De esta forma este documento sirve para de un vistazo rápido poder visualizar e
 - Creación de [historias de usuario](https://github.com/antoniocuadros/WhenToClass/issues/11) como issues y además incluidas como documentación.
     - Documentación adicional como este documento.
 
-## Hito 2: Integración continua
-La realización de este hito consiste en añadir integración continua al proyecto. APrender como describir la versión del lenguaje de programación que se está utilizando y la infraestructura necesaria para funcionar así como la eleccion de un sistema y sitio para integración continua y su configuración.
+## Hito 2: Tests
+La realización de este hito consiste en entender la necesidad de los tests unitarios como herramienta fundamental en el desarrollo software. Además se deben realizar los tests para cada una de las funciones e implementarlas.
+- Implementar tests para cada una de las funciones del código:
+    - [Método obtenerHorario](https://github.com/antoniocuadros/WhenToClass/issues/14)
+    - [Método obtenerDiasPresenciales](https://github.com/antoniocuadros/WhenToClass/issues/15)
+    - [Método tengoQueIrEstaSemana](https://github.com/antoniocuadros/WhenToClass/issues/24)
+- Implementar los métodos que testearan los tests unitarios
+    - [Método obtenerHorario](https://github.com/antoniocuadros/WhenToClass/issues/17)
+    - [Método obtenerDiasPresenciales](https://github.com/antoniocuadros/WhenToClass/issues/18)
+    - [Método tengoQueIrEstaSemana](https://github.com/antoniocuadros/WhenToClass/issues/23)
+- [Mejora de la documentación y el README](https://github.com/antoniocuadros/WhenToClass/issues/20)
+    - Explicación de cada herramienta a utilizar
+    - Explicación de como instalar la clase
+    - Explicación de como testear la clase
+- [Creación y uso de un Rakefile](https://github.com/antoniocuadros/WhenToClass/issues/19)
+
 
 ## Hito 3: Diseño y test de un microservicio
 En esta entrega se busca configurar y documentar una herramienta de construcción de tests, arranque y parada del servicio. Además se deberan diseñar las rutas o tareas, tests y documentación de todo justificando como se ajustan a las historias de usuario.
