@@ -40,7 +40,7 @@ Para poder instalar las dependencias será necesario ejecutar:
 
 `rake test`
 
-Ésto instalará las dependencias de nuestro proyecto, dichas dependencias se encuentran especificadas en el [Gemfile](https://github.com/antoniocuadros/WhenToClass/blob/master/Gemfile) y [Gemfile.lock](https://github.com/antoniocuadros/WhenToClass/blob/master/Gemfile.lock). 
+Se instalarán las dependencias de nuestro proyecto, dichas dependencias se encuentran especificadas en el [Gemfile](https://github.com/antoniocuadros/WhenToClass/blob/master/Gemfile) y [Gemfile.lock](https://github.com/antoniocuadros/WhenToClass/blob/master/Gemfile.lock). 
 - **Gemfile:** es un fichero donde especificamos que gemas queremos usar. 
 - **Gemfile.lock:** es un fichero donde Bundler graba las versiones exactas que tenemos instaladas de nuestras gemas y que será utilizado cuando se haga bundle install en la tarea rake test para instalar las dependencias junto al fichero Gemfile para saber de donde obtener las gemas.
 
