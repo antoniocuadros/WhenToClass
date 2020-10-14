@@ -12,3 +12,5 @@ En este documento se irán añadiendo las historias de usuario necesarias para i
 ## [HU3](https://github.com/antoniocuadros/WhenToClass/issues/10): Como usuario, quiero poder saber si tengo que ir esta semana teniendo en cuenta mi turno de presencialidad.
 ![imagen3](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/HistoriasUsuario/Im%C3%A1genes/hu3.png)
 
+## [HU4](https://github.com/antoniocuadros/WhenToClass/issues/28): Como usuario debo poder seleccionar una asignatura.
+![imagen4](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/HistoriasUsuario/Im%C3%A1genes/hu4.png)
