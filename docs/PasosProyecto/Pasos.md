@@ -40,7 +40,7 @@ La realización de este hito consiste en entender la necesidad de los tests unit
     - Explicación de como testear la clase
 - [Creación y uso de un Rakefile](https://github.com/antoniocuadros/WhenToClass/issues/19)
 
-
+De esta forma han avanzado las historias de usuario [HU1](https://github.com/antoniocuadros/WhenToClass/issues/8), [HU2](https://github.com/antoniocuadros/WhenToClass/issues/9) y [HU3](https://github.com/antoniocuadros/WhenToClass/issues/10).
 ## Hito 3: Diseño y test de un microservicio
 En esta entrega se busca configurar y documentar una herramienta de construcción de tests, arranque y parada del servicio. Además se deberan diseñar las rutas o tareas, tests y documentación de todo justificando como se ajustan a las historias de usuario.
 
