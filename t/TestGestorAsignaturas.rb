@@ -48,9 +48,9 @@ class TestGestorAsignaturas < Minitest::Test
 	end
 	
 	#####################################################################################
-	#Tests que comprueban el correcto comportamiento del método añadirAsignatura
+	#Tests que comprueban el correcto comportamiento del método obtenerAsignatura
 	#
-	#Método: añadirAsignatura
+	#Método: obtenerAsignatura
 	#
 	#####################################################################################
 
@@ -65,7 +65,16 @@ class TestGestorAsignaturas < Minitest::Test
 	def test_that_obtenerAsignatura_method_return_asignatura
 		@gestor.anadirAsignatura(@asignatura1)
 		assert_instance_of Asignatura, @gestor.obtenerAsignatura("Infraestructura Virtual")
+		asig = @gestor.obtenerAsignatura("Infraestructura Virtual")
+		assert_equal "Infraestructura Virtual", asig.nombre
 	end
+
+	#####################################################################################
+	#Tests que comprueban el correcto comportamiento del método eliminarAsignatura
+	#
+	#Método: eliminarAsignatura
+	#
+	#####################################################################################
 	
 	
 	
