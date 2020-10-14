@@ -3,12 +3,12 @@ En este documento se irán añadiendo las historias de usuario necesarias para i
 
 ## [HU1](https://github.com/antoniocuadros/WhenToClass/issues/8): Como usuario, quiero obtener el horario de teoría y prácticas de una asignatura dado un grupo de prácticas y obtenerlo en orden de lunes a viernes.
 
-![imagen1](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/HistoriasUsuario/Im%C3%A1genes/HU1.png)
+![imagen1](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/HistoriasUsuario/Im%C3%A1genes/hu1.png)
 
 ## [HU2](https://github.com/antoniocuadros/WhenToClass/issues/9): Como usuario, quiero poder consultar los turnos de presencialidad de un mes determinado y grupo de presencialidad de una asignatura.
-![imagen2](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/HistoriasUsuario/Im%C3%A1genes/HU2.png)
+![imagen2](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/HistoriasUsuario/Im%C3%A1genes/hu2.png)
 
 
 ## [HU3](https://github.com/antoniocuadros/WhenToClass/issues/10): Como usuario, quiero poder saber si tengo que ir esta semana teniendo en cuenta mi turno de presencialidad.
-![imagen3](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/HistoriasUsuario/Im%C3%A1genes/HU3.png)
+![imagen3](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/HistoriasUsuario/Im%C3%A1genes/hu3.png)
 
