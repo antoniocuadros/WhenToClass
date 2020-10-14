@@ -88,5 +88,18 @@ class TestAsignaturas < Minitest::Test
 		end
 	end
 	
+	#####################################################################################
+	#Con los siguientes tests vamos a comprobar si funciona correctamente el método
+	#que nos permite dado un turno (1, 2, ...) y un mes devolver el conjunto
+	#de días que hay que ir
+	#
+	#Método: obtenerDiasPresenciales
+	#
+	#####################################################################################
 	
+	#TEST 1 obtenerDiasPresenciales
+	#Se comprueba que si el turno proporcionado no existe da error
+	def test_that_obtenerDiasPresenciales_method_return_error_si_grupo_no_existe
+		assert_equal "Error: El turno debe ser numérico y menor que 2.", @asignatura.obtenerDiasPresenciales("12", "oct"), "Fallo al saltar error debido a grupo no valido"
+	end
 end
