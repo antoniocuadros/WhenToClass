@@ -49,14 +49,14 @@ class Asignatura
 				#metemos todo en un vector
 				clases = Array.new
 				clases << @horario_teoria
-				for i in 0..@horario_practicas.length()-1
+				for i in 0..@horario_practicas.length() - 1
 					if(horario_practicas[i].grupo == grupo_practicas)
 						clases << @horario_practicas[i]
 					end
 				end
 				
 				#Ordenamos por día de la semana (los dias en primera posición tienen un número)
-				for i in 1..clases.length()-1
+				for i in 1..clases.length() - 1
 					valor_a_ordenar = clases[i]
 					posicion = i
 					while posicion > 0 and clases[posicion-1].dia[0] > valor_a_ordenar.dia[0] do
@@ -71,6 +71,7 @@ class Asignatura
 				#de la asignatura
 				#Ahora devolvemos el vector de clases ordenado para que le sea
 				#más fácil de consultar
+				
 				return clases
 			end
 		end
