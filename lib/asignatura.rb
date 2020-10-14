@@ -31,7 +31,16 @@ class Asignatura
 	#Únicamente devolverá los grupos de prácticas que especifique el usuario
 	#Este método responde a la HU1
 	def obtenerHorario(grupo_practicas)
-	
+		if(horario_teoria == nil or horario_practicas == nil)
+			return "Error: Horario de teoría o prácticas vacío."
+		else
+			#En primer lugar comprobamos si el grupo de prácticas existe (de la
+			#forma P[1-3] (no hay asignaturas con mas de 3 subgrupos de pr) y luego
+			#que el grupo que le pasemos exista)
+			if(!/P[1-3]/.match(grupo_practicas) or grupo_practicas.scan(/\d+/).first.to_i > horario_practicas.length())
+				return "Error: Solo hay " + horario_practicas.length().to_s + " grupos de prácticas"
+			end
+		end
 	end
 	
 	#Método que dado un turno de presencialidad devuelve que días corresponden ir
