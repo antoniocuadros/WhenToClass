@@ -35,7 +35,7 @@ class GestorAsignaturas
 			end
 			i +=1
 		end
-		
+		#devuelve nil si no se obtiene
 		return asignatura
 	end
 	
