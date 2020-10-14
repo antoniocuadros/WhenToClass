@@ -24,6 +24,22 @@ class TestGestorAsignaturas < Minitest::Test
 							["5oct - 9oct", "19oct - 23oct", "2nov - 6nov","16nov - 20nov", "30nov - 4dec", "14dec - 18dec", "8jan y 11jan - 14jan"]],
 							)
 	end
+	
+	#####################################################################################
+	#Tests que comprueban el correcto comportamiento del método contarAsignaturas
+	#
+	#Método: contarAsignaturas
+	#
+	#####################################################################################	
+	
+	#TEST1
+	#Si se añaden dos asignaturas, el tamaño es 2
+	def test_that_contarAsignaturas_method_return_valores_correctos
+		@gestor.anadirAsignatura(@asignatura1)
+		@gestor.anadirAsignatura(@asignatura2)
+		assert_equal 2, @gestor.contarAsignaturas(), "Fallo al añadir elemento"
+	end
+	
 	#####################################################################################
 	#Tests que comprueban el correcto comportamiento del método añadirAsignatura
 	#
