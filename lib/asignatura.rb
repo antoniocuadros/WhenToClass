@@ -24,8 +24,13 @@ class Asignatura
 		@turno_presencialidad = t_presencialidad
 	end
 	
-	#Método que devuelve los días y hora a los que hay que ir tanto a teoría como prácticas
-	def obtenerHorario()
+	#Método que devuelve un vector de structs donde cada struct será un día de prácticas
+	#o de teoría
+	#Devuelve los structs ordenados en un vector de tal manera que en primera posición
+	#estará el horario de la clase de teoría o de prácticas que antes toque (lunes, martes,...)
+	#Únicamente devolverá los grupos de prácticas que especifique el usuario
+	#Este método responde a la HU1
+	def obtenerHorario(grupo_practicas)
 	
 	end
 	
