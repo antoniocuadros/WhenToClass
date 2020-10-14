@@ -85,6 +85,7 @@ class Asignatura
 	
 	#Método que dado un turno de presencialidad y un mes devuelve que días corresponden ir en 
 	#ese mes
+	#Este método responde a la HU2
 	def obtenerDiasPresenciales(turno, mes)
 		#Comprobamos que el turno que se nos pasa es un número entre 1 y 4
 		#Comprobamos que el turno es un número
@@ -122,6 +123,7 @@ class Asignatura
 	#####################################################################################
 	
 	#Método que nos indica si tenemos que o no esta semana a una asignatura
+	#Este método responde a la HU3
 	def tengoQueIrEstaSemana(turno_pr)
 		if(!/[1-9]/.match(turno_pr) or turno_pr.to_i > @turno_presencialidad.length() or turno_pr.to_i < 0)
 			return "Error: El turno debe ser numérico y menor que " + @turno_presencialidad.length().to_s + "."
