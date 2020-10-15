@@ -47,7 +47,7 @@ class GestorAsignaturas
 		if(asignatura.instance_of? Asignatura)
 			@asignaturas << asignatura
 		else
-			return "Error: No se puede añadir, no es un objeto Asignatura"
+			raise AsignaturaError, "Error: No se puede añadir, no es un objeto Asignatura"
 		end
 	
 	end
