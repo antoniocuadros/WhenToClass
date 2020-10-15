@@ -14,8 +14,11 @@ y debemos fijarnos aquellos en los que indica "Run tests". Como podemos ver tene
 Para ejecutar cada una de estos conjuntos de tests podemos hacer:
 
 - `rake testunitariosasignaturas`
+
  ![img2](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/tests/Im%C3%A1genes/tests1.png)
+
 - `rake testunitariosgestorasignaturas`
+
 ![img3](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/tests/Im%C3%A1genes/tests2.png)
 
 Si queremos ejecutar todos haremos:
