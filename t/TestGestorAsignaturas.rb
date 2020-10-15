@@ -2,6 +2,7 @@ require "minitest/autorun"
 
 require_relative "../lib/gestorasignaturas.rb"
 require_relative "../lib/asignatura.rb"
+require_relative "../lib/asignaturaerror.rb"
 
 class TestGestorAsignaturas < Minitest::Test
 	def setup
@@ -51,7 +52,7 @@ class TestGestorAsignaturas < Minitest::Test
 	#Comprueba que salta error si pasamos algo que no es un objeto asignatura
 	def test_that_anadirAsignatura_method_return_error_if_no_pasamos_objeto_Asignatura
 		#Si le pasamos mal el objeto
-		assert_equal "Error: No se puede añadir, no es un objeto Asignatura", @gestor.anadirAsignatura("IV"), "Fallo al saltar error debido a parametro debe ser objeto Asignatura"
+		assert_raises(AsignaturaError, "Error: No se puede añadir, no es un objeto Asignatura"){@gestor.anadirAsignatura("IV")}
 	end
 
 	#TEST2
