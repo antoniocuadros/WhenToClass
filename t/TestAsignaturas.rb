@@ -3,6 +3,7 @@ require "minitest/mock"
 require "date"
 require_relative "../lib/asignatura.rb"
 require_relative "../lib/horarioasignatura.rb"
+require_relative "../lib/asignaturaerror.rb"
 
 class TestAsignaturas < Minitest::Test
 	#####################################################################################
@@ -55,15 +56,15 @@ class TestAsignaturas < Minitest::Test
 	#Si el horario de teoría o prácticas o ambos están vacíos debería dar error
 	#todas las asignaturas tienen tanto prácticas como teoría
 	def test_that_obtenerHorario_method_return_error_if_horario_vacio
-		assert_equal "Error: Horario de teoría o prácticas vacío.", @asignaturaSinHorarioTeoria.obtenerHorario("P1"), "Fallo al saltar error debido a horario vacio"
-		assert_equal "Error: Horario de teoría o prácticas vacío.", @asignaturaSinHorarioPracticas.obtenerHorario("P1"), "Fallo al saltar error debido a horario vacio"
-		assert_equal "Error: Horario de teoría o prácticas vacío.", @asignaturaSinHorario.obtenerHorario("P1"), "Fallo al saltar error debido a horario vacio"
+		assert_raises(AsignaturaError, "Error: Horario de teoría o prácticas vacío."){@asignaturaSinHorarioTeoria.obtenerHorario("P1")}
+		assert_raises(AsignaturaError, "Error: Horario de teoría o prácticas vacío."){@asignaturaSinHorarioPracticas.obtenerHorario("P1")} 
+		assert_raises(AsignaturaError, "Error: Horario de teoría o prácticas vacío."){@asignaturaSinHorario.obtenerHorario("P1")} 
 	end
 
 	#TEST 2 obtenerHorario
 	#Si el grupo de prácticas proporcionado como argumento no existe debería dar un error
 	def test_that_grupopracticas_existe_en_obtenerHorario_method
-		assert_equal "Error: Solo hay 2 grupos de prácticas", @asignatura.obtenerHorario("P12"), "Fallo al saltar error debido a grupo proporcionado no válido"
+		assert_raises(AsignaturaError, "Error: Solo hay 2 grupos de prácticas"){@asignatura.obtenerHorario("P12")} 
 	end
 	
 	#TEST 3 obtenerHorario
@@ -102,13 +103,13 @@ class TestAsignaturas < Minitest::Test
 	#TEST 1 obtenerDiasPresenciales
 	#Se comprueba que si el turno proporcionado no existe da error
 	def test_that_obtenerDiasPresenciales_method_return_error_si_grupo_no_existe
-		assert_equal "Error: El turno debe ser numérico y menor que 2.", @asignatura.obtenerDiasPresenciales("12", "oct"), "Fallo al saltar error debido a grupo no valido"
+		assert_raises(AsignaturaError, "Error: El turno debe ser numérico y menor que 2."){@asignatura.obtenerDiasPresenciales("12", "oct")} 
 	end
 	
 	#TEST 2 obtenerDiasPresenciales
 	#Se comprueba que si el mes proporcionado no es válido da error
 	def test_that_obtenerDiasPresenciales_method_return_error_si_mes_no_valido
-		assert_equal "Error: El mes no es válido.", @asignatura.obtenerDiasPresenciales("1", "mayo"), "Fallo al saltar error debido a mes no valido"
+		assert_raises(AsignaturaError, "Error: El mes no es válido."){@asignatura.obtenerDiasPresenciales("1", "mayo")} 
 	end
 	
 	#TEST 3
@@ -140,7 +141,7 @@ class TestAsignaturas < Minitest::Test
 	#TEST 1
 	#Se comprueba que si el turno proporcionado no existe da error
 	def test_that_tengoQueIrEstaSemana_method_return_error_si_grupo_no_existe
-		assert_equal "Error: El turno debe ser numérico y menor que 2.", @asignatura.tengoQueIrEstaSemana("13"), "Fallo al saltar error debido a turno no valido"
+		assert_raises(AsignaturaError, "Error: El turno debe ser numérico y menor que 2."){@asignatura.tengoQueIrEstaSemana("13")} 
 	end
 	
 	#TEST 2
