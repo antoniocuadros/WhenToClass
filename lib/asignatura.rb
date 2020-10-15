@@ -38,13 +38,13 @@ class Asignatura
 	#Este método responde a la HU1
 	def obtenerHorario(grupo_practicas)
 		if(@horario_teoria == nil or @horario_practicas == nil)
-			return "Error: Horario de teoría o prácticas vacío."
+			raise AsignaturaError, "Error: Horario de teoría o prácticas vacío."
 		else
 			#En primer lugar comprobamos si el grupo de prácticas existe (de la
 			#forma P[1-3] (no hay asignaturas con mas de 3 subgrupos de pr) y luego
 			#que el grupo que le pasemos exista)
 			if(!/P[1-3]/.match(grupo_practicas) or grupo_practicas.scan(/\d+/).first.to_i > @horario_practicas.length())
-				return "Error: Solo hay " + @horario_practicas.length().to_s + " grupos de prácticas"
+				raise AsignaturaError, "Error: Solo hay " + @horario_practicas.length().to_s + " grupos de prácticas"
 			else
 				#metemos todo en un vector
 				clases = Array.new
@@ -90,14 +90,14 @@ class Asignatura
 		#Comprobamos que el turno que se nos pasa es un número entre 1 y 4
 		#Comprobamos que el turno es un número
 		if(!/[1-9]/.match(turno) or turno.to_i > @turno_presencialidad.length() or turno.to_i < 0)
-			return "Error: El turno debe ser numérico y menor que " + @turno_presencialidad.length().to_s + "."
+			raise AsignaturaError, "Error: El turno debe ser numérico y menor que " + @turno_presencialidad.length().to_s + "."
 		end
 		
 		#comprobamos que el mes es válido
 		meses = ["sep", "oct", "nov", "dec", "jan"]
 		
 		if(!meses.include?(mes))
-			return "Error: El mes no es válido."
+			raise AsignaturaError, "Error: El mes no es válido."
 		else
 			#Si no hay errores en los argumentos añadimos a un vector
 			#los intervalos de tiempo a los que hay que asistir a clase
@@ -126,7 +126,7 @@ class Asignatura
 	#Este método responde a la HU3
 	def tengoQueIrEstaSemana(turno_pr)
 		if(!/[1-9]/.match(turno_pr) or turno_pr.to_i > @turno_presencialidad.length() or turno_pr.to_i < 0)
-			return "Error: El turno debe ser numérico y menor que " + @turno_presencialidad.length().to_s + "."
+			raise AsignaturaError, "Error: El turno debe ser numérico y menor que " + @turno_presencialidad.length().to_s + "."
 		else
 			hoy = Time.now
 
