@@ -39,6 +39,8 @@ Para poder ejecutar ésto es necesario tener instalado rake (`gem install rake`)
 
 Con esto se ejecutan tanto los tests para la clase Asignatura como para la clase GestorAsignaturas.
 
+Se pueden ver [aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/tests/tests.md) la ejecución de los tests junto a una pequeña explicación.
+
 ### Instalar las dependencias
 Para poder instalar las dependencias será necesario ejecutar:
 
@@ -68,7 +70,8 @@ Se instalarán las dependencias de nuestro proyecto, dichas dependencias se encu
 ### Pasos en la realización del proyecto
 [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/PasosProyecto/Pasos.md) puede consultarse documentación adicional acerca de los pasos que se llevarán acabo para completar el proyecto.
 
-
+### Ejecución de los tests
+[En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/tests/tests.md) se puede consultar documentación acerca de los tests.
 
 ### Fichero iv.yaml
 [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/iv.yaml) se puede consultar el fichero iv.yaml.
