@@ -79,7 +79,6 @@ Se instalarán las dependencias de nuestro proyecto, dichas dependencias se encu
 [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/iv.yaml) se puede consultar el fichero iv.yaml.
 
 ### Configuración Inicial
-
 [En este enlace](https://github.com/antoniocuadros/ejercicios-apuntes-IV/blob/master/Configuraci%C3%B3n%20gitHub/ConfiguracionGit.md) se puede comprobar la configuración de GitHub.
 
 ### Autor
