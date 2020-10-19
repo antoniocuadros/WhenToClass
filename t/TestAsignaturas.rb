@@ -101,7 +101,35 @@ class TestAsignaturas < Minitest::Test
 	#Método: obtenerDiasPresenciales
 	#
 	#####################################################################################
+	#TEST 1 obtenerDiasPresenciales
+	#Se comprueba que si el turno proporcionado no existe da error
+	def test_that_obtenerDiasPresenciales_method_return_error_si_grupo_no_existe
+		assert_raises(AsignaturaError, "Error: El turno debe ser numérico y menor que 2."){@asignatura.obtenerDiasPresenciales("12", "oct")} 
+	end
 	
+	#TEST 2 obtenerDiasPresenciales
+	#Se comprueba que si el mes proporcionado no es válido da error
+	def test_that_obtenerDiasPresenciales_method_return_error_si_mes_no_valido
+		assert_raises(AsignaturaError, "Error: El mes no es válido."){@asignatura.obtenerDiasPresenciales("1", "mayo")} 
+	end
+	
+	#TEST 3
+	#Si se le pasan bien los datos se tiene que comprobar que:
+	# -Se obtiene un vector de longitud al menos > 1
+	# -En cada componente del vector devuelto existe la palabra pasada como mes
+	def test_that_obtenerDiasPresenciales_method_return_valores_correctos
+		#obtenemos los días que hay que ir en octubre
+		dias_presenciales = @asignatura.obtenerDiasPresenciales("1", "oct")
+		
+		#Se comprueba que para el mes de octubre el grupo 1 tiene más de una semana a la
+		#que asistir
+		assert_operator dias_presenciales.length(), :>=, 1, "Fallo al obtener los días presenciales"
+		
+		#Se comprueba que cada componente del vector contiene el mes dado como palabra
+		for i in 0..dias_presenciales.length() - 1 do
+			assert_match (/.*oct*./),  dias_presenciales[i]
+		end
+	end
 	
 	
 	#####################################################################################
