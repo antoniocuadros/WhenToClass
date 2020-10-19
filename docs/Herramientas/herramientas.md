@@ -33,3 +33,8 @@ Se ha elegido Bundler debido a que es una herramienta muy extendida en lo que a 
 ### Framework para aplicaciones web
 Se utilizará debido a la baja complejidad del proyecto un framework sencillo, como por ejemplo es el caso de [Sinatra](http://sinatrarb.com/) que se describe así mismo como "Sinatra is a DSL for quickly creating web applications in Ruby with minimal effort" y además posee una gran cantidad de documentación tanto [oficial](http://sinatrarb.com/documentation.html) como por parte de la comunidad.
 
+### Herramienta de gestión de tareas
+#### Rake
+Para la realización de este proyecto se está utilizando como herramienta de automatización rake. Rake en la actualidad se ha convertido en un estándar como herramienta de construcción para Ruby y es muy popular entre toda la comunidad. Es un proyecto apoyado por la comunidad que colabora activamente en su constante evolución, se puede consultar el repositorio oficial [aquí](https://github.com/ruby/rake).
+##### ¿Por qué Rake?
+Se ha elegido rake debido a que es una herramienta muy potente para trabajar con Ruby y además está escrito también en este lenguaje.  Además es muy útil ya que permite especificar tareas con requisitos previos y además que la sintaxis sea la estándar de Ruby hace que sea muy sencillo de utilizar y aprender. Por otra parte, cuenta con una gran cantidad de documentación lo que facilita el aprendizaje y su uso. De esta forma rake es una herramienta muy potente para Ruby ya que nos permite automatizar todas las tareas que necesitemos.
