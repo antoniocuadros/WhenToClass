@@ -71,7 +71,20 @@ class TestGestorAsignaturas < Minitest::Test
 	#
 	#####################################################################################
 
+	#TEST1
+	#Si no existe el elemento a buscar, se devuelve nil
+	def test_that_obtenerAsignatura_method_return_nil_si_no_existe
+		assert_nil @gestor.obtenerAsignatura("Infraestructura Virtual")
+	end
 	
+	#TEST2
+	#Si existe se devuelve la asignatura
+	def test_that_obtenerAsignatura_method_return_asignatura
+		@gestor.anadirAsignatura(@asignatura1)
+		assert_instance_of Asignatura, @gestor.obtenerAsignatura("Infraestructura Virtual")
+		asig = @gestor.obtenerAsignatura("Infraestructura Virtual")
+		assert_equal "Infraestructura Virtual", asig.nombre
+	end
 
 	#####################################################################################
 	#Tests que comprueban el correcto comportamiento del método eliminarAsignatura
