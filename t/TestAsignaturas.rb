@@ -99,7 +99,7 @@ class TestAsignaturas < Minitest::Test
 	#de días que hay que ir
 	#
 	#Método: obtenerDiasPresenciales
-	#
+	##Relacionado con la HU1
 	#####################################################################################
 	#TEST 1 obtenerDiasPresenciales
 	#Se comprueba que si el turno proporcionado no existe da error
