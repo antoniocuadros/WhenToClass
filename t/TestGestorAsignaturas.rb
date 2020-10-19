@@ -68,7 +68,7 @@ class TestGestorAsignaturas < Minitest::Test
 	#Tests que comprueban el correcto comportamiento del método obtenerAsignatura
 	#
 	#Método: obtenerAsignatura
-	#
+	#Relacionado con HU4
 	#####################################################################################
 
 	#TEST1
