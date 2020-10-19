@@ -139,7 +139,20 @@ class TestAsignaturas < Minitest::Test
 	#Método: tengoQueIrEstaSemana
 	#
 	#####################################################################################
+	#TEST 1
+	#Se comprueba que si el turno proporcionado no existe da error
+	def test_that_tengoQueIrEstaSemana_method_return_error_si_grupo_no_existe
+		assert_raises(AsignaturaError, "Error: El turno debe ser numérico y menor que 2."){@asignatura.tengoQueIrEstaSemana("13")} 
+	end
 	
+	#TEST 2
+	#Se comprueba que el metodo devuelve true o false en función de si hay que ir esta semana
+	def test_that_tengoQueIrEstaSemana_method_return_valores_correctos
+		#necesario ya que dependía del día actual puede cambiar el resultado
+		DateTime.stub(:now, Date.new(2020,10,13)) do
+			assert_equal true, @asignatura.tengoQueIrEstaSemana("1")
+		end
+	end
 	
 
 
