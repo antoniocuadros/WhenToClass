@@ -49,7 +49,7 @@ class TestAsignaturas < Minitest::Test
 	#ordenado por el día de la semana
 	#
 	#Método: obtenerHorario
-	#
+	#Relacionado con la HU1
 	#####################################################################################
 	#TEST 1 obtenerHorario
 	#Relacionado con la HU1
@@ -99,7 +99,7 @@ class TestAsignaturas < Minitest::Test
 	#de días que hay que ir
 	#
 	#Método: obtenerDiasPresenciales
-	##Relacionado con la HU1
+	##Relacionado con la HU2
 	#####################################################################################
 	#TEST 1 obtenerDiasPresenciales
 	#Se comprueba que si el turno proporcionado no existe da error
@@ -137,7 +137,7 @@ class TestAsignaturas < Minitest::Test
 	#que nos permite saber si debemos ir esta semana a una asignatura
 	#
 	#Método: tengoQueIrEstaSemana
-	#
+	#Relacionado con la HU3
 	#####################################################################################
 	#TEST 1
 	#Se comprueba que si el turno proporcionado no existe da error
@@ -150,7 +150,7 @@ class TestAsignaturas < Minitest::Test
 	def test_that_tengoQueIrEstaSemana_method_return_valores_correctos
 		#necesario ya que dependía del día actual puede cambiar el resultado
 		DateTime.stub(:now, Date.new(2020,10,13)) do
-			assert_equal true, @asignatura.tengoQueIrEstaSemana("1")
+			assert_equal false, @asignatura.tengoQueIrEstaSemana("1")
 		end
 	end
 	
