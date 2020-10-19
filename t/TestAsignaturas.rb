@@ -52,6 +52,7 @@ class TestAsignaturas < Minitest::Test
 	#
 	#####################################################################################
 	#TEST 1 obtenerHorario
+	#Relacionado con la HU1
 	#Si el horario de teoría o prácticas o ambos están vacíos debería dar error
 	#todas las asignaturas tienen tanto prácticas como teoría
 	def test_that_obtenerHorario_method_return_error_if_horario_vacio
