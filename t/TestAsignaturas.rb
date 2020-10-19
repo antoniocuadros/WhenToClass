@@ -51,7 +51,44 @@ class TestAsignaturas < Minitest::Test
 	#Método: obtenerHorario
 	#
 	#####################################################################################
+	#TEST 1 obtenerHorario
+	#Si el horario de teoría o prácticas o ambos están vacíos debería dar error
+	#todas las asignaturas tienen tanto prácticas como teoría
+	def test_that_obtenerHorario_method_return_error_if_horario_vacio
+		assert_raises(AsignaturaError, "Error: Horario de teoría o prácticas vacío."){@asignaturaSinHorarioTeoria.obtenerHorario("P1")}
+		assert_raises(AsignaturaError, "Error: Horario de teoría o prácticas vacío."){@asignaturaSinHorarioPracticas.obtenerHorario("P1")} 
+		assert_raises(AsignaturaError, "Error: Horario de teoría o prácticas vacío."){@asignaturaSinHorario.obtenerHorario("P1")} 
+	end
+
+	#TEST 2 obtenerHorario
+	#Si el grupo de prácticas proporcionado como argumento no existe debería dar un error
+	def test_that_grupopracticas_existe_en_obtenerHorario_method
+		assert_raises(AsignaturaError, "Error: Solo hay 2 grupos de prácticas"){@asignatura.obtenerHorario("P12")} 
+	end
 	
+	#TEST 3 obtenerHorario
+	#Si tanto el grupo proporcionado como el objeto asignatura es correcto para llamar a este 
+	#método:
+	# -Deberíamos obtener un vector de tamaño >= 2 (horario de practicas y de teoria)
+	# -Deberíamos obtener un vector donde cada posición es un Struct horarioasignatura
+	# -Deberíamos obtener un vector ordenado de las clases que tocan de esa asignatura
+	#  ordenado de lunes a viernes
+	def test_that_obtenerHorario_method_return_valores_correctos_si_no_hay_errores
+		horario_asignatura = @asignatura.obtenerHorario("P1")
+		#Se comprueba que al menos hay horario de teoría y horario de prácticas
+		assert_operator horario_asignatura.length(), :>=, 2, "Fallo al obtener los horarios de prácticas y teoría"
+		#Para cada elemento del vector, se comprueba que es una instacia de HorarioAsignatura (nuestra estructura)
+		for i in 0..horario_asignatura.length() - 1 do
+			assert_instance_of HorarioAsignatura, horario_asignatura[i]
+		end
+		
+		#Ahora comprobamos que lo devuelve en orden (Lunes, Martes, ...)
+		for i in 0..horario_asignatura.length() - 1 do
+			if(i != horario_asignatura.length() - 1)
+				assert_operator horario_asignatura[i].dia[0].to_i, :<=, horario_asignatura[i+1].dia[0].to_i
+			end
+		end
+	end
 	
 
 	
