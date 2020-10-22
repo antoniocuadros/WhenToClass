@@ -1,5 +1,5 @@
-# Pruebas rendimiento y almacenamiento imágenes base para Ruby
-A continuación se va a realizar una comparativa de almacenamiento y velocidad de ejecución de los tests con diversas imágenes base de Ruby, dichas imágenes han sido explicadas en en [siguiente enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/Imagenes_base.md). Índice:
+# Decisión imagen base: Pruebas rendimiento y almacenamiento imágenes base para Ruby
+A continuación se va a realizar una comparativa de almacenamiento y velocidad de ejecución de los tests con diversas imágenes base de Ruby con el objetivo de elegir una para el contenedor que ejecutará los tests, dichas imágenes han sido explicadas en en [siguiente enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/Imagenes_base.md). Índice:
 1. [Pruebas](#id1)
 2. [Comparación de resultados](#id2)
 3. [Conclusión y decisión de imagen base](#id3)
