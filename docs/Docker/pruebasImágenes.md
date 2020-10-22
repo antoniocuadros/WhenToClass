@@ -1,5 +1,5 @@
 ## Pruebas rendimiento y almacenamiento imágenes base para Ruby
-A continuación se muestra una comparativa de almacenamiento y velocidad de ejecución de los tests con diversas imágenes base, dichas imágenes han sido explicadas en en [siguiente enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/Imagenes_base.md):
+A continuación se va a realizar una comparativa de almacenamiento y velocidad de ejecución de los tests con diversas imágenes base, dichas imágenes han sido explicadas en en [siguiente enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/Imagenes_base.md):
 #### ruby:2.7.2
 Peso:
 
@@ -34,3 +34,7 @@ A continuación se recogen los datos de las pruebas anteriores en una tabla:
 | ruby:2.7.2        | 859MB | 6,137s                   | 
 | ruby:2.7.2-slim   | 166MB | 3s                       |  
 | ruby:2.7.2-alpine | 68MB  | 1,154s                   | 
+
+Como podemos ver la imagen que más pesa, con bastante diferencia es la de Ruby base y la que menos pesa es la de Ruby Alpine además la que más tarda en ejecutarse es la imagen de Ruby base y la que menos la de Alpine. Esto se puede deber a lo comentado en la documentación en la que se explica las diferencias entre las imágenes base de Ruby:
+- ruby:2.7.2  es la más pesada ya que contiene una gran cantidad de paquetes muy comunes para trabajar con Debian.
+- ruby:2.7.2-alpine es la menos pesada ya que 
