@@ -13,21 +13,21 @@ A continuación se va a realizar una comparativa de almacenamiento y velocidad d
 <div id='id4' />
 
 ### Imágenes base oficiales
-### ruby:2.7.2
+#### ruby:2.7.2
 >Peso:
 ![img](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/base/peso.png)
 
 >Tiempo en ejecutar los tests:
 ![img](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/base/tiempo.png)
 
-### ruby:2.7.2-slim
+#### ruby:2.7.2-slim
 >Peso:
 ![img](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/slim/peso.png)
 
 >Tiempo en ejecutar los tests:
 ![img](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/slim/tiempo.png)
 
-### ruby:2.7.2-alpine
+#### ruby:2.7.2-alpine
 >Peso:
 ![img](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/alpine/peso.png)
 
@@ -37,7 +37,7 @@ A continuación se va a realizar una comparativa de almacenamiento y velocidad d
 <div id='id5' />
 
 ### Imagen base no oficial, Sistema operativo base (Alpine)
-### alpine:3.12.1
+#### alpine:3.12.1
 >Peso:
 ![img](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/alpinepropio/peso.png)
 
@@ -54,7 +54,7 @@ A continuación se recogen los datos de las pruebas anteriores en una tabla:
 | **ruby:2.7.2**        | 859MB  | 6,137s                   | 
 | **ruby:2.7.2-slim**   | 166MB  | 3s                       |  
 | **ruby:2.7.2-alpine** | 68MB   | 1,154s                   |
-| **alpine:3.12.1**     | 38.7MB | 1,204S                   |
+| **alpine:3.12.1**     | 38.7MB | 1,204s                   |
 
 Como podemos ver la imagen que más pesa, con bastante diferencia es la de ruby:2.7.2 y la que menos pesa es la de Ruby Alpine (ruby:2.7.2-alpine) además la que más tarda en ejecutarse es la imagen de Ruby base y la que menos la de Alpine. Esto se puede deber a lo comentado en la documentación en la que se explican las diferencias entre las imágenes base de Ruby:
 - **ruby:2.7.2**  es la más pesada ya que contiene una gran cantidad de paquetes muy comunes para trabajar con Debian.
