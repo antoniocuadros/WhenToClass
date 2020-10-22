@@ -1,30 +1,24 @@
 # Pruebas rendimiento y almacenamiento imágenes base para Ruby
 A continuación se va a realizar una comparativa de almacenamiento y velocidad de ejecución de los tests con diversas imágenes base de Ruby, dichas imágenes han sido explicadas en en [siguiente enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/Imagenes_base.md):
 ### ruby:2.7.2
-Peso:
-
+>Peso:
 ![img](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/base/peso.png)
 
-Tiempo en ejecutar los tests:
-
+>Tiempo en ejecutar los tests:
 ![img](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/base/tiempo.png)
 
 ### ruby:2.7.2-slim
-Peso:
-
+>Peso:
 ![img](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/slim/peso.png)
 
-Tiempo en ejecutar los tests:
-
+>Tiempo en ejecutar los tests:
 ![img](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/slim/tiempo.png)
 
 ### ruby:2.7.2-alpine
-Peso:
-
+>Peso:
 ![img](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/alpine/peso.png)
 
-Tiempo en ejecutar los tests:
-
+>Tiempo en ejecutar los tests:
 ![img](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/alpine/tiempo.png)
 
 ## Comparación
