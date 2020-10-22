@@ -36,7 +36,7 @@ A continuación se va a realizar una comparativa de almacenamiento y velocidad d
 
 <div id='id5' />
 
-### Imagen base no oficial, Sistema operativo base (Alpine)
+### Imagen base no oficial del lenguaje, Sistema operativo base (Alpine)
 #### alpine:3.12.1
 >Peso:
 ![img](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/alpinepropio/peso.png)
