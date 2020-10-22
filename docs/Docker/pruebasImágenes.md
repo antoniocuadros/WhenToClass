@@ -76,9 +76,11 @@ Además con estas pruebas vemos que la más rápida es la imagen base ruby:2.7.2
 | **ruby:2.7.2-alpine** | 68MB   | 1,154s                   |
 | **alpine:3.12.1**     | 38.7MB | 1,204s                   |
 
-Como podemos ver la imagen oficial del lenguaje basada en Alpine pesa un 56.91% más que si tomamos como base el sistema operativo Alpine y le añadimos nosotros únicamente lo necesario para hacer correr los tests. La diferencia de tiempo a penas es significativa.
+Como podemos ver la imagen oficial del lenguaje basada en Alpine pesa un 43.09% más que si tomamos como base el sistema operativo Alpine y le añadimos nosotros únicamente lo necesario para hacer correr los tests. La diferencia de tiempo a penas es significativa.
 
 <div id='id3' />
 
 ## Conclusión y decisión de imagen base
 
+Teniendo en cuenta todo lo que se ha comentado hasta ahora tanto en este documento principalmente como en [este otro](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/Imagenes_base.md) llego a la siguiente conclusión:
+Se va a utilizar como imagen base una no oficial de Ruby, se utilizará alpine:3.12.1 ya que aún instalando sobre esa imagen todo lo necesario para hacer funcionar los tests pesa un 43.09% menos y presenta un rendimiento muy parecido ya que los tests tardan casi lo mismo en ejecutarse. Además, una de las razones por la que también me he decidido por usar alpine:3.12.1 instalando encima lo necesario para ejecutar los tests es porque únicamente instalo lo que yo necesito y nada más, de tal forma que se exactamente que paquetes hay instalados y puedo tener un mayor control sobre el contenedor de esta forma, además como se ha mencionado, esto hace que pese menos.
