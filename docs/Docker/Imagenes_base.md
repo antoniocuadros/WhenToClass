@@ -1,5 +1,5 @@
 # Posibilidades de elección como imagen base
-Cuando tenemos que elegir una imagen base para nuestro contenedor encontramos varias posibilidades, elegir una imagen base oficial de un determinado lenguaje, o partir de un sistema operativo base.
+Cuando tenemos que elegir una imagen base para nuestro contenedor encontramos varias posibilidades, elegir una imagen base oficial de un determinado lenguaje, o partir de un sistema operativo como imagen base.
 ## Imágenes base oficiales Ruby
 En Ruby principalmente podemos encontrar tres tipos de imágenes base:
 ### ruby:\<version\>
