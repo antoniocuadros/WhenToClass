@@ -12,5 +12,6 @@ En Ruby principalmente podemos encontrar tres tipos de imágenes base:
 >Esta imagen está basada en Alpine Linux, y es muy popular en la actualidad debido a que genera imágenes de muy pequeño tamaño. De esta forma esta imagen es la deseada cuando el objetivo principal es que la imagen sea lo más pequeña posible. Como principal advertencia, esta imagen hace uso de musl libc en vez de glibc. Como es una imagen muy pequeña únicamente se incluyen las herramientas básicas para trabajar con Ruby.
 
 ## Usando un sistema operativo como imagen base
+Existe una gran variedad sistemas operativos como imágenes base, se destaca Alpine debido a una característica principal que lo define y diferencia del resto, son imágenes muy pequeñas.
 ### alpine:\<version\>
 >Esta opción nos permite crear el contenedor totalmente a nuestra medida ya que partimos de un sistema operativo base como en este caso es Alpine y a partir de ahí nosotros deberemos instalar únicamente lo que necesitemos para llevar a cabo lo que queramos hacer, en este caso, ejecutar los tests sobre el código. De esta forma tenemos un control total de lo que hay instalado y podemos añadir exclusivamente los paquetes que necesitemos, a diferencia de las imágenes oficiales de los lenguajes que instalan un abanico mayor de herramientas normalmente y en consiguiente pesan más.
