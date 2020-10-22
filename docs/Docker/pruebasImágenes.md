@@ -28,7 +28,8 @@ Tiempo en ejecutar los tests:
 ![img](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/alpine/tiempo.png)
 
 ### Comparación
-Imagen | Peso | Tiempo de ejecución 
-ruby:2.7.2  | 
-ruby:2.7.2-slim |
-ruby:2.7.2-alpine
+| Imagen | Peso | Tiempo de ejecución |
+|---|---|---|
+ruby:2.7.2  | X | X 
+ruby:2.7.2-slim | X | X 
+ruby:2.7.2-alpine | X | X 
