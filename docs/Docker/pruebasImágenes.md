@@ -5,6 +5,7 @@ A continuación se va a realizar una comparativa de almacenamiento y velocidad d
 3. [Conclusión y decisión de imagen base](#id3)
 
 <div id='id1' />
+
 ## Pruebas
 ### ruby:2.7.2
 >Peso:
@@ -28,6 +29,7 @@ A continuación se va a realizar una comparativa de almacenamiento y velocidad d
 ![img](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/alpine/tiempo.png)
 
 <div id='id2' />
+
 ## Comparación de resultados
 A continuación se recogen los datos de las pruebas anteriores en una tabla:
 | Imagen                | Peso  | Tiempo de ejecución tests|
@@ -43,4 +45,5 @@ Como podemos ver la imagen que más pesa, con bastante diferencia es la de ruby:
 Además con estas pruebas vemos que la más rápida es la imagen base ruby:2.7.2-alpine.
 
 <div id='id3' />
+
 ## Conclusión y decisión de imagen base
