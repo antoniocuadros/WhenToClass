@@ -1,9 +1,11 @@
 # Decisión imagen base: Pruebas rendimiento y almacenamiento imágenes base para Ruby
 A continuación se va a realizar una comparativa de almacenamiento y velocidad de ejecución de los tests con diversas imágenes base con el objetivo de elegir una para el contenedor que ejecutará los tests, dichas imágenes han sido explicadas en en [siguiente enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/Imagenes_base.md). Índice:
 1. [Pruebas](#id1)
-2. [Comparación de resultados](#id2)
    1. [Imágenes base oficiales](#id4)
    2. [Imagen base no oficial del lenguaje, Sistema operativo base (Alpine)](#id5)
+2. [Comparación de resultados](#id2)
+   1. [Comparación entre imágenes oficiales de Ruby](#id5)
+   2. [Comparación mejor imagen base oficial del lenguaje con imagen no oficial (Sistema operativo Alpine como Imagen base)](#id6)
 3. [Conclusión y decisión de imagen base](#id3)
 
 <div id='id1' />
@@ -48,6 +50,10 @@ A continuación se va a realizar una comparativa de almacenamiento y velocidad d
 <div id='id2' />
 
 ## Comparación de resultados
+
+<div id='id5' />
+
+### Comparación entre imágenes oficiales de Ruby
 A continuación se recogen los datos de las pruebas anteriores en una tabla:
 | Imagen                | Peso   | Tiempo de ejecución tests|
 |---                    |---     |---                       |
@@ -62,6 +68,9 @@ Como podemos ver la imagen que más pesa, con bastante diferencia es la de ruby:
 
 Además con estas pruebas vemos que la más rápida es la imagen base ruby:2.7.2-alpine.
 
+<div id='id6' />
+
+### Comparación mejor imagen base oficial del lenguaje con imagen no oficial (Sistema operativo Alpine como Imagen base)
 <div id='id3' />
 
 ## Conclusión y decisión de imagen base
