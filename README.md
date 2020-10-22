@@ -56,6 +56,9 @@ Se instalarán las dependencias de nuestro proyecto, dichas dependencias se encu
 
 ## :hammer: Documentación
 
+### Docker
+[En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/Imagenes_base.md) se puede consultar documentación acerca de las distintas imágenes base que encontramos para Ruby.
+
 ### Herramientas
 [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Herramientas/herramientas.md) se pueden consultar todas las herramientas utilizadas tanto generales como específicas de Ruby.
 
