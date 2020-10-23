@@ -1,4 +1,4 @@
-#Partimos de una ligera imagen de alpine
+#Partimos de una ligera imagen de alpine 3.12.1
 FROM alpine:3.12.1
 
 LABEL version="1.0.1" maintainer="antculap@gmail.com"
@@ -26,4 +26,5 @@ RUN rm -r /src/app/Gemfile*
 VOLUME /test
 WORKDIR /test
 
+#Ejecución de los tests
 CMD ["rake","test"]
