@@ -1,2 +1,3 @@
-# Buenas prácticas llevadas a cabo para escribir el Dockerfile para ruby
-En esta sección se va a analizar el [Dockerfile](https://github.com/antoniocuadros/WhenToClass/blob/master/Dockerfile) que hemos escrito y analizaremos que buenas prácticas hemos seguido:
+# Buenas prácticas llevadas a cabo para escribir el Dockerfile para ejecución de tests en Ruby
+En esta sección se va a analizar el [Dockerfile](https://github.com/antoniocuadros/WhenToClass/blob/master/Dockerfile) que hemos escrito y analizaremos que buenas prácticas hemos seguido. Para documentarme acerca de las buenas prácticas a la hora de escribir Dockerfiles consulté [la siguiente página](https://lipanski.com/posts/dockerfile-ruby-best-practices). Como podemos ver, en esa página, se nos cuenta a lo largo de diversos apartados de forma muy clara que es lo que no se recomienda hacer y que debemos hacer en contraposición con una serie de ejemplos muy sencillos.
+
