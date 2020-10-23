@@ -1,0 +1,2 @@
+# Buenas prácticas llevadas a cabo para escribir el Dockerfile para ruby
+En esta sección se va a analizar el [Dockerfile](https://github.com/antoniocuadros/WhenToClass/blob/master/Dockerfile) que hemos escrito y analizaremos que buenas prácticas hemos seguido:
