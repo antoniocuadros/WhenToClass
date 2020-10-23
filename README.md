@@ -60,7 +60,7 @@ Se instalarán las dependencias de nuestro proyecto, dichas dependencias se encu
 - [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/Imagenes_base.md) se puede consultar documentación acerca de las distintas imágenes base (de forma general) que encontramos para Ruby.
 
 - [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/pruebasIm%C3%A1genes.md) se puede consultar el proceso de decisión de la imagen base y la justificación de la [elección final](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/pruebasIm%C3%A1genes.md#id3).
-- [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/buenas_practicas.md) se pueden consultar las buenas prácticas seguidas para la realización de mi Dockerfile y como se han aplicado a a la hora de escribirlo.
+- [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/buenas_practicas.md) se pueden consultar las buenas prácticas seguidas para la realización de mi Dockerfile y como se han aplicado a la hora de escribirlo.
 
 ### Herramientas
 [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Herramientas/herramientas.md) se pueden consultar todas las herramientas utilizadas tanto generales como específicas de Ruby.
