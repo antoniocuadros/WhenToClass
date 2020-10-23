@@ -4,6 +4,6 @@ Se ha creado un repositorio en Docker Hub y se ha configurado para que se constr
 
 El repositorio puede ser consultado [aquí](https://hub.docker.com/r/antoniocuadros/whentoclass).
 
-Se muestra la configuración de Docker Hub:
+Se muestra el repositorio de Docker Hub:
 
 ![img1](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/dockerhub/vistapublica.png)
