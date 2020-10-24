@@ -67,6 +67,8 @@ Se instalarán las dependencias de nuestro proyecto, dichas dependencias se encu
 
 - [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/dockerhub.md) se puede consultar una pequeña documentación sobre Docker Hub y además podemos ir directamente al [repositorio creado en Docker Hub](https://hub.docker.com/r/antoniocuadros/whentoclass).
 
+- [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/githubpackageregistry.md) se puede consultar documentación acerca de la subida del contenedor a Github Container Registry.
+
 ### Herramientas
 [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Herramientas/herramientas.md) se pueden consultar todas las herramientas utilizadas tanto generales como específicas de Ruby.
 
