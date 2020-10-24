@@ -43,8 +43,14 @@ La realización de este hito consiste en entender la necesidad de los tests unit
 - [Tests métodos clase GestorAsignaturas](https://github.com/antoniocuadros/WhenToClass/issues/27)
 
 De esta forma han avanzado las historias de usuario [HU1](https://github.com/antoniocuadros/WhenToClass/issues/8), [HU2](https://github.com/antoniocuadros/WhenToClass/issues/9), [HU3](https://github.com/antoniocuadros/WhenToClass/issues/10) y [HU4](https://github.com/antoniocuadros/WhenToClass/issues/28).
-## Hito 3: Diseño y test de un microservicio
-En esta entrega se busca configurar y documentar una herramienta de construcción de tests, arranque y parada del servicio. Además se deberan diseñar las rutas o tareas, tests y documentación de todo justificando como se ajustan a las historias de usuario.
+## Hito 3: Creación de un contenedor para pruebas
+En esta entrega se busca configurar y documentar un contenedor para ejecutar tests así como probar a subirlos a distintos registros de contenedores.
+- [Se ha añadido toda la documentación necesaria](https://github.com/antoniocuadros/WhenToClass/issues/33).
+- [Se ha añadido un Dockerfile para crear un contenedor para ejecutar los tests](https://github.com/antoniocuadros/WhenToClass/issues/36).
+- Se ha subido el contenedor a Docker Hub.
+- Se ha subido el contenedor a Github Container Registry.
+- Se han documentado las pruebas realizadas para la elección del contenedor y la decisión final
+- Se han documentado las buenas prácticas a la hora de escribir un Dockerfile.
 
 ## Hito 4: Despliegue de una aplicación en un PaaS
 Se pretende hacer un despliegue en la nube uasndo una plataforma como servicio. Para esto será necesario realizar un script de configuración del PaaS, documentar como hacer el despliegue y agregar diversos ficheros de definición y lanzamiento de los servicios en el PaaS.
