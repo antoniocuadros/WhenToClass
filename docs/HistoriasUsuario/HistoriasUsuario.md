@@ -14,3 +14,7 @@ En este documento se irán añadiendo las historias de usuario necesarias para i
 
 ## [HU4](https://github.com/antoniocuadros/WhenToClass/issues/28): Como usuario debo poder seleccionar una asignatura.
 ![imagen4](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/HistoriasUsuario/Im%C3%A1genes/hu4.png)
+
+
+## [HU5](https://github.com/antoniocuadros/WhenToClass/issues/36): [HU5] Como desarrollador quiero tener un entorno de pruebas para ejecutar los tests.
+![imagen4](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/HistoriasUsuario/Im%C3%A1genes/hu5.png)
