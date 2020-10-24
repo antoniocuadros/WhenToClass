@@ -7,3 +7,6 @@ El repositorio puede ser consultado [aquí](https://hub.docker.com/r/antoniocuad
 Se muestra el repositorio de Docker Hub:
 
 ![img1](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/dockerhub/vistapublica.png)
+
+En la configuración de GitHub:
+![img2](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/dockerhub/webhooks.png)
