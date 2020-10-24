@@ -1,10 +1,17 @@
 # Subir contenedor a Github Container Registry
-Como podemos ser se ha subido el contenedor para ejecutar los tests al Github Container Registry y se puede consultar en el [siguiente enlace](https://github.com/antoniocuadros/WhenToClass/packages/471569).
+Inicialmente se subió el contenedor a Github Package Registry ya que nada más hacer click en el apartado paquetes aparecían las instrucciones para subirlo ahí, ¿el problema?, tal y como podemos ver cuando lo subimos dice que el servicio está obsoleto.
 
-A continuación se adjuntan imágenes del contenedor subido:
 
-![img1](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/githubrepositoryregistry/vista.png)
+No obstante podemos ver el contenedor subido a Github Package Registry en el [siguiente enlace](https://github.com/antoniocuadros/WhenToClass/packages/471569).
 
-![img2](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/githubrepositoryregistry/contenedor.png)
+Y los pasos seguidos para subir paquetes a este registro se encuentran [aquí](https://docs.github.com/es/free-pro-team@latest/packages/using-github-packages-with-your-projects-ecosystem/configuring-docker-for-use-with-github-packages) en la documentación oficial.
 
-Se han seguido los pasos comentados aquí en la [documentación oficial](https://docs.github.com/es/free-pro-team@latest/packages/managing-container-images-with-github-container-registry/connecting-a-repository-to-a-container-image) para subir este contenedor.
+Investigando, me he dado cuenta que el que está activo actualmente es Github Container Registry y subí ahí mi contenedor que se puede consultar en el [siguiente enlace](https://github.com/users/antoniocuadros/packages/container/package/whentoclasstests).
+
+A continuación se adjuntan imágenes del contenedor subido correctamente:
+
+![img1](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/githubrepositoryregistry/vista2.png)
+
+![img2](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/githubrepositoryregistry/contenedor2.png)
+
+Se han seguido los pasos encontrados en la [documentación oficial](https://docs.github.com/es/free-pro-team@latest/packages/getting-started-with-github-container-registry/migrating-to-github-container-registry-for-docker-images).
