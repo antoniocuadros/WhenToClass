@@ -56,7 +56,7 @@ Se instalarán las dependencias de nuestro proyecto, dichas dependencias se encu
 
 ## :hammer: Documentación
 
-### Docker
+### Docker: Entorno de prueba para los tests
 - [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/Imagenes_base.md) se puede consultar documentación acerca de las distintas imágenes base (de forma general) que encontramos para Ruby.
 
 - [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/pruebasIm%C3%A1genes.md) se puede consultar el proceso de decisión de la imagen base incluyendo pruebas entre distintas imágenes y la justificación de la [elección final](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/pruebasIm%C3%A1genes.md#id3).
