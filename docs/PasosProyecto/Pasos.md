@@ -43,7 +43,7 @@ La realización de este hito consiste en entender la necesidad de los tests unit
 - [Tests métodos clase GestorAsignaturas](https://github.com/antoniocuadros/WhenToClass/issues/27)
 
 De esta forma han avanzado las historias de usuario [HU1](https://github.com/antoniocuadros/WhenToClass/issues/8), [HU2](https://github.com/antoniocuadros/WhenToClass/issues/9), [HU3](https://github.com/antoniocuadros/WhenToClass/issues/10) y [HU4](https://github.com/antoniocuadros/WhenToClass/issues/28).
-## Hito 3: Creación de un contenedor para pruebas
+## [Hito 3](https://github.com/antoniocuadros/WhenToClass/milestone/3): Creación de un contenedor para pruebas
 En esta entrega se busca configurar y documentar un contenedor para ejecutar tests así como probar a subirlos a distintos registros de contenedores.
 - [Se ha añadido toda la documentación necesaria](https://github.com/antoniocuadros/WhenToClass/issues/33).
 - [Se ha añadido un Dockerfile para crear un contenedor para ejecutar los tests](https://github.com/antoniocuadros/WhenToClass/issues/36).
