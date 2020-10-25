@@ -70,7 +70,12 @@ Se instalarán las dependencias de nuestro proyecto, dichas dependencias se encu
 - [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/githubpackageregistry.md) se puede consultar documentación acerca de la subida del contenedor a Github Container Registry y además podemos ir directamente al [contenedor subido](https://github.com/users/antoniocuadros/packages/container/package/whentoclasstests).
   
 - [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/exectestsdocker.md) se puede consultar como descargar las imágenes desde Docker Hub o GitHub Container Registry y ejecutar los tests en el contenedor.
-
+  
+#### Github Action
+- Se ha creado una github action ([se puede consultar aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/.github/workflows/docker.yml)) con el objetivo de que cada vez que se haga push, se hace lo siguiente:
+  - Hacemos login en docker (Github Container Registry).
+  - Hacemos una build de la imagen.
+  - Hacemos push de la imagen a Github Container Registry
 
 ### Herramientas
 [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Herramientas/herramientas.md) se pueden consultar todas las herramientas utilizadas tanto generales como específicas de Ruby.
