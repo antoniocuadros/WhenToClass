@@ -1,0 +1,11 @@
+name: Docker Build Push
+
+on: [push]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v2
+        - name: docker build
+          run: docker build -t ghrc.io/antoniocuadros/whentoclasstests:v2 .
