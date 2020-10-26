@@ -65,7 +65,7 @@ Se instalarán las dependencias de nuestro proyecto, dichas dependencias se encu
   
 - [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/buenas_practicas.md) se pueden consultar las buenas prácticas seguidas para la realización de mi Dockerfile y como se han aplicado a la hora de escribirlo.
 
-- [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/dockerhub.md) se puede consultar una pequeña documentación sobre Docker Hub y además podemos ir directamente al [repositorio creado en Docker Hub](https://hub.docker.com/r/antoniocuadros/whentoclass).
+- [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/dockerhub.md) se puede consultar una pequeña documentación sobre Docker Hub y como se ha configurado para hacer build de forma automática, además podemos ir directamente al [repositorio creado en Docker Hub](https://hub.docker.com/r/antoniocuadros/whentoclass).
 
 - [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/githubpackageregistry.md) se puede consultar documentación acerca de la subida del contenedor a Github Container Registry y además podemos ir directamente al [contenedor subido](https://github.com/users/antoniocuadros/packages/container/package/whentoclasstests).
   

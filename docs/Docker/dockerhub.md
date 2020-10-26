@@ -1,4 +1,4 @@
-# Contenedor subido a Docker Hub
+# Contenedor subido a Docker Hub y configuración de la automatización
 
 ## Repositorio creado y enlazado con repositorio GitHub
 Se ha creado un repositorio en Docker Hub y se ha configurado para que se construya automáticamente cada vez que se actualiza el repositorio de GitHub.
