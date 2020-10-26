@@ -13,3 +13,6 @@ En la configuración de GitHub y para su actualización de forma automática en 
 
 En la configuración de Docker Hub del repositorio debemos tener lo siguiente:
 ![img3](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/dockerhub/auto1.png)
+
+Y de esta forma ya hemos automatizado el proceso de hacer build y push, podemos ver a la derecha el historial de builds, de hecho se puede ver a la derecha que justo se está haciendo una build:
+![img3](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/dockerhub/auto2.png)
