@@ -3,6 +3,8 @@ FROM alpine:3.12.1
 
 LABEL version="1.0.1" maintainer="antculap@gmail.com"
 
+RUN adduser -D usuario
+
 #Ahora tenemos que instalar todo lo necesario para trabajar con Ruby
 RUN apk update &&\
     apk add --no-cache ruby=2.7.1-r3 \
@@ -22,6 +24,8 @@ RUN bundle install
 
 #Ya no necesitamos los Gemfiles porque las dependencias se han instalado ya
 RUN rm -r /src/app/Gemfile*
+
+USER usuario
 
 VOLUME /test
 WORKDIR /test
