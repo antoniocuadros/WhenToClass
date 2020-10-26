@@ -75,7 +75,10 @@ Se instalarán las dependencias de nuestro proyecto, dichas dependencias se encu
 - Se ha creado una github action ([se puede consultar aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/.github/workflows/docker.yml)) con el objetivo de que cada vez que se haga push, se hace lo siguiente:
   - Hacemos login en docker (Github Container Registry).
   - Hacemos una build de la imagen.
-  - Hacemos push de la imagen a Github Container Registry
+  - Se ejecutan los tests:
+    - Si fallan, no se hace push de la imagen,
+    - En caso de que se ejecuten correctamente:
+      - Hacemos push de la imagen a Github Container Registry
 
 ### Herramientas
 [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Herramientas/herramientas.md) se pueden consultar todas las herramientas utilizadas tanto generales como específicas de Ruby.
