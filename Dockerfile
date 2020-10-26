@@ -27,7 +27,6 @@ RUN rm -r /src/app/Gemfile*
 
 USER usuario
 
-VOLUME /test
 WORKDIR /test
 
 #Ejecución de los tests
