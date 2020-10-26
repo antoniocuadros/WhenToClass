@@ -20,21 +20,21 @@ A continuación se va a realizar una comparativa de almacenamiento y velocidad d
 ![img](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/base/peso.png)
 
 >Tiempo en ejecutar los tests:
-![img](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/base/tiempo.png)
+![img](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/base/tiempo1.png)
 
 #### ruby:2.7.2-slim
 >Peso:
 ![img](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/slim/peso.png)
 
 >Tiempo en ejecutar los tests:
-![img](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/slim/tiempo.png)
+![img](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/slim/tiempo1.png)
 
 #### ruby:2.7.2-alpine
 >Peso:
 ![img](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/alpine/peso.png)
 
 >Tiempo en ejecutar los tests:
-![img](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/alpine/tiempo.png)
+![img](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/alpine/tiempo1.png)
 
 <div id='id5' />
 
@@ -44,7 +44,7 @@ A continuación se va a realizar una comparativa de almacenamiento y velocidad d
 ![img](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/alpinepropio/peso.png)
 
 >Tiempo en ejecutar los tests:
-![img](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/alpinepropio/tiempo.png)
+![img](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/alpinepropio/tiempo1.png)
 
 
 <div id='id2' />
