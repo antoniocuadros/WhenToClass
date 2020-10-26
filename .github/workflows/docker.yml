@@ -15,6 +15,6 @@ jobs:
         - name: docker build
           run: docker build -t ghcr.io/antoniocuadros/whentoclasstests:v2 .
         -name: exec test
-          run: docker run -t -v `pwd`:/test whentoclasstests:v2
+          run: docker run -t -v `pwd`:/test ghcr.io/antoniocuadros/whentoclasstests:v2 
         - name: docker push
           run: docker push ghcr.io/antoniocuadros/whentoclasstests:v2
