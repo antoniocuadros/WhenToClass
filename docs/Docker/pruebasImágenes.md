@@ -57,15 +57,14 @@ A continuación se va a realizar una comparativa de almacenamiento y velocidad d
 A continuación se recogen los datos de las pruebas anteriores en una tabla:
 | Imagen                | Peso   | Tiempo de ejecución tests|
 |---                    |---     |---                       |
-| **ruby:2.7.2**        | 859MB  | 6,137s                   | 
-| **ruby:2.7.2-slim**   | 166MB  | 3s                       |  
-| **ruby:2.7.2-alpine** | 68MB   | 1,154s                   |
+| **ruby:2.7.2**        | 859MB  | 1,035s                   | 
+| **ruby:2.7.2-slim**   | 166MB  | 1,097s                   |  
+| **ruby:2.7.2-alpine** | 68MB   | 1,090s                   |
 
-Como podemos ver la imagen que más pesa, con bastante diferencia es la de ruby:2.7.2 y la que menos pesa es la de Ruby Alpine (ruby:2.7.2-alpine) además la que más tarda en ejecutarse es la imagen de Ruby base y la que menos la de Alpine. Esto se puede deber a lo comentado en la documentación en la que se explican las diferencias entre las imágenes base de Ruby:
+Como podemos ver la imagen que más pesa, con bastante diferencia es la de ruby:2.7.2 y la que menos pesa es la de Ruby Alpine (ruby:2.7.2-alpine) además si nos fijamos en los tiempos de ejecución de tests las diferencias no son muy significativas. Esto se puede deber a lo comentado en la documentación en la que se explican las diferencias entre las imágenes base de Ruby:
+
 - **ruby:2.7.2**  es la más pesada ya que contiene una gran cantidad de paquetes muy comunes para trabajar con Debian.
 - **ruby:2.7.2-alpine** es la menos pesada ya que con Alpine obtenemos unas imágenes muy pequeñas y además contiene únicamente los paquetes necesarios para trabajar con Ruby.
-
-Además con estas pruebas vemos que la más rápida es la imagen base ruby:2.7.2-alpine.
 
 <div id='id6' />
 
@@ -73,8 +72,8 @@ Además con estas pruebas vemos que la más rápida es la imagen base ruby:2.7.2
 
 | Imagen                | Peso   | Tiempo de ejecución tests|
 |---                    |---     |---                       |
-| **ruby:2.7.2-alpine** | 68MB   | 1,154s                   |
-| **alpine:3.12.1**     | 38.7MB | 1,204s                   |
+| **ruby:2.7.2-alpine** | 68MB   | 1,090s                   |
+| **alpine:3.12.1**     | 38.7MB | 1,127s                   |
 
 Como podemos ver la imagen oficial del lenguaje basada en Alpine pesa un 43.09% más que si tomamos como base el sistema operativo Alpine y le añadimos nosotros únicamente lo necesario para hacer correr los tests. La diferencia de tiempo a penas es significativa.
 
