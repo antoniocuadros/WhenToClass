@@ -126,5 +126,12 @@ class TestGestorAsignaturas < Minitest::Test
 		assert_equal 0, @gestor.contarAsignaturas(), "Fallo al borrar elemento"
 	end
 	
+	#TEST3
+	#Se elimina una asignatura por sus siglas
+	def test_that_eliminarAsignatura_siglas_method_borra_si_existe
+		@gestor.anadirAsignatura(@asignatura1)
+		@gestor.eliminarAsignatura("IV")
+		assert_equal 0, @gestor.contarAsignaturas(), "Fallo al borrar elemento"
+	end
 	
 end
