@@ -50,6 +50,8 @@ Como ya se ha comentado anteriormente, en la actualidad los estudiantes de Infor
 - [Tests de la clase GestorAsignaturas](https://github.com/antoniocuadros/WhenToClass/blob/master/t/TestGestorAsignaturas.rb).
 - [Clase propia para excepciones](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/asignaturaerror.rb)
 
+### Test de las clases e instalar dependencias
+[En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Clases/test.md) se puede consultar información sobre cómo testear e instalar dependencias.
 ### Historias de Usuario
 [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/HistoriasUsuario/HistoriasUsuario.md) puede consultarse las diversas historias de usuarios que hay activas en cada momento.
 
