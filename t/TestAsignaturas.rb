@@ -166,7 +166,27 @@ class TestAsignaturas < Minitest::Test
 		end
 	end
 	
+	#####################################################################################
+	#Con los siguientes tests vamos a comprobar si funciona correctamente el método
+	#que nos permite obtener el enlace de teoría o de un determinado grupo de prácticas
+	#
+	#Método: dameEnlace
+	#Relacionado con la HU6
+	#####################################################################################
+	#Se comprueba que si no hay enlaces da error
+	def test_that_dameEnlace_method_return_error_si_no_enlaces
+		assert_raises(AsignaturaError, "Error: No existen enlaces para esta asignatura"){@asignaturaSinHorario.dameEnlace("T")} 
+	end
 
+	#Se lanza error si se solicita un grupo no válido
+	def test_that_dameEnlace_method_return_error_si_no_grupo_valido
+		assert_raises(AsignaturaError, "Error: No existe ese grupo de prácticas"){@asignatura.dameEnlace("P3")} 
+	end
+
+	#Se lanza error si se solicita un grupo no válido
+	def test_that_dameEnlace_method_return_enlace
+		assert_equal "https://meet.jit.si/IV-ETSIIT-UGR-2020", @asignatura.dameEnlace("T")
+	end
 
 	
 	#Tests básicos
