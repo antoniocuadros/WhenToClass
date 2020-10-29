@@ -25,7 +25,7 @@ class Asignatura
 		@horario_practicas = h_practicas
 		@grupo = group
 		@turno_presencialidad = t_presencialidad
-		
+
 		if(_siglas == nil) #si no se proporcionan siglas, hacemos nosotros el acrónimo con las letras en mayúsculas (primeras letras unicamente)
 			@siglas = @nombre.gsub('-', ' ').scan(/(\A[A-Z]|(?<=\s)[A-Z])/).flatten.join.upcase # con gsub convertimos - en espacios
 																								# scan, primera letra de una cadena precedida de espacio
@@ -194,6 +194,32 @@ class Asignatura
 			return ir
 		end	
 	
+	end
+
+	#####################################################################################
+	#
+	#Método dameEnlace
+	#
+	#####################################################################################
+	def dameEnlace(grupo)	#enlace puede ser T para teoría, P1 para el grupo de prácticas P1, P2 análogamente
+		num_enlaces = @enlaces_clase_online.length()
+
+		if(num_enlaces == 0)
+			raise AsignaturaError, "Error: No existen enlaces para esta asignatura"
+		else
+			if grupo.scan(/\d+/)
+				a_buscar = grupo.scan(/\d+/)
+			else
+				a_buscar = 0 #teoría si no se encuentra número
+			end
+			
+			if(a_buscar[0].to_i > horario_practicas.length())
+				raise AsignaturaError, "Error: No existe ese grupo de prácticas"
+			end
+
+			return @enlaces_clase_online[a_buscar[0].to_i]
+		end
+		return nil
 	end
 	
 end
