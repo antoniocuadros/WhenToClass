@@ -28,9 +28,14 @@ class GestorAsignaturas
 		i = 0
 		
 		while i < @asignaturas.length() and !encontrado
-			if(@asignaturas[i].nombre == nombre)
+			if nombre == @asignaturas[i].nombre.gsub('-', ' ').scan(/(\A[A-Z]|(?<=\s)[A-Z])/).flatten.join.upcase	#Podemos buscar por siglas (nos han proporcionado siglas)
 				encontrado = true
 				asignatura = @asignaturas[i]
+			else																									#Si no es sigla, buscamos por nombre (nos han proporcionado nombre)
+				if(@asignaturas[i].nombre == nombre)
+					encontrado = true
+					asignatura = @asignaturas[i]
+				end
 			end
 			i +=1
 		end
