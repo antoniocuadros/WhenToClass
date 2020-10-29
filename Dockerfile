@@ -11,15 +11,16 @@ RUN apk update &&\
     ruby-bundler=2.1.4-r1 \
     ruby-rake=2.7.1-r3
 
+
+#Para evitar problemas al hacer gem install desde usuario
 ENV GEM_HOME /usr/local/bundle
 ENV BUNDLE_APP_CONFIG="$GEM_HOME"
 ENV PATH $GEM_HOME/bin:$PATH
-
-# adjust permissions of a few directories for running "gem install" as an arbitrary user
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
 
-
+#cambiamos usuario
 USER usuario
+
 #Traemos los ficheros de dependencias
 COPY Gemfile Gemfile.lock /home/usuario/
 
