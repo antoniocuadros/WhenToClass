@@ -67,9 +67,14 @@ class GestorAsignaturas
 		encontrado = false
 		
 		while i < @asignaturas.length() and !encontrado
-			if(@asignaturas[i].nombre == nombre)
+			if nombre == @asignaturas[i].nombre.gsub('-', ' ').scan(/(\A[A-Z]|(?<=\s)[A-Z])/).flatten.join.upcase	#Si nos dan las siglas
 				encontrado = true
-				@asignaturas.delete_at(i)
+				@asignaturas.delete_at(i)	
+			else																									#Si nos dan el nombre
+				if(@asignaturas[i].nombre == nombre)
+					encontrado = true
+					@asignaturas.delete_at(i)
+				end
 			end
 			i +=1
 		end
