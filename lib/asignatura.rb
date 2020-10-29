@@ -1,6 +1,6 @@
 #Antonio Cuadros Lapresta
 require_relative "horarioasignatura.rb"
-
+require_relative "asignaturaerror.rb"
 ##############################################################################################
 #												#
 #					Clase Asignatura					#
@@ -8,6 +8,7 @@ require_relative "horarioasignatura.rb"
 ##############################################################################################
 class Asignatura
 	#Métodos get
+	attr_reader:siglas
 	attr_reader:nombre
 	attr_reader:horario_teoria 		#será un struct con dia, hora inicio, hora fin
 	attr_reader:horario_practicas  	#será un vector de struct con dia, hora inicio, hora fin
@@ -15,13 +16,25 @@ class Asignatura
 						#turnos: 1, 2... y resto de columnas los días de 
 						#cada grupo
 	attr_reader:grupo			#Carácter (A, B, C, ...)
-	
-	def initialize(nombre_asignatura, h_teoria, h_practicas, group, t_presencialidad)
+	attr_reader:enlaces_clase_online		#vector en la que en cada posicion hay una pareja
+
+
+	def initialize(nombre_asignatura, h_teoria, h_practicas, group, t_presencialidad, enlaces,_siglas=nil)
 		@nombre = nombre_asignatura
 		@horario_teoria = h_teoria
 		@horario_practicas = h_practicas
 		@grupo = group
 		@turno_presencialidad = t_presencialidad
+		if(_siglas == nil) #si no se proporcionan siglas, hacemos nosotros el acrónimo con las letras en mayúsculas (primeras letras unicamente)
+			@siglas = @nombre.gsub('-', ' ').scan(/(\A[A-Z]|(?<=\s)[A-Z])/).flatten.join.upcase # con gsub convertimos - en espacios
+																								# scan, primera letra de una cadena precedida de espacio
+																								# flatten unificamos un array de arrays
+																								# join, lo unimos
+																								# upcase lo convertimos a mayúsculas
+		else
+			@siglas = _siglas
+		end
+		@enlaces_clase_online = enlaces #vector de enlaces
 	end
 	
 	#####################################################################################
