@@ -29,6 +29,8 @@ Como ya se ha comentado anteriormente, en la actualidad los estudiantes de Infor
 - [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/githubpackageregistry.md) se puede consultar documentación acerca de la subida del contenedor a Github Container Registry y además podemos ir directamente al [contenedor subido](https://github.com/users/antoniocuadros/packages/container/package/whentoclasstests).
   
 - [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/exectestsdocker.md) se puede consultar como descargar las imágenes desde Docker Hub o GitHub Container Registry y ejecutar los tests en el contenedor.
+
+- [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/imagenreducida.md) se puede consultar información de cómo se ha obtenido una imagen de poco tamaño.
   
 #### Github Action
 - Se ha creado una github action ([se puede consultar aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/.github/workflows/docker.yml)) con el objetivo de que cada vez que se haga push, se hace lo siguiente:
