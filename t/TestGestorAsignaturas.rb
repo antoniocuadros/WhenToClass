@@ -81,11 +81,25 @@ class TestGestorAsignaturas < Minitest::Test
 	
 	#TEST2
 	#Si existe se devuelve la asignatura
-	def test_that_obtenerAsignatura_method_return_asignatura
+	def test_that_obtenerAsignatura_nombres_method_return_asignatura
 		@gestor.anadirAsignatura(@asignatura1)
 		assert_instance_of Asignatura, @gestor.obtenerAsignatura("Infraestructura Virtual")
 		asig = @gestor.obtenerAsignatura("Infraestructura Virtual")
 		assert_equal "Infraestructura Virtual", asig.nombre
+	end
+
+	#TEST3
+	#Podemos encontrar una asignatura por sus siglas
+	def test_that_obtenerAsignatura_siglas_method_return_asignatura
+		@gestor.anadirAsignatura(@asignatura1)
+		assert_instance_of Asignatura, @gestor.obtenerAsignatura("IV")
+		asig = @gestor.obtenerAsignatura("IV")
+		assert_equal "IV", asig.siglas
+
+		@gestor.anadirAsignatura(@asignatura2)
+		assert_instance_of Asignatura, @gestor.obtenerAsignatura("DAI")
+		asig = @gestor.obtenerAsignatura("DAI")
+		assert_equal "DAI", asig.siglas
 	end
 
 	#####################################################################################
