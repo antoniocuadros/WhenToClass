@@ -1,7 +1,7 @@
 language: ruby
 
 #Cacheamos las dependencias
-
+cache: bundler
 
 #Probamos con distintas versiones de ruby
 rvm:
