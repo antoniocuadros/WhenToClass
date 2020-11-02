@@ -3,6 +3,7 @@ cache: bundler
 cache:
   directories:
     - /home/travis/.rvm/
+    
 rvm:
   - 2.7.1
   - 2.7.2
