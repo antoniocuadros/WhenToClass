@@ -1,5 +1,4 @@
 language: ruby
-cache: 
 cache:
   bundler: true
   directories:
@@ -17,5 +16,6 @@ rvm:
 before_install:
   - gem install bundler
 
+install: bundle install
 
 script: rake test
