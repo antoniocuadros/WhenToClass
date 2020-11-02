@@ -14,6 +14,10 @@ Como ya se ha comentado anteriormente, en la actualidad los estudiantes de Infor
 
 
 ## :hammer: Documentación
+### Integración Continua
+
+#### Pasos previos
+- [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/register.md) se puede consultar el proceso de registro en Travis y la vinculación con GitHub.
 
 ### Docker: Entorno de prueba para los tests
 - [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/Imagenes_base.md) se puede consultar documentación acerca de las distintas imágenes base (de forma general) que encontramos para Ruby.
