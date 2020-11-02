@@ -1,0 +1,13 @@
+language: ruby
+rvm:
+  - 2.7.0
+
+env:
+  - secure: ToKXA9GEA7f4XA+9Hlm+R1F6o9/KiGoMFieQkwRjJHUiId82iBqsddgXVXv+3eYet4eeBs+0D4GbOMQq97OnEqnynGI0/WaY3refCVkhkwmIqVrKW13272lTt0BTzRnpiVKd6p+r+e6e3tG5f1Jm6t8snL6aDGlQwyJ/jYoNCg6k0hqn7robkGNa6rpvupSbxqhAit/Q4mjW8vvlcZucgME5dJ6+TrA6/xa5PYArRqxJZYk+JIqIOtkCjUSM6woCXqm7yS/Mt9JsZ/jdqKxrdd2EomQjJ3qIujcALpl1QB9U6vmkIPqRRR7GdLgmT4agFuSeH4YARl8QSPDR2D19MA==
+  - secure: ToKXA9GEA7f4XA+9Hlm+R1F6o9/KiGoMFieQkwRjJHUiId82iBqsddgXVXv+3eYet4eeBs+0D4GbOMQq97OnEqnynGI0/WaY3refCVkhkwmIqVrKW13272lTt0BTzRnpiVKd6p+r+e6e3tG5f1Jm6t8snL6aDGlQwyJ/jYoNCg6k0hqn7robkGNa6rpvupSbxqhAit/Q4mjW8vvlcZucgME5dJ6+TrA6/xa5PYArRqxJZYk+JIqIOtkCjUSM6woCXqm7yS/Mt9JsZ/jdqKxrdd2EomQjJ3qIujcALpl1QB9U6vmkIPqRRR7GdLgmT4agFuSeH4YARl8QSPDR2D19MA==
+build:
+  ci:
+    - docker login ghcr.io -u $DOCKER_USER -p $DOCKER_PASSWORD
+    - docker build docker build -t whentoclasstests:v2 .
+    - docker run -t -v `pwd`:/test whentoclasstests:v2
+
