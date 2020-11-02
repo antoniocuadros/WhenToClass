@@ -1,4 +1,12 @@
 # Travis CI para integración continua
+
+## Integración continua funcionando
+[En este enlace](https://travis-ci.com/github/antoniocuadros/WhenToClass) se puede consultar la integración continua funcionando.
+
+Se adjunta imagen:
+
+![img6](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/images/fichero/6.png)
+
 ## ¿Qué es Travis CI?
 Travis CI es un sistema de integración continua usado para construir y probar productos software alojados en GitHub.
 
