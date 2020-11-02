@@ -17,7 +17,7 @@ En primer lugar se define el lenguaje que se va a utilizar, en este caso Ruby:
 language: ruby
 ```
 
-En segundo lugar cacheamos las dependencias, esto nos ahorrará algo de tiempo a la hora de ejecutarse bundle install:
+En segundo lugar cacheamos las dependencias, esto nos ahorrará algo de tiempo a la hora de ejecutarse bundle install ya que nos ahorramos el tiempo de descarga de las dependencias:
 
 ```
 cache: bundler
