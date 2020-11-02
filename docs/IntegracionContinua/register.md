@@ -1,6 +1,7 @@
 # Proceso de registro en Travis y vinculación con GitHub
 ## Darnos de alta en Travis CI 
-En primer lugar para empezar a trabajar con Travis CI debemos dirigirnos a su página oficial, la cual encontramos en el [siguiente enlace](https://travis-ci.org/).
+
+En primer lugar para empezar a trabajar con Travis CI debemos dirigirnos a su página oficial, la cual encontramos en el [siguiente enlace](https://travis-ci.com/).
 
 Una vez dentro de la página web nos registramos haciendo click en "Sign Up": 
 
@@ -24,6 +25,10 @@ Ahora en la nueva página a la que hemos sido redirigidos, añadimos travis-ci a
 
 ![img5](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/images/register/5.png)
 
-Lo que hemos conseguido con esto es añadir un webhook de GitHub en nuestro repositorio de forma automática:
+Lo que hemos conseguido con esto es añadir un webhook de GitHub en nuestro repositorio de forma automática (se muestra el hook de travis-ci.org, ya que inicialmente se registró en este sitio que está obsoleto y posteriormente se migró a travis-ci.com)
 
 ![img6](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/images/register/6.png)
+
+A continuación se muestra la integración continua funcionando en travis-ci.com:
+
+![img7](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/images/register/7.png)
