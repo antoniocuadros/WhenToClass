@@ -25,8 +25,16 @@ cache: bundler
 
 Tiempo con las dependencias cacheadas:
 
+![img1](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/images/fichero/1.png)
 
 Tiempo con las dependencias no cacheadas:
+
+![img2](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/images/fichero/2.png)
+
+Podemos ver que no existe mucha diferencia a la hora de hacer `bundle install`, pero hay diferencia, pasamos de 1,30s (sin cachear) a 0,32s (cacheando dependencias).
+
+Ahora mismo no es una diferencia muy significativa pero cuando el proyecto vaya creciendo y aumenten el número de dependencias podrá suponer una mayor diferencia, debido a esto se ha optado por seguir manteniendo en caché las dependencias.
+
 
 
 ## Pruebas de rendimiento usando caché
