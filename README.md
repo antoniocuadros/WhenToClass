@@ -15,6 +15,7 @@ Como ya se ha comentado anteriormente, en la actualidad los estudiantes de Infor
 
 ## :hammer: Documentación
 ### Integración Continua
+- [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/ficherotravis.md) se puede ver la integración continua funcionando y la justificación de la misma.
 
 #### Pasos previos
 - [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/register.md) se puede consultar el proceso de registro en Travis y la vinculación con GitHub.
