@@ -1,5 +1,6 @@
 # Proceso de registro en Travis y vinculación con GitHub
 ## Darnos de alta en Travis CI 
+(Aclaración: inicialmente se realizó el registro en travis-ci.org y posteriormente se migró todo a travis-ci.com ya que el primero nombrado está obsoleto)
 
 En primer lugar para empezar a trabajar con Travis CI debemos dirigirnos a su página oficial, la cual encontramos en el [siguiente enlace](https://travis-ci.com/).
 
