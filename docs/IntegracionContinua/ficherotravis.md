@@ -11,13 +11,13 @@ Además encontramos una gran cantidad de documentación oficial y muchísimos us
 
 Nuestro fichero `.travis.yml` se puede consultar [aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/.travis.yml). Este fichero hace lo siguiente:
 
-En primer lugar se define el lenguaje que se va a utilizar, en este caso Ruby:
+**En primer lugar** se define el lenguaje que se va a utilizar, en este caso Ruby:
 
 ```
 language: ruby
 ```
 
-En segundo lugar cacheamos las dependencias, esto nos ahorrará algo de tiempo a la hora de ejecutarse bundle install ya que nos ahorramos el tiempo de descarga de las dependencias:
+**En segundo lugar** cacheamos las dependencias, esto nos ahorrará algo de tiempo a la hora de ejecutarse bundle install ya que nos ahorramos el tiempo de descarga de las dependencias:
 
 ```
 cache: bundler
@@ -35,7 +35,7 @@ Podemos ver que no existe mucha diferencia a la hora de hacer `bundle install`, 
 
 Ahora mismo no es una diferencia muy significativa pero cuando el proyecto vaya creciendo y aumenten el número de dependencias podrá suponer una mayor diferencia, debido a esto se ha optado por seguir manteniendo en caché las dependencias.
 
-A continuación indicamos todas las versiones de Ruby que funcionan con nuestro proyecto:
+**En tercer lugar** indicamos todas las versiones de Ruby que funcionan con nuestro proyecto:
 
 ```
 rvm:
@@ -57,3 +57,29 @@ En versiones anteriores a la 2.3.0 nuestro proyecto deja de funcionar:
 ![img4](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/images/fichero/4.png)
 
 ![img5](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/images/fichero/5.png)
+
+Esto es debido a que nosotros tenemos que utilizar bundler en su versión 2.1.4 y dicha versión no es compatible con versiones anteriores a ruby 2.3.0, para versiones anteriores a ruby 2.3.0 debemos utilizar bundler 1.17.3.
+
+**A continuación** ejecutamos:
+
+```
+before_install:
+  - gem install bundler
+```
+
+Esto nos permite trabajar con bundler 2.1.4.
+
+**En siguiente lugar** ejecutamos los tests:
+
+```
+script: rake test
+```
+
+**En último lugar**, cambio la política de notificaciones para que únicamente me avise en caso de fallo por email:
+
+```
+notifications:
+  email:
+    on_success: never # por defecto: change
+    on_failure: always # por defecto: always
+```
