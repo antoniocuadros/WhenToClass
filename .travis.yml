@@ -1,9 +1,4 @@
 language: ruby
-cache:
-  bundler: true
-  directories:
-    - /home/travis/.rvm/
-    
 rvm:
   - 2.7.1
   - 2.7.2
@@ -18,4 +13,9 @@ before_install:
 
 install: bundle install
 
+cache:
+  bundler: true
+  directories:
+    - /home/travis/.rvm/
+    
 script: rake test
