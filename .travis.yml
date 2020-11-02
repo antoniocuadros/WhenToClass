@@ -1,5 +1,9 @@
 language: ruby
+
+#Cacheamos las dependencias
 cache: bundler
+
+#Probamos con distintas versiones de ruby
 rvm:
   - 2.7.1
   - 2.7.2
@@ -9,7 +13,16 @@ rvm:
   - 2.4.0
   - 2.3.0
 
+#Para poder trabajar con bundler 2.1.4
 before_install:
   - gem install bundler
 
+#Se ejecutan los tests
 script: rake test
+
+# cambiamos la política de notificaciones para que solo notifique
+# en caso de que falle la build
+notifications:
+  email:
+    on_success: never # por defecto: change
+    on_failure: always # por defecto: always
