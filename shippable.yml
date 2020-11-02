@@ -10,5 +10,6 @@ build:
     - docker login ghcr.io -u $DOCKER_USER -p $DOCKER_PASSWORD
     - docker build -t whentoclasstests:v2 .
     - cd /root/src/github.com/antoniocuadros/WhenToClass
+    - ls
     - docker run -t -v `pwd`:/test whentoclasstests:v2
 
