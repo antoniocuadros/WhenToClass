@@ -9,5 +9,5 @@ build:
   ci:
     - cd /root/src/github.com/antoniocuadros/WhenToClass
     - docker build -t whentoclasstests:v2 .
-    - docker run -t -v `pwd`:/test whentoclasstests:v2
+    - docker run -t -v .:/test whentoclasstests:v2
 
