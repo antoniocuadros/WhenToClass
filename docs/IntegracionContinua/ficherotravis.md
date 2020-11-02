@@ -51,3 +51,9 @@ rvm:
 Podemos ver en la siguiente captura los tests pasando en dichas versiones:
 
 ![img3](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/images/fichero/3.png)
+
+En versiones anteriores a la 2.3.0 nuestro proyecto deja de funcionar:
+
+![img4](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/images/fichero/4.png)
+
+![img5](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/images/fichero/5.png)
