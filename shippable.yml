@@ -9,5 +9,6 @@ build:
   ci:
     - docker login ghcr.io -u $DOCKER_USER -p $DOCKER_PASSWORD
     - docker build -t whentoclasstests:v2 .
+    - cd WhenToClass
     - docker run -t -v `pwd`:/test whentoclasstests:v2
 
