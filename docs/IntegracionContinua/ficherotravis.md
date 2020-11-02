@@ -23,7 +23,7 @@ En segundo lugar cacheamos las dependencias, esto nos ahorrará algo de tiempo a
 cache: bundler
 ```
 
-Tiempo con las dependencias cacheadas:
+Tiempo con las dependencias cacheadas (al final de la imagen a la derecha):
 
 ![img1](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/images/fichero/1.png)
 
@@ -35,6 +35,19 @@ Podemos ver que no existe mucha diferencia a la hora de hacer `bundle install`, 
 
 Ahora mismo no es una diferencia muy significativa pero cuando el proyecto vaya creciendo y aumenten el número de dependencias podrá suponer una mayor diferencia, debido a esto se ha optado por seguir manteniendo en caché las dependencias.
 
+A continuación indicamos todas las versiones de Ruby que funcionan con nuestro proyecto:
 
+```
+rvm:
+  - 2.7.1
+  - 2.7.2
+  - 2.7.0
+  - 2.6.0
+  - 2.5.0
+  - 2.4.0
+  - 2.3.0
+```
 
-## Pruebas de rendimiento usando caché
+Podemos ver en la siguiente captura los tests pasando en dichas versiones:
+
+![img3](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/images/fichero/3.png)
