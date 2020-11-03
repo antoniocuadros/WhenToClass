@@ -23,6 +23,8 @@ Como ya se ha comentado anteriormente, en la actualidad los estudiantes de Infor
 
 - [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/usogestordetareas.md) se puede consultar el uso del gestor de tareas en los distintos sistemas de integración continua utilizados.
 
+- [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/contenedor.md) se puede consultar el uso del contenedor en los distintos sistemas de integración continua.
+
 #### Pasos previos
 - [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/register.md) se puede consultar el proceso de registro en Travis y la vinculación con GitHub.
 
