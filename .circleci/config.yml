@@ -1,10 +1,6 @@
 #vesión de circle ci
 version: 2.1
 
-#utilizando un orbe de ruby
-orbs:
-  ruby: circleci/ruby@0.1.2 
-
 #trabajo que buildea una imagen y ejecuta los tests en el contenedor
 jobs:
   build:
