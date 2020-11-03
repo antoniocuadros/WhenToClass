@@ -5,7 +5,7 @@ rvm:
 
 build:
   pre_ci:
-    - docker build -t ghcr.io/antoniocuadros/whentoclasstests:v2 .
+    - docker build -t my_registry_repo/my_image:v2 .
 
   pre_ci_boot:
     image_name: ghcr.io/antoniocuadros/whentoclasstests:v2    ##replace with your repo and image name
