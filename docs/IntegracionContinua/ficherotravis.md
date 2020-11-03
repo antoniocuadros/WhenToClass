@@ -24,7 +24,34 @@ Además encontramos una gran cantidad de documentación oficial y muchísimos us
 
 ## ¿Que hace nuestro fichero .travis.yml?
 
-Nuestro fichero `.travis.yml` se puede consultar [aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/.travis.yml). Este fichero hace lo siguiente:
+Para empezar a trabajar con Travis CI hemos necesitado crear el fichero y añadir ahí la configuración `.travis.yml` se puede consultar [aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/.travis.yml). No obstante se presenta a continuación:
+
+```
+language: ruby
+
+#Cacheamos las dependencias
+cache: bundler
+
+#Probamos con distintas versiones de ruby
+rvm:
+  - 2.7.1
+  - 2.7.2
+  - 2.7.0
+  - 2.6.0
+  - 2.5.0
+  - 2.4.0
+  - 2.3.0
+
+#Para poder trabajar con bundler 2.1.4
+before_install:
+  - gem install bundler
+
+#Se ejecutan los tests
+script: rake test
+```
+
+
+Este fichero hace lo siguiente:
 
 **En primer lugar** se define el lenguaje que se va a utilizar, en este caso Ruby:
 
