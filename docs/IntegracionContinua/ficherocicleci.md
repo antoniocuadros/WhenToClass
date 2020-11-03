@@ -23,3 +23,20 @@ En un primer momento se empezó a utilizar [Shippable](https://www.shippable.com
 En cambio, Circle CI, nada más introducirnos en su [página web](https://circleci.com/product/#features) asguran un "soporte para Docker de primera clase" y efectivamente, el trabajo con Docker ha sido muy sencillo para poder tanto construir el contenedor como para ejecutar los tests dentro del mismo en gran parte debido a la muy buena documentación que encontramos sobre Docker en su página.
 
 ## ¿Que hace nuestro fichero .circleci/config.yml?
+
+Para empezar a trabajar con Circle CI hemos necesitado crear una primera carpeta oculta llama `circleci` y en esa carpeta metemos el archivo de configuración llamado `config.yml`. Dicho fichero es lo que se comenta a continuación y puede ser consultado [aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/.circleci/config.yml). No obstante se presenta a continuación:
+
+```
+#vesión de circle ci
+version: 2.1
+
+#trabajo que buildea una imagen y ejecuta los tests en el contenedor
+jobs:
+  build:
+    machine: true
+    steps:
+      - checkout
+      - run: docker build -t whentoclasstests:v2 .
+      - run: docker run -t -v `pwd`:/test whentoclasstests:v2
+```
+
