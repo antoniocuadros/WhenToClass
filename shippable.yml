@@ -6,5 +6,7 @@ build:
   ci:
     - cd /root/src/github.com/antoniocuadros/WhenToClass
     - docker build -t whentoclasstests:v2 .
+    - ls /root/src/github.com/antoniocuadros/WhenToClass/shippable/buildoutput
+    - ls /root/src/github.com/antoniocuadros/WhenToClass/shippable/codecoverage
     - docker run -t -v /root/src/github.com/antoniocuadros/WhenToClass/:/test whentoclasstests:v2
 
