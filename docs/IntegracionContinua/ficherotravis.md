@@ -117,14 +117,10 @@ Esto nos permite trabajar con bundler 2.1.4.
 script: rake test
 ```
 
-**En último lugar**, cambio la política de notificaciones para que únicamente me avise en caso de fallo por email:
+Cuando hacemos un push vemos que en Travis CI se ejecutan los tests:
 
-```
-notifications:
-  email:
-    on_success: never # por defecto: change
-    on_failure: always # por defecto: always
-```
+![img8](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/images/fichero/8.png)
+
 
 ### Nota
 Como se puede observar parece que no estoy instalando las dependencias, pero esto no es así, no hace falta utilizar explicitamente la orden `bundle install` en nuestro fichero `.travis.yml` ya que se ejecuta de forma automática tal y como se indica en la [guía de Travis de como construir un proyecto escrito en Ruby](https://docs.travis-ci.com/user/languages/ruby/#dependency-management).
