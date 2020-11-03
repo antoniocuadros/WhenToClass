@@ -1,4 +1,4 @@
-# GitHub Action
+# GitHub Action para mantener actualizado el contenedor de GitHub Container Registry
 En este apartado se comenta la creación de una GitHub action que se realizó para la práctica anterior con el objetivo de conseguir un funcionamiento de GitHub Container Registry similar a Docker Hub en el sentido de actualizarse automáticamente con cada push el contenedor para no tener que hacerlo de forma manual y mantener así el contenedor actualizado. De esta forma se construirá la imagen y se ejecutarán los tests, si todo ha ido bien hasta este punto, se hará un push  a GitHub Container Registry.
 
 La GitHub action ([se puede consultar aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/.github/workflows/docker.yml)) con el objetivo de que cada vez que se haga push. No obstante se muestra a continuación:
