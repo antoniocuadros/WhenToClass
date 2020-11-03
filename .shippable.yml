@@ -4,9 +4,11 @@ rvm:
   - 2.7.0
 
 build:
+  pre_ci_boot:
+    options: "-v /root/src/github.com/antoniocuadros/WhenToClass:/test"
   ci:
     - cd /root/src/github.com/antoniocuadros/WhenToClass
     - docker build --no-cache -t whentoclasstests:v2 . 
     - ls
-    - docker run -t -v `pwd`:/test whentoclasstests:v2 sh
+    - docker run -t  -d whentoclasstests:v2
 
