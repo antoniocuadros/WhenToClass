@@ -19,6 +19,8 @@ Como ya se ha comentado anteriormente, en la actualidad los estudiantes de Infor
 
 - [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/ficherocicleci.md) se puede ver la integración continua con Circle CI funcionando y la justificación de la misma.
 
+- Se ha creado una github action ([se puede consultar aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/.github/workflows/docker.yml)) con el objetivo de mantener actualizado el contenedor de Docker Container Registry.
+
 #### Pasos previos
 - [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/register.md) se puede consultar el proceso de registro en Travis y la vinculación con GitHub.
 
@@ -41,15 +43,6 @@ Como ya se ha comentado anteriormente, en la actualidad los estudiantes de Infor
 
 - [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/imagenreducida.md) se puede consultar información de cómo se ha obtenido una imagen de poco tamaño.
   
-#### Github Action
-- Se ha creado una github action ([se puede consultar aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/.github/workflows/docker.yml)) con el objetivo de que cada vez que se haga push, se hace lo siguiente:
-  - Hacemos login en docker (Github Container Registry).
-  - Hacemos una build de la imagen.
-  - Se ejecutan los tests:
-    - Si fallan, no se hace push de la imagen,
-    - En caso de que se ejecuten correctamente:
-      - Hacemos push de la imagen a Github Container Registry
-
 ### Herramientas
 [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Herramientas/herramientas.md) se pueden consultar todas las herramientas utilizadas tanto generales como específicas de Ruby.
 
