@@ -52,4 +52,11 @@ version: 2.1
 
 Cada trabajo debe declarar un "ejecutor" que puede ser docker, machine, windows o macos.
 
-Un [ejecutor](https://circleci.com/docs/2.0/concepts/#executors-and-images) define una tecnología/entorno subyacente en el que se va a ejecutar un trabajo. En mi caso se ha elegido hacer las pruebas haciendo uso de una máquina virtual de Linux, especificado por `machine`.
+Un [ejecutor](https://circleci.com/docs/2.0/concepts/#executors-and-images) define una tecnología/entorno subyacente en el que se va a ejecutar un trabajo. En mi caso se ha elegido hacer las pruebas haciendo uso de una máquina virtual de Linux, especificado por `machine`. Se utiliza está opción ya que es la recomendada para trabajar con docker ya que trae facilidades para tarbajar con el mismo.
+
+Todo lo comentado hace referencia al siguiente fragmento de código:
+
+```
+
+```
+
