@@ -8,7 +8,7 @@ build:
     - docker build -t my_registry_repo/my_image:v2 .
 
   pre_ci_boot:
-    image_name: ghcr.io/antoniocuadros/whentoclasstests:v2    ##replace with your repo and image name
+    image_name: ghcr.io/antoniocuadros/whentoclasstests   ##replace with your repo and image name
     image_tag: latest
     pull: true
     env: FOO=bar
