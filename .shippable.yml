@@ -8,5 +8,7 @@ build:
     - cd /root/src/github.com/antoniocuadros/WhenToClass
     - docker build -t whentoclasstests:v2 .
     - ls -R
+    - ls 
+    - pwd
     - docker run -t -v /root/src/github.com/antoniocuadros/WhenToClass:/test whentoclasstests:v2
 
