@@ -30,6 +30,13 @@ Lo que hemos conseguido con esto es añadir un webhook de GitHub en nuestro repo
 
 ![img6](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/images/register/6.png)
 
+NOTA:
+
+En travis-ci.com ya no se aáde un webhook si no que ya viene como una GitHub App:
+Se muestra a continuación:
+![img8](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/images/register/8.png)
+
+
 A continuación se muestra la integración continua funcionando en travis-ci.com:
 
 ![img7](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/images/register/7.png)
