@@ -9,7 +9,7 @@ build:
 
   pre_ci_boot:
     image_name: ghcr.io/antoniocuadros/whentoclasstests   ##replace with your repo and image name
-    image_tag: latest
+    image_tag: v2
     pull: true
     env: FOO=bar
     options: "-e HOME=/root"
