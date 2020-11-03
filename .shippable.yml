@@ -5,10 +5,15 @@ rvm:
 
 build:
   pre_ci:
-    options: "-v /root/src/github.com/antoniocuadros/WhenToClass:/test"
+    - docker build -t ghcr.io/antoniocuadros/whentoclasstests:v2 .
+
+  pre_ci_boot:
+    image_name: ghcr.io/antoniocuadros/whentoclasstests:v2    ##replace with your repo and image name
+    image_tag: latest
+    pull: true
+    env: FOO=bar
+    options: "-e HOME=/root"
   ci:
-    - cd /root/src/github.com/antoniocuadros/WhenToClass
-    - docker build --no-cache -t whentoclasstests:v2 . 
     - ls
     - docker run -t  whentoclasstests:v2
 
