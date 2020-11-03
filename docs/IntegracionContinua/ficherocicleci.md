@@ -24,7 +24,7 @@ En cambio, Circle CI, nada más introducirnos en su [página web](https://circle
 
 ## ¿Que hace nuestro fichero .circleci/config.yml?
 
-Para empezar a trabajar con Circle CI hemos necesitado crear una primera carpeta oculta llama `circleci` y en esa carpeta metemos el archivo de configuración llamado `config.yml`. Dicho fichero es lo que se comenta a continuación y puede ser consultado [aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/.circleci/config.yml). No obstante se presenta a continuación:
+Para empezar a trabajar con Circle CI hemos necesitado crear una primera carpeta oculta llama `.circleci` y en esa carpeta metemos el archivo de configuración llamado `config.yml`. Dicho fichero es lo que se comenta a continuación y puede ser consultado [aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/.circleci/config.yml). No obstante se presenta a continuación:
 
 ```
 #vesión de circle ci
@@ -40,3 +40,16 @@ jobs:
       - run: docker run -t -v `pwd`:/test whentoclasstests:v2
 ```
 
+Como podemos ver, es un fichero muy sencillo y hace lo siguiente:
+
+**En primer lugar** se define la [versión](https://circleci.com/docs/reference-2-1/#version) de Circle CI que se está utilizando:
+
+```
+version: 2.1
+```
+
+**En segundo lugar** se define un [trabajo](https://circleci.com/docs/2.0/concepts/#jobs), un trabajo no es más que un componente básico de configuración y están formado por un conjunto de pasos que ejecutan tanto comando como scripts, en nuestro caso concreto, ejecutamos comandos.
+
+Cada trabajo debe declarar un "ejecutor" que puede ser docker, machine, windows o macos.
+
+Un [ejecutor](https://circleci.com/docs/2.0/concepts/#executors-and-images) define una tecnología/entorno subyacente en el que se va a ejecutar un trabajo. En mi caso se ha elegido hacer las pruebas haciendo uso de una máquina virtual de Linux, especificado por `machine`.
