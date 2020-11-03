@@ -33,7 +33,7 @@ El uso del contenedor también ha sido muy sencillo y **tampoco ha sido necesari
 Se ha hecho uso del contenedor de la siguiente forma:
 
 ```
- name: docker build
+        - name: docker build
           run: docker build -t ghcr.io/antoniocuadros/whentoclasstests:v2 .
         - name: exec test
           run: docker run -t -v `pwd`:/test ghcr.io/antoniocuadros/whentoclasstests:v2
