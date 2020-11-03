@@ -1,5 +1,4 @@
 language: ruby
-sudo: false
 rvm:
   - 2.7.0
 
@@ -10,5 +9,5 @@ build:
     - ls -R
     - ls 
     - pwd
-    - docker run -t -v /root/src/github.com/antoniocuadros/WhenToClass:/test whentoclasstests:v2
+    - docker run -t -v `pwd`:/test whentoclasstests:v2
 
