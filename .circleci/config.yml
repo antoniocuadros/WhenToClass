@@ -4,8 +4,7 @@ version: 2.1
 #trabajo que buildea una imagen y ejecuta los tests en el contenedor
 jobs:
   build:
-    docker:
-      - image: alpine
+    machine: true
     steps:
       - checkout
       - run: docker build -t whentoclasstests:v2 .
