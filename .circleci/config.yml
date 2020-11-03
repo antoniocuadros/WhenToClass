@@ -4,13 +4,8 @@ orbs:
 
 jobs:
   build:
-    docker:
-      - image: circleci/ruby:2.6.3-stretch-node
-    executor: ruby/default
+    machine: true
     steps:
       - checkout
-      - run:
-          name: Which bundler?
-          command: bundle -v
-      - ruby/bundle-install
-
+      - run: docker build -t whentoclasstests:v2 .
+      - run: docker run -t -v `pwd`:/test whentoclasstests:v2
