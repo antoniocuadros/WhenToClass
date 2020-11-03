@@ -5,10 +5,8 @@ rvm:
 
 build:
   ci:
-    env:
-      - PATH: /root/src/github.com/antoniocuadros/WhenToClass
     - cd /root/src/github.com/antoniocuadros/WhenToClass
-    - docker build -t whentoclasstests:v2 .
+    - docker build --no-cache -t whentoclasstests:v2 . 
     - ls
     - docker run -it -v `pwd`:/test whentoclasstests:v2
 
