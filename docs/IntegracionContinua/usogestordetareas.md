@@ -15,7 +15,7 @@ script: rake test
 Como podemos ver se está haciendo uso del gestor de tareas rake y además se ejecuta la orden que hace correr los tests.
 
 ## Circle CI
-En el caso de Circle CI, hacemos uso del contenedor creado para ejecutar los tests. En dicho contenedor, en el apartado CMD indicamos que se ejecuten los tests haciendo uso del gestor de tareras rake de la siguiente forma:
+En el caso de Circle CI, hacemos uso del contenedor creado para ejecutar los tests. En dicho contenedor, en el apartado CMD indicamos que se ejecuten los tests haciendo uso del gestor de tareras rake y la tarea test de la siguiente forma:
 
 ```
 #Ejecución de los tests
