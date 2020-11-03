@@ -57,6 +57,20 @@ Un [ejecutor](https://circleci.com/docs/2.0/concepts/#executors-and-images) defi
 Todo lo comentado hace referencia al siguiente fragmento de código:
 
 ```
-
+jobs:
+  build:
+    machine: true
 ```
 
+**Por último** como hemos dicho un trabajo se compone de pasos, estos pasos en nuestro caso será construir la imagen y posteriormente usarla para ejecutar los tests:
+
+```
+steps:
+      - checkout
+      - run: docker build -t whentoclasstests:v2 .
+      - run: docker run -t -v `pwd`:/test whentoclasstests:v2
+```
+
+Cuando hacemos un push vemos que en Circle CI se ejecutan los tests:
+
+![img3](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/images/circleci/3.png)
