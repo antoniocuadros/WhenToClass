@@ -19,7 +19,7 @@ Como ya se ha comentado anteriormente, en la actualidad los estudiantes de Infor
 
 - [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/ficherocicleci.md) se puede ver la integración continua con Circle CI funcionando y la justificación de la misma.
 
-- Se ha creado una github action ([se puede consultar aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/.github/workflows/docker.yml)) con el objetivo de mantener actualizado el contenedor de Docker Container Registry.
+- Se ha creado una github action ([se puede consultar aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/githubaction.md)) con el objetivo de mantener actualizado el contenedor de Docker Container Registry.
 
 #### Pasos previos
 - [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/register.md) se puede consultar el proceso de registro en Travis y la vinculación con GitHub.
