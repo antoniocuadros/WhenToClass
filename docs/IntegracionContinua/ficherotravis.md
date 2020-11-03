@@ -124,3 +124,10 @@ Cuando hacemos un push vemos que en Travis CI se ejecutan los tests:
 
 ### Nota
 Como se puede observar parece que no estoy instalando las dependencias, pero esto no es así, no hace falta utilizar explicitamente la orden `bundle install` en nuestro fichero `.travis.yml` ya que se ejecuta de forma automática tal y como se indica en la [guía de Travis de como construir un proyecto escrito en Ruby](https://docs.travis-ci.com/user/languages/ruby/#dependency-management).
+
+Vemos en la siguiente imagen como efectivamente, se instalan las dependencias:
+
+![img9](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/images/fichero/9.png)
+
+
+Las capturas se han sacado del [siguiente](https://travis-ci.com/github/antoniocuadros/WhenToClass/jobs/427121652) trabajo de Travis.
