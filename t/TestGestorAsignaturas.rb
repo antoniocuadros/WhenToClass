@@ -191,5 +191,4 @@ class TestGestorAsignaturas < Minitest::Test
 		assert_equal "Desarrollo de Aplicaciones para Internet", asignaturas[1], "Fallo al obtener las asignaturas"
 
 	end
-	
 end
