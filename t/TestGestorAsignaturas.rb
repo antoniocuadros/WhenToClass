@@ -1,5 +1,7 @@
-require "minitest/autorun"
+require "simplecov"
+SimpleCov.start
 
+require "minitest/autorun"
 require_relative "../lib/gestorasignaturas.rb"
 require_relative "../lib/asignatura.rb"
 require_relative "../lib/asignaturaerror.rb"
