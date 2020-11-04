@@ -10,6 +10,8 @@ rvm:
   - 2.7.0
   - 2.6.0
   - 2.5.0
+  - 2.4.0
+  - 2.3.0
 
 #Para poder trabajar con bundler 2.1.4
 before_install:
