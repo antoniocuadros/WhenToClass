@@ -25,6 +25,7 @@ class Asignatura
 		@horario_practicas = h_practicas
 		@grupo = group
 		@turno_presencialidad = t_presencialidad
+		@curso = curso
 
 		if(_siglas == nil) #si no se proporcionan siglas, hacemos nosotros el acrónimo con las letras en mayúsculas (primeras letras unicamente)
 			@siglas = @nombre.gsub('-', ' ').scan(/(\A[A-Z]|(?<=\s)[A-Z])/).flatten.join.upcase # con gsub convertimos - en espacios
