@@ -134,5 +134,9 @@ class TestGestorAsignaturas < Minitest::Test
 		@gestor.eliminarAsignatura("IV")
 		assert_equal 0, @gestor.contarAsignaturas(), "Fallo al borrar elemento"
 	end
+
+	def test_that_si_no_asignaturas_obtenerAsignaturaPorCurso_return_error
+		assert_raises(AsignaturaError, "Error: No existen asignaturas ahora mismo"){@gestor.obtenerAsignaturaPorCurso("4")}
+	end
 	
 end

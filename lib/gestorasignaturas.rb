@@ -86,7 +86,7 @@ class GestorAsignaturas
 	#Método obtenerAsignaturaPorCurso
 	#
 	#####################################################################################
-	def obtenerAsignaturaPorCurso()
+	def obtenerAsignaturaPorCurso(curso)
 		if @asignaturas.length() == 0
 			raise AsignaturaError, "Error: No existen asignaturas ahora mismo"
 		end
