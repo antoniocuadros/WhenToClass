@@ -19,7 +19,7 @@ class Asignatura
 	attr_reader:enlaces_clase_online		#vector en la que en cada posicion hay una pareja
 	attr_reader:curso
 
-	def initialize(nombre_asignatura, h_teoria, h_practicas, group, t_presencialidad, enlaces,_siglas=nil)
+	def initialize(nombre_asignatura, h_teoria, h_practicas, group, t_presencialidad, enlaces, curso, _siglas=nil)
 		@nombre = nombre_asignatura
 		@horario_teoria = h_teoria
 		@horario_practicas = h_practicas
