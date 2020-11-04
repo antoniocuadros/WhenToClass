@@ -87,8 +87,12 @@ class GestorAsignaturas
 	#
 	#####################################################################################
 	def obtenerAsignaturaPorCurso(curso)
-		if @asignaturas.length() == 0
-			raise AsignaturaError, "Error: No existen asignaturas ahora mismo"
+		if curso.to_i < 1 or curso.to_i > 4
+			raise AsignaturaError, "Error: El curso especificado no es válido"
+		else
+			if @asignaturas.length() == 0
+				raise AsignaturaError, "Error: No existen asignaturas ahora mismo"
+			end
 		end
 	end
 	
