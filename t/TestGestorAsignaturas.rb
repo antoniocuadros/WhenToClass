@@ -27,6 +27,28 @@ class TestGestorAsignaturas < Minitest::Test
 							["https://meet.jit.si/IV-ETSIIT-UGR-2020", "https://meet.jit.si/IV-ETSIIT-UGR-2020", "https://meet.jit.si/IV-ETSIIT-UGR-2020"],
 							"4",
 							)
+
+		@asignatura3 = Asignatura.new("Fundamentos de la programación", 
+							HorarioAsignatura.new("3-Miércoles", "11:30", "13:30", "T"), 
+							[HorarioAsignatura.new("3-Miércoles", "9:30", "11:30", "P1"), 
+							HorarioAsignatura.new("5-Viernes", "9:30", "11:30", "P2")],
+							"A",
+							[["28sep - 2oct", "12oct - 16oct", "26oct - 30oct", "9nov - 13nov", "23nov - 27nov", "7dec - 11dec", "21dec - 22dec"],
+							["5oct - 9oct", "19oct - 23oct", "2nov - 6nov","16nov - 20nov", "30nov - 4dec", "14dec - 18dec", "8jan y 11jan - 14jan"]],
+							["https://meet.jit.si/IV-ETSIIT-UGR-2020", "https://meet.jit.si/IV-ETSIIT-UGR-2020", "https://meet.jit.si/IV-ETSIIT-UGR-2020"],
+							"1",
+							)
+
+		@asignatura4 = Asignatura.new("Fundamentos del software", 
+							HorarioAsignatura.new("3-Miércoles", "11:30", "13:30", "T"), 
+							[HorarioAsignatura.new("3-Miércoles", "9:30", "11:30", "P1"), 
+							HorarioAsignatura.new("5-Viernes", "9:30", "11:30", "P2")],
+							"A",
+							[["28sep - 2oct", "12oct - 16oct", "26oct - 30oct", "9nov - 13nov", "23nov - 27nov", "7dec - 11dec", "21dec - 22dec"],
+							["5oct - 9oct", "19oct - 23oct", "2nov - 6nov","16nov - 20nov", "30nov - 4dec", "14dec - 18dec", "8jan y 11jan - 14jan"]],
+							["https://meet.jit.si/IV-ETSIIT-UGR-2020", "https://meet.jit.si/IV-ETSIIT-UGR-2020", "https://meet.jit.si/IV-ETSIIT-UGR-2020"],
+							"1",
+							)
 	end
 	
 	#####################################################################################
@@ -153,6 +175,21 @@ class TestGestorAsignaturas < Minitest::Test
 	def test_that_si_curso_no_valido_obtenerAsignaturaPorCurso_return_error
 		assert_raises(AsignaturaError, "Error: El curso especificado no es válido"){@gestor.obtenerAsignaturaPorCurso("0")}
 		assert_raises(AsignaturaError, "Error: El curso especificado no es válido"){@gestor.obtenerAsignaturaPorCurso("5")}
+	end
+
+	#TEST3
+	#Se comprueba que si todo se pasa bien y hay asignaturas, se devuelven las del curso especificado
+	def test_that_return_asignaturas_obtenerAsignaturaPorCurso
+		@gestor.anadirAsignatura(@asignatura1)
+		@gestor.anadirAsignatura(@asignatura2)
+		@gestor.anadirAsignatura(@asignatura3)
+		@gestor.anadirAsignatura(@asignatura4)
+		
+		asignaturas = @gestor.obtenerAsignaturaPorCurso("4")
+
+		assert_equal "Infraestructura Virtual", asignaturas[0], "Fallo al obtener las asignaturas"
+		assert_equal "Desarrollo de Aplicaciones para Internet", asignaturas[1], "Fallo al obtener las asignaturas"
+
 	end
 	
 end

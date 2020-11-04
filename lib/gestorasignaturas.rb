@@ -94,11 +94,13 @@ class GestorAsignaturas
 				raise AsignaturaError, "Error: No existen asignaturas ahora mismo"
 			else
 				a_devolver = []
-				for asignatura in @asignaturas
-					if asignatura.curso == curso.to_i
-						a_devolver.push(asignatura.nombre)
+
+				for i in 0..@asignaturas.length() -1
+					if @asignaturas[i].curso.to_i == curso.to_i
+						a_devolver.push(@asignaturas[i].nombre)
 					end
 				end
+
 				return a_devolver
 			end
 		end
