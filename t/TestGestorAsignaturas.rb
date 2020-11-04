@@ -135,6 +135,15 @@ class TestGestorAsignaturas < Minitest::Test
 		assert_equal 0, @gestor.contarAsignaturas(), "Fallo al borrar elemento"
 	end
 
+	#####################################################################################
+	#Tests que comprueban el correcto comportamiento del método obtenerAsignaturaPorCurso
+	#
+	#Método: obtenerAsignaturaPorCurso
+	#
+	#####################################################################################
+	
+	#TEST1
+	#Se comprueba que si se quieren obtener las asignaturas y no hay ninguna devuelve error
 	def test_that_si_no_asignaturas_obtenerAsignaturaPorCurso_return_error
 		assert_raises(AsignaturaError, "Error: No existen asignaturas ahora mismo"){@gestor.obtenerAsignaturaPorCurso("4")}
 	end
