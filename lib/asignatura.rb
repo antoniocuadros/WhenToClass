@@ -17,7 +17,7 @@ class Asignatura
 						#cada grupo
 	attr_reader:grupo			#Carácter (A, B, C, ...)
 	attr_reader:enlaces_clase_online		#vector en la que en cada posicion hay una pareja
-	attr_reader: curso
+	attr_reader:curso
 
 	def initialize(nombre_asignatura, h_teoria, h_practicas, group, t_presencialidad, enlaces,_siglas=nil)
 		@nombre = nombre_asignatura
