@@ -147,5 +147,12 @@ class TestGestorAsignaturas < Minitest::Test
 	def test_that_si_no_asignaturas_obtenerAsignaturaPorCurso_return_error
 		assert_raises(AsignaturaError, "Error: No existen asignaturas ahora mismo"){@gestor.obtenerAsignaturaPorCurso("4")}
 	end
+
+	#TEST2
+	#Se comprueba que si el curso pasado no es válido da error
+	def test_that_si_curso_no_valido_obtenerAsignaturaPorCurso_return_error
+		assert_raises(AsignaturaError, "Error: El curso especificado no es válido"){@gestor.obtenerAsignaturaPorCurso("0")}
+		assert_raises(AsignaturaError, "Error: El curso especificado no es válido"){@gestor.obtenerAsignaturaPorCurso("5")}
+	end
 	
 end
