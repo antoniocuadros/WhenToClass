@@ -12,7 +12,15 @@ Esto ha ocurrido debido a que se han realizado una serie de acciones que podría
 
 ## Cuando hacer push
 
+Uno de los principales problemas por los que se han agotado los créditos es debido a que se han realizado demasiados push y en consecuencia se ha ejecutado travis muchas veces.
+
+Se puede reducir el número de push realizados con una práctica muy sencilla, agrupar varios commits en un push en vez de hacer para cada commit un push.
+
 ## Versiones a probar
 
+Cuando probamos distintas versiones del lenguaje para ver cuáles soporta nuestra aplicación podríamos probar por ejemplo en el caso de ruby las versiones 2.7.2, 2.7.1, 2.7.0, 2.6.0... Esto es un problema con el sistema de créditos de Travis ya que estará ejecutando durante más tiempo y en consecuencia gastando más créditos.
+
+Para solucionar esto, sería suficiente con probar con las últimas versiones de cada serie, en la serie 2.7 por ejemplo sería suficiente con probar la versión 2.7.2
 
 ## Posibilidad de ejecutar los tests localmente
+
