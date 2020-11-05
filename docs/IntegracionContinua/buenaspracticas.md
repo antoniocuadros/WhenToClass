@@ -2,11 +2,11 @@
 
 Este documento se escribe a partir de haber agotado los créditos de Travis tal y como se puede ver en la siguiente imagen:
 
-![img1]()
+![img1](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/images/buenaspracticas/1.png)
 
 Como podemos ver Travis cuenta con un sistema de créditos que se agota en función de lo que se comenta en la siguiente imagen:
 
-![img2]()
+![img2](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/images/buenaspracticas/2.png)
 
 Esto ha ocurrido debido a que se han realizado una serie de acciones que podrían haberse realizado de mejor forma tal y como se van a comentar en los apartados siguientes.
 
@@ -23,4 +23,7 @@ Cuando probamos distintas versiones del lenguaje para ver cuáles soporta nuestr
 Para solucionar esto, sería suficiente con probar con las últimas versiones de cada serie, en la serie 2.7 por ejemplo sería suficiente con probar la versión 2.7.2
 
 ## Posibilidad de ejecutar los tests localmente
+Otra posibilidad es ejecutar los tests de travis de forma local. Para ello estoy investigando los siguientes enlaces para conseguir ponerlo a funcionar:
 
+- [Enlace 1](https://gist.github.com/fulldecent/d84cd1abdcc6930865d1b862c4aed917)
+- [Enlace 2](https://medium.com/google-developers/how-to-run-travisci-locally-on-docker-822fc6b2db2e)
