@@ -19,10 +19,3 @@ before_install:
 
 #Se ejecutan los tests
 script: rake test
-
-# cambiamos la política de notificaciones para que solo notifique
-# en caso de que falle la build
-notifications:
-  email:
-    on_success: never # por defecto: change
-    on_failure: always # por defecto: always
