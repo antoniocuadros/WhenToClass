@@ -52,6 +52,14 @@ script: rake test
 
 (obsérvese que no se prueba con la última versión del lenguaje ya que eso lo probamos con CircleCI dentro del contenedor)
 
+Adicionalmente cuando se posean créditos se realizarán pruebas con **diferentes sistemas operativos** ya que Travis facilita mucho esta tarea simplemente añadiendo lo siguiente a nuestro fichero de configuración por ejemplo:
+
+```
+os:
+  - linux
+  - osx
+```
+
 Este fichero hace lo siguiente:
 
 **En primer lugar** se define el lenguaje que se va a utilizar, en este caso Ruby:
