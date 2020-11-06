@@ -32,6 +32,12 @@ Para empezar a trabajar con Travis CI hemos necesitado crear el fichero y añadi
 ```
 language: ruby
 
+# Aún no ha sido probado, pendiente de recibir créditos
+#os:
+#  - linux
+#  - osx
+#  - windows
+
 #Cacheamos las dependencias
 cache: bundler
 
