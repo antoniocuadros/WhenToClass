@@ -52,8 +52,19 @@ En esta entrega se busca configurar y documentar un contenedor para ejecutar tes
 - Se han documentado las pruebas realizadas para la elección del contenedor y la decisión final
 - Se han documentado las buenas prácticas a la hora de escribir un Dockerfile.
 
-## Hito 4: Despliegue de una aplicación en un PaaS
-Se pretende hacer un despliegue en la nube uasndo una plataforma como servicio. Para esto será necesario realizar un script de configuración del PaaS, documentar como hacer el despliegue y agregar diversos ficheros de definición y lanzamiento de los servicios en el PaaS.
+## Hito 4: Integración continua
+Se pretende familiarizarse con los sistemas de integración continua y al menos utilizar dos de ellos.
+- Se ha añadido integración continua con Travis.
+
+- Se ha añadido integración continua con CircleCI.
+
+- Se ha añadido documentación de ambos sistemas.
+
+- Se ha añadido documentación de buenas prácticas con Travis debido al sistema de créditos.
+
+- Se han añadido badges al readme.
+
+- Se ha añadido documentación de una GitHub Action realizada anteriormente para mantener actualizado el contenedor de GitHub Container Registry.
 
 ## Hito 5: Contenedores para un microservicio
 En esta entrega se pretende desplegar un contenedor si es posible en más de una plataforma, descripción de los pasos para realizar dicho desplegue y automatizarlo. Documentación de los Dockerfiles.
