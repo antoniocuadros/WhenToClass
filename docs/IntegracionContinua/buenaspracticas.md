@@ -27,3 +27,7 @@ Otra posibilidad es ejecutar los tests de travis de forma local. Para ello estoy
 
 - [Enlace 1](https://gist.github.com/fulldecent/d84cd1abdcc6930865d1b862c4aed917)
 - [Enlace 2](https://medium.com/google-developers/how-to-run-travisci-locally-on-docker-822fc6b2db2e)
+
+
+## Hacer que Travis no se ejecute
+Si queremos que Travis no se ejecute, podemos añadir al mensaje del commit `[skip ci]`. Esto es muy útil cuando estamos haciendo documentación y hacemos push y no necesitamos que se ejecute Travis.
