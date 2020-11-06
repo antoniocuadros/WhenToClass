@@ -26,6 +26,8 @@ Además encontramos una gran cantidad de documentación oficial y muchísimos us
 
 Para empezar a trabajar con Travis CI hemos necesitado crear el fichero y añadir ahí la configuración `.travis.yml` se puede consultar [aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/.travis.yml). No obstante se presenta a continuación:
 
+(se puede observar que se han añadido las ultimas versiones de cada serie, se ha probado localmente y funcionan, en Travis se muestran las pruebas con las primeras versiones de cada serie funcionando, se modificará la imagen cuando y documentación cuando posea créditos de Travis)
+
 ```
 language: ruby
 
@@ -34,13 +36,11 @@ cache: bundler
 
 #Probamos con distintas versiones de ruby
 rvm:
-  - 2.7.1
   - 2.7.2
-  - 2.7.0
-  - 2.6.0
-  - 2.5.0
-  - 2.4.0
-  - 2.3.0
+  - 2.6.6
+  - 2.5.8
+  - 2.4.10
+  - 2.3.8
 
 #Para poder trabajar con bundler 2.1.4
 before_install:
