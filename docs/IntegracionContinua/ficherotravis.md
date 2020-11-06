@@ -58,6 +58,7 @@ Adicionalmente cuando se posean créditos se realizarán pruebas con **diferente
 os:
   - linux
   - osx
+  - windows
 ```
 
 Este fichero hace lo siguiente:
