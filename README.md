@@ -16,6 +16,7 @@ Como ya se ha comentado anteriormente, en la actualidad los estudiantes de Infor
 
 ## :hammer: Documentación
 ### Integración Continua
+
 - [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/ficherotravis.md) se puede ver la integración continua con Travis CI funcionando y la justificación de la misma.
 
 - [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/ficherocicleci.md) se puede ver la integración continua con Circle CI funcionando y la justificación de la misma.
@@ -29,6 +30,7 @@ Como ya se ha comentado anteriormente, en la actualidad los estudiantes de Infor
 - [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/buenaspracticas.md) se puede consultar una pequeña documentación de buenas prácticas que se pueden seguir desde mi experiencia usando Travis en relación al sistema de créditos.
   
 #### Pasos previos
+
 - [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/register.md) se puede consultar el proceso de registro en Travis y la vinculación con GitHub.
 
 - [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/investigacionPrevia.md) se puede consultar una documentación sobre una investigación previa sobre como trabajar con Travis y ruby y con contenedores.
