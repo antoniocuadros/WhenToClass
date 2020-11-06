@@ -79,6 +79,8 @@ Ahora mismo no es una diferencia muy significativa pero cuando el proyecto vaya 
 
 **En tercer lugar** indicamos todas las versiones de Ruby que funcionan con nuestro proyecto:
 
+(se adjuntan las fotos de las versiones que se probaron antes de agotarse los créditos, en cuanto posea créditos adjuntaré las imágenes de Travis funcionando con las últimas versiones de cada serie)
+
 ```
 rvm:
   - 2.7.1
