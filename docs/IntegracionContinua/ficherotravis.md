@@ -37,7 +37,6 @@ cache: bundler
 
 #Probamos con distintas versiones de ruby
 rvm:
-  - 2.7.2
   - 2.6.6
   - 2.5.8
   - 2.4.10
@@ -51,6 +50,7 @@ before_install:
 script: rake test
 ```
 
+(obsérvese que no se prueba con la última versión del lenguaje ya que eso lo probamos con CircleCI dentro del contenedor)
 
 Este fichero hace lo siguiente:
 
