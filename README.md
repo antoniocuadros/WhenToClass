@@ -1,5 +1,5 @@
 # WhenToClass :books:
-![CircleCI](https://img.shields.io/circleci/build/github/antoniocuadros/WhenToClass)
+![CircleCI](https://img.shields.io/circleci/build/github/antoniocuadros/WhenToClass?label=Build%20CircleCI) ![Travis (.com)](https://img.shields.io/travis/com/antoniocuadros/WhenToClass?label=Build%20Travis) ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/antoniocuadros/WhenToClass/Docker%20Build%20Push?label=GitHub%20Action%20%28push%20container%29) ![GitHub](https://img.shields.io/github/license/antoniocuadros/WhenToClass) ![GitHub issues](https://img.shields.io/github/issues/antoniocuadros/WhenToClass)
 
 ![logo](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/logo.jpg)
 
