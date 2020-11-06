@@ -1,4 +1,5 @@
 # WhenToClass :books:
+![CircleCI](https://img.shields.io/circleci/build/github/antoniocuadros/WhenToClass)
 
 ![logo](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/logo.jpg)
 
