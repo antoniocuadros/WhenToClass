@@ -1,4 +1,5 @@
 # Travis CI para integración continua
+Se ha utilizado este sistema con el objetivo de probar a ejecutar los tests haciendo uso de versiones más antiguas del lenguaje.
 
 ## Integración continua funcionando
 [En este enlace](https://travis-ci.com/github/antoniocuadros/WhenToClass) se puede consultar la integración continua funcionando.

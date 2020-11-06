@@ -1,4 +1,5 @@
 # Circle CI para integración continua
+Se ha utilizado este sistema con el objetivo de utilizar docker para probar con la última versión del lenguaje la ejecución de los tests.
 
 ## Integración continua funcionando
 
