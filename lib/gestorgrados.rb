@@ -42,5 +42,18 @@ class GestorGrados
         end
     end
 
+	#####################################################################################
+	#
+	#Método AñadirGrado
+	#
+	#####################################################################################
+    def AnadirGrado(grado)
+		if(grado.instance_of? Grado)
+			@grados << grado
+		else
+			raise AsignaturaError, "Error: No se puede añadir, no es un objeto Grado"
+		end
+	
+	end
 end
 
