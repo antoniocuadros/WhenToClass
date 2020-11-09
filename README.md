@@ -21,8 +21,6 @@ Como ya se ha comentado anteriormente, en la actualidad los estudiantes de Infor
 
 - [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/ficherocicleci.md) se puede ver la integración continua con Circle CI funcionando y la justificación de la misma.
 
-- Se ha creado una github action, [se puede consultar aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/githubaction.md) la documentación, con el objetivo de mantener actualizado el contenedor de Docker Container Registry.
-
 - [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/usogestordetareas.md) se puede consultar el uso del gestor de tareas en los distintos sistemas de integración continua utilizados.
 
 - [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/contenedor.md) se puede consultar el uso del contenedor en los distintos sistemas de integración continua.
