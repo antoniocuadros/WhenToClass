@@ -1,8 +1,10 @@
 entidad: 
   - lib/asignatura.rb
   - lib/grado.rb
+  - lib/gestorgrados.rb
 lenguaje: ruby
 test: 
   - t/TestAsignaturas.rb
   - t/TestGrado.rb
+  - t/TestGestorGrados.rb
 taskfile: Rakefile
