@@ -16,7 +16,6 @@ Como ya se ha comentado anteriormente, en la actualidad los estudiantes de Infor
 
 ## :hammer: Documentación
 ### Integración Continua
-
 - [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/ficherotravis.md) se puede ver la integración continua con Travis CI funcionando y la justificación de la misma.
 
 - [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/ficherocicleci.md) se puede ver la integración continua con Circle CI funcionando y la justificación de la misma.
