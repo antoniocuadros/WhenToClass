@@ -43,10 +43,12 @@ cache: bundler
 
 #Probamos con distintas versiones de ruby
 rvm:
-  - 2.6.6
-  - 2.5.8
-  - 2.4.10
-  - 2.3.8
+  - ruby-head
+  - 2.7
+  - 2.6
+  - 2.5
+  - 2.4
+  - 2.3
 
 #Para poder trabajar con bundler 2.1.4
 before_install:
