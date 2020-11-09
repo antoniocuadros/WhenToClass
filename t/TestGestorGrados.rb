@@ -87,5 +87,29 @@ class TestGestorGrados < Minitest::Test
 
 	end
 
+	#####################################################################################
+	#Tests que comprueba que funciona correctamente el método eliminarGrado
+	#
+	#método: eliminarGrado
+	#HU10
+	#####################################################################################
+
+	#TEST1
+	#Comprobamos que se puede eliminar
+	def test_that_elimina_correctamente_grado 
+		informatica2 = Grado.new("Ingeniería Informática2", "https://grados.ugr.es/informatica/", [@asignatura1, @asignatura2])
+		@gestorGrados.AnadirGrado(informatica2)
+		assert_equal 2, @gestorGrados.obtenerNumGrados()
+
+		@gestorGrados.eliminarGrado("Ingeniería Informática2")
+
+		assert_equal 1, @gestorGrados.obtenerNumGrados()
+	end
+
+	#TEST2
+	#Comprobamos que no se puede eliminar si no existe
+	def test_that_elimina_grado_falla_si_no_existe
+		assert_raises(AsignaturaError, "Error: No se puede eliminar, no existe el Grado"){@gestorGrados.eliminarGrado("Ingeniería Informática3")}
+	end
 
 end
