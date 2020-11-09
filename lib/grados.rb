@@ -9,8 +9,10 @@ require_relative "gestorasignatura.rb"
 #												                                             #
 ##############################################################################################
 
-class Grado
+class Grados
 
-
+	def initialize()
+		@gestor = Array.new
+	end
 
 end
