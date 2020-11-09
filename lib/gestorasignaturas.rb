@@ -3,12 +3,15 @@ require_relative "asignatura.rb"
 
 
 ##############################################################################################
-#												#
-#					Clase GestorAsignaturas				#
-#												#
+#												                                             #
+#					Clase grado				                                                 #
+#												                                             #
 ##############################################################################################
 
-class GestorAsignaturas
+class Grado
+	attr_reader:nombre_grado			#nombre del grado
+	attr_reader:asignaturas				#gestor de las asignaturas del grado
+	attr_reader:enlace_grado			#enlace a la información del grado
 	
 	#Constructor sin parámetros que indica que la variable asignaturas es un array
 	def initialize()
