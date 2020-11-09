@@ -41,21 +41,6 @@ jobs:
       - run: rake test
 ```
 
-
-```
-#vesión de circle ci
-version: 2.1
-
-#trabajo que buildea una imagen y ejecuta los tests en el contenedor
-jobs:
-  build:
-    machine: true
-    steps:
-      - checkout
-      - run: docker build -t whentoclasstests:v2 .
-      - run: docker run -t -v `pwd`:/test whentoclasstests:v2
-```
-
 Como podemos ver, es un fichero muy sencillo y hace lo siguiente:
 
 **En primer lugar** se define la [versión](https://circleci.com/docs/reference-2-1/#version) de Circle CI que se está utilizando:
