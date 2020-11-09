@@ -34,6 +34,21 @@ version: 2.1
 #trabajo que buildea una imagen y ejecuta los tests en el contenedor
 jobs:
   build:
+    docker:
+      - image: antoniocuadros/whentoclass
+    steps:
+      - checkout
+      - run: rake test
+```
+
+
+```
+#vesión de circle ci
+version: 2.1
+
+#trabajo que buildea una imagen y ejecuta los tests en el contenedor
+jobs:
+  build:
     machine: true
     steps:
       - checkout
@@ -53,23 +68,24 @@ version: 2.1
 
 Cada trabajo debe declarar un "ejecutor" que puede ser docker, machine, windows o macos.
 
-Un [ejecutor](https://circleci.com/docs/2.0/concepts/#executors-and-images) define una tecnología/entorno subyacente en el que se va a ejecutar un trabajo. En mi caso se ha elegido hacer las pruebas haciendo uso de una máquina virtual de Linux, especificado por `machine`. Se utiliza está opción ya que es la recomendada para trabajar con docker ya que trae facilidades para tarbajar con el mismo.
+Un [ejecutor](https://circleci.com/docs/2.0/concepts/#executors-and-images) define una tecnología/entorno subyacente en el que se va a ejecutar un trabajo. En mi caso se ha elegido hacer las pruebas haciendo uso de docker ya que vamos a reutilizar el contenedor creado de Docker Hub, además le indicamos nuestra imagen de para que la traiga (haga pull).
 
 Todo lo comentado hace referencia al siguiente fragmento de código:
 
 ```
 jobs:
   build:
-    machine: true
+    docker:
+      - image: antoniocuadros/whentoclass
 ```
 
-**Por último** como hemos dicho un trabajo se compone de pasos, estos pasos en nuestro caso será construir la imagen y posteriormente usarla para ejecutar los tests:
+**Por último** como hemos dicho un trabajo se compone de pasos, estos pasos en nuestro caso será hacer checkout y ejecutar los tests desde dentro del contenedor con la orden `rake test`, al haber dicho que usamos como ejecutor docker y nuestra propia imagen de Docker Hub ya estamos trabajando dentro del contenedor, debido a esto ejecutamos directamente esa orden y no nos hace falta indicar volúmenes, todo lo hacemos dentro del contenedor ya. Lo mencionado hace referencia a:
 
 ```
 steps:
-      - checkout
-      - run: docker build -t whentoclasstests:v2 .
-      - run: docker run -t -v `pwd`:/test whentoclasstests:v2
+  - checkout
+  - run: docker build -t whentoclasstests:v2 .
+  - run: docker run -t -v `pwd`:/test whentoclasstests:v2
 ```
 
 Cuando hacemos un push vemos que en Circle CI se ejecutan los tests:
