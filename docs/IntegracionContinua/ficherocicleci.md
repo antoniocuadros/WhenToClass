@@ -49,6 +49,7 @@ Como podemos ver, es un fichero muy sencillo y hace lo siguiente:
 version: 2.1
 ```
 
+
 **En segundo lugar** se define un [trabajo](https://circleci.com/docs/2.0/concepts/#jobs), un trabajo no es más que un componente básico de configuración y están formado por un conjunto de pasos que ejecutan tanto comando como scripts, en nuestro caso concreto, ejecutamos comandos.
 
 Cada trabajo debe declarar un "ejecutor" que puede ser docker, machine, windows o macos.
