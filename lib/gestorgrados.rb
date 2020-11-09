@@ -54,6 +54,15 @@ class GestorGrados
 			raise AsignaturaError, "Error: No se puede añadir, no es un objeto Grado"
 		end
 	
-	end
+    end
+    
+	#####################################################################################
+	#
+	#Método obtenerNumGrados
+	#
+    #####################################################################################
+    def obtenerNumGrados()
+        return @grados.length()
+    end
 end
 

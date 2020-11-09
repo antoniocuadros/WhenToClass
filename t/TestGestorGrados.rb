@@ -65,4 +65,19 @@ class TestGestorGrados < Minitest::Test
 		assert_raises(AsignaturaError, "Error: No se ha encontrado el grado"){@gestorGrados.obtenerGrado("Magisterio Primaria")}
 	end
 
+	#####################################################################################
+	#Tests que comprueba que funciona correctamente el método anadirGrado
+	#
+	#método: anadirGrado
+	#HU10
+	#####################################################################################
+	
+	#TEST1
+	#Comprobamos que se puede añadir correctamente un grado
+	def test_that_añade_correctamente_grado 
+		informatica2 = Grado.new("Ingeniería Informática2", "https://grados.ugr.es/informatica/", [@asignatura1, @asignatura2])
+		@gestorGrados.AnadirGrado(informatica2)
+		assert_equal 2, @gestorGrados.obtenerNumGrados()
+	end
+
 end
