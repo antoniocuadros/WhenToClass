@@ -8,8 +8,16 @@ require_relative "asignaturaerror.rb"
 ##############################################################################################
 class GestorGrados
 
-    def initialize()
-        @grados = Array.new
+    def initialize(grados = nil)
+        if(grados != nil)
+            num_grados = grados.length()
+
+            for i in 0..num_grados-1
+                @grados.push(grados[i])
+            end
+        else
+            @grados = Array.new
+        end
     end
 
     def obtenerGrado(nombre_grado)
@@ -20,7 +28,7 @@ class GestorGrados
                 if @grados.nombre_grado == nombre_grado
                     return @grados[i]
             end
-            
+
             raise AsignaturaError, "Error: No se ha encontrado el grado"
         end
 
