@@ -70,10 +70,5 @@ jobs:
 ```
 steps:
   - checkout
-  - run: docker build -t whentoclasstests:v2 .
-  - run: docker run -t -v `pwd`:/test whentoclasstests:v2
+  - run: rake test
 ```
-
-Cuando hacemos un push vemos que en Circle CI se ejecutan los tests:
-
-![img3](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/images/circleci/3.png)
