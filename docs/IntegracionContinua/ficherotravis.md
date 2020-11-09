@@ -109,6 +109,11 @@ rvm:
   - 2.3
 ```
 
+Especificando de esta forma las versiones, estamos probando de una forma muy sencilla las últimas versiones de cada serie (2.X) para comprobar que funciona nuestra aplicación para cada serie hasta la última que me ha funcionado, la 2.3.
+
+
+Además se prueba con la última versión del lenguaje, que se denomina en el caso de ruby como ruby-head.
+
 Podemos ver en la siguiente captura los tests pasando en dichas versiones:
 
 ![img3](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/images/fichero/3.png)
