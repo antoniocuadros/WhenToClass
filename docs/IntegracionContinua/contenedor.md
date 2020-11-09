@@ -17,27 +17,14 @@ El uso del contenedor en este sistema de integración continua ha sido muy senci
 Se ha hecho uso del contenedor de la siguiente forma:
 
 ```
-steps:
+  build:
+    docker:
+      - image: antoniocuadros/whentoclass
+    steps:
       - checkout
-      - run: docker build -t whentoclasstests:v2 .
-      - run: docker run -t -v `pwd`:/test whentoclasstests:v2
+      - run: rake test
 ```
 
-
-## GitHub Actions
-De forma semejante a lo que se ha comentado en el apartado de Circle CI, se ha hecho uso del contenedor para ejecutar los tests ya que todo está configurado en ese contenedor para llevar a cabo esta tarea. 
-
-El uso del contenedor también ha sido muy sencillo y **tampoco ha sido necesaria ninguna adaptación del contenedor** ya que todo ha funcionado correctamente de acuerdo a lo especificado en el Dockerfile.
-
-
-Se ha hecho uso del contenedor de la siguiente forma:
-
-```
-        - name: docker build
-          run: docker build -t ghcr.io/antoniocuadros/whentoclasstests:v2 .
-        - name: exec test
-          run: docker run -t -v `pwd`:/test ghcr.io/antoniocuadros/whentoclasstests:v2
-```
 ## Travis CI
 En Travis CI no se ha hecho uso del contenedor. Esto es debido a que se ha querido probar con distintas versiones de Ruby para saber en qué versiones funciona nuestra aplicación. 
 
