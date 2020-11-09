@@ -47,8 +47,8 @@ class TestGestorGrados < Minitest::Test
 
 	#Test1
 	#Comprueba que se han añadido los grados
-	#def test_that_grado_asignado_correcto
-	#	assert_equal "Ingeniería Informática", @gestorGrados.grados[0].nombre_grado
-	#end
+	def test_that_grado_asignado_correcto
+		assert_equal "Ingeniería Informática", @gestorGrados.obtenerGrado("Ingeniería Informática").nombre_grado
+	end
 
 end

@@ -1,5 +1,7 @@
 #Antonio Cuadros Lapresta
 require_relative "horarioasignatura.rb"
+require_relative "asignatura.rb"
+require_relative "grado.rb"
 require_relative "asignaturaerror.rb"
 ##############################################################################################
 #												                                             #
@@ -26,7 +28,7 @@ class GestorGrados
             raise AsignaturaError, "Error: No existe ningún grado disponible"
         else
             for i in 0..@grados.length() -1
-                if @grados.nombre_grado == nombre_grado
+                if @grados[i].nombre_grado == nombre_grado
                     return @grados[i]
                 end
             end
@@ -36,3 +38,4 @@ class GestorGrados
     end
 
 end
+
