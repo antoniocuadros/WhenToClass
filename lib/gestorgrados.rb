@@ -13,6 +13,7 @@ class GestorGrados
             num_grados = grados.length()
 
             for i in 0..num_grados-1
+                @grados = Array.new
                 @grados.push(grados[i])
             end
         else

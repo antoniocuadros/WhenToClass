@@ -5,6 +5,7 @@ require_relative "../lib/asignatura.rb"
 require_relative "../lib/horarioasignatura.rb"
 require_relative "../lib/asignaturaerror.rb"
 require_relative "../lib/gestorgrados.rb"
+require_relative "../lib/grado.rb"
 
 class TestGestorGrados < Minitest::Test
 	#####################################################################################
@@ -37,5 +38,17 @@ class TestGestorGrados < Minitest::Test
 
 		@gestorGrados = GestorGrados.new([@informatica])
 	end
+
+	#####################################################################################
+	#Tests básicos para comprobar que funcionan bien las asignaciones en el constructor
+	#
+	#
+	#####################################################################################
+
+	#Test1
+	#Comprueba que se han añadido los grados
+	#def test_that_grado_asignado_correcto
+	#	assert_equal "Ingeniería Informática", @gestorGrados.grados[0].nombre_grado
+	#end
 
 end
