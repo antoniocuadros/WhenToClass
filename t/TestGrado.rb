@@ -1,11 +1,11 @@
 require "minitest/autorun"
-require_relative "../lib/gestorasignaturas.rb"
+require_relative "../lib/grado.rb"
 require_relative "../lib/asignatura.rb"
 require_relative "../lib/asignaturaerror.rb"
 
-class TestGestorAsignaturas < Minitest::Test
+class TestGrado < Minitest::Test
 	def setup
-		@gestor = GestorAsignaturas.new
+		@gestor = Grado.new
 		
 		@asignatura1 = Asignatura.new("Infraestructura Virtual", 
 								HorarioAsignatura.new("2-Martes", "11:30", "13:30", "T"), 
