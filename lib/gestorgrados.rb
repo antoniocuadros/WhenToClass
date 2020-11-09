@@ -53,8 +53,26 @@ class GestorGrados
 		else
 			raise AsignaturaError, "Error: No se puede añadir, no es un objeto Grado"
 		end
-	
     end
+
+	#####################################################################################
+	#
+	#Método eliminarGrado
+	#
+	#####################################################################################
+	def eliminarGrado(nombre)
+		i = 0
+		encontrado = false
+		
+		while i < @grados.length() and !encontrado
+            if(@grados[i].nombre_grado == nombre)
+                encontrado = true
+                @grados.delete_at(i)
+            end
+			i +=1
+		end
+	
+	end
     
 	#####################################################################################
 	#
