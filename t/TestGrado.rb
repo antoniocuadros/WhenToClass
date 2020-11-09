@@ -5,7 +5,7 @@ require_relative "../lib/asignaturaerror.rb"
 
 class TestGrado < Minitest::Test
 	def setup
-		@gestor = Grado.new
+		@informatica = Grado.new("Ingeniería Informática", "https://grados.ugr.es/informatica/")
 		
 		@asignatura1 = Asignatura.new("Infraestructura Virtual", 
 								HorarioAsignatura.new("2-Martes", "11:30", "13:30", "T"), 
@@ -61,9 +61,9 @@ class TestGrado < Minitest::Test
 	#TEST1
 	#Si se añaden dos asignaturas, el tamaño es 2
 	def test_that_contarAsignaturas_method_return_valores_correctos
-		@gestor.anadirAsignatura(@asignatura1)
-		@gestor.anadirAsignatura(@asignatura2)
-		assert_equal 2, @gestor.contarAsignaturas(), "Fallo al añadir elemento"
+		@informatica.anadirAsignatura(@asignatura1)
+		@informatica.anadirAsignatura(@asignatura2)
+		assert_equal 2, @informatica.contarAsignaturas(), "Fallo al añadir elemento"
 	end
 	
 	#####################################################################################
@@ -77,16 +77,16 @@ class TestGrado < Minitest::Test
 	#Comprueba que salta error si pasamos algo que no es un objeto asignatura
 	def test_that_anadirAsignatura_method_return_error_if_no_pasamos_objeto_Asignatura
 		#Si le pasamos mal el objeto
-		assert_raises(AsignaturaError, "Error: No se puede añadir, no es un objeto Asignatura"){@gestor.anadirAsignatura("IV")}
+		assert_raises(AsignaturaError, "Error: No se puede añadir, no es un objeto Asignatura"){@informatica.anadirAsignatura("IV")}
 	end
 
 	#TEST2
 	#Comprueba que se incrementa  el tamaño del vector al añadir elementos
 	def test_that_anadirAsignatura_method_anade_correctamente
 		
-		@gestor.anadirAsignatura(@asignatura1)
-		@gestor.anadirAsignatura(@asignatura2)
-		assert_equal 2, @gestor.contarAsignaturas(), "Fallo al añadir elemento"
+		@informatica.anadirAsignatura(@asignatura1)
+		@informatica.anadirAsignatura(@asignatura2)
+		assert_equal 2, @informatica.contarAsignaturas(), "Fallo al añadir elemento"
 	end
 	
 	#####################################################################################
@@ -99,29 +99,29 @@ class TestGrado < Minitest::Test
 	#TEST1
 	#Si no existe el elemento a buscar, se devuelve nil
 	def test_that_obtenerAsignatura_method_return_nil_si_no_existe
-		assert_nil @gestor.obtenerAsignatura("Infraestructura Virtual")
+		assert_nil @informatica.obtenerAsignatura("Infraestructura Virtual")
 	end
 	
 	#TEST2
 	#Si existe se devuelve la asignatura
 	def test_that_obtenerAsignatura_nombres_method_return_asignatura
-		@gestor.anadirAsignatura(@asignatura1)
-		assert_instance_of Asignatura, @gestor.obtenerAsignatura("Infraestructura Virtual")
-		asig = @gestor.obtenerAsignatura("Infraestructura Virtual")
+		@informatica.anadirAsignatura(@asignatura1)
+		assert_instance_of Asignatura, @informatica.obtenerAsignatura("Infraestructura Virtual")
+		asig = @informatica.obtenerAsignatura("Infraestructura Virtual")
 		assert_equal "Infraestructura Virtual", asig.nombre
 	end
 
 	#TEST3
 	#Podemos encontrar una asignatura por sus siglas
 	def test_that_obtenerAsignatura_siglas_method_return_asignatura
-		@gestor.anadirAsignatura(@asignatura1)
-		assert_instance_of Asignatura, @gestor.obtenerAsignatura("IV")
-		asig = @gestor.obtenerAsignatura("IV")
+		@informatica.anadirAsignatura(@asignatura1)
+		assert_instance_of Asignatura, @informatica.obtenerAsignatura("IV")
+		asig = @informatica.obtenerAsignatura("IV")
 		assert_equal "IV", asig.siglas
 
-		@gestor.anadirAsignatura(@asignatura2)
-		assert_instance_of Asignatura, @gestor.obtenerAsignatura("DAI")
-		asig = @gestor.obtenerAsignatura("DAI")
+		@informatica.anadirAsignatura(@asignatura2)
+		assert_instance_of Asignatura, @informatica.obtenerAsignatura("DAI")
+		asig = @informatica.obtenerAsignatura("DAI")
 		assert_equal "DAI", asig.siglas
 	end
 
@@ -136,25 +136,25 @@ class TestGrado < Minitest::Test
 	#Se comprueba que si se quiere eliminar una asignatura que no existe, el tamaño del vector
 	#no varía
 	def test_that_eliminarAsignatura_method_no_borra_no_existe
-		@gestor.anadirAsignatura(@asignatura1)
-		@gestor.eliminarAsignatura("DAI")
-		assert_equal 1, @gestor.contarAsignaturas(), "Fallo al borrar elemento, no se podía borrar"
+		@informatica.anadirAsignatura(@asignatura1)
+		@informatica.eliminarAsignatura("DAI")
+		assert_equal 1, @informatica.contarAsignaturas(), "Fallo al borrar elemento, no se podía borrar"
 	end
 	
 	#TEST2
 	#Se comprueba que se borra un elemento que existe
 	def test_that_eliminarAsignatura_method_borra_si_existe
-		@gestor.anadirAsignatura(@asignatura1)
-		@gestor.eliminarAsignatura("Infraestructura Virtual")
-		assert_equal 0, @gestor.contarAsignaturas(), "Fallo al borrar elemento"
+		@informatica.anadirAsignatura(@asignatura1)
+		@informatica.eliminarAsignatura("Infraestructura Virtual")
+		assert_equal 0, @informatica.contarAsignaturas(), "Fallo al borrar elemento"
 	end
 	
 	#TEST3
 	#Se elimina una asignatura por sus siglas
 	def test_that_eliminarAsignatura_siglas_method_borra_si_existe
-		@gestor.anadirAsignatura(@asignatura1)
-		@gestor.eliminarAsignatura("IV")
-		assert_equal 0, @gestor.contarAsignaturas(), "Fallo al borrar elemento"
+		@informatica.anadirAsignatura(@asignatura1)
+		@informatica.eliminarAsignatura("IV")
+		assert_equal 0, @informatica.contarAsignaturas(), "Fallo al borrar elemento"
 	end
 
 	#####################################################################################
@@ -167,28 +167,46 @@ class TestGrado < Minitest::Test
 	#TEST1
 	#Se comprueba que si se quieren obtener las asignaturas y no hay ninguna devuelve error
 	def test_that_si_no_asignaturas_obtenerAsignaturaPorCurso_return_error
-		assert_raises(AsignaturaError, "Error: No existen asignaturas ahora mismo"){@gestor.obtenerAsignaturaPorCurso("4")}
+		assert_raises(AsignaturaError, "Error: No existen asignaturas ahora mismo"){@informatica.obtenerAsignaturaPorCurso("4")}
 	end
 
 	#TEST2
 	#Se comprueba que si el curso pasado no es válido da error
 	def test_that_si_curso_no_valido_obtenerAsignaturaPorCurso_return_error
-		assert_raises(AsignaturaError, "Error: El curso especificado no es válido"){@gestor.obtenerAsignaturaPorCurso("0")}
-		assert_raises(AsignaturaError, "Error: El curso especificado no es válido"){@gestor.obtenerAsignaturaPorCurso("5")}
+		assert_raises(AsignaturaError, "Error: El curso especificado no es válido"){@informatica.obtenerAsignaturaPorCurso("0")}
+		assert_raises(AsignaturaError, "Error: El curso especificado no es válido"){@informatica.obtenerAsignaturaPorCurso("5")}
 	end
 
 	#TEST3
 	#Se comprueba que si todo se pasa bien y hay asignaturas, se devuelven las del curso especificado
 	def test_that_return_asignaturas_obtenerAsignaturaPorCurso
-		@gestor.anadirAsignatura(@asignatura1)
-		@gestor.anadirAsignatura(@asignatura2)
-		@gestor.anadirAsignatura(@asignatura3)
-		@gestor.anadirAsignatura(@asignatura4)
+		@informatica.anadirAsignatura(@asignatura1)
+		@informatica.anadirAsignatura(@asignatura2)
+		@informatica.anadirAsignatura(@asignatura3)
+		@informatica.anadirAsignatura(@asignatura4)
 		
-		asignaturas = @gestor.obtenerAsignaturaPorCurso("4")
+		asignaturas = @informatica.obtenerAsignaturaPorCurso("4")
 
 		assert_equal "Infraestructura Virtual", asignaturas[0], "Fallo al obtener las asignaturas"
 		assert_equal "Desarrollo de Aplicaciones para Internet", asignaturas[1], "Fallo al obtener las asignaturas"
 
+	end
+
+	#####################################################################################
+	#Tests basicos para comprobar que los atributos han sido asignados correctamente
+	#
+	#
+	#####################################################################################
+
+	#TEST1
+	#se comprueba que el nombre es correcto
+	def test_that_return_nombre_grado
+		assert_equal "Ingeniería Informática", @informatica.nombre_grado, "Fallo al obtener el nombre del grado"
+	end
+
+	#TEST2
+	#se comprueba que el enlace del grado es correcto
+	def test_that_return_enlace_grado
+		assert_equal "https://grados.ugr.es/informatica/", @informatica.enlace_grado, "Fallo al obtener el enlace del grado"
 	end
 end
