@@ -41,7 +41,7 @@ language: ruby
 #Cacheamos las dependencias
 cache: bundler
 
-#Probamos con distintas versiones de ruby
+#Probamos con las últimas versiones de cada rama
 rvm:
   - ruby-head
   - 2.7
@@ -97,17 +97,16 @@ Ahora mismo no es una diferencia muy significativa pero cuando el proyecto vaya 
 
 **En tercer lugar** indicamos todas las versiones de Ruby que funcionan con nuestro proyecto:
 
-(se adjuntan las fotos de las versiones que se probaron antes de agotarse los créditos, en cuanto posea créditos adjuntaré las imágenes de Travis funcionando con las últimas versiones de cada serie)
+(se adjuntan las fotos de las versiones que se probaron antes de agotarse los créditos, en cuanto posea créditos adjuntaré las imágenes de Travis funcionando con las últimas versiones de cada serie y además se ha utilizado la última versión del lenguaje especificada como ruby-head)
 
 ```
 rvm:
-  - 2.7.1
-  - 2.7.2
-  - 2.7.0
-  - 2.6.0
-  - 2.5.0
-  - 2.4.0
-  - 2.3.0
+  - ruby-head
+  - 2.7
+  - 2.6
+  - 2.5
+  - 2.4
+  - 2.3
 ```
 
 Podemos ver en la siguiente captura los tests pasando en dichas versiones:
