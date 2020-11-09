@@ -27,28 +27,26 @@ Además encontramos una gran cantidad de documentación oficial y muchísimos us
 
 Para empezar a trabajar con Travis CI hemos necesitado crear el fichero y añadir ahí la configuración `.travis.yml` se puede consultar [aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/.travis.yml). No obstante se presenta a continuación:
 
-(se puede observar que se han añadido las ultimas versiones de cada serie, se ha probado localmente y funcionan, en Travis se muestran las pruebas con las primeras versiones de cada serie funcionando, se modificará la imagen cuando y documentación cuando posea créditos de Travis)
+Se han realizado pruebas con las últimas versiones de cada serie y se ha determinado que funciona nuestra aplicación con las versiones desde la 2.3.0 hasta la 2.7 e incluso la que es en este momento la "ruby-head". Se han dejado únicamente las más representativas, es decir, la head, la [última release: 2.7](https://www.ruby-lang.org/en/downloads/releases/), la que se ha venido utilizando con nuestro gestor de versiones rbenv: 2.6 y además la última compatible: 2.3.
 
 ```
 language: ruby
-
-# Aún no ha sido probado, pendiente de recibir créditos
-#os:
-#  - linux
-#  - osx
-#  - windows
 
 #Cacheamos las dependencias
 cache: bundler
 
 #Probamos con las últimas versiones de cada rama
 rvm:
+  #última versión de ruby, se llama en ruby "ruby-head"
   - ruby-head
+  #Última release
   - 2.7
+  #Versión que estaba utilizando en rbenv
   - 2.6
-  - 2.5
-  - 2.4
+  #Última release que funciona con nuestro proyecto
   - 2.3
+
+  #Las versiones entre la 2.3 y la 2.6 funcionan con nuestro proyecto de forma correcta
 
 #Para poder trabajar con bundler 2.1.4
 before_install:
@@ -101,11 +99,13 @@ Ahora mismo no es una diferencia muy significativa pero cuando el proyecto vaya 
 
 ```
 rvm:
+  #última versión de ruby, se llama en ruby "ruby-head"
   - ruby-head
+  #Última release
   - 2.7
+  #Versión que estaba utilizando en rbenv
   - 2.6
-  - 2.5
-  - 2.4
+  #Última release que funciona con nuestro proyecto
   - 2.3
 ```
 
