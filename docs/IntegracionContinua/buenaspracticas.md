@@ -23,11 +23,7 @@ Cuando probamos distintas versiones del lenguaje para ver cuáles soporta nuestr
 Para solucionar esto, sería suficiente con probar con las últimas versiones de cada serie, en la serie 2.7 por ejemplo sería suficiente con probar la versión 2.7.2
 
 ## Posibilidad de ejecutar los tests localmente
-Otra posibilidad es ejecutar los tests de travis de forma local. Para ello estoy investigando los siguientes enlaces para conseguir ponerlo a funcionar:
-
-- [Enlace 1](https://gist.github.com/fulldecent/d84cd1abdcc6930865d1b862c4aed917)
-- [Enlace 2](https://medium.com/google-developers/how-to-run-travisci-locally-on-docker-822fc6b2db2e)
-
+Otra posibilidad es ejecutar los tests de forma local. Simplemente haremos uso del gestor de tareas y la orden creada para ello `rake test` y así nos ahorraremos tener que usar travis tan continuadamente.
 
 ## Hacer que Travis no se ejecute
 Si queremos que Travis no se ejecute, podemos añadir al mensaje del commit `[skip ci]`. Esto es muy útil cuando estamos haciendo documentación y hacemos push y no necesitamos que se ejecute Travis.
