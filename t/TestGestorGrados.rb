@@ -35,7 +35,7 @@ class TestGestorGrados < Minitest::Test
 
 		@informatica = Grado.new("Ingeniería Informática", "https://grados.ugr.es/informatica/", [@asignatura1, @asignatura2])
 
-        @gestorGrados = GestorGrados.new([@informatica])
-    end
+		@gestorGrados = GestorGrados.new([@informatica])
+	end
 
 end

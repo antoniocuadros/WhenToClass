@@ -27,9 +27,11 @@ class GestorGrados
             for i in 0..@grados.length() -1
                 if @grados.nombre_grado == nombre_grado
                     return @grados[i]
+                end
             end
 
             raise AsignaturaError, "Error: No se ha encontrado el grado"
         end
+    end
 
 end
