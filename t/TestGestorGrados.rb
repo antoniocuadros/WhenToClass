@@ -80,4 +80,12 @@ class TestGestorGrados < Minitest::Test
 		assert_equal 2, @gestorGrados.obtenerNumGrados()
 	end
 
+	#TEST2
+	#Comprobamos que falla si no se le pasa un objeto grado
+	def test_that_añade_falla_si_no_grado
+		assert_raises(AsignaturaError, "Error: No se puede añadir, no es un objeto Grado"){@gestorGrados.AnadirGrado(@asignatura1)}
+
+	end
+
+
 end
