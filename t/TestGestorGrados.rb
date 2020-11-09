@@ -40,9 +40,10 @@ class TestGestorGrados < Minitest::Test
 	end
 
 	#####################################################################################
-	#Tests básicos para comprobar que funcionan bien las asignaciones en el constructor
+	#Tests que comprueba que funciona correctamente el método obtenerGrado
 	#
-	#
+	#método: obtenerGrado
+	#HU9
 	#####################################################################################
 
 	#Test1

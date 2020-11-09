@@ -23,6 +23,11 @@ class GestorGrados
         end
     end
 
+	#####################################################################################
+	#
+	#Método obtenerGrado
+	#
+	#####################################################################################
     def obtenerGrado(nombre_grado)
         if @grados.length() == 0
             raise AsignaturaError, "Error: No existe ningún grado disponible"
