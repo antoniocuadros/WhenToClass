@@ -11,9 +11,7 @@ class TestGestorGrados < Minitest::Test
 	#Definimos en primer lugar un objeto de la clase con el cual vamos a 
 	#trabajar en los tests
 	#####################################################################################
-	def setup
-		@informatica = Grado.new("Ingeniería Informática", "https://grados.ugr.es/informatica/")
-		
+	def setup		
 		@asignatura1 = Asignatura.new("Infraestructura Virtual", 
 								HorarioAsignatura.new("2-Martes", "11:30", "13:30", "T"), 
 								[HorarioAsignatura.new("2-Martes", "9:30", "11:30", "P1"), 
@@ -34,8 +32,10 @@ class TestGestorGrados < Minitest::Test
 							["https://meet.jit.si/IV-ETSIIT-UGR-2020", "https://meet.jit.si/IV-ETSIIT-UGR-2020", "https://meet.jit.si/IV-ETSIIT-UGR-2020"],
 							"4",
 							)
-							
-        @gestorGrados = GestorGrados.new()
+
+		@informatica = Grado.new("Ingeniería Informática", "https://grados.ugr.es/informatica/", [@asignatura1, @asignatura2])
+
+        @gestorGrados = GestorGrados.new([@informatica])
     end
 
 end
