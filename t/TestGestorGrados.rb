@@ -52,4 +52,17 @@ class TestGestorGrados < Minitest::Test
 		assert_equal "Ingeniería Informática", @gestorGrados.obtenerGrado("Ingeniería Informática").nombre_grado
 	end
 
+	#Test2
+	#Si no hay grados, debe saltar excepcion
+	def test_that_return_error_si_grado_vacio
+		@gestorGrados2 = GestorGrados.new
+		assert_raises(AsignaturaError, "Error: No existe ningún grado disponible"){@gestorGrados2.obtenerGrado("Ingeniería Informática")}
+	end
+
+	#Test3
+	#Si no existe el grado, debe saltar una excepcion
+	def test_that_return_error_si_grado_no_existe
+		assert_raises(AsignaturaError, "Error: No se ha encontrado el grado"){@gestorGrados.obtenerGrado("Magisterio Primaria")}
+	end
+
 end
