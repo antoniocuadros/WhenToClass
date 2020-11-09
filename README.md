@@ -55,11 +55,13 @@ Como ya se ha comentado anteriormente, en la actualidad los estudiantes de Infor
 
 ### Ficheros relevantes
 - [Clase Asignatura](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/asignatura.rb).
-- [Clase GestorAsignaturas](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/gestorasignaturas.rb).
+- [Clase grado](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/grado.rb).
 - [Struct horarioAsignatura](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/horarioasignatura.rb).
 - [Tests de clase Asignaturas](https://github.com/antoniocuadros/WhenToClass/blob/master/t/TestAsignaturas.rb).
-- [Tests de la clase GestorAsignaturas](https://github.com/antoniocuadros/WhenToClass/blob/master/t/TestGestorAsignaturas.rb).
+- [Tests de la clase grado](https://github.com/antoniocuadros/WhenToClass/blob/master/t/TestGrado.rb).
 - [Clase propia para excepciones](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/asignaturaerror.rb)
+- [Clase gestorGrados](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/gestorgrados.rb)
+- [Tests Clase gestorGrados](https://github.com/antoniocuadros/WhenToClass/blob/master/t/TestGestorGrados.rb)
 
 ### Test de las clases e instalar dependencias
 [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Clases/test.md) se puede consultar información sobre cómo testear e instalar dependencias.
