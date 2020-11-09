@@ -209,4 +209,12 @@ class TestGrado < Minitest::Test
 	def test_that_return_enlace_grado
 		assert_equal "https://grados.ugr.es/informatica/", @informatica.enlace_grado, "Fallo al obtener el enlace del grado"
 	end
+
+	#TEST3
+	#se comprueba que se añaden bien asignaturas en el constructor
+	def test_that_return_asignatura
+		@informatica2 = Grado.new("Ingeniería Informática", "https://grados.ugr.es/informatica/", [@asignatura1])
+
+		assert_equal "Infraestructura Virtual", @informatica2.obtenerAsignatura("Infraestructura Virtual").nombre, "Fallo al construir el grado"
+	end
 end
