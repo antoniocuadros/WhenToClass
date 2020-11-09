@@ -20,14 +20,14 @@ class Grado
 		@enlace_grado = enlace_grado
 
 		if(asignaturas != nil)
-            num_asig = asignaturas.length()
+			num_asig = asignaturas.length()
 
-            for i in 0..num_asig-1
-                @asignaturas.push(asignaturas[i])
-            end
-        else
-            @asignaturas = Array.new
-        end
+			for i in 0..num_asig-1
+				@asignaturas.push(asignaturas[i])
+			end
+		else
+			@asignaturas = Array.new
+		end
 	end
 	
 	#####################################################################################
