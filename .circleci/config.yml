@@ -8,6 +8,5 @@ jobs:
       - image: antoniocuadros/whentoclass
     steps:
       - checkout
-      - run:
-        docker run -t -v `pwd`:/test whentoclasstests
+      - run: docker run -t -v `pwd`:/test whentoclasstests
 
