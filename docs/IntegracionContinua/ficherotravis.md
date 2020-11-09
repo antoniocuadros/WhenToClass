@@ -107,7 +107,13 @@ rvm:
   - 2.6
   #Última release que funciona con nuestro proyecto
   - 2.3
+
+  #Las versiones entre la 2.3 y la 2.6 funcionan con nuestro proyecto de forma correcta
 ```
+
+Se pueden ver todas las versiones de ruby funcionando, de la 2.3 a la head funcionando (en un repositorio que es un clon de este en gitlab ya que no me quedan créditos con esta cuenta) en la siguiente imagen:
+
+![img44](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/images/versiones_gitlab.png)
 
 Especificando de esta forma las versiones, estamos probando de una forma muy sencilla las últimas versiones de cada serie (2.X) para comprobar que funciona nuestra aplicación para cada serie hasta la última que me ha funcionado, la 2.3.
 
