@@ -5,12 +5,16 @@ cache: bundler
 
 #Probamos con las últimas versiones de cada rama
 rvm:
+  #última versión de ruby, se llama en ruby "ruby-head"
   - ruby-head
+  #Última release
   - 2.7
+  #Versión que estaba utilizando en rbenv
   - 2.6
-  - 2.5
-  - 2.4
+  #Última release que funciona con nuestro proyecto
   - 2.3
+
+  #Las versiones entre la 2.3 y la 2.6 funcionan con nuestro proyecto de forma correcta
 
 #Para poder trabajar con bundler 2.1.4
 before_install:
