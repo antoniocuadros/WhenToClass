@@ -9,10 +9,13 @@ require_relative "gestorasignatura.rb"
 #												                                             #
 ##############################################################################################
 
-class Grados
+class Grado
+	attr_reader:nombre_grado
+	attr_reader:asignaturas
+	attr_reader:enlace_grado
 
-	def initialize()
-		@gestor = Array.new
+	def initialize(nombre_grado, asignaturas, enlace_grado)
+		
 	end
 
 end
