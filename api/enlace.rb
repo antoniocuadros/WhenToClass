@@ -55,10 +55,6 @@ Handler = Proc.new do |req, res|
     a_devolver = {asignatura:datos["asignaturas"][a_buscar]["nombreAsignatura"], enlace:datos["asignaturas"][a_buscar]["enlace"], info:msg  }
   end
 
-
-
-
-
   res.status = 200
   res['Content-Type'] = 'application/json; charset=utf-8'
   res.body = a_devolver.to_json
