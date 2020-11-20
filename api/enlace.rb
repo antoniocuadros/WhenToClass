@@ -8,11 +8,10 @@ Handler = Proc.new do |req, res|
 
   #################
   #Leemos el fichero de datos
-  if datos != nil
-    ubicacion = File.join(File.dirname(__FILE__),'data.json')
-    fichero = File.read(ubicacion)
-    datos = JSON.parse(fichero)
-  end
+  ubicacion = File.join(File.dirname(__FILE__),'data.json')
+  fichero = File.read(ubicacion)
+  datos = JSON.parse(fichero)
+
 
   dias_validos = ["L","M","X","J","V"]
   modalidades_validas = ["T","P"]
