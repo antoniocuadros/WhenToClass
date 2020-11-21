@@ -106,12 +106,11 @@ Si accedemos directamente a la página de netlify nos saltará el siguiente mens
 Se puede ir a dicha página desde [aquí](https://ktengo.netlify.app/.netlify/functions/ktengo).
 
 ### Prueba de funcionamiento
+Si se desea probar se puede hacer a través del siguiente [enlace](https://t.me/ktengobot).
 Nada más iniciar un chat con el bot podemos ver que salta el default del switch ya que se invoca el comando /start:
 
-![img1]()
+![img1](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/serverless/images/8.png)
 
 Si ponemos el resto de comandos:
 
-![img2]()
-
-Si se quiere probar se puede hacer a través del siguiente [enlace](https://t.me/ktengobot).
+![img2](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/serverless/images/9.png)
