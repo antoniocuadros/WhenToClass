@@ -1,0 +1,3 @@
+[submodule "TareasTelegramBot"]
+	path = TareasTelegramBot
+	url = https://github.com/antoniocuadros/TareasTelegramBot
