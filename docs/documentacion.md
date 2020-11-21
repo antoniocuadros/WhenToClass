@@ -1,37 +1,30 @@
 # Documentación del proyecto
 ## Índice
-1. ¿Qué problema se pretende resolver?
-   1. Motivación
-2. Herramientas
-   1. Gestor de versiones
-   2. Herramienta de pruebas
-   3. Herramienta de gestión de dependencias
-   4. Framework para aplicaciones web
-   5. Herramienta de gestión de tareas
-3. Tests unitarios
-4. Docker
-   1. Buenas prácticas llevadas a cabo para escribir el Dockerfile para ejecución de tests en Ruby
-   2. Contenedor subido a Docker Hub y configuración de la automatización
-      1. Repositorio creado y enlazado con repositorio GitHub
-      2. Configuración de la automatización
-         1. En GitHub
-         2. En Docker Hub
-         3. Automatización funcionando
-   3. Como ejecutar los tests en el contenedor
-      1. Ejemplo
-         1. Descargando la imagen desde Docker Hub.
-         2. Descargando la imagen desde Github Container Registry.
-   4. Subir contenedor a Github Container Registry
-   5. Posibilidades de elección como imagen base
-   6. Decisión imagen base: Pruebas rendimiento y almacenamiento imágenes base para Ruby
-   7. Optimización de la imagen resultante
-5. Integración continua
-   1. Buenas prácticas a seguir con Travis debido al sistema de créditos
-   2. Travis
-   3. Circle CI
-   4. Aprovechamiento del contenedor en sistemas de Integración Continua
-   5. Uso del gestor de tareas en Integración Continua
+1. ¿Qué problema se pretende resolver? (#id1)
+   1. Motivación (#id2)
+2. Herramientas (#id3)
+   1. Gestor de versiones (#id4)
+   2. Herramienta de pruebas (#id5)
+   3. Herramienta de gestión de dependencias (#id6)
+   4. Framework para aplicaciones web (#id7)
+   5. Herramienta de gestión de tareas (#id8)
+3. Tests unitarios (#id9)
+4. Docker (#id10)
+   1. Buenas prácticas llevadas a cabo para escribir el Dockerfile para ejecución de tests en Ruby (#id11)
+   2. Contenedor subido a Docker Hub y configuración de la automatización (#id12)
+   3. Como ejecutar los tests en el contenedor (#id13)
+   4. Subir contenedor a Github Container Registry (#id14)
+   5. Posibilidades de elección como imagen base (#id15)
+   6. Decisión imagen base: Pruebas rendimiento y almacenamiento imágenes base para Ruby (#id16)
+   7. Optimización de la imagen resultante (#id17)
+5. Integración continua (#id18)
+   1. Buenas prácticas a seguir con Travis debido al sistema de créditos (#id19)
+   2. Travis (#id20)
+   3. Circle CI (#id21)
+   4. Aprovechamiento del contenedor en sistemas de Integración Continua (#id22)
+   5. Uso del gestor de tareas en Integración Continua (#id23)
 
+<div id='id1' />
 
 ## :notebook: ¿Qué problema se pretende resolver?
 Con este proyecto se pretende dar solución a un problema al que nos enfrentamos en la actualidad los estudiantes de Ingeniería Informática, este problema consiste en saber qué días debemos ir a clases y a qué horas a cada una de las asignaturas debido a la semipresencialidad con la que nos encontramos debido a la situación actual.
@@ -39,13 +32,19 @@ Así se pretende crear un microservicio REST que permita responder a las siguien
 - ¿Qué horario tiene la asignatura "X"?
 - ¿Qué días tengo que ir si soy del turno de presencialidad "Y" de la asignatura "X"?
 
+<div id='id2' />
+
 ### Motivación
 Como ya se ha comentado anteriormente, en la actualidad los estudiantes de Informática nos encontramos con constantes dudas relacionadas con qué días debemos acudir a una determinada asignatura debido a la semipresencialidad que nos encontramos debido a la situación presente. Debido a esto se pretende elaborar un microservicio REST que permita a los usuarios consultar el horario de ciertas asignaturas tanto de teoría como de prácticas, así como saber que días les corresponde ir pudiendo consultar la lista de días asignados en función del turno de presencialidad al que pertenecen.
+
+<div id='id3' />
 
 ## :wrench: Herramientas
 - **Lenguaje de programación:** Se utilizará Ruby como lenguaje de programación debido a que lo he usado en otras asignaturas, me parece muy útil y me gustaría seguir profundizando en él.
 - **Base de datos:** La aplicación deberá obtener la información solicitada por los usuario de una determinada base de datos que puede ser tanto local (haciendo uso de ficheros JSON) como remota haciendo uso de bases de datos relacionales o no relacionales como MongoDB en este último caso.
 - **Sistema de logs:** Tal y como se menciona [aquí](https://jj.github.io/curso-tdd/temas/servicios.html) el sistema de logs es uno de los servicios más importantes ya que nos permite registrar los eventos que ocurren para posteriormente analizarlos en busca de problemas tanto del servicio en sí como de prestaciones y otros muchos más aspectos.
+
+<div id='id4' />
 
 ### Gestor de versiones
 #### rbenv
@@ -60,6 +59,9 @@ Se ha elegido como gestor de versiones rbenv ya que aporta una gran flexibilidad
 - Simplicidad y facilidad de uso.
 
 Se descartó el uso de RVM por las ventajas comentadas de rbenv, podemos consultar información de RVM  [aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Herramientas/rvm.md).
+
+<div id='id5' />
+
 ### Herramienta de pruebas
 #### minitest
 Para la realización de este proyecto se utiliza como herramienta para realizar las pruebas del código la herramienta minitest. Esta herramienta es la evolución de unit/test que incluye más funcionalidades como por ejemplo Mocks. Es una herramienta escrita en Ruby para probar código escrito en este mismo lenguaje. Permite realizar lo que se conoce como pruebas unitarias, es decir, probar clases y métodos al igual que RSPEC. Además minitest continúa evolucionando gracias a los aportes de la comunidad y el trabajo de cientos de colaboradores. Se puede consultar el repositorio oficial [aquí](https://github.com/seattlerb/minitest).
@@ -68,19 +70,29 @@ Se ha elegido debido a que es una herramienta muy sencilla con una sintaxis tamb
 Además, minitest es mucho más rápido ejecutando tests e incluye el uso de fixtures sin tener que instalar nada más.
 
 Se descartó el uso de RSpec por las ventajas comentadas anteriormente, no obstante, podemos consultar información del mismo [aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Herramientas/rspec.md)
+
+<div id='id6' />
+
 ### Herramienta de gestión de dependencias
 #### Bundler
 Para la realización de este proyecto se está utilizando como herramienta de gestión de dependencias (en el caso de Ruby son conocidas como gemas) Bundler. Es una herramienta que permite realizar un seguimiento de las gemas así como su instalación. Es un proyecto apoyado por la comunidad que realiza aportaciones a su [repositorio oficial](https://github.com/rubygems/rubygems/tree/master/bundler) de forma constante para mejorarlo de forma continuada. Dada una lista de gemas, Bundler puede tanto descargarlas como instalarlas así como otras gemas necesarias para las gemas que se han indicado. Además proporciona facilidades para actualizar las gemas instaladas y registra las versiones que se encuentran instaladas.
 ##### ¿Por qué Bundler?
 Se ha elegido Bundler debido a que es una herramienta muy extendida en lo que a desarrollo en Ruby se refiere debido a su sencillez de utilización e instalación así como debido a la gran cantidad de documentación existente sobre Bundler y todas las ventajas mencionadas en el apartado anterior, ya que aporta una gran flexibilidad gracias a todas las opciones comentadas.
+
+<div id='id7' />
+
 ### Framework para aplicaciones web
 Se utilizará debido a la baja complejidad del proyecto un framework sencillo, como por ejemplo es el caso de [Sinatra](http://sinatrarb.com/) que se describe así mismo como "Sinatra is a DSL for quickly creating web applications in Ruby with minimal effort" y además posee una gran cantidad de documentación tanto [oficial](http://sinatrarb.com/documentation.html) como por parte de la comunidad.
+
+<div id='id8' />
 
 ### Herramienta de gestión de tareas
 #### Rake
 Para la realización de este proyecto se está utilizando como herramienta de automatización rake. Rake en la actualidad se ha convertido en un estándar como herramienta de construcción para Ruby y es muy popular entre toda la comunidad. Es un proyecto apoyado por la comunidad que colabora activamente en su constante evolución, se puede consultar el repositorio oficial [aquí](https://github.com/ruby/rake).
 ##### ¿Por qué Rake?
 Se ha elegido rake debido a que es una herramienta muy potente para trabajar con Ruby y además está escrito también en este lenguaje.  Además es muy útil ya que permite especificar tareas con requisitos previos y además que la sintaxis sea la estándar de Ruby hace que sea muy sencillo de utilizar y aprender. Por otra parte, cuenta con una gran cantidad de documentación lo que facilita el aprendizaje y su uso. De esta forma rake es una herramienta muy potente para Ruby ya que nos permite automatizar todas las tareas que necesitemos.
+
+<div id='id9' />
 
 ## Tests unitarios
 A continuación se muestran capturas de pantalla que muestran el correcto funcionamiento de los tests, siendo ejecutados con la herramienta rake.
@@ -111,7 +123,12 @@ Si queremos ejecutar todos haremos:
 
 ![img4](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/tests/Im%C3%A1genes/tests3.png)
 
+<div id='id10' />
+
 ## Docker
+
+<div id='id11' />
+
 ### Buenas prácticas llevadas a cabo para escribir el Dockerfile para ejecución de tests en Ruby
 En esta sección se va a analizar el [Dockerfile](https://github.com/antoniocuadros/WhenToClass/blob/master/Dockerfile) que hemos escrito y analizaremos que buenas prácticas hemos seguido. Para documentarme acerca de las buenas prácticas a la hora de escribir Dockerfiles consulté [la siguiente página](https://lipanski.com/posts/dockerfile-ruby-best-practices). Como podemos ver, en esa página, se nos cuenta a lo largo de diversos apartados de forma muy clara que es lo que no se recomienda hacer y que debemos hacer en contraposición con una serie de ejemplos muy sencillos.
 
@@ -129,6 +146,8 @@ De esta forma, en mi Dockerfile podemos encontrar las siguientes buenas práctic
 5. **Minimizar lo máximo posible el tamaño, eligiendo una imagen base lo más pequeña posible:** Como podemos ver se ha optado por una imagen de Alpine que ofrece una imagen muy pequeña.
 6. **Al configurar la instrucción CMD optar por el formato exec frente al formato shell:** Como podemos ver hemos optado por este formato porque hemos hecho:
    >CMD ["rake","test"]
+
+<div id='id12' />
 
 ### Contenedor subido a Docker Hub y configuración de la automatización
 
@@ -161,6 +180,8 @@ En la configuración de Docker Hub del repositorio debemos tener lo siguiente:
 Y de esta forma ya hemos automatizado el proceso de hacer build en DockerHub tras hacer un push en nuestro repositorio de GitHub, podemos ver a la derecha el historial de builds que se han hecho de forma automatizada, de hecho se puede ver a la derecha que justo se está haciendo una build ya que se ha hecho un push al repositorio de GitHub hace unos minutos:
 ![img3](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/dockerhub/auto2.png)
 
+<div id='id13' />
+
 ### Como ejecutar los tests en el contenedor
 En primer lugar deberemos bajarnos el contenedor, tenemos dos posibilidades:
 - Docker Hub: 
@@ -181,6 +202,7 @@ Y ya podemos ejecutar los tests (ejecutar lo siguiente desde dentro de la carpet
 ##### Descargando la imagen desde GitHub Container Registry
 ![img2](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/githubrepositoryregistry/paso2.png)
 
+<div id='id14' />
 
 ### Subir contenedor a Github Container Registry
 Inicialmente se subió el contenedor a Github Package Registry ya que nada más hacer click en el apartado paquetes aparecían las instrucciones para subirlo ahí, ¿el problema?, tal y como podemos ver cuando lo subimos dice que el servicio está obsoleto.
@@ -200,6 +222,7 @@ A continuación se adjuntan imágenes del contenedor subido correctamente:
 
 Se han seguido los pasos encontrados en la [documentación oficial](https://docs.github.com/es/free-pro-team@latest/packages/getting-started-with-github-container-registry/migrating-to-github-container-registry-for-docker-images).
 
+<div id='id15' />
 
 ### Posibilidades de elección como imagen base
 Cuando tenemos que elegir una imagen base para nuestro contenedor encontramos varias posibilidades, elegir una imagen base oficial de un determinado lenguaje, o partir de un sistema operativo como imagen base.
@@ -219,22 +242,12 @@ Existe una gran variedad sistemas operativos como imágenes base, se destaca Alp
 #### alpine:\<version\>
 >Esta opción nos permite crear el contenedor totalmente a nuestra medida ya que partimos de un sistema operativo base como en este caso es Alpine y a partir de ahí nosotros deberemos instalar únicamente lo que necesitemos para llevar a cabo lo que queramos hacer, en este caso, ejecutar los tests sobre el código. De esta forma tenemos un control total de lo que hay instalado y podemos añadir exclusivamente los paquetes que necesitemos, a diferencia de las imágenes oficiales de los lenguajes que instalan un abanico mayor de herramientas normalmente y en consiguiente pesan más.
 
+<div id='id16' />
+
 ### Decisión imagen base: Pruebas rendimiento y almacenamiento imágenes base para Ruby
 A continuación se va a realizar una comparativa de almacenamiento y velocidad de ejecución de los tests con diversas imágenes base con el objetivo de elegir una para el contenedor que ejecutará los tests, dichas imágenes han sido explicadas en en [siguiente enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/Imagenes_base.md). Índice:
-1. [Pruebas](#id1)
-   1. [Imágenes base oficiales](#id4)
-   2. [Imagen base no oficial del lenguaje, Sistema operativo base (Alpine)](#id5)
-2. [Comparación de resultados](#id2)
-   1. [Comparación entre imágenes oficiales de Ruby](#id5)
-   2. [Comparación mejor imagen base oficial del lenguaje con imagen no oficial (Sistema operativo Alpine como Imagen base)](#id6)
-3. [Conclusión y decisión de imagen base](#id3)
 
-<div id='id1' />
-
-## Pruebas
-
-<div id='id4' />
-
+### Pruebas
 #### Imágenes base oficiales
 ##### ruby:2.7.2
 >Peso:
@@ -257,7 +270,7 @@ A continuación se va a realizar una comparativa de almacenamiento y velocidad d
 >Tiempo en ejecutar los tests:
 ![img](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/alpine/tiempo1.png)
 
-<div id='id5' />
+
 
 #### Imagen base no oficial del lenguaje, Sistema operativo base (Alpine)
 ##### alpine:3.12.1
@@ -268,11 +281,10 @@ A continuación se va a realizar una comparativa de almacenamiento y velocidad d
 ![img](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/images/alpinepropio/tiempo1.png)
 
 
-<div id='id2' />
+
 
 #### Comparación de resultados
 
-<div id='id5' />
 
 ##### Comparación entre imágenes oficiales de Ruby
 A continuación se recogen los datos de las pruebas anteriores en una tabla:
@@ -287,7 +299,6 @@ Como podemos ver la imagen que más pesa, con bastante diferencia es la de ruby:
 - **ruby:2.7.2**  es la más pesada ya que contiene una gran cantidad de paquetes muy comunes para trabajar con Debian.
 - **ruby:2.7.2-alpine** es la menos pesada ya que con Alpine obtenemos unas imágenes muy pequeñas y además contiene únicamente los paquetes necesarios para trabajar con Ruby.
 
-<div id='id6' />
 
 ##### Comparación mejor imagen base oficial del lenguaje con imagen no oficial (Sistema operativo Alpine como Imagen base)
 
@@ -298,13 +309,14 @@ Como podemos ver la imagen que más pesa, con bastante diferencia es la de ruby:
 
 Como podemos ver la imagen oficial del lenguaje basada en Alpine pesa un 43.09% más que si tomamos como base el sistema operativo Alpine y le añadimos nosotros únicamente lo necesario para hacer correr los tests. La diferencia de tiempo a penas es significativa.
 
-<div id='id3' />
 
 ##### Conclusión y decisión de imagen base
 
 Teniendo en cuenta todo lo que se ha comentado hasta ahora tanto en este documento principalmente como en [este otro](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/Imagenes_base.md) llego a la siguiente conclusión:
 
 Se va a utilizar como imagen base una no oficial de Ruby, **se utilizará alpine:3.12.1** ya que aún instalando sobre esa imagen todo lo necesario para hacer funcionar los tests pesa un 43.09% menos y presenta un rendimiento muy parecido ya que los tests tardan casi lo mismo en ejecutarse. Además, una de las razones por la que también me he decidido por usar alpine:3.12.1 instalando encima lo necesario para ejecutar los tests es porque únicamente instalo lo que yo necesito y nada más, de tal forma que se exactamente que paquetes hay instalados y puedo tener un mayor control sobre el contenedor de esta forma, además como se ha mencionado, esto hace que pese menos.
+
+<div id='id17' />
 
 ### Optimización de la imagen resultante
 Como ya se ha comentado en [otros apartados](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/pruebasIm%C3%A1genes.md), para construir el contenedor se ha utilizado como imagen base Alpine. Ésto es así debido a que es una imagen muy ligera. Pero además se ha decidido escoger Alpine en vez de una imagen base oficial del lenguaje, en este caso Ruby, debido a que se instalan en esta imagen base una gran cantidad de paquetes, los cuales actualmente no necesito.
@@ -324,7 +336,12 @@ Para conseguir esto se ha seguido algún consejo que encontramos en la [siguient
 - Se ha intentado usar el mínimo número posible de capas: Se han agrupado en lo posible varios comandos en uno solo como por ejemplo cuando se han instalado los paquetes necesarios para trabajar con ruby y ejecutar los tests, se ha hecho únicamente con un comando.
 - Se ha instlado únicamente lo necesario: Partiendo de una imagen no oficial del lenguaje, en mi caso Alpine se ha instalado únicamente los paquetes necesarios para poder ejecutar los tests correctamente. Se ha tomado esta decisión para conseguir un menor tamaño y tener mayor control sobre los paquetes que hay instalados en el sistema.
 
+<div id='id18' />
+
 ## Integración continua
+
+<div id='id19' />
+
 ### Buenas prácticas a seguir con Travis debido al sistema de créditos
 
 Este documento se escribe a partir de haber agotado los créditos de Travis tal y como se puede ver en la siguiente imagen:
@@ -354,6 +371,8 @@ Otra posibilidad es ejecutar los tests de forma local. Simplemente haremos uso d
 
 #### Hacer que Travis no se ejecute
 Si queremos que Travis no se ejecute, podemos añadir al mensaje del commit `[skip ci]`. Esto es muy útil cuando estamos haciendo documentación y hacemos push y no necesitamos que se ejecute Travis.
+
+<div id='id20' />
 
 ### Travis
 #### Travis CI para integración continua
@@ -512,6 +531,7 @@ Vemos en la siguiente imagen como efectivamente, se instalan las dependencias:
 
 Las capturas se han sacado del [siguiente](https://travis-ci.com/github/antoniocuadros/WhenToClass/jobs/427121652) trabajo de Travis.
 
+<div id='id21' />
 
 ## Circle CI
 ### Circle CI para integración continua
@@ -589,6 +609,8 @@ steps:
   - run: rake test
 ```
 
+<div id='id22' />
+
 ### Aprovechamiento del contenedor en sistemas de Integración Continua
 Como ya hemos visto anteriormente se ha hecho uso de tres sistemas de integración continua como es Travis CI, Circle CI y GitHub Actions.
 
@@ -621,6 +643,8 @@ En Travis CI no se ha hecho uso del contenedor. Esto es debido a que se ha queri
 
 
 De esta forma se ha configurado Travis para que se haga todo de forma análoga a lo que hace el contenedor (instalar dependencias, ejecutar los tests) pero probando con varias versiones del lenguaje, hasta que hemos encontrado las versiones en las que funciona correctamente nuestra aplicación.
+
+<div id='id22' />
 
 ### Uso del gestor de tareas en Integración Continua
 Nosotros hemos utilizado como sistemas de integración continua principalmente Travis CI y Circle CI aunque como ya se ha comentado, también se ha escrito una GitHub action que hace pasar los tests y hace push a GitHub Container Registry.
