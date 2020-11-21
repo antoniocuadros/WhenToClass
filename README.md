@@ -15,70 +15,10 @@ Como ya se ha comentado anteriormente, en la actualidad los estudiantes de Infor
 
 
 ## :hammer: Documentación
-### Integración Continua
-- [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/ficherotravis.md) se puede ver la integración continua con Travis CI funcionando y la justificación de la misma.
-
-- [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/ficherocicleci.md) se puede ver la integración continua con Circle CI funcionando y la justificación de la misma.
-
-- [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/usogestordetareas.md) se puede consultar el uso del gestor de tareas en los distintos sistemas de integración continua utilizados.
-
-- [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/contenedor.md) se puede consultar el uso del contenedor en los distintos sistemas de integración continua.
-
-- [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/buenaspracticas.md) se puede consultar una pequeña documentación de buenas prácticas que se pueden seguir desde mi experiencia usando Travis en relación al sistema de créditos.
-  
-#### Pasos previos
-
-- [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/register.md) se puede consultar el proceso de registro en Travis y la vinculación con GitHub.
-
-- [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/IntegracionContinua/investigacionPrevia.md) se puede consultar una documentación sobre una investigación previa sobre como trabajar con Travis y ruby y con contenedores.
-
-
-### Docker: Entorno de prueba para los tests
-- [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/Imagenes_base.md) se puede consultar documentación acerca de las distintas imágenes base (de forma general) que encontramos para Ruby.
-
-- [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/pruebasIm%C3%A1genes.md) se puede consultar el proceso de decisión de la imagen base incluyendo pruebas entre distintas imágenes y la justificación de la [elección final](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/pruebasIm%C3%A1genes.md#id3).
-  
-- [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/Dockerfile) se puede consultar el Dockerfile.
-  
-- [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/buenas_practicas.md) se pueden consultar las buenas prácticas seguidas para la realización de mi Dockerfile y como se han aplicado a la hora de escribirlo.
-
-- [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/dockerhub.md) se puede consultar una pequeña documentación sobre Docker Hub y como se ha configurado para hacer build de forma automática, además podemos ir directamente al [repositorio creado en Docker Hub](https://hub.docker.com/r/antoniocuadros/whentoclass).
-
-- [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/githubpackageregistry.md) se puede consultar documentación acerca de la subida del contenedor a Github Container Registry y además podemos ir directamente al [contenedor subido](https://github.com/users/antoniocuadros/packages/container/package/whentoclasstests).
-  
-- [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/exectestsdocker.md) se puede consultar como descargar las imágenes desde Docker Hub o GitHub Container Registry y ejecutar los tests en el contenedor.
-
-- [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Docker/imagenreducida.md) se puede consultar información de cómo se ha obtenido una imagen de poco tamaño.
-  
-### Herramientas
-[En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Herramientas/herramientas.md) se pueden consultar todas las herramientas utilizadas tanto generales como específicas de Ruby.
-
-### Ficheros relevantes
-- [Clase Asignatura](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/asignatura.rb).
-- [Clase grado](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/grado.rb).
-- [Struct horarioAsignatura](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/horarioasignatura.rb).
-- [Tests de clase Asignaturas](https://github.com/antoniocuadros/WhenToClass/blob/master/t/TestAsignaturas.rb).
-- [Tests de la clase grado](https://github.com/antoniocuadros/WhenToClass/blob/master/t/TestGrado.rb).
-- [Clase propia para excepciones](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/asignaturaerror.rb)
-- [Clase gestorGrados](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/gestorgrados.rb)
-- [Tests Clase gestorGrados](https://github.com/antoniocuadros/WhenToClass/blob/master/t/TestGestorGrados.rb)
-
-### Test de las clases e instalar dependencias
-[En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/Clases/test.md) se puede consultar información sobre cómo testear e instalar dependencias.
-### Historias de Usuario
-[En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/HistoriasUsuario/HistoriasUsuario.md) puede consultarse las diversas historias de usuarios que hay activas en cada momento.
-
-### Pasos en la realización del proyecto
-[En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/PasosProyecto/Pasos.md) puede consultarse documentación adicional acerca de los pasos que se llevarán acabo para completar el proyecto.
-
-### Ejecución de los tests
-[En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/tests/tests.md) se puede consultar documentación acerca de los tests.
+Toda la documentación del proyecto se encuentra recogida en el [siguiente enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/documentacion.md)
 
 ### Fichero iv.yaml
 [En este enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/iv.yaml) se puede consultar el fichero iv.yaml.
-
-### Configuración Inicial
-[En este enlace](https://github.com/antoniocuadros/ejercicios-apuntes-IV/blob/master/Configuraci%C3%B3n%20gitHub/ConfiguracionGit.md) se puede comprobar la configuración de GitHub.
 
 ### Autor
 [Antonio Cuadros Lapresta](https://github.com/antoniocuadros)
