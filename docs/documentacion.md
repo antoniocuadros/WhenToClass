@@ -1,5 +1,36 @@
 # Documentación del proyecto
-![logo](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/logo.jpg)
+## Índice
+1. ¿Qué problema se pretende resolver?
+   1. Motivación
+2. Herramientas
+   1. Gestor de versiones
+   2. Herramienta de pruebas
+   3. Herramienta de gestión de dependencias
+   4. Framework para aplicaciones web
+   5. Herramienta de gestión de tareas
+3. Tests unitarios
+4. Docker
+   1. Buenas prácticas llevadas a cabo para escribir el Dockerfile para ejecución de tests en Ruby
+   2. Contenedor subido a Docker Hub y configuración de la automatización
+      1. Repositorio creado y enlazado con repositorio GitHub
+      2. Configuración de la automatización
+         1. En GitHub
+         2. En Docker Hub
+         3. Automatización funcionando
+   3. Como ejecutar los tests en el contenedor
+      1. Ejemplo
+         1. Descargando la imagen desde Docker Hub.
+         2. Descargando la imagen desde Github Container Registry.
+   4. Subir contenedor a Github Container Registry
+   5. Posibilidades de elección como imagen base
+   6. Decisión imagen base: Pruebas rendimiento y almacenamiento imágenes base para Ruby
+   7. Optimización de la imagen resultante
+5. Integración continua
+   1. Buenas prácticas a seguir con Travis debido al sistema de créditos
+   2. Travis
+   3. Circle CI
+   4. Aprovechamiento del contenedor en sistemas de Integración Continua
+   5. Uso del gestor de tareas en Integración Continua
 
 
 ## :notebook: ¿Qué problema se pretende resolver?
@@ -16,7 +47,6 @@ Como ya se ha comentado anteriormente, en la actualidad los estudiantes de Infor
 - **Base de datos:** La aplicación deberá obtener la información solicitada por los usuario de una determinada base de datos que puede ser tanto local (haciendo uso de ficheros JSON) como remota haciendo uso de bases de datos relacionales o no relacionales como MongoDB en este último caso.
 - **Sistema de logs:** Tal y como se menciona [aquí](https://jj.github.io/curso-tdd/temas/servicios.html) el sistema de logs es uno de los servicios más importantes ya que nos permite registrar los eventos que ocurren para posteriormente analizarlos en busca de problemas tanto del servicio en sí como de prestaciones y otros muchos más aspectos.
 
-## :wrench: Herramientas específicas de Ruby
 ### Gestor de versiones
 #### rbenv
 Para la realización de este proyecto se está utilizando el gestor de versiones RBENV, podemos consultar la página oficial de este manejador de versiones en este [enlace](https://github.com/rbenv/rbenv) que nos lleva a su repositorio oficial apoyado por la comunidad.
