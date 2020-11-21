@@ -113,4 +113,4 @@ Nada más iniciar un chat con el bot podemos ver que salta el default del switch
 
 Si ponemos el resto de comandos:
 
-![img2](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/serverless/images/9.png)
+![img2](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/serverless/images/9.jpeg)

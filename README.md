@@ -15,6 +15,12 @@ Como ya se ha comentado anteriormente, en la actualidad los estudiantes de Infor
 
 
 ## :hammer: Documentación
+### Serverless
+
+- Se puede encontrar la documentación relacionada con la función desplegada en Netlify, un bot de telegram haciendo uso de un lenguaje y herramientas diferentes en el siguiente [enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/serverless/netlify/netlify.md).
+
+
+### Documentación anterior
 Toda la documentación del proyecto se encuentra recogida en el [siguiente enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/documentacion.md)
 
 ### Fichero iv.yaml
