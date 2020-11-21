@@ -644,7 +644,7 @@ En Travis CI no se ha hecho uso del contenedor. Esto es debido a que se ha queri
 
 De esta forma se ha configurado Travis para que se haga todo de forma análoga a lo que hace el contenedor (instalar dependencias, ejecutar los tests) pero probando con varias versiones del lenguaje, hasta que hemos encontrado las versiones en las que funciona correctamente nuestra aplicación.
 
-<div id='id22' />
+<div id='id23' />
 
 ### Uso del gestor de tareas en Integración Continua
 Nosotros hemos utilizado como sistemas de integración continua principalmente Travis CI y Circle CI aunque como ya se ha comentado, también se ha escrito una GitHub action que hace pasar los tests y hace push a GitHub Container Registry.
