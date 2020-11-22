@@ -1,4 +1,5 @@
 # Documentación del proyecto
+
 ## Índice
 1. [¿Qué problema se pretende resolver?](#id1)
    1. [Motivación](#id2)
