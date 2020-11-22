@@ -17,7 +17,7 @@ class TestAsignaturas < Minitest::Test
 	
 	#TEST 1
 	#Se comprueba que se devuelve una respuesta correcta
-	def test_that_comprueba_devuelve_codigo_correcto
+    def test_that_comprueba_devuelve_codigo_correcto
         assert_equal "200", @response1.code
     end
 
