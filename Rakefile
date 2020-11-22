@@ -2,6 +2,7 @@ require "rake/testtask"
 
 task default: %w[install]
 task test: %w[testunitariosasignaturas testunitariosgrado testunitariosgestorgrados]
+task testv: %w[testvercel]
 
 desc "Instala todas las dependencias"
 task :install do
@@ -21,4 +22,9 @@ end
 Rake::TestTask.new do |t|
 	t.name = "testunitariosgestorgrados"
 	t.test_files = FileList['t/TestGestorGrados.rb']
+end
+
+Rake::TestTask.new do |t|
+	t.name = "testvercel"
+	t.test_files = FileList['api/t/testEnlace.rb']
 end
