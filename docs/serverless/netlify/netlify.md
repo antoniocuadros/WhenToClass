@@ -101,6 +101,29 @@ Por último envía la respuesta haciendo uso de la primera función comentada (e
 await enviaMensaje(chat.id, a_devolver);
 ```
 
+
+### Tests del código
+Siguiendo las buenas prácticas que llevamos realizando en la asignatura, se han realizado tests sencillos para aprender a utilizar Jest que se pueden encontrar en el siguiente [fichero](https://github.com/antoniocuadros/TareasTelegramBot/blob/main/test/bot.test.js) y además en npm se ha añadido una tarea para ejecutarlos de tal manera que si hacemos `npm test` se nos ejecutarán de la siguiente forma:
+
+```
+➜  TareasTelegramBot git:(main) npm test
+
+> TareasTelegramBot@1.0.0 test /home/antculap/Desktop/WhenToClass_Updated/WhenToClass/TareasTelegramBot
+> jest
+
+ PASS  test/bot.test.js
+  ✓ Debemos poder obtener tareas IV (2 ms)
+  ✓ Debemos poder obtener tareas de todas las asignaturas definidas (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        1.033 s
+Ran all test suites.
+
+```
+
+
 ### Nota
 Si accedemos directamente a la página de netlify nos saltará el siguiente mensaje: `{"message":"Utilizado por bot de telegram @ketengobot"}`.
 Se puede ir a dicha página desde [aquí](https://ktengo.netlify.app/.netlify/functions/ktengo).
