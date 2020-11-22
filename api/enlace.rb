@@ -26,7 +26,6 @@ Handler = Proc.new do |req, res|
     a_buscar = ""
   end
 
-
   #no se ha pasado algún parámetro                          se ha pasado un parámetro no válido
   if( (asignatura == nil or modalidad == nil or dia == nil) or (datos["asignaturas"][a_buscar] == nil))
     #Si no pasa algún parámetro o falla alguno, le recuperamos los enlaces de las clases de hoy
