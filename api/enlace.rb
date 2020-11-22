@@ -14,7 +14,6 @@ Handler = Proc.new do |req, res|
 
 
   dias_validos = ["L","M","X","J","V"]
-  modalidades_validas = ["T","P"]
 
   #comprobamos la validez de los argumentos
   if asignatura != nil and modalidad != nil and dia != nil
