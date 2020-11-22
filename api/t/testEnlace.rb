@@ -1,6 +1,7 @@
 require "minitest/autorun"
 require_relative "../enlace.rb"
-
+require 'net/http'
+require 'uri'
 class TestAsignaturas < Minitest::Test
 	#####################################################################################
 	#Definimos en primer lugar un objeto de la clase con el cual vamos a 
@@ -9,6 +10,9 @@ class TestAsignaturas < Minitest::Test
 	def setup
         @uri1 = URI.parse("https://when-to-class.vercel.app/api/enlace?asignatura=IV&m=p&d=m")
         @response1 = Net::HTTP.get_response(@uri1)
+
+        @uri2 = URI.parse("https://when-to-class.vercel.app/api/enlace")
+        @response2 = Net::HTTP.get_response(@uri2)
 	end
 	
 	#TEST 1
