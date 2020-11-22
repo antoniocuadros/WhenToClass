@@ -16,7 +16,7 @@ Como ya se ha comentado anteriormente, en la actualidad los estudiantes de Infor
 
 ## :hammer: Documentación
 ### Serverless
-
+- Se puede encontrar la documentación del despliegue funcionando y de la conexión entre el repositorio de GitHub y Netlify/Vercel en el siguiente [enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/serverless/conexion/despliegue.md).
 - Se puede encontrar la documentación relacionada con la función desplegada en Netlify, un bot de telegram haciendo uso de un lenguaje y herramientas diferentes en el siguiente [enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/serverless/netlify/netlify.md).
 - Como se menciona en el documento del punto anterior, se ha utilizado un nuevo repositorio, se encuentra en el [siguiente enlace](https://github.com/antoniocuadros/TareasTelegramBot).
 
