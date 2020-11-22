@@ -22,6 +22,9 @@ Como ya se ha comentado anteriormente, en la actualidad los estudiantes de Infor
 - Como se menciona en el documento del punto anterior, se ha utilizado un nuevo repositorio, se encuentra en el [siguiente enlace](https://github.com/antoniocuadros/TareasTelegramBot).
 
 
+- Se ha añadido el campo URL en el fichero [iv.yaml](https://github.com/antoniocuadros/WhenToClass/blob/master/iv.yaml) y se ha añadido también el fichero [5.json](https://github.com/antoniocuadros/WhenToClass/blob/master/5.json).
+
+
 ### Documentación anterior
 Toda la documentación del proyecto se encuentra recogida en el [siguiente enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/documentacion.md)
 
