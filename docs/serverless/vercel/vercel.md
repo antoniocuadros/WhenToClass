@@ -64,3 +64,20 @@ De esta forma vamos a desgranar el código que nos encontramos dentro de dicho b
   res['Content-Type'] = 'application/json; charset=utf-8'
   res.body = a_devolver.to_json
 ```
+
+
+### Tests del código
+Siguiendo las buenas prácticas que llevamos realizando en la asignatura, se han realizado tests que se pueden encontrar en el siguiente [fichero](https://github.com/antoniocuadros/WhenToClass/blob/master/api/t/testEnlace.rb) y además en el fichero Rakefile se ha añadido una nueva tarea para ejecutar dichos tests, se pueden probar ejecutando `rake testvercel`. Si lo ejecutamos podemos ver que pasan los tests:
+
+```
+➜  WhenToClass git:(master) ✗ rake testvercel
+Run options: --seed 17956
+
+# Running:
+
+....
+
+Finished in 5.857324s, 0.6829 runs/s, 1.3658 assertions/s.
+
+4 runs, 8 assertions, 0 failures, 0 errors, 0 skips
+```
