@@ -13,6 +13,9 @@ class TestAsignaturas < Minitest::Test
 
         @uri2 = URI.parse("https://when-to-class.vercel.app/api/enlace")
         @response2 = Net::HTTP.get_response(@uri2)
+
+        @uri3 = URI.parse("https://when-to-class.vercel.app/api/enlace?asignatura=SPSI&m=t&d=x")
+        @response3 = Net::HTTP.get_response(@uri3)
 	end
 	
 	#TEST 1
@@ -36,5 +39,14 @@ class TestAsignaturas < Minitest::Test
     def test_that_comprueba_error_devuelto_correctamente
         parsed = JSON.parse(@response2.body)
         assert_equal "No se ha encontrado la asignatura, compruebe los parámetros, se adjuntan las asignaturas del día de hoy :)", parsed["error"]
+    end
+
+    #TEST 4
+    #Se comprueba que la respuesta con otros parámetros es igualmente correcta
+    def test_that_comprueba_error_devuelto_correctamente2
+        parsed = JSON.parse(@response3.body)
+        assert_equal "SPSI", parsed["asignatura"]
+        assert_equal "https://meet.google.com/tvm-umgh-tfm?pli=1&authuser=3", parsed["enlace"]
+        assert_equal "La clase de teoría tendrá lugar de 11:30-13:30 el Miércoles", parsed["info"]
     end
 end
