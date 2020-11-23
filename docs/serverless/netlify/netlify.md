@@ -83,7 +83,7 @@ Por último envía la respuesta de la siguiente forma:
     statusCode: 200,
     body: JSON.stringify({text:a_devolver, method:'sendMessage', chat_id:chat.id}),
     headers:{
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json; charset=utf-8'
     }
 ```
 Devolvemos un código 200 equivalente a "ok".
