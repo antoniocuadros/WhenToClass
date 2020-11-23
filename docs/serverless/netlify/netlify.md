@@ -32,28 +32,9 @@ Una vez dentro de esta carpeta podemos encontrar varios ficheros:
 - **ktengo.js**: Fichero que contiene la mayor parte de la lógica del bot, se encarga de extraer la información de la petición y posteriormente generar una respuesta.Se puede consultar [aquí](https://github.com/antoniocuadros/TareasTelegramBot/blob/main/functions/ktengo.js).
 
 
-Centremonos en el fichero **ktengo.json** que contiene lo más importante relacionado con el bot podemos ver que tenemos una primera función que se llama  `enviaMensaje`:
+Centremonos en el fichero **ktengo.json** que contiene lo más importante relacionado con el bot.
 
-```
-async function enviaMensaje(chat_id, text) {
-  const options = {
-    method: 'GET',
-    uri: `https://api.telegram.org/bot${process.env.TELEGRAMBOTTOKEN}/sendMessage`,
-    qs: {
-      chat_id,  //id del chat
-      text      //contenido
-    }
-  };
-
-  return request(options);
-}
-```
-
-Esta función es muy interesante ya que es la encargada de dado un chat_id, y un mensaje (text) construir una respuesta. Destacamos que como podemos ver, se utiliza el método sendMessage que activará una determinada orden de la API de Telegram y luego indicamos el id del chat donde tiene que enviar la respuesta (mismo desde el cual se activó el webhook) y el mensaje de respuesta (text).
-Notése que se ha usado una variable de entorno de Netlify para almacenar el token del bot: `${process.env.TELEGRAMBOTTOKEN}`.
-
-
-En siguiente lugar tenemos la función principal, la función serverless, que tiene el siguiente formato en netlify: `exports.handler = async function(event, context)`.
+La función principal, la función serverless, tiene el siguiente formato en netlify: `exports.handler = async function(event, context)`.
 Esta función se encarga de extraer la información que nos aporta el evento, procesarla, buscar que acción realizar y por último devolver una respuesta haciendo uso del método anteriormente comentado.
 
 De esta forma cuando se activa el webhook, extraemos la información necesaria de la siguiente forma:
@@ -95,11 +76,22 @@ Como podemos ver tenemos tres comandos:
 - ...
 En este switch podemos ver que se ha hecho uso de una nueva función, getAsignaturas, que lo que hace es obtener las tareas de todas las asignaturas si no tiene parámetros, o de una determinada si se pasa como parámetro. Se encuentra en el fichero [tareas.js](https://github.com/antoniocuadros/TareasTelegramBot/blob/main/functions/tareas.js).
 
-Por último envía la respuesta haciendo uso de la primera función comentada (enviarMensaje): 
+Por último envía la respuesta de la siguiente forma:
 
 ```
-await enviaMensaje(chat.id, a_devolver);
+  return {
+    statusCode: 200,
+    body: JSON.stringify({text:a_devolver, method:'sendMessage', chat_id:chat.id}),
+    headers:{
+        'Content-Type': 'application/json'
+    }
 ```
+Devolvemos un código 200 equivalente a "ok".
+Luego devolvemos el mensaje que hemos formado y que se encuentra en la variable "a_devolver", indicamos que el método a utilizar es "sendMessage" y el id del chat donde devolver la respuesta.
+
+### Estableciendo el webhook
+Por último debemos establecer el webhook y ya el bot entraría en funcionamiento. Se puede hacer realizando una petición HTTP a la siguiente dirección `https://api.telegram.org/bot<TOKEN_BOT>/setWebHook?url=<URL_NETLIFY>`. Si todo ha salido bien nos debe devolver una respuesta como la siguiente:
+`{"ok":true,"result":true,"description:"Webhook was set"}`
 
 
 ### Tests del código
