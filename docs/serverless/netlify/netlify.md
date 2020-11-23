@@ -32,7 +32,7 @@ Una vez dentro de esta carpeta podemos encontrar varios ficheros:
 - **ktengo.js**: Fichero que contiene la mayor parte de la lógica del bot, se encarga de extraer la información de la petición y posteriormente generar una respuesta.Se puede consultar [aquí](https://github.com/antoniocuadros/TareasTelegramBot/blob/main/functions/ktengo.js).
 
 
-Centremonos en el fichero **ktengo.json** que contiene lo más importante relacionado con el bot.
+Centremonos en el fichero **ktengo.json** que contiene lo más importante relacionado con el bot (no se muestra todo el código, únicamente las partes más destacadas [aquí](https://github.com/antoniocuadros/TareasTelegramBot/blob/main/functions/ktengo.js) encontramos todo el código).
 
 La función principal, la función serverless, tiene el siguiente formato en netlify: `exports.handler = async function(event, context)`.
 Esta función se encarga de extraer la información que nos aporta el evento, procesarla, buscar que acción realizar y por último devolver una respuesta haciendo uso del método anteriormente comentado.
@@ -51,23 +51,27 @@ Como podemos ver extraemos tanto "chat" como "text", chat lo usaremos más adela
 Decidimos que hacer en función del mensaje recibido, para ello tenemos un switch que nos permite diferenciar entre las distintas acciones: 
 
 ```
-switch (text) {
-                case "/ktengo":
-                  a_devolver = lib.getAsignaturas();
-                  break;
-                case "/ktengoIV":
-                  a_devolver = lib.getAsignaturas("IV");
-                  break;
-                case "/ktengoDAI":
-                  a_devolver = lib.getAsignaturas("DAI");
-                  break;
-                case "/ktengoSPSI":
-                  a_devolver = lib.getAsignaturas("SPSI");
-                  break;
-                default:
-                  a_devolver = "Usa /ktengo para saber que tareas tienes que realizar y para consultas más concretas: \n/ktengoIV para obtener las tareas a realizar de IV. \n/ktengoDAI para obtener las tareas a realizar de DAI. \n/ktengoSPSI para obtener las tareas a realizar de SPSI."
-                  break;
-            }       
+ if (text && text.charAt(0) == '/'){ //Contiene texto el mensaje, será el comando
+            let a_devolver = '';
+  switch (text) {
+                  case "/ktengo":
+                    a_devolver = lib.getAsignaturas();
+                    break;
+                  case "/ktengoIV":
+                    a_devolver = lib.getAsignaturas("IV");
+                    break;
+                  case "/ktengoDAI":
+                    a_devolver = lib.getAsignaturas("DAI");
+                    break;
+                  case "/ktengoSPSI":
+                    a_devolver = lib.getAsignaturas("SPSI");
+                    break;
+                  default:
+                    a_devolver = "Usa /ktengo para saber que tareas tienes que realizar y para consultas más concretas: \n/ktengoIV para obtener las tareas a realizar de IV. \n/ktengoDAI para obtener las tareas a realizar de DAI. \n/ktengoSPSI para obtener las tareas a realizar de SPSI."
+                    break;
+              }
+    ...
+ }
 ```
 
 Como podemos ver tenemos tres comandos:
