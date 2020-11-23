@@ -27,7 +27,7 @@ Como se ha mencionado en el apartado anterior, Netlify únicamente admite como l
 #### Código del bot
 Para comenzar a desarrollar el bot, Netlify nos pide que creemos un fichero de configuración en nuestro proyecto para indicar donde se alojarán nuestras funciones o especificarlo en la propia configuración de Netlify, en mi caso se ha optado por la segunda opción y se ha indicado que las funciones se encuentran en la carpeta `functions`.
 Una vez dentro de esta carpeta podemos encontrar varios ficheros:
-- **data.json**: Fichero que contiene datos en formato JSO, contiene información de diversas asignaturas. Puede observarse que aunque el bot vaya a tratar de responder a peticiones acerca de tareas, se incorporan más datos de cada asignatura por si en algún momento se amplía la funcionalidad del mismo, ya que un bot de Telegram es muy útil y tener un bot completo puede ser muy interesante para facilitarte ciertas tareas. Se puede consultar [aquí](https://github.com/antoniocuadros/TareasTelegramBot/blob/main/functions/data.json).
+- **data.json**: Fichero que contiene datos en formato JSON, contiene información de diversas asignaturas. Puede observarse que aunque el bot vaya a tratar de responder a peticiones acerca de tareas, se incorporan más datos de cada asignatura por si en algún momento se amplía la funcionalidad del mismo, ya que un bot de Telegram es muy útil y tener un bot completo puede ser muy interesante para facilitarte ciertas tareas. Se puede consultar [aquí](https://github.com/antoniocuadros/TareasTelegramBot/blob/main/functions/data.json).
 - **tareas.js**: Este fichero contiene una función que será la encargada de leer el fichero comentado anteriormente y ser capaz de localizar las tareas que se están pidiendo y devolverlas con cierto formato.Se puede consultar [aquí](https://github.com/antoniocuadros/TareasTelegramBot/blob/main/functions/tareas.js).
 - **ktengo.js**: Fichero que contiene la mayor parte de la lógica del bot, se encarga de extraer la información de la petición y posteriormente generar una respuesta.Se puede consultar [aquí](https://github.com/antoniocuadros/TareasTelegramBot/blob/main/functions/ktengo.js).
 
@@ -91,7 +91,18 @@ Luego devolvemos el mensaje que hemos formado y que se encuentra en la variable 
 
 ### Estableciendo el webhook
 Por último debemos establecer el webhook y ya el bot entraría en funcionamiento. Se puede hacer realizando una petición HTTP a la siguiente dirección `https://api.telegram.org/bot<TOKEN_BOT>/setWebHook?url=<URL_NETLIFY>`. Si todo ha salido bien nos debe devolver una respuesta como la siguiente:
-`{"ok":true,"result":true,"description:"Webhook was set"}`
+`{"ok":true,"result":true,"description:"Webhook was set"}`, en mi caso URL_NETLIFY ha sido: `https://ktengo.netlify.app/.netlify/functions/ktengo`
+
+
+### Prueba de funcionamiento
+Si se desea probar se puede hacer a través del siguiente [enlace](https://t.me/ktengobot).
+Nada más iniciar un chat con el bot podemos ver que salta el default del switch ya que se invoca el comando /start:
+
+![img1](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/serverless/images/8.png)
+
+Si ponemos el resto de comandos:
+
+![img2](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/serverless/images/9.jpeg)
 
 
 ### Tests del código
@@ -114,18 +125,3 @@ Time:        1.033 s
 Ran all test suites.
 
 ```
-
-
-### Nota
-Si accedemos directamente a la página de netlify nos saltará el siguiente mensaje: `{"message":"Utilizado por bot de telegram @ketengobot"}`.
-Se puede ir a dicha página desde [aquí](https://ktengo.netlify.app/.netlify/functions/ktengo).
-
-### Prueba de funcionamiento
-Si se desea probar se puede hacer a través del siguiente [enlace](https://t.me/ktengobot).
-Nada más iniciar un chat con el bot podemos ver que salta el default del switch ya que se invoca el comando /start:
-
-![img1](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/serverless/images/8.png)
-
-Si ponemos el resto de comandos:
-
-![img2](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/serverless/images/9.jpeg)
