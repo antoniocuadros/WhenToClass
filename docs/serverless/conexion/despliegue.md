@@ -1,5 +1,5 @@
 # Justificación conexión entre gitHub y Vercel/Netlify
-En este apartado se va a justificar el despliegue correcto y funcionando así como la conexión entre el repositorio de GitHub y Vercel/Netlify para el despliegue continuo.
+En este apartado se va a justificar la conexión entre el repositorio de GitHub y Vercel/Netlify para el despliegue continuo.
 
 ## Vercel
 El despliegue en vercel ha sido sencillo siguiendo los pasos de la documentación oficial de vercel. Para desplegarlo hemos tenido que crear una carpeta /api donde alojar todo el código de la función serverless ya que así nos lo indicaba la documentación. Se puede comprobar que funciona la función accediendo por ejemplo al siguiente [enlace](https://when-to-class.vercel.app/api/enlace?asignatura=IV&m=p&d=m).
