@@ -22,10 +22,23 @@ Vercel deploys relacionados con cada push:
 
 ![img3](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/serverless/images/conexion3.png)
 
+Una vez hecho esto podríamos usar para probar que todo es correcto inicialmente una función de ejemplo para comenzar el despliegue. Se puede utilizar la que propiamente Vercel nos proporciona:
+
+```
+Handler = Proc.new do |req, res|
+  res.status = 200
+  res['Content-Type'] = 'text/text; charset=utf-8'
+  res.body = "Current Time: #{Time.new}"
+end
+```
+
+Para consultar la implementación de nuestra función desplegada en Vercel (no es la anterior, esa es un ejemplo simplemente) podemos ir al [siguiente enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/serverless/vercel/vercel.md)
+
+Como se verá en dicho documento, hemos desplegado una función que nos permite obtener los enlaces de las clases online que se pidan. En caso de que ocurra un error en los parámetros o no se pase ninguno, se obtendrán los enlaces de las clases online del mismo día que se está realizando la petición.
 
 
 ## Netlify
-El despliegue en Netlify también ha sido bastante sencillo. La función que se ha programado en Netlify como ya se comentará más adelante en su correspondiente documento, es un bot de telegram que nos permite conocer que tareas hay que realizar de cada asignatura. Como se ha programado en un lenguaje diferente (JavaScript) ya que Netlify únicamente admite JavaScript y Go, y se han usado herramientas diferentes como npm y Jest, se ha tomado la decisión de apartarlo a un repositorio diferente.
+El despliegue en Netlify también ha sido bastante sencillo. La función que se ha programado en Netlify como ya se comentará más adelante en su [correspondiente documento](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/serverless/netlify/netlify.md), es un bot de telegram que nos permite conocer que tareas hay que realizar de cada asignatura. Como se ha programado en un lenguaje diferente (JavaScript) ya que Netlify únicamente admite JavaScript y Go, y se han usado herramientas diferentes como npm y Jest, se ha tomado la decisión de apartarlo a un repositorio diferente.
 
 
 No obstante dicho repositorio se ha conectado correctamente con Netlify y a su vez se ha integrado correctamente en el proyecto WhenToClass haciendo uso de los submódulos de git para poder continuar las HUs e issues de este repositorio (WhenToClass) aunque se trate de un repositorio diferente.
@@ -43,3 +56,16 @@ Gracias a esa GitHubb App cada vez que hacemos push se buildea el proyecto en Ne
 
 
 ![img5](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/serverless/images/conexion5.png)
+
+
+Para probar que inicialmente funciona, en nuestro directorio functions se podría utilizar la función de ejemplo que proporciona Netlify para JavaScript. Es un sencillo ejemplo y no se corresponde con lo implementado, es un simple ejemplo que nos sirve como punto de partida para probar que la configuración es correcta:
+
+
+```
+exports.handler = async function(event, context) {
+    return {
+        statusCode: 200,
+        body: JSON.stringify({message: "Hello World"})
+    };
+}
+```
