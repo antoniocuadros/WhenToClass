@@ -1,5 +1,5 @@
 # Despliegue de una función serverless con Vercel e integración con el proyecto
-
+En este apartado se termina de abordar la rúbrica 1 (despliegue y adaptación), y la rúbrica 2.
 ## ¿Para qué se ha utilizado Vercel?
 Como primer sistema serverless se ha utilizado Vercel. En dicho sistema se ha programado una función serverless (que se puede consultar [aquí](https://when-to-class.vercel.app/api/enlace?asignatura=IV&m=p&d=m)) con el objetivo de prototipar una función que podría añadirse a mi proyecto, obtener los enlaces de las clases online de una determinada asignatura. Como se acaba de mencionar se ha hecho uso de una función serverless para prototipar de forma rápida y sencilla una función que podríamos incorporar a nuestro proyecto más adelante ya que desde mi punto de vista los sistemas serverless pueden resultar de gran utilidad para programar la lógica de una función, testearla y posteriormente incorporar dicha funcionalidad a nuestro proyecto.
 
