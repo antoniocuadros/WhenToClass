@@ -2,12 +2,16 @@ GEM
   remote: https://rubygems.org/
   specs:
     minitest (5.14.2)
+    rack (2.2.3)
+    roda (3.38.0)
+      rack
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   minitest (~> 5.14)
+  roda (~> 3.22)
 
 BUNDLED WITH
    2.1.4
