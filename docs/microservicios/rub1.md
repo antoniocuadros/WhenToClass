@@ -73,7 +73,7 @@ Se han realizado tres benchmarks sobre cada microservicio y en el siguiente apar
 
 Si plasmamos los resultados sobre un gráfico para una mejor interpretación obtenemos lo siguiente:
 
-![img1]()
+![img1](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/microservicios/images/grafico.png)
 
 
 En cuanto al **tiempo por petición**, como ya sabemos, cuanto menor sea el valor mejor, de esta forma encontramos que no existen muchas diferencias. El que menor tiempo por petición tiene es tanto Roda como Hanami. En caso opuesto, el que más tarda en sevir una petición es Sinatra.
