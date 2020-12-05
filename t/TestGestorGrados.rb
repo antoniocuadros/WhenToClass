@@ -61,6 +61,19 @@ class TestGestorGrados < Minitest::Test
 		assert_raises(StandardError, "Error, objeto pasado como parámetro incorrecto"){@gestorGrados.AnadirGrado(@asignatura2)}
 	end
 
-
+	#####################################################################################
+	#Tests que comprueba que funciona correctamente el método eliminarGrado
+	#
+	#método: eliminarGrado
+	#HU10
+	#####################################################################################
+	#Test1
+	#Comprueba que se añade correctamente un grado y posteriormente si se intenta eliminar de nuevo salta excepción
+	def test_that_grado_eliminado_correctamente
+		id = @gestorGrados.AnadirGrado(@informatica)
+		assert_equal "Ingeniería Informática", @gestorGrados.obtenerGrado(id).nombre_grado
+		@gestorGrados.eliminarGrado(id)
+		assert_raises(StandardError, "Error, no existe dicho grado"){@gestorGrados.eliminarGrado(id)}
+	end
 
 end
