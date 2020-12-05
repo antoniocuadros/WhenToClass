@@ -57,7 +57,7 @@ class TestGestorGrados < Minitest::Test
 
 	#Test2
 	#Si se pasa mal un objeto al método debe saltar excepción
-	def test_that_return_error_si_grado_vacio
+	def test_that_return_error_si_parametro_erroneo
 		assert_raises(StandardError, "Error, objeto pasado como parámetro incorrecto"){@gestorGrados.AnadirGrado(@asignatura2)}
 	end
 
