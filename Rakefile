@@ -9,6 +9,11 @@ task :install do
 	exec "bundle install"
 end
 
+desc "Se inicia el microservicio"
+task :start do
+	exec "rackup"
+end
+
 Rake::TestTask.new do |t|
 	t.name = "testunitariosasignaturas"
 	t.test_files = FileList['t/TestAsignaturas.rb']
