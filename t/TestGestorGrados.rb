@@ -1,6 +1,7 @@
 require "minitest/autorun"
 require "minitest/mock"
 require "date"
+require 'fileutils'
 require_relative "../lib/asignatura.rb"
 require_relative "../lib/horarioasignatura.rb"
 require_relative "../lib/asignaturaerror.rb"
@@ -37,7 +38,7 @@ class TestGestorGrados < Minitest::Test
 
 		@informatica = Grado.new("Ingeniería Informática", "https://grados.ugr.es/informatica/", [@asignatura1, @asignatura2])
 
-		dator = FSDator.new("data")
+		dator = FSDator.new("data_test")
 		@gestorGrados = GestorGrados.new(dator)
 	end
 
@@ -90,4 +91,7 @@ class TestGestorGrados < Minitest::Test
 	def test_that_grado_obtenido_incorrecto
 		assert_raises(StandardError, "Error, no existe dicho grado"){@gestorGrados.obtenerGrado('123')}
 	end
+	Minitest.after_run {
+		FileUtils.rm_rf("data_test")
+	  }
 end
