@@ -44,6 +44,15 @@ class App < Roda
             end
         end
 
+        # /asignatura
+        r.on "asignatura" do
+            r.on /[a-f0-9]{20}/ do |id|
+                # /asignatura/$ID/horario
+                r.get "horario" do
+                    "obtener el horario de la asignatura"
+                end
+            end
+        end
 
     end
 end
