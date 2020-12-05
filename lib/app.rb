@@ -25,7 +25,17 @@ class App < Roda
         r.on "grado" do
             # /grado/$ID
             r.on /[a-f0-9]{20}/ do |id|
+                r.get do
+                    "obtener información del grado"
+                end
 
+                r.delete do
+                    "eliminar el grado"
+                end
+
+                r.post do
+                    "añadir grado"
+                end
             end
         end
 
