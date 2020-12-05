@@ -6,6 +6,7 @@ require_relative "../lib/horarioasignatura.rb"
 require_relative "../lib/asignaturaerror.rb"
 require_relative "../lib/gestorgrados.rb"
 require_relative "../lib/grado.rb"
+require_relative "../lib/FSDator.rb"
 
 class TestGestorGrados < Minitest::Test
 	#####################################################################################
@@ -36,33 +37,8 @@ class TestGestorGrados < Minitest::Test
 
 		@informatica = Grado.new("Ingeniería Informática", "https://grados.ugr.es/informatica/", [@asignatura1, @asignatura2])
 
-		@gestorGrados = GestorGrados.new([@informatica])
-	end
-
-	#####################################################################################
-	#Tests que comprueba que funciona correctamente el método obtenerGrado
-	#
-	#método: obtenerGrado
-	#HU9
-	#####################################################################################
-
-	#Test1
-	#Comprueba que se han añadido los grados
-	def test_that_grado_asignado_correcto
-		assert_equal "Ingeniería Informática", @gestorGrados.obtenerGrado("Ingeniería Informática").nombre_grado
-	end
-
-	#Test2
-	#Si no hay grados, debe saltar excepcion
-	def test_that_return_error_si_grado_vacio
-		@gestorGrados2 = GestorGrados.new
-		assert_raises(AsignaturaError, "Error: No existe ningún grado disponible"){@gestorGrados2.obtenerGrado("Ingeniería Informática")}
-	end
-
-	#Test3
-	#Si no existe el grado, debe saltar una excepcion
-	def test_that_return_error_si_grado_no_existe
-		assert_raises(AsignaturaError, "Error: No se ha encontrado el grado"){@gestorGrados.obtenerGrado("Magisterio Primaria")}
+		dator = FSDator.new("data")
+		@gestorGrados = GestorGrados.new(dator)
 	end
 
 	#####################################################################################
@@ -71,45 +47,20 @@ class TestGestorGrados < Minitest::Test
 	#método: anadirGrado
 	#HU10
 	#####################################################################################
-	
-	#TEST1
-	#Comprobamos que se puede añadir correctamente un grado
-	def test_that_añade_correctamente_grado 
-		informatica2 = Grado.new("Ingeniería Informática2", "https://grados.ugr.es/informatica/", [@asignatura1, @asignatura2])
-		@gestorGrados.AnadirGrado(informatica2)
-		assert_equal 2, @gestorGrados.obtenerNumGrados()
+
+	#Test1
+	#Comprueba que se añade correctamente un grado
+	def test_that_grado_aniadido_correcto
+		id = @gestorGrados.AnadirGrado(@informatica)
+		assert_equal "Ingeniería Informática", @gestorGrados.obtenerGrado(id).nombre_grado
 	end
 
-	#TEST2
-	#Comprobamos que falla si no se le pasa un objeto grado
-	def test_that_añade_falla_si_no_grado
-		assert_raises(AsignaturaError, "Error: No se puede añadir, no es un objeto Grado"){@gestorGrados.AnadirGrado(@asignatura1)}
-
+	#Test2
+	#Si se pasa mal un objeto al método debe saltar excepción
+	def test_that_return_error_si_grado_vacio
+		assert_raises(StandardError, "Error, objeto pasado como parámetro incorrecto"){@gestorGrados.AnadirGrado(@asignatura2)}
 	end
 
-	#####################################################################################
-	#Tests que comprueba que funciona correctamente el método eliminarGrado
-	#
-	#método: eliminarGrado
-	#HU10
-	#####################################################################################
 
-	#TEST1
-	#Comprobamos que se puede eliminar
-	def test_that_elimina_correctamente_grado 
-		informatica2 = Grado.new("Ingeniería Informática2", "https://grados.ugr.es/informatica/", [@asignatura1, @asignatura2])
-		@gestorGrados.AnadirGrado(informatica2)
-		assert_equal 2, @gestorGrados.obtenerNumGrados()
-
-		@gestorGrados.eliminarGrado("Ingeniería Informática2")
-
-		assert_equal 1, @gestorGrados.obtenerNumGrados()
-	end
-
-	#TEST2
-	#Comprobamos que no se puede eliminar si no existe
-	def test_that_elimina_grado_falla_si_no_existe
-		assert_raises(AsignaturaError, "Error: No se puede eliminar, no existe el Grado"){@gestorGrados.eliminarGrado("Ingeniería Informática3")}
-	end
 
 end

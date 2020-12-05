@@ -29,7 +29,8 @@ class GestorGrados
 	#
 	#####################################################################################
     def AnadirGrado(grado)
-		@dator.nuevoGrado(grado)
+        @dator.nuevoGrado(grado)
+        return grado.id
     end
 
 	#####################################################################################
