@@ -19,18 +19,8 @@ class GestorGrados
 	#Método obtenerGrado
 	#
 	#####################################################################################
-    def obtenerGrado(nombre_grado)
-        if @grados.length() == 0
-            raise AsignaturaError, "Error: No existe ningún grado disponible"
-        else
-            for i in 0..@grados.length() -1
-                if @grados[i].nombre_grado == nombre_grado
-                    return @grados[i]
-                end
-            end
-
-            raise AsignaturaError, "Error: No se ha encontrado el grado"
-        end
+    def obtenerGrado(grado_id)
+        return @dator.obtenerGrado(grado_id)
     end
 
 	#####################################################################################
