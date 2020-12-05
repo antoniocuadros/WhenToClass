@@ -26,6 +26,7 @@ class App < Roda
             # /grado/$ID
             r.on /[a-f0-9]{20}/ do |id|
                 
+                # Rama /grado/$ID/asignatura/$ID2
                 r.on "asignatura" do
                     r.on /[a-f0-9]{20}/ do |id|
                         # /asignatura/$ID/horario
@@ -56,20 +57,24 @@ class App < Roda
                         "añadir una asignatura"
                     end
                 end
-                
+
+                # /grado/$ID/asignaturas
                 r.on "asignaturas" do
                     r.get do
                         "obtener las asignaturas del grado"
                     end
                 end
+                # get /grado/$ID
                 r.get do
                     "obtener información del grado"
                 end
 
+                # delelete /grado/$ID
                 r.delete do
                     "eliminar el grado"
                 end
 
+                # post /grado/$ID
                 r.post do
                     "añadir grado"
                 end
