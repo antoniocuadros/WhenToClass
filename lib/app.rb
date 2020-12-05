@@ -12,5 +12,23 @@ class App < Roda
         r.root do
             "/"
         end
+
+        # /grados
+        r.on "grados" do
+            # GET /grados
+            r.get do
+                "obtener todos los grados"
+            end
+        end
+
+        # /grado
+        r.on "grado" do
+            # /grado/$ID
+            r.on /[a-f0-9]{20}/ do |id|
+
+            end
+        end
+
+
     end
 end
