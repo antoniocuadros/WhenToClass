@@ -37,30 +37,9 @@ class GestorGrados
 	#Método eliminarGrado
 	#
 	#####################################################################################
-	def eliminarGrado(nombre)
-		i = 0
-		encontrado = false
-		
-        while i < @grados.length() and !encontrado
-            if(@grados[i].nombre_grado == nombre)
-                encontrado = true
-                @grados.delete_at(i)
-            end
-            i +=1
-        end
-        
-        if !encontrado
-            raise AsignaturaError, "Error: No se puede eliminar, no existe el Grado"
-        end
+	def eliminarGrado(grado_id)
+		@dator.eliminaGrado(grado_id)
 	end
     
-	#####################################################################################
-	#
-	#Método obtenerNumGrados
-	#
-    #####################################################################################
-    def obtenerNumGrados()
-        return @grados.length()
-    end
 end
 
