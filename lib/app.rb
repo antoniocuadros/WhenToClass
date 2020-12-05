@@ -25,6 +25,11 @@ class App < Roda
         r.on "grado" do
             # /grado/$ID
             r.on /[a-f0-9]{20}/ do |id|
+                r.on "asignaturas" do
+                    r.get do
+                        "obtener las asignaturas del grado"
+                    end
+                end
                 r.get do
                     "obtener información del grado"
                 end
