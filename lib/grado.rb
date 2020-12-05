@@ -15,8 +15,12 @@ class Grado
 	attr_reader:enlace_grado			#enlace a la información del grado
 	
 	#Constructor sin parámetros que indica que la variable asignaturas es un array
-	def initialize(nombre_grado, enlace_grado, asignaturas=nil)
-		@id = SecureRandom.hex(10)
+	def initialize(nombre_grado, enlace_grado, asignaturas=nil, _id=nil)
+		if _id != nil
+			@id = _id
+		else
+			@id = SecureRandom.hex(10)
+		end
 		@asignaturas = Array.new
 		@nombre_grado = nombre_grado
 		@enlace_grado = enlace_grado
