@@ -52,8 +52,8 @@ class Parse
         for i in 0..grado.asignaturas.length()-1
             asignatura = asignaturaToJSON(grado.asignaturas[i])
 
-             asignaturas.push(asignatura)
-         end
+            asignaturas.push(asignatura)
+        end
         
         grado = {
             "id"=> grado.id,
