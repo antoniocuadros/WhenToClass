@@ -10,17 +10,8 @@ require_relative "asignaturaerror.rb"
 ##############################################################################################
 class GestorGrados
 
-    def initialize(grados = nil)
-        if(grados != nil)
-            num_grados = grados.length()
-
-            for i in 0..num_grados-1
-                @grados = Array.new
-                @grados.push(grados[i])
-            end
-        else
-            @grados = Array.new
-        end
+    def initialize(_dator)
+       @dator = _dator
     end
 
 	#####################################################################################
