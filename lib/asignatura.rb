@@ -1,6 +1,8 @@
 #Antonio Cuadros Lapresta
 require_relative "horarioasignatura.rb"
 require_relative "asignaturaerror.rb"
+require 'securerandom'
+
 ##############################################################################################
 #												#
 #					Clase Asignatura					#
@@ -8,6 +10,7 @@ require_relative "asignaturaerror.rb"
 ##############################################################################################
 class Asignatura
 	#Métodos get
+	attr_reader:id
 	attr_reader:siglas
 	attr_reader:nombre
 	attr_reader:horario_teoria 		#será un struct con dia, hora inicio, hora fin
@@ -20,6 +23,7 @@ class Asignatura
 	attr_reader:curso
 
 	def initialize(nombre_asignatura, h_teoria, h_practicas, group, t_presencialidad, enlaces, curso, _siglas=nil)
+		@id = SecureRandom.hex(10)
 		@nombre = nombre_asignatura
 		@horario_teoria = h_teoria
 		@horario_practicas = h_practicas
