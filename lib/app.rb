@@ -51,6 +51,11 @@ class App < Roda
                 r.get "horario" do
                     "obtener el horario de la asignatura"
                 end
+
+                # /asignatura/$ID/turnos
+                r.get "turnos" do
+                    "obtener los turnos de la asignatura"
+                end
             end
         end
 
