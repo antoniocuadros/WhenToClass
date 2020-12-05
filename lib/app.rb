@@ -61,8 +61,19 @@ class App < Roda
                 r.get "turnos" do
                     "obtener los turnos de la asignatura"
                 end
+                    
+                # /asignatura/$ID
+                r.get do
+                    "obtiene toda la información de una asignatura"    
+                end
+
+                r.delete do
+                    "elimina la asignatura"
+                end
+            end
+            r.post do
+                "añadir una asignatura"
             end
         end
-
     end
 end
