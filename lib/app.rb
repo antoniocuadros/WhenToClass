@@ -2,6 +2,7 @@ require "roda"
 require "json"
 require_relative "../lib/FSDator.rb"
 require_relative "../lib/gestorgrados.rb"
+require_relative "../lib/parse.rb"
 
 class App < Roda
     ####################
@@ -9,12 +10,13 @@ class App < Roda
     plugin :all_verbs #por defecto solo trae GET y POST, queremos más.
     plugin :response_request #nos permite personalizar más las respuestas
 
-    @dator = FSDator.new("data")
-    @gestor = GestorGrados.new(@dator)
     
     ####################
     #Rutas
     route do |r|
+        @dator = FSDator.new("data")
+        @gestor = GestorGrados.new(@dator)
+        @parse = Parse.new
         #Directorio Raíz
         r.root do
             response.status = 200
@@ -30,7 +32,19 @@ class App < Roda
         r.on "grados" do
             # GET /grados
             r.get do
-                "obtener todos los grados"
+                #obtenemos todos los grados
+                grados = Array.new
+                grados = @gestor.todosGrados()
+                gradosjson = Array.new
+                #los pasamos a JSON
+                for i in 0..grados.length()-1
+                    gradosjson.push(@parse.gradoToJSON(grados[i]))
+                end
+
+                #preparamos la respuesta
+                response.status = 200
+                response['Content-Type'] = 'application/json'
+                response.write(gradosjson.to_json)
             end
         end
 
