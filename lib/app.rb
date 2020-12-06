@@ -10,7 +10,6 @@ class App < Roda
     plugin :all_verbs #por defecto solo trae GET y POST, queremos más.
     plugin :response_request #nos permite personalizar más las respuestas
 
-    
     ####################
     #Rutas
     route do |r|
