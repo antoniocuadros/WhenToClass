@@ -8,7 +8,6 @@ require_relative "../lib/parse.rb"
 require 'fileutils'
 require 'json'
 
-
 class FSDator < Dator
     def initialize(ruta)
         if (! Dir.exist?(ruta))     #no existe la ruta que se nos ha pasado
