@@ -31,6 +31,7 @@ class App < Roda
         # /grados
         r.on "grados" do
             # GET /grados
+            # curl --request GET http://localhost:9292/grados
             r.get do
                 #obtenemos todos los grados
                 grados = Array.new
@@ -51,11 +52,11 @@ class App < Roda
         # /grado
         r.on "grado" do
             # /grado/$ID
-            r.on /[a-f0-9]{20}/ do |id|
+            r.on String do |id|
                 
                 # Rama /grado/$ID/asignatura/$ID2
                 r.on "asignatura" do
-                    r.on /[a-f0-9]{20}/ do |id|
+                    r.on String do |id2|
                         # /asignatura/$ID/horario
                         r.get "horario" do
                             "obtener el horario de la asignatura"
@@ -73,7 +74,11 @@ class App < Roda
                             
                         # /asignatura/$ID
                         r.get do
-                            "obtiene toda la información de una asignatura"    
+                            asignatura = @gestor.obtenerAsignatura(id, id2)
+                            asigjson = @parse.asignaturaToJSON(asignatura)
+                            response.status = 200
+                            response['Content-Type'] = 'application/json'
+                            response.write(asigjson.to_json)
                         end
 
                         r.delete do
