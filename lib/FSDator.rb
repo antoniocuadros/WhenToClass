@@ -87,11 +87,11 @@ class FSDator < Dator
             for i in 0..grado.asignaturas.length()-1
                 if asignatura_id == grado.asignaturas[i].id
                     nombre = grado.asignaturas[i].nombre
-                    grado.eliminarAsignatura(nombre)
                     encontrado = true
                 end
             end
             if (encontrado)
+                grado.eliminarAsignatura(nombre)
                 a_escribir = @parse.gradoToJSON(grado)
                 File.open(@carpeta + "/" + grado_id + "/info.json", 'w') { |file| file.write(a_escribir.to_json) }
             else
