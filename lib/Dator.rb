@@ -45,4 +45,8 @@ class Dator
     def obtenerAsignatura(grado_id, asignatura_id)
         raise  "Hay que implementar el método"
     end
+
+    def todasAsignaturas(grado_id)
+        raise  "Hay que implementar el método"
+    end
 end
