@@ -58,6 +58,16 @@ class FSDator < Dator
         end
     end
 
+    def todosGrados()
+        grados = Array.new
+        busqueda = @carpeta+"/*"
+        array_dir_grados = Dir.glob(busqueda) #devuelve un array de la forma data/id,data/id2...
+        for i in 0..array_dir_grados.length()-1
+            grados.push(obtenerGrado(array_dir_grados[i].split('/')[1]))
+        end
+        return grados
+    end
+
     #########################
     #
     # Asignaturas
@@ -135,3 +145,6 @@ class FSDator < Dator
         end
     end
 end
+
+dator = FSDator.new("data")
+dator.todosGrados()
