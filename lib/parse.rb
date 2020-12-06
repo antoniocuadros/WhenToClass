@@ -106,4 +106,13 @@ class Parse
         return grado_a_devolver
     end
 
+    def horarioToJSON(horario)
+        horariojson = {
+            "dia"=> horario.dia,
+            "hora_inicio"=> horario.hora_inicio,
+            "hora_fin"=> horario.hora_fin,
+            "grupo"=> horario.grupo
+        }
+        return horariojson
+    end
 end
