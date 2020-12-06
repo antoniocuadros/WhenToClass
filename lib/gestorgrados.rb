@@ -98,5 +98,6 @@ class GestorGrados
 		asignatura = @dator.obtenerAsignatura(grado_id, asignatura_id)
 		horario = asignatura.obtenerHorario(grupo)
 		return horario
+	end
 end
 
