@@ -159,6 +159,23 @@ class TestGestorGrados < Minitest::Test
 		assert_equal "P1", horario[1].grupo
 	end
 
+	#####################################################################################
+	#Tests que comprueba que funciona correctamente el método enlacesAsignatura
+	#
+	#método: enlacesAsignatura
+	#HU6
+	#####################################################################################
+	def test_that_obtiene_enlace_correctamente
+		id = @gestorGrados.AnadirGrado(@informatica)
+		asignaturas = @gestorGrados.todasAsignaturas(id)
+		id2 = asignaturas[0].id
+
+		enlaces = @gestorGrados.enlacesAsignatura(id, id2, "P1")
+
+
+		assert_equal "https://meet.jit.si/IV-ETSIIT-UGR-2020", enlaces
+	end
+
 	Minitest.after_run {
 		FileUtils.rm_rf("data_test")
 	}
