@@ -1,16 +1,24 @@
 require "roda"
+require "json"
 
 class App < Roda
     ####################
     #Plugins
     plugin :all_verbs #por defecto solo trae GET y POST, queremos más.
+    plugin :response_request #nos permite personalizar más las respuestas
     
     ####################
     #Rutas
     route do |r|
         #Directorio Raíz
         r.root do
-            "/"
+            response.status = 200
+            response['Content-Type'] = 'application/json'
+            body = 
+                {
+                    "status"=>200
+                }
+            response.write(body.to_json)
         end
 
         # /grados
