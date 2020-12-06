@@ -1,11 +1,16 @@
 require "roda"
 require "json"
+require_relative "../lib/FSDator.rb"
+require_relative "../lib/gestorgrados.rb"
 
 class App < Roda
     ####################
     #Plugins
     plugin :all_verbs #por defecto solo trae GET y POST, queremos más.
     plugin :response_request #nos permite personalizar más las respuestas
+
+    @dator = FSDator.new("data")
+    @gestor = GestorGrados.new(@dator)
     
     ####################
     #Rutas
