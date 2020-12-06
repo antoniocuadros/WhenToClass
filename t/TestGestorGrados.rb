@@ -91,7 +91,25 @@ class TestGestorGrados < Minitest::Test
 	def test_that_grado_obtenido_incorrecto
 		assert_raises(StandardError, "Error, no existe dicho grado"){@gestorGrados.obtenerGrado('123')}
 	end
+
+	#####################################################################################
+	#Tests que comprueba que funciona correctamente el método obtenerGrado
+	#
+	#método: eliminaAsignatura
+	#HU4
+	#####################################################################################
+	def test_that_elimina_asignatura_correctamente
+		id = @gestorGrados.AnadirGrado(@informatica)
+		assert_equal 2, @gestorGrados.todasAsignaturas(id).length()
+		asignaturas = @gestorGrados.todasAsignaturas(id)
+		id2 = asignaturas[0].id
+
+		@gestorGrados.eliminaAsignatura(id, id2)
+		assert_equal 1, @gestorGrados.todasAsignaturas(id).length()
+	end
+
+
 	Minitest.after_run {
 		FileUtils.rm_rf("data_test")
-	  }
+	}
 end
