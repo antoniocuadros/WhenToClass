@@ -59,27 +59,37 @@ class App < Roda
                     r.on String do |id2|
                         # /asignatura/$ID/horario
                         r.get "horario" do
-                            if r.params['grupo'] == nil
-                                response.status = 404
-                                response['Content-Type'] = 'application/json'
-                                res = {
-                                    "error"=>"es necesario pasar la variable grupo"
-                                }
-                                response.write(res.to_json)   
-                            else
-                                grupo = r.params['grupo']
-                                horario = @gestor.horarioAsignatura(id, id2, grupo)
-                                arrayHorario = Array.new
-                                for i in 0..horario.length()-1
-                                    arrayHorario.push(@parse.horarioToJSON(horario[i]))
+                            begin
+                                if r.params['grupo'] == nil
+                                    response.status = 404
+                                    response['Content-Type'] = 'application/json'
+                                    res = {
+                                        "error"=>"es necesario pasar la variable grupo"
+                                    }
+                                    response.write(res.to_json)   
+                                else
+                                    grupo = r.params['grupo']
+                                    horario = @gestor.horarioAsignatura(id, id2, grupo)
+                                    arrayHorario = Array.new
+                                    for i in 0..horario.length()-1
+                                        arrayHorario.push(@parse.horarioToJSON(horario[i]))
+                                    end
+                                    res = {
+                                        "horario"=>arrayHorario
+                                    }
+                                    response.status = 200
+                                    response['Content-Type'] = 'application/json'
+                                    response.write(res.to_json)
                                 end
-                                res = {
-                                    "horario"=>arrayHorario
-                                }
-                                response.status = 200
-                                response['Content-Type'] = 'application/json'
-                                response.write(res.to_json)
+                            rescue => exception
+                                response.status = 404
+                                    response['Content-Type'] = 'application/json'
+                                    res = {
+                                        "error"=>"No se ha encontrado el grado o asignatura"
+                                    }
+                                response.write(res.to_json)  
                             end
+                            
                             
 
                             
