@@ -24,6 +24,10 @@ class Dator
         raise  "Hay que implementar el método"
     end
 
+    def todosGrados()
+        raise  "Hay que implementar el método"
+    end
+
     #########################
     #
     # Asignaturas
