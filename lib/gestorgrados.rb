@@ -110,5 +110,16 @@ class GestorGrados
 		enlaces = asignatura.dameEnlace(grupo)
 		return enlaces
 	end
+
+	#####################################################################################
+	#
+	#Método turnosAsignatura
+	#
+	#####################################################################################
+	def turnosAsignatura(grado_id, asignatura_id, turno, mes)
+		asignatura = @dator.obtenerAsignatura(grado_id, asignatura_id)
+		turnos = asignatura.obtenerDiasPresenciales(turno, mes)
+		return turnos
+	end
 end
 
