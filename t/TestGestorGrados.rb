@@ -176,6 +176,23 @@ class TestGestorGrados < Minitest::Test
 		assert_equal "https://meet.jit.si/IV-ETSIIT-UGR-2020", enlaces
 	end
 
+	#####################################################################################
+	#Tests que comprueba que funciona correctamente el método turnosAsignatura
+	#
+	#método: turnosAsignatura
+	#HU2
+	#####################################################################################
+	def test_that_obtiene_turno_correctamente
+		id = @gestorGrados.AnadirGrado(@informatica)
+		asignaturas = @gestorGrados.todasAsignaturas(id)
+		id2 = asignaturas[0].id
+
+		turnos = @gestorGrados.turnosAsignatura(id, id2, "1", "dec")
+
+		assert_equal 2, turnos.length()
+		assert_equal "7dec - 11dec", turnos[0]
+	end
+
 	Minitest.after_run {
 		FileUtils.rm_rf("data_test")
 	}
