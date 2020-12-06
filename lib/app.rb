@@ -145,7 +145,26 @@ class App < Roda
                 # /grado/$ID/asignaturas
                 r.on "asignaturas" do
                     r.get do
-                        "obtener las asignaturas del grado"
+                        begin
+                            asignaturas = @gestor.todasAsignaturas(id)
+                            asignaturasjson = Array.new
+                            for i in 0..asignaturas.length()-1
+                                asignaturasjson.push(@parse.asignaturaToJSON(asignaturas[i]))
+                            end
+
+                            #Preparamos la respuesta
+                            response.status = 200
+                            response['Content-Type'] = 'application/json'
+                            response.write(asignaturasjson.to_json) 
+                        rescue => exception
+                            response.status = 404
+                            response['Content-Type'] = 'application/json'
+                            res = {
+                                "error"=>"No existe el grado o no contiene ninguna asignatura"
+                            }
+                            response.write(res.to_json)
+                        end
+                        
                     end
                 end
                 # get /grado/$ID
