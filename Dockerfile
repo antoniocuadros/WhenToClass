@@ -1,5 +1,5 @@
 #Partimos de una ligera imagen de alpine 3.12.1
-FROM alpine:3.12.1
+FROM ruby:2.7.2-alpine3.12
 
 LABEL version="1.0.1" maintainer="antculap@gmail.com"
 
