@@ -124,7 +124,34 @@ class App < Roda
 
                         # grado/$ID1/asignatura/$ID/turnos
                         r.get "turnos" do
-                            "obtener los turnos de la asignatura"
+                            begin
+                                if r.params['turno'] == nil or r.params['mes'] == nil
+                                    response.status = 404
+                                    response['Content-Type'] = 'application/json'
+                                    res = {
+                                        "error"=>"es necesario pasar la variable turno y mes"
+                                    }
+                                    response.write(res.to_json)   
+                                else
+                                    turno = r.params['turno']
+                                    mes = r.params['mes']
+                                    turnos = @gestor.turnosAsignatura(id, id2, turno,mes)
+
+                                    res = {
+                                        "turnos"=>turnos
+                                    }
+                                    response.status = 200
+                                    response['Content-Type'] = 'application/json'
+                                    response.write(res.to_json)
+                                end
+                            rescue => exception
+                                response.status = 404
+                                response['Content-Type'] = 'application/json'
+                                res = {
+                                    "error"=>"No se ha encontrado el grado o asignatura"
+                                }
+                                response.write(res.to_json)  
+                            end
                         end
                             
                         # grado/$ID1/asignatura/$ID
