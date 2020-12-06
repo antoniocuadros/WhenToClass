@@ -169,7 +169,21 @@ class App < Roda
                 end
                 # get /grado/$ID
                 r.get do
-                    "obtener información del grado"
+                    begin
+                        grado = @gestor.obtenerGrado(id)
+                        jsongrado = @parse.gradoToJSON(grado)
+                        response.status = 200
+                        response['Content-Type'] = 'application/json'
+                        response.write(jsongrado.to_json) 
+                    rescue => exception
+                        response.status = 404
+                        response['Content-Type'] = 'application/json'
+                        res = {
+                            "error"=>"No existe el grado"
+                        }
+                        response.write(res.to_json)
+                    end
+                    
                 end
 
                 # delelete /grado/$ID
