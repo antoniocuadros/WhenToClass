@@ -108,7 +108,38 @@ class TestGestorGrados < Minitest::Test
 		assert_equal 1, @gestorGrados.todasAsignaturas(id).length()
 	end
 
+	#####################################################################################
+	#Tests que comprueba que funciona correctamente el método añadeAsignatura
+	#
+	#método: añadeAsignatura
+	#HU4
+	#####################################################################################
+	def test_that_anade_asignatura_correctamente
+		id = @gestorGrados.AnadirGrado(@informatica)
+		assert_equal 2, @gestorGrados.todasAsignaturas(id).length()
+		asignaturas = @gestorGrados.todasAsignaturas(id)
+		id2 = asignaturas[0].id
 
+		@gestorGrados.eliminaAsignatura(id, id2)
+		assert_equal 1, @gestorGrados.todasAsignaturas(id).length()
+
+		@gestorGrados.añadeAsignatura(id, @asignatura1)
+		assert_equal 2, @gestorGrados.todasAsignaturas(id).length()
+	end
+
+	#####################################################################################
+	#Tests que comprueba que funciona correctamente el método obtenerAsignatura
+	#
+	#método: obtenerAsignatura
+	#HU4
+	#####################################################################################
+	def test_that_obtiene_asignatura_correctamente
+		id = @gestorGrados.AnadirGrado(@informatica)
+		asignaturas = @gestorGrados.todasAsignaturas(id)
+		id2 = asignaturas[0].id
+
+		assert_equal "Infraestructura Virtual", @gestorGrados.obtenerAsignatura(id, id2).nombre
+	end
 	Minitest.after_run {
 		FileUtils.rm_rf("data_test")
 	}
