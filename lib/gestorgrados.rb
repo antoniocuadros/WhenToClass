@@ -99,5 +99,16 @@ class GestorGrados
 		horario = asignatura.obtenerHorario(grupo)
 		return horario
 	end
+
+	#####################################################################################
+	#
+	#Método enlacesAsignatura
+	#
+	#####################################################################################
+	def enlacesAsignatura(id1, id2, grupo)
+		asignatura = @dator.obtenerAsignatura(grado_id, asignatura_id)
+		enlaces = asignatura.dameEnlace(grupo)
+		return enlaces
+	end
 end
 
