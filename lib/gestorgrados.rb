@@ -88,5 +88,15 @@ class GestorGrados
 	def todasAsignaturas(grado_id)
 		return @dator.todasAsignaturas(grado_id)
 	end
+
+	#####################################################################################
+	#
+	#Método horarioAsignatura
+	#
+	#####################################################################################
+	def horarioAsignatura(grado_id, asignatura_id, grupo)
+		asignatura = @dator.obtenerAsignatura(grado_id, asignatura_id)
+		horario = asignatura.obtenerHorario(grupo)
+		return horario
 end
 
