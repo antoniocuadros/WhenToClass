@@ -41,6 +41,14 @@ class GestorGrados
 	def eliminarGrado(grado_id)
 		@dator.eliminaGrado(grado_id)
 	end
-    
+
+	#####################################################################################
+	#
+	#Método todosGrados
+	#
+	#####################################################################################
+	def todosGrados()
+		return @dator.todosGrados()
+	end
 end
 
