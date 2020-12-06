@@ -105,7 +105,7 @@ class GestorGrados
 	#Método enlacesAsignatura
 	#
 	#####################################################################################
-	def enlacesAsignatura(id1, id2, grupo)
+	def enlacesAsignatura(grado_id, asignatura_id, grupo)
 		asignatura = @dator.obtenerAsignatura(grado_id, asignatura_id)
 		enlaces = asignatura.dameEnlace(grupo)
 		return enlaces
