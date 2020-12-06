@@ -89,23 +89,45 @@ class App < Roda
                                     }
                                 response.write(res.to_json)  
                             end
-                            
-                            
-
-                            
                         end
 
-                        # /asignatura/$ID/enlaces
+                        # grado/$ID1/asignatura/$ID2/enlaces
                         r.get "enlaces" do
-                            "obtener los enlaces de la asignatura"
+                            begin
+                                if r.params['grupo'] == nil
+                                    response.status = 404
+                                    response['Content-Type'] = 'application/json'
+                                    res = {
+                                        "error"=>"es necesario pasar la variable grupo"
+                                    }
+                                    response.write(res.to_json)   
+                                else
+                                    grupo = r.params['grupo']
+                                    enlaces = @gestor.enlacesAsignatura(id, id2, grupo)
+
+                                    res = {
+                                        "enlace"=>enlaces
+                                    }
+                                    response.status = 200
+                                    response['Content-Type'] = 'application/json'
+                                    response.write(res.to_json)
+                                end
+                            rescue => exception
+                                response.status = 404
+                                response['Content-Type'] = 'application/json'
+                                res = {
+                                    "error"=>"No se ha encontrado el grado o asignatura"
+                                }
+                                response.write(res.to_json)  
+                            end
                         end
 
-                        # /asignatura/$ID/turnos
+                        # grado/$ID1/asignatura/$ID/turnos
                         r.get "turnos" do
                             "obtener los turnos de la asignatura"
                         end
                             
-                        # /asignatura/$ID
+                        # grado/$ID1/asignatura/$ID
                         # curl --request GET http://localhost:9292/grado/0e78a27a1e605334c0ba/asignatura/50bbd29ff87ba567f7bd
                         r.get do
                             begin
