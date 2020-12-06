@@ -188,7 +188,22 @@ class App < Roda
 
                 # delelete /grado/$ID
                 r.delete do
-                    "eliminar el grado"
+                    begin
+                        @gestor.eliminarGrado(id)
+                        res = {
+                            "eliminado"=>id
+                        }
+                        response.status = 200
+                        response['Content-Type'] = 'application/json'
+                        response.write(res.to_json) 
+                    rescue => exception
+                        response.status = 404
+                        response['Content-Type'] = 'application/json'
+                        res = {
+                            "error"=>"No existe el grado"
+                        }
+                        response.write(res.to_json)
+                    end
                 end
 
                 # post /grado/$ID
