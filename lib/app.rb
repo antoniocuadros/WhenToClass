@@ -73,16 +73,34 @@ class App < Roda
                         end
                             
                         # /asignatura/$ID
+                        # curl --request GET http://localhost:9292/grado/0e78a27a1e605334c0ba/asignatura/50bbd29ff87ba567f7bd
                         r.get do
                             asignatura = @gestor.obtenerAsignatura(id, id2)
                             asigjson = @parse.asignaturaToJSON(asignatura)
+
+                            #Preparamos la respuesta
                             response.status = 200
                             response['Content-Type'] = 'application/json'
                             response.write(asigjson.to_json)
                         end
 
                         r.delete do
-                            "elimina la asignatura"
+                            begin
+                                @gestor.eliminaAsignatura(id, id2)
+                                res = {
+                                    "eliminado"=>id2
+                                }
+                                response.status = 200
+                                response['Content-Type'] = 'application/json'
+                                response.write(res.to_json)
+                            rescue => exception
+                                response.status = 404
+                                response['Content-Type'] = 'application/json'
+                                res = {
+                                    "error"=>"No existe el grado o la asignatura"
+                                }
+                                response.write(res.to_json)
+                            end
                         end
                     end
                     r.post do
