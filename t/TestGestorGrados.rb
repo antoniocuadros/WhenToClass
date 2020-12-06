@@ -140,6 +140,25 @@ class TestGestorGrados < Minitest::Test
 
 		assert_equal "Infraestructura Virtual", @gestorGrados.obtenerAsignatura(id, id2).nombre
 	end
+
+
+	#####################################################################################
+	#Tests que comprueba que funciona correctamente el método horarioAsignatura
+	#
+	#método: horarioAsignatura
+	#HU1
+	#####################################################################################
+	def test_that_obtiene_horario_correctamente
+		id = @gestorGrados.AnadirGrado(@informatica)
+		asignaturas = @gestorGrados.todasAsignaturas(id)
+		id2 = asignaturas[0].id
+
+		horario = @gestorGrados.horarioAsignatura(id, id2, "P1")
+
+		assert_equal "T", horario[0].grupo
+		assert_equal "P1", horario[1].grupo
+	end
+
 	Minitest.after_run {
 		FileUtils.rm_rf("data_test")
 	}
