@@ -50,5 +50,43 @@ class GestorGrados
 	def todosGrados()
 		return @dator.todosGrados()
 	end
+
+	#####################################################################################
+	#
+	#Método eliminaAsignatura
+	#
+	#####################################################################################
+	def eliminaAsignatura(grado_id, asignatura_id)
+		@dator.eliminaAsignatura(grado_id, asignatura_id)
+	end
+
+	#####################################################################################
+	#
+	#Método añadeAsignatura
+	#
+	#####################################################################################
+	def añadeAsignatura(grado_id, asignatura)
+		@dator.añadeAsignatura(grado_id, asignatura)
+	end
+
+
+	#####################################################################################
+	#
+	#Método obtenerAsignatura
+	#
+	#####################################################################################
+	def obtenerAsignatura(grado_id, asignatura_id)
+		return @dator.obtenerAsignatura(grado_id, asignatura_id)
+	end
+
+
+	#####################################################################################
+	#
+	#Método todasAsignaturas
+	#
+	#####################################################################################
+	def todasAsignaturas(grado_id)
+		return @dator.todasAsignaturas(grado_id)
+	end
 end
 
