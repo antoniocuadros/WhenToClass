@@ -160,7 +160,6 @@ class FSDator < Dator
             end
         
             if (encontrado)
-                p asignaturas
                 return asignaturas
             else
                 raise  "No se han encontrado asignaturas"
