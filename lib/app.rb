@@ -206,10 +206,28 @@ class App < Roda
                     end
                 end
 
-                # post /grado/$ID
-                r.post do
-                    "añadir grado"
+            end
+            # post /grado
+            r.post do
+                begin
+                    grado = JSON.parse(r.body.read)
+                    parsed = @parse.jsonToGrado(grado)
+                    id2 = @gestor.AnadirGrado(parsed)
+                    res = {
+                        "añadido"=>id2
+                    }
+                    response.status = 200
+                    response['Content-Type'] = 'application/json'
+                    response.write(res.to_json)      
+                rescue => exception
+                    response.status = 404
+                    response['Content-Type'] = 'application/json'
+                    res = {
+                        "error"=>"Error al añadir el grado"
+                    }
+                    response.write(res.to_json)
                 end
+
             end
         end
     end
