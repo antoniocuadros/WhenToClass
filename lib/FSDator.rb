@@ -135,7 +135,6 @@ class FSDator < Dator
                 end
             end
             if (encontrado)
-                p asignatura
                 return asignatura
             else
                 raise  "No se ha encontrado la asignatura"
@@ -144,7 +143,30 @@ class FSDator < Dator
             raise "No existe el grado"
         end
     end
-end
 
-dator = FSDator.new("data")
-dator.todosGrados()
+    def todasAsignaturas(grado_id)
+                carpeta_grado = @carpeta + "/" + grado_id
+        archivo = carpeta_grado + "/info.json"
+        if  File.exist?(archivo)
+            data = File.read(archivo)
+            grado = @parse.jsonToGrado(JSON.parse(data))
+
+            encontrado = false
+            asignaturas = Array.new
+            for i in 0..grado.asignaturas.length()-1
+                    asignatura = grado.asignaturas[i]
+                    asignaturas.push(asignatura)
+                    encontrado = true
+            end
+        
+            if (encontrado)
+                p asignaturas
+                return asignaturas
+            else
+                raise  "No se han encontrado asignaturas"
+            end
+        else
+            raise "No existe el grado"
+        end
+    end
+end
