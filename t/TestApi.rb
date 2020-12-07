@@ -109,4 +109,16 @@ class TestApi < Minitest::Test
         FileUtils.rm_rf("data/0e78a27a1e605334c0ba")
     end
 
+    #Test 2: Se consulta erroneamente
+    def test_consultar_grado_falla
+        #Probamos a consultar
+        get '/grado/0e78a27a1e605334c0ba' 
+            res = {"error"=>"No existe el grado"}
+            res = res.to_json
+            assert_equal last_response.status, 404
+            assert_equal(last_response.content_type, 'application/json')
+            assert_equal(last_response.body, res)
+        FileUtils.rm_rf("data/0e78a27a1e605334c0ba")
+    end
+
 end
