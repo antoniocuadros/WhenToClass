@@ -1,7 +1,7 @@
 require "rake/testtask"
 
 task default: %w[install]
-task test: %w[testIntegracion testunitariosasignaturas testunitariosgrado testunitariosgestorgrados]
+task test: %w[testIntegracion testunitariosasignaturas testunitariosgrado testunitariosgestorgrados testFSDator]
 task testv: %w[testvercel]
 
 desc "Instala todas las dependencias"
@@ -37,4 +37,9 @@ end
 Rake::TestTask.new do |t|
 	t.name = "testIntegracion"
 	t.test_files = FileList['t/TestApi.rb']
+end
+
+Rake::TestTask.new do |t|
+	t.name = "testFSDator"
+	t.test_files = FileList['t/TestFSDator.rb']
 end

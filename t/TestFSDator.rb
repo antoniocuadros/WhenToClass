@@ -59,8 +59,8 @@ class TestFSDator < Minitest::Test
 
 	#Test2
 	#Si se pasa mal un objeto al método debe saltar excepción
-	def test_that_return_error_si_parametro_erroneo
-		assert_raises(StandardError, "Error, objeto pasado como parámetro incorrecto"){@dator.nuevoGrado(@asignatura2)}
+    def test_that_return_error_si_parametro_erroneo
+        assert_raises(StandardError, "Error, objeto pasado como parámetro incorrecto"){@dator.nuevoGrado(@asignatura2)}
     end
     
     #####################################################################################
@@ -103,8 +103,69 @@ class TestFSDator < Minitest::Test
     def test_that_todosGrados_ok
         @dator.nuevoGrado(@informatica)
         assert_equal 1, @dator.todosGrados().length()
+        @dator.eliminaGrado(@informatica.id)
     end
 
+    #####################################################################################
+	#Tests que comprueba que funciona correctamente el método eliminaAsignatura
+	#
+	#método: eliminaAsignatura
+	#HU12 y HU4
+    #####################################################################################
+    def test_that_eliminaAsignatura_ok
+        @dator.nuevoGrado(@informatica)
+        idg = @informatica.id
+        id = @informatica.asignaturas[0].id
+
+        @dator.eliminaAsignatura(idg, id)
+        assert_equal 1, @dator.todasAsignaturas(idg).length()
+        @dator.eliminaGrado(idg)
+    end
+
+    #####################################################################################
+	#Tests que comprueba que funciona correctamente el método añadeAsignatura
+	#
+	#método: añadeAsignatura
+	#HU12 y HU4
+    #####################################################################################
+    def test_that_añadeAsignatura_ok
+        @dator.nuevoGrado(@informatica)
+        idg = @informatica.id
+
+        @dator.añadeAsignatura(idg, @asignatura1)
+        assert_equal 3, @dator.todasAsignaturas(idg).length()
+        @dator.eliminaGrado(idg)
+    end
+
+    #####################################################################################
+	#Tests que comprueba que funciona correctamente el método obtenerAsignatura
+	#
+	#método: obtenerAsignatura
+	#HU12 y HU4
+    #####################################################################################
+    def test_that_obtenerAsignatura_ok
+        @dator.nuevoGrado(@informatica)
+        idg = @informatica.id
+        id = @informatica.asignaturas[0].id
+
+        assert_equal "Infraestructura Virtual", @dator.obtenerAsignatura(idg, id).nombre
+        @dator.eliminaGrado(idg)
+    end
+
+    #####################################################################################
+	#Tests que comprueba que funciona correctamente el método todasAsignaturas
+	#
+	#método: todasAsignaturas
+	#HU12 y HU4
+    #####################################################################################
+    def test_that_todasAsignaturas_ok
+        @dator.nuevoGrado(@informatica)
+        idg = @informatica.id
+
+        
+        assert_equal 2, @dator.todasAsignaturas(idg).length()
+        @dator.eliminaGrado(idg)
+    end
 
     Minitest.after_run {
 		FileUtils.rm_rf("data_test")
