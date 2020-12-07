@@ -99,7 +99,7 @@ class TestApi < Minitest::Test
         #Añadimos para poder consultar
         post '/grado', a_anadir.to_json    
 
-        #Probamos a borrar
+        #Probamos a consultar
         get '/grado/0e78a27a1e605334c0ba' 
             res = a_anadir
             res = res.to_json
