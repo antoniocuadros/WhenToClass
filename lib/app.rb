@@ -1,16 +1,16 @@
 require "roda"
 require "json"
-require 'logger'
 require_relative "../lib/FSDator.rb"
 require_relative "../lib/gestorgrados.rb"
 require_relative "../lib/parse.rb"
+require_relative "middleware"
 
 class App < Roda
     ####################
     #Plugins
     plugin :all_verbs #por defecto solo trae GET y POST, queremos más.
     plugin :response_request #nos permite personalizar más las respuestas
-    plugin :common_logger, Logger.new('logfile.txt')
+    use Rack::CustomLogger
 
     ####################
     #Rutas
