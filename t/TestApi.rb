@@ -121,4 +121,37 @@ class TestApi < Minitest::Test
         FileUtils.rm_rf("data/0e78a27a1e605334c0ba")
     end
 
+    #####################################################################################
+	#Tests que comprueba que funciona correctamente el método para añadir asignatura
+	#
+	#método: añadir asignatura en el microservicio
+	#HU4
+    #####################################################################################
+    #Test 1: se obtiene la asignatura correctamente
+    def test_consultar_asignatura_ok
+        a_anadir = {"id"=>"0e78a27a1e605334c0ba","asignaturas"=>[{"id"=>"50bbd28fa87ba567f7bd","siglas"=>"IV","nombre"=>"Infraestructura Virtual","horario_teoria"=>{"dia"=>"2-Martes","hora_inicio"=>"11:30","hora_fin"=>"13:30","grupo"=>"T"},"horario_practicas"=>[{"dia"=>"2-Martes","hora_inicio"=>"9:30","hora_fin"=>"11:30","grupo"=>"P1"},{"dia"=>"5-Viernes","hora_inicio"=>"9:30","hora_fin"=>"11:30","grupo"=>"P2"}],"turno_presencialidad"=>[["28sep - 2oct","12oct - 16oct","26oct - 30oct","9nov - 13nov","23nov - 27nov","7dec - 11dec","21dec - 22dec"],["5oct - 9oct","19oct - 23oct","2nov - 6nov","16nov - 20nov","30nov - 4dec","14dec - 18dec","8jan y 11jan - 14jan"]],"grupo"=>"A","enlaces_clase_online"=>["https://meet.jit.si/IV-ETSIIT-UGR-2020","https://meet.jit.si/IV-ETSIIT-UGR-2020","https://meet.jit.si/IV-ETSIIT-UGR-2020"],"curso"=>"4"}],"nombre_grado"=>"Ingeniería Informática","enlace_grado"=>"https://grados.ugr.es/informatica/"}
+        #Añadimos para poder consultar
+        post '/grado', a_anadir.to_json    
+
+        #Probamos a consultar
+        get '/grado/0e78a27a1e605334c0ba/asignatura/50bbd28fa87ba567f7bd' 
+            res = {"id"=>"50bbd28fa87ba567f7bd","siglas"=>"IV","nombre"=>"Infraestructura Virtual","horario_teoria"=>{"dia"=>"2-Martes","hora_inicio"=>"11:30","hora_fin"=>"13:30","grupo"=>"T"},"horario_practicas"=>[{"dia"=>"2-Martes","hora_inicio"=>"9:30","hora_fin"=>"11:30","grupo"=>"P1"},{"dia"=>"5-Viernes","hora_inicio"=>"9:30","hora_fin"=>"11:30","grupo"=>"P2"}],"turno_presencialidad"=>[["28sep - 2oct","12oct - 16oct","26oct - 30oct","9nov - 13nov","23nov - 27nov","7dec - 11dec","21dec - 22dec"],["5oct - 9oct","19oct - 23oct","2nov - 6nov","16nov - 20nov","30nov - 4dec","14dec - 18dec","8jan y 11jan - 14jan"]],"grupo"=>"A","enlaces_clase_online"=>["https://meet.jit.si/IV-ETSIIT-UGR-2020","https://meet.jit.si/IV-ETSIIT-UGR-2020","https://meet.jit.si/IV-ETSIIT-UGR-2020"],"curso"=>"4"}
+            res = res.to_json
+            assert_equal last_response.status, 200
+            assert_equal(last_response.content_type, 'application/json')
+            assert_equal(last_response.body, res)
+        FileUtils.rm_rf("data/0e78a27a1e605334c0ba")
+    end
+
+    #Test 3: se obtiene la asignatura erroneamente
+    def test_consultar_asignatura_falla
+        #Probamos a consultar
+        get '/grado/0e78a27a1e605334c0ba/asignatura/123' 
+            res = {"error"=>"No existe el grado o la asignatura"}
+            res = res.to_json
+            assert_equal last_response.status, 404
+            assert_equal(last_response.content_type, 'application/json')
+            assert_equal(last_response.body, res)
+        FileUtils.rm_rf("data/0e78a27a1e605334c0ba")
+    end
 end
