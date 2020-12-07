@@ -122,7 +122,7 @@ class App < Roda
                         end
 
                         # grado/$ID1/asignatura/$ID/turnos
-                        r.get "turnos" do
+                        r.get "turno" do
                             begin
                                 if r.params['turno'] == nil or r.params['mes'] == nil
                                     response.status = 404
