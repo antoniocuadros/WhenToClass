@@ -90,8 +90,8 @@ class App < Roda
                             end
                         end
 
-                        # grado/$ID1/asignatura/$ID2/enlaces
-                        r.get "enlaces" do
+                        # grado/$ID1/asignatura/$ID2/enlace
+                        r.get "enlace" do
                             begin
                                 if r.params['grupo'] == nil
                                     response.status = 404
