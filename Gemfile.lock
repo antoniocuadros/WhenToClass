@@ -3,6 +3,8 @@ GEM
   specs:
     minitest (5.14.2)
     rack (2.2.3)
+    rack-test (1.1.0)
+      rack (>= 1.0, < 3)
     roda (3.38.0)
       rack
 
@@ -11,6 +13,7 @@ PLATFORMS
 
 DEPENDENCIES
   minitest (~> 5.14)
+  rack-test
   roda (~> 3.22)
 
 BUNDLED WITH
