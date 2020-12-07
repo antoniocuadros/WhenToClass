@@ -1,7 +1,7 @@
 
 class Dator
     def initialize()
-        if (self.initialize == Dator)
+        if (self.instanceof? Dator)
             raise  "Clase no instanciable"
         end
     end
