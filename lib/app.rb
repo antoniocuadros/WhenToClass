@@ -80,7 +80,7 @@ class App < Roda
                                     response['Content-Type'] = 'application/json'
                                     response.write(res.to_json)
                                 end
-                            rescue => exception
+                            rescue 
                                 response.status = 404
                                     response['Content-Type'] = 'application/json'
                                     res = {
@@ -111,7 +111,7 @@ class App < Roda
                                     response['Content-Type'] = 'application/json'
                                     response.write(res.to_json)
                                 end
-                            rescue => exception
+                            rescue
                                 response.status = 404
                                 response['Content-Type'] = 'application/json'
                                 res = {
@@ -143,7 +143,7 @@ class App < Roda
                                     response['Content-Type'] = 'application/json'
                                     response.write(res.to_json)
                                 end
-                            rescue => exception
+                            rescue
                                 response.status = 404
                                 response['Content-Type'] = 'application/json'
                                 res = {
@@ -164,7 +164,7 @@ class App < Roda
                                 response.status = 200
                                 response['Content-Type'] = 'application/json'
                                 response.write(asigjson.to_json)
-                            rescue => exception
+                            rescue
                                 response.status = 404
                                 response['Content-Type'] = 'application/json'
                                 res = {
@@ -184,7 +184,7 @@ class App < Roda
                                 response.status = 200
                                 response['Content-Type'] = 'application/json'
                                 response.write(res.to_json)
-                            rescue => exception
+                            rescue
                                 response.status = 404
                                 response['Content-Type'] = 'application/json'
                                 res = {
@@ -212,7 +212,7 @@ class App < Roda
                                 "añadido"=>parsed.id
                             }
                             response.write(res.to_json) 
-                        rescue => exception
+                        rescue
                             response.status = 404
                             response['Content-Type'] = 'application/json'
                             res = {
@@ -237,7 +237,7 @@ class App < Roda
                             response.status = 200
                             response['Content-Type'] = 'application/json'
                             response.write(asignaturasjson.to_json) 
-                        rescue => exception
+                        rescue
                             response.status = 404
                             response['Content-Type'] = 'application/json'
                             res = {
@@ -256,7 +256,7 @@ class App < Roda
                         response.status = 200
                         response['Content-Type'] = 'application/json'
                         response.write(jsongrado.to_json) 
-                    rescue => exception
+                    rescue
                         response.status = 404
                         response['Content-Type'] = 'application/json'
                         res = {
@@ -277,7 +277,7 @@ class App < Roda
                         response.status = 200
                         response['Content-Type'] = 'application/json'
                         response.write(res.to_json) 
-                    rescue => exception
+                    rescue
                         response.status = 404
                         response['Content-Type'] = 'application/json'
                         res = {
@@ -300,7 +300,7 @@ class App < Roda
                     response.status = 200
                     response['Content-Type'] = 'application/json'
                     response.write(res.to_json)      
-                rescue => exception
+                rescue
                     response.status = 404
                     response['Content-Type'] = 'application/json'
                     res = {
