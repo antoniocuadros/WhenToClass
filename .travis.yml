@@ -1,7 +1,5 @@
 language: ruby
 
-#Cacheamos las dependencias
-cache: bundler
 
 rvm:
   - ruby-head
