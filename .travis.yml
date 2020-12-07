@@ -11,7 +11,8 @@ rvm:
 #Para poder trabajar con bundler 2.1.4
 before_install:
   - gem install bundler
-  - gem install rack-test
+
+install: bundle install
 
 #Se ejecutan los tests
 script: rake test
