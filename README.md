@@ -27,6 +27,8 @@ Como ya se ha comentado anteriormente, en la actualidad los estudiantes de Infor
 - [TestApi.rb ](https://github.com/antoniocuadros/WhenToClass/blob/master/t/TestApi.rb): Tests del microservicio.
 - [Dator.rb ](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/Dator.rb): Clase "abstracta" Dator.
 - [TestDator.rb](https://github.com/antoniocuadros/WhenToClass/blob/master/t/TestDator.rb): Tests de la clase Dator.
+- [FSDator.rb ](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/FSDator.rb): Clase FSDator.
+- [TestFSDator.rb](https://github.com/antoniocuadros/WhenToClass/blob/master/t/TestFSDator.rb): Tests de la clase FSDator.
 - [parse.rb](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/parse.rb): clase Parse.
 - [TestParse.rb](https://github.com/antoniocuadros/WhenToClass/blob/master/t/TestParse.rb): Tests de la clase Parse.
 
