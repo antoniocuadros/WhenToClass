@@ -15,6 +15,9 @@ class App < Roda
     ####################
     #Rutas
     route do |r|
+
+        ####################
+        #Variables
         @dator = FSDator.new("data")
         @gestor = GestorGrados.new(@dator)
         @parse = Parse.new
