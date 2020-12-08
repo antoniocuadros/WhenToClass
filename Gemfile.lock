@@ -1,7 +1,14 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    logger (1.4.2)
+    etcdv3 (0.10.2)
+      grpc (~> 1.17)
+    google-protobuf (3.14.0)
+    googleapis-common-protos-types (1.0.5)
+      google-protobuf (~> 3.11)
+    grpc (1.34.0)
+      google-protobuf (~> 3.13)
+      googleapis-common-protos-types (~> 1.0)
     minitest (5.14.2)
     rack (2.2.3)
     rack-test (1.1.0)
@@ -13,7 +20,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  logger (~> 1.4)
+  etcdv3 (~> 0.10.2)
   minitest (~> 5.14)
   rack-test
   roda (~> 3.22)
