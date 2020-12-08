@@ -150,19 +150,19 @@ A continuación se muestran algunos ejemplos para que se pueda comprobar que al 
 
 Por ejemplo, obtener todos los grados, en este caso hay 1:
 
-![img1]()
+![img1](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/microservicios/images/1.png)
 
 Mostramos una asignatura de dicho grado:
 
-![img2]()
+![img2](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/microservicios/images/2.png)
 
 Mostramos el horario de una asignatura:
 
-![img3]()
+![img3](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/microservicios/images/3.png)
 
 Mostramos el enlace de una clase online de una asignatura:
 
-![img4]()
+![img4](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/microservicios/images/4.png)
 
 ## Detalles sobre la implementación y diseño por capas
 Para implementar la API se ha utilizado el framework Roda tal y como se nombó en [este documento](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/microservicios/rub1.md) donde realizamos una serie de pruebas y estudio de características para llegar a elegirlo.
@@ -261,7 +261,7 @@ end
 
 Si nos fijamos es sencillo si se ve como una estructura jerárquica y para comprenderlo de mejor forma podemos compararlo con la siguiente figura que representa de forma gráfica la jerarquía anterior:
 
-![img5]()
+![img5](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/microservicios/images/5.png)
 
 ### Uso de plugins
 Como podemos ver en el código anterior, se está haciendo uso de plugins de Roda como son:
