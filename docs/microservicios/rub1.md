@@ -158,10 +158,45 @@ Para la realización del microservicio se va a utilizar Roda ya que como hemos v
 
 
 
+## Como se usa Roda
+A la hora de empezar a crear un microservicio con Roda, necesitamos dos archivos: un config.ru para arrancar la aplicación y gestionar configuraciones como por ejemplo el puerto y otro archivo donde tendremos todo el comportamiento del microservicio programado. De esta forma, podríamos partir de un sencillo ejemplo como el siguiente para entender algunas cosas básicas de Roda:
+```
+require "roda"
 
+class App < Roda
+  route do |r|
+    r.on "hello" do
+      @saludo = 'Hello World!'
 
+      r.is do
+        r.get do
+          "#{@saludo}!"
+        end
+      end
+    end
+  end
+end
+```
 
+Como vemos todo el código relacionado con las rutas debe estar contenido en `route do |r| ... end`. 
+`r` es el objeto que contiene información de la petición y será accesible por todas las rutas.
+Como vemos tenemos dos métodos de coincidencia para entrar en una u otra ruta:
+- `r.is`: es un método de coincidencia terminal, consume toda la cadena a comparar.
+- `r.on`: es un método de coincidencia no terminal, no necesita consumir toda la cadena a comparar para aceptarla.
 
+Posteriormente para trabajar con cada verbo HTTP tenemos:
+- r.get: para GET.
+- r.post: para POST.
+- r.delete: para DELETE.
+- ...
+
+Con estas cuestiones básicas podríamos empezar a construir nuestro microservicio, pero antes nos queda una cosa importante, como devolver los datos, se hace de forma sencilla de la siguiente forma:
+
+```
+response.status = X # X un código de estado HTTP
+response['Content-Type'] = Y # Y un Content-Type válido
+response.write(Z) # Z el mensaje que queremos devolver
+```
 
 
 
