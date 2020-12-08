@@ -6,28 +6,43 @@ Para lograr esto, necesitamos tener instalado `etcd` en nuestro sistema, exporta
 
 Una vez hecho esto, ya podemos almacenar el valor del puerto de la siguiente forma:
 `
-etcdctl put port 9292
+etcdctl put /node/port 9777
 `
-Ahora en el lado de la aplicación necesitamos instalar la gema `etcdv3` que se ha añadido al GemFile y en el [fichero donde se vaya a hacer uso de configuración distribuida](https://github.com/antoniocuadros/WhenToClass/blob/master/config.ru) hacer `require "etcdv3"`. Y se ha puesto lo siguiente dentro del fichero:
+Ahora en el lado de la aplicación necesitamos instalar la gema `etcd` que se ha añadido al GemFile y en el [fichero donde se vaya a hacer uso de configuración distribuida](https://github.com/antoniocuadros/WhenToClass/blob/master/config.ru) hacer `require "etcd"`. Y se ha puesto lo siguiente dentro del fichero:
 
 ```
-require "etcdv3"
+require "etcd"
 require "./lib/app" #fichero de la api
 
 #nos conectamos a etcd
-cliente_etcd = Etcdv3.new(endpoints: 'http://127.0.0.1:2379')
+begin
+    client = Etcd.client(host: '127.0.0.1', port: 2379)
 
- # Get
-port = cliente_etcd.get('port').kvs.first.value
+    # Get
+    port = client.get('/nodes/port').value
+rescue
+    port = "9898" #Por defecto de Rack
+end
+
 
 Rack::Handler.default.run(App, :Port => port)
 ```
 
 Como vemos creamos un cliente y posteriormente se obtiene el puerto y es usado por Rack para iniciar la aplicación en dicho puerto.
 
+Cuando hacemos Rackup vemos que se ejecuta en el puerto que hemos establecido anteriormente:
+```
+[2020-12-08 20:29:25] INFO  WEBrick 1.6.0
+[2020-12-08 20:29:25] INFO  ruby 2.7.0 (2019-12-25) [x86_64-linux-gnu]
+[2020-12-08 20:29:25] INFO  WEBrick::HTTPServer#start: pid=75074 port=9777
+```
+
 Es un ejemplo muy sencillo de como utilizar configuración distribuida. Aunque quizás se le saque más provecho cuando se disponga de múltiples microservicios por ejemplo y todos tengan una base de datos en común (por ejemplo) y gracias a esto pudiésemos cambiar la ruta a la base de datos con un simple comando en la consola.
 
-Se ha consultado la [siguiente documentación](https://github.com/davissp14/etcdv3-ruby) de etcdv3 para poder trabajar con dicha gema.
+Se ha consultado la [siguiente documentación](https://github.com/ranjib/etcd-ruby) de etcd-ruby para poder trabajar con dicha gema.
+
+--NOTA--
+Anteriormente se estaba usado la gema `etcdv3` pero a la hora de ejercutar la tarea `rake start` en el dockerfile si no definías la variable entraba en un bucle infinito en vez de saltar una excepción de tal manera que era imposible de tratar en un bucle `begin ... rescue ... end`. Debido a esto se ha utilizado la gema `etcd` que si trata con excepciones y de esta forma, si no está establecida la clave /nodes/port coge el puerto por defecto de Rack que es el 9898.
 
 ## Logs y middleware
 Para esta parte, se ha programado un middleware que se encargue de gestionar los logs. Como ya sabemos un middleware es como un hook o una llamada que se produce antes o después de la activación de una ruta, en nuestro caso, se ejecutará después de la activación de la ruta.
