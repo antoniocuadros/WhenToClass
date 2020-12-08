@@ -3,6 +3,7 @@ require_relative "horarioasignatura.rb"
 require_relative "asignatura.rb"
 require_relative "grado.rb"
 require_relative "asignaturaerror.rb"
+
 ##############################################################################################
 #												                                             #
 #					Clase GestorGrados					                                     #
@@ -122,4 +123,3 @@ class GestorGrados
 		return turnos
 	end
 end
-
