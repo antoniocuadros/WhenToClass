@@ -1,6 +1,5 @@
 require "roda"
 require "json"
-require "etcdv3"
 require_relative "../lib/FSDator.rb"
 require_relative "../lib/gestorgrados.rb"
 require_relative "../lib/parse.rb"
