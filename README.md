@@ -16,7 +16,10 @@ Como ya se ha comentado anteriormente, en la actualidad los estudiantes de Infor
 
 ## :hammer: Documentación
 ### Microservicios
-
+- Documentación sobre justificación técnica del framework elegido y como se utiliza dicho framework con un ejemplo inicial, se puede encontrar en el [siguiente enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/microservicios/rub1.md).
+- Documentación sobre diseño en general del API, las rutas (o tareas), tipos devueltos por las peticiones y estados devueltos por las mismas, demostración funcionamiento, explicación diseño por capas y HUs que han intervenido se puede encontrar en el [siguiente enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/microservicios/rub2.md).
+- Documentación sobre uso de buenas prácticas: configuración distribuida, logs, uso de middleware y gestión de errores se puede encontrar en el [siguiente enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/microservicios/rub3.md).
+- Documentación sobre tests de integración de acuerdo con las historias de usuario se puede encontrar en el [siguiente enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/microservicios/rub4.md).
 
 
 ### Documentación anterior
