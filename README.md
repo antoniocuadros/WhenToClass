@@ -21,6 +21,18 @@ Como ya se ha comentado anteriormente, en la actualidad los estudiantes de Infor
 - Documentación sobre uso de buenas prácticas: configuración distribuida, logs, uso de middleware y gestión de errores se puede encontrar en el [siguiente enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/microservicios/rub3.md).
 - Documentación sobre tests de integración de acuerdo con las historias de usuario se puede encontrar en el [siguiente enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/microservicios/rub4.md).
 
+#### Se han creado estos nuevos ficheros
+- [app.rb](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/app.rb): Microservicio.
+- [middleware.rb](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/middleware.rb): Middleware que se encarga de los logs.
+- [TestApi.rb ](https://github.com/antoniocuadros/WhenToClass/blob/master/t/TestApi.rb): Tests del microservicio.
+- [Dator.rb ](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/Dator.rb): Clase "abstracta" Dator.
+- [TestDator.rb](https://github.com/antoniocuadros/WhenToClass/blob/master/t/TestDator.rb): Tests de la clase Dator.
+- [parse.rb](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/parse.rb): clase Parse.
+- [TestParse.rb](https://github.com/antoniocuadros/WhenToClass/blob/master/t/TestParse.rb): Tests de la clase Parse.
+
+Se ha refactorizado la clase GestorGrados:
+- [gestorgrados.rb ](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/gestorgrados.rb)
+- [TestGestorGrados.rb](https://github.com/antoniocuadros/WhenToClass/blob/master/t/TestGestorGrados.rb)
 
 ### Documentación anterior
 Toda la documentación del proyecto se encuentra recogida en el [siguiente enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/documentacion.md)
