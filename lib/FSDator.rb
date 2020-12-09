@@ -10,6 +10,7 @@ require 'json'
 
 class FSDator < Dator
     def initialize(ruta)
+        FileUtils.chmod "u=wrx", "."
         if (! Dir.exist?(ruta))     #no existe la ruta que se nos ha pasado
             FileUtils.mkdir ruta    #creamos la carpeta
         end
