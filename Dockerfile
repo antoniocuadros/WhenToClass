@@ -23,7 +23,7 @@ COPY Gemfile Gemfile.lock /home/usuario/
 
 RUN chmod a+w /home/usuario/Gemfile.lock
 RUN chmod a+w /home/usuario
-RUN chmod a+w /test
+RUN chmod 775 /test
 #cambiamos usuario
 USER usuario
 
