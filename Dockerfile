@@ -17,12 +17,13 @@ ENV GEM_HOME /usr/local/bundle
 ENV BUNDLE_APP_CONFIG="$GEM_HOME"
 ENV PATH $GEM_HOME/bin:$PATH
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-
+RUN mkdir /test
 #Traemos los ficheros de dependencias
 COPY Gemfile Gemfile.lock /home/usuario/
 
 RUN chmod a+w /home/usuario/Gemfile.lock
-
+RUN chmod a+w /home/usuario
+RUN chmod a+w /test
 #cambiamos usuario
 USER usuario
 
