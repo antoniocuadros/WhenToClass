@@ -14,6 +14,11 @@ task :start do
 	exec "rackup"
 end
 
+desc "Se construye el proyecto"
+task :build do
+
+end
+
 Rake::TestTask.new do |t|
 	t.name = "testunitariosasignaturas"
 	t.test_files = FileList['t/TestAsignaturas.rb']
