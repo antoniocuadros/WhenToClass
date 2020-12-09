@@ -23,7 +23,7 @@ COPY Gemfile Gemfile.lock /home/usuario/
 
 RUN chmod a+w /home/usuario/Gemfile.lock
 RUN chmod a+w /home/usuario
-RUN chmod 775 /test
+
 #cambiamos usuario
 USER usuario
 
@@ -36,6 +36,8 @@ RUN bundle install
 RUN rm -r /home/usuario/Gemfile*
 
 WORKDIR /test
+USER root
+RUN chmod 775 /test
 
 #Ejecución de los tests
 CMD ["rake","test"]
