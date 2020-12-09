@@ -9,3 +9,4 @@ test:
   - t/TestGestorGrados.rb
 taskfile: Rakefile
 URL: https://when-to-class.vercel.app/api/enlace?asignatura=IV&m=p&d=m
+make: rake
