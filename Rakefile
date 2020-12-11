@@ -1,5 +1,6 @@
 require "rake/testtask"
 
+#Tareas
 task default: %w[install]
 task test: %w[testIntegracion testunitariosasignaturas testunitariosgrado testunitariosgestorgrados testFSDator testDator testParse]
 task testv: %w[testvercel]
