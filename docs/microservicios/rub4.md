@@ -54,4 +54,4 @@ De acuerdo a los tests realizados, se han avanzado las historias de usuario corr
 - [[HU12] Como desarrollador quiero una jerarquía de clases que me permita gestionar datos adecuadamente](https://github.com/antoniocuadros/WhenToClass/issues/89)
 
 ## Test de integración en tarea test
-Se ha añadido a la tarea test `rake test` la ejecución de los tests de integración para poder testear el microservicio. Todas las tareas configuradas pueden ser consultadas en el [siguiente enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/Rakefile), como se puede ver adicionalmente se ha creado una tarea, `rake start` que iniciará el microservicio de forma sencilla.
+Se ha añadido a la tarea test `rake test` la ejecución de los tests de integración para poder testear el microservicio. Todas las tareas configuradas pueden ser consultadas en el [siguiente enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/Rakefile), como se puede ver adicionalmente se ha creado una tarea, `rake start` que iniciará el microservicio de forma sencilla haciendo uso del fichero config.ru.
