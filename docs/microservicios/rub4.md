@@ -51,3 +51,4 @@ De acuerdo a los tests realizados, se han avanzado las historias de usuario corr
 - [[HU4] Como usuario debo poder seleccionar, añadir y eliminar una asignatura](https://github.com/antoniocuadros/WhenToClass/issues/28)
 - [[HU6] Como usuario quiero poder obtener los enlaces de las clases online de una determinada asignatura](https://github.com/antoniocuadros/WhenToClass/issues/47)
 - [[HU10] Como administrador de una universidad tendría que poder añadir, eliminar grados y consultarlos](https://github.com/antoniocuadros/WhenToClass/issues/71)
+- [[HU12] Como desarrollador quiero una jerarquía de clases que me permita gestionar datos adecuadamente](https://github.com/antoniocuadros/WhenToClass/issues/89)
