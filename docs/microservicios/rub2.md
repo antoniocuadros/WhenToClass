@@ -139,7 +139,7 @@ Para éxito:
 response.status = 200
                         
 ```
-Fallo en la petición:
+Fallo en la petición, se ha podido comunicar con el microservicio pero no existe el recurso que se está solicitando.
 ```
 response.status = 404
 ```
