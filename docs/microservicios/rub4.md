@@ -52,3 +52,6 @@ De acuerdo a los tests realizados, se han avanzado las historias de usuario corr
 - [[HU6] Como usuario quiero poder obtener los enlaces de las clases online de una determinada asignatura](https://github.com/antoniocuadros/WhenToClass/issues/47)
 - [[HU10] Como administrador de una universidad tendría que poder añadir, eliminar grados y consultarlos](https://github.com/antoniocuadros/WhenToClass/issues/71)
 - [[HU12] Como desarrollador quiero una jerarquía de clases que me permita gestionar datos adecuadamente](https://github.com/antoniocuadros/WhenToClass/issues/89)
+
+## Test de integración en tarea test
+Se ha añadido a la tarea test `rake test` la ejecución de los tests de integración para poder testear el microservicio. Todas las tareas configuradas pueden ser consultadas en el [siguiente enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/Rakefile), como se puede ver adicionalmente se ha creado una tarea, `rake start` que iniciará el microservicio de forma sencilla.
