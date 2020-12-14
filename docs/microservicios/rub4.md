@@ -5,6 +5,8 @@ Para poder llevar a cabo los tests de integración, se ha necesitado hacer uso d
 
 En el fichero de tests `TestApi.rb` podemos ver que los tests se realizan de forma muy sencilla, mostramos a continuación algún ejemplo:
 
+**No se ha arrancado el servicio para hacer los tests.** Se importa únicamente el fichero de la API [app.rb](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/app.rb) que es independiente del fichero que se usaría para arrancar el microservicio [config.ru](https://github.com/antoniocuadros/WhenToClass/blob/master/config.ru).
+ 
 Ejemplo de test de ruta con POST:
 ```
 def test_anadir_grado_ok
