@@ -16,10 +16,10 @@ module Rack
             status, headers, body = @app.call(env)
           
             fecha = Time.now.strftime("%d_%m_%Y")
-            ruta = "logs/log" + fecha.to_s + ".txt"
+            ruta = "../logs/log" + fecha.to_s + ".txt"
 
-            if (! Dir.exist?("logs")) 
-                FileUtils.mkdir("logs")
+            if (! Dir.exist?("../logs/")) 
+                FileUtils.mkdir("../logs/")
             end
             if ( ! ::File.exist?(ruta) )
                 FileUtils.touch(ruta)
