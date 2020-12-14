@@ -36,7 +36,7 @@ class TestFSDator < Minitest::Test
 
 		@informatica = Grado.new("Ingeniería Informática", "https://grados.ugr.es/informatica/", [@asignatura1, @asignatura2])
 
-		@dator = FSDator.new("data_test")
+		@dator = FSDator.new("../data_test")
 	end
 
 	#####################################################################################
@@ -168,6 +168,6 @@ class TestFSDator < Minitest::Test
     end
 
     Minitest.after_run {
-		FileUtils.rm_rf("data_test")
+		FileUtils.rm_rf("../data_test")
 	}
 end

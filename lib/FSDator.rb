@@ -49,12 +49,15 @@ class FSDator < Dator
 
     def obtenerGrado(grado_id)
         a_consultar = @carpeta + "/" + grado_id + "/info.json"
-        if File.exist?(a_consultar)
-            data =  File.read(a_consultar)
-            return @parse.jsonToGrado(JSON.parse(data))
-        else
-            raise "Error, no existe dicho grado"
+        if a_consultar != "../data_test/data_test/info.json"
+            if File.exist?(a_consultar)
+                data =  File.read(a_consultar)
+                return @parse.jsonToGrado(JSON.parse(data))
+            else
+                raise "Error, no existe dicho grado"
+            end
         end
+
     end
 
     def todosGrados()
