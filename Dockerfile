@@ -18,6 +18,12 @@ ENV BUNDLE_APP_CONFIG="$GEM_HOME"
 ENV PATH $GEM_HOME/bin:$PATH
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
 
+#Necesario para crear datos, no se pueden crear archivos en la carpeta donde se monta
+RUN mkdir /logs
+RUN mkdir /data_test
+RUN chmod a+w /logs
+RUN chmod a+w /data_test
+
 #Traemos los ficheros de dependencias
 COPY Gemfile Gemfile.lock /home/usuario/
 
@@ -36,9 +42,6 @@ RUN bundle install
 RUN rm -r /home/usuario/Gemfile*
 
 WORKDIR /test
-USER root
-RUN chmod 775 /test
-USER usuario
 
 #Ejecución de los tests
 CMD ["rake","test"]
