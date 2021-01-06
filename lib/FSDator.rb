@@ -51,7 +51,7 @@ class FSDator < Dator
 
     def obtenerGrado(grado_id)
         a_consultar = @carpeta + "/" + grado_id + "/info.json"
-        if a_consultar != "../data_test/data_test/info.json"
+        if a_consultar != "../data/data/info.json"
             if File.exist?(a_consultar)
                 data =  File.read(a_consultar)
                 return @parse.jsonToGrado(JSON.parse(data))
@@ -67,7 +67,7 @@ class FSDator < Dator
         busqueda = @carpeta+"/*"
         array_dir_grados = Dir.glob(busqueda) #devuelve un array de la forma data/id,data/id2...
         for i in 0..array_dir_grados.length()-1
-            grados.push(obtenerGrado(array_dir_grados[i].split('/')[1]))
+            grados.push(obtenerGrado(array_dir_grados[i].split('/')[2]))
         end
         return grados
     end

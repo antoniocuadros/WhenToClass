@@ -43,23 +43,10 @@ class TestApi < Minitest::Test
             res = res.to_json
             assert_equal(last_response.content_type, 'application/json')
             assert_equal(last_response.body, res)
-        FileUtils.rm_rf("data/0e78a27a1e605334c0ba")
+        FileUtils.rm_rf("../data/0e78a27a1e605334c0ba")
     end
 
-    #Test 2: si se intenta añadir el mismo debe dar error
-    def test_anadir_grado_error
-        a_anadir = @grado
-        put '/grado/0e78a27a1e605334c0ba', a_anadir.to_json    
 
-        put '/grado/0e78a27a1e605334c0ba', a_anadir.to_json
-            res = {"error"=>"Error al añadir el grado"}
-            res = res.to_json
-
-            assert_equal last_response.status, 404
-            assert_equal(last_response.content_type, 'application/json')
-            assert_equal(last_response.body, res)
-        FileUtils.rm_rf("data/0e78a27a1e605334c0ba")
-    end
 
     #####################################################################################
 	#Tests que comprueba que funciona correctamente el método para eliminar grado
@@ -111,7 +98,7 @@ class TestApi < Minitest::Test
             assert_equal last_response.status, 200
             assert_equal(last_response.content_type, 'application/json')
             assert_equal(last_response.body, res)
-        FileUtils.rm_rf("data/0e78a27a1e605334c0ba")
+        FileUtils.rm_rf("../data/0e78a27a1e605334c0ba")
     end
 
     #Test 2: Se consulta erroneamente
@@ -144,7 +131,7 @@ class TestApi < Minitest::Test
             assert_equal last_response.status, 200
             assert_equal(last_response.content_type, 'application/json')
             assert_equal(last_response.body, res)
-        FileUtils.rm_rf("data/0e78a27a1e605334c0ba")
+        FileUtils.rm_rf("../data/0e78a27a1e605334c0ba")
     end
 
     #Test 3: se obtiene la asignatura erroneamente
@@ -177,7 +164,7 @@ class TestApi < Minitest::Test
             assert_equal last_response.status, 200
             assert_equal(last_response.content_type, 'application/json')
             assert_equal(last_response.body, res)
-        FileUtils.rm_rf("data/0e78a27a1e605334c0ba")
+        FileUtils.rm_rf("../data/0e78a27a1e605334c0ba")
     end
 
     #Test 2: Se elimina la asignatura erroneamente
@@ -210,7 +197,7 @@ class TestApi < Minitest::Test
             assert_equal last_response.status, 200
             assert_equal(last_response.content_type, 'application/json')
             assert_equal(last_response.body, res)
-        FileUtils.rm_rf("data/0e78a27a1e605334c0ba")
+        FileUtils.rm_rf("../data/0e78a27a1e605334c0ba")
     end
 
     #Test 2: falla al añadir asignatura
@@ -244,7 +231,7 @@ class TestApi < Minitest::Test
             assert_equal last_response.status, 200
             assert_equal(last_response.content_type, 'application/json')
             assert_equal(last_response.body, res)
-        FileUtils.rm_rf("data/0e78a27a1e605334c0ba")
+        FileUtils.rm_rf("../data/0e78a27a1e605334c0ba")
     end
 
     #Test 2: Si no se pasan argumentos falla
@@ -260,7 +247,7 @@ class TestApi < Minitest::Test
             assert_equal last_response.status, 404
             assert_equal(last_response.content_type, 'application/json')
             assert_equal(last_response.body, res)
-        FileUtils.rm_rf("data/0e78a27a1e605334c0ba")
+        FileUtils.rm_rf("../data/0e78a27a1e605334c0ba")
     end
 
     #Test 3: Si no existe grado o asignatura falla
@@ -293,7 +280,7 @@ class TestApi < Minitest::Test
             assert_equal last_response.status, 200
             assert_equal(last_response.content_type, 'application/json')
             assert_equal(last_response.body, res)
-        FileUtils.rm_rf("data/0e78a27a1e605334c0ba")
+        FileUtils.rm_rf("../data/0e78a27a1e605334c0ba")
     end
 
     #Test 2: Si no se pasan argumentos falla
@@ -309,7 +296,7 @@ class TestApi < Minitest::Test
             assert_equal last_response.status, 404
             assert_equal(last_response.content_type, 'application/json')
             assert_equal(last_response.body, res)
-        FileUtils.rm_rf("data/0e78a27a1e605334c0ba")
+        FileUtils.rm_rf("../data/0e78a27a1e605334c0ba")
     end
 
     #Test 3: Si no existe grado o asignatura falla
@@ -342,7 +329,7 @@ class TestApi < Minitest::Test
             assert_equal last_response.status, 200
             assert_equal(last_response.content_type, 'application/json')
             assert_equal(last_response.body, res)
-        FileUtils.rm_rf("data/0e78a27a1e605334c0ba")
+        FileUtils.rm_rf("../data/0e78a27a1e605334c0ba")
     end
 
     #Test 2: Si no se pasan argumentos falla
@@ -358,7 +345,7 @@ class TestApi < Minitest::Test
             assert_equal last_response.status, 404
             assert_equal(last_response.content_type, 'application/json')
             assert_equal(last_response.body, res)
-        FileUtils.rm_rf("data/0e78a27a1e605334c0ba")
+        FileUtils.rm_rf("../data/0e78a27a1e605334c0ba")
     end
 
     #Test 3: Si no existe grado o asignatura falla
@@ -391,7 +378,7 @@ class TestApi < Minitest::Test
             assert_equal last_response.status, 200
             assert_equal(last_response.content_type, 'application/json')
             assert_equal(last_response.body, res)
-        FileUtils.rm_rf("data/0e78a27a1e605334c0ba")
+        FileUtils.rm_rf("../data/0e78a27a1e605334c0ba")
     end
 
     #Test 2: Se obtienen grados vacios
@@ -424,6 +411,6 @@ class TestApi < Minitest::Test
             assert_equal last_response.status, 200
             assert_equal(last_response.content_type, 'application/json')
             assert_equal(last_response.body, res)
-        FileUtils.rm_rf("data/0e78a27a1e605334c0ba")
+        FileUtils.rm_rf("../data/0e78a27a1e605334c0ba")
     end
 end
