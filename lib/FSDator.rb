@@ -26,7 +26,9 @@ class FSDator < Dator
     def nuevoGrado(grado)
         if grado.instance_of? Grado
             ruta_para_grado = @carpeta + "/" + grado.id #se crea una carpeta con la id
-            FileUtils.mkdir ruta_para_grado
+            if (! Dir.exist?(ruta_para_grado))
+                FileUtils.mkdir ruta_para_grado
+            end
             FileUtils.touch @carpeta + "/" + grado.id + "/info.json" #creamos el archivo con la información
             
             a_escribir = @parse.gradoToJSON(grado)

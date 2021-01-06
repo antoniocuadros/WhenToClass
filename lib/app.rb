@@ -18,7 +18,7 @@ class App < Roda
 
         ####################
         #Variables
-        @dator = FSDator.new("data")
+        @dator = FSDator.new("../data")
         @gestor = GestorGrados.new(@dator)
         @parse = Parse.new
         #Directorio Raíz
