@@ -292,26 +292,28 @@ class App < Roda
                     end
                 end
 
-            end
-            # post /grado
-            r.post do
-                begin
-                    grado = JSON.parse(r.body.read)
-                    parsed = @parse.jsonToGrado(grado)
-                    id2 = @gestor.AnadirGrado(parsed)
-                    res = {
-                        "añadido"=>id2
-                    }
-                    response.status = 200
-                    response['Content-Type'] = 'application/json'
-                    response.write(res.to_json)      
-                rescue
-                    response.status = 404
-                    response['Content-Type'] = 'application/json'
-                    res = {
-                        "error"=>"Error al añadir el grado"
-                    }
-                    response.write(res.to_json)
+                                # put /grado
+                # curl --header "Content-Type:application/json" --request PUT --data '{"id":"123","asignaturas":[],"nombre_grado":"informatica", "enlace_grado":"hola"}' http://localhost:9777/grado/123
+                r.put do
+                    begin
+                        grado = JSON.parse(r.body.read)
+                        parsed = @parse.jsonToGrado(grado)
+                        id2 = @gestor.AnadirGrado(parsed)
+                        res = {
+                            "añadido"=>id2
+                        }
+                        response.status = 200
+                        response['Content-Type'] = 'application/json'
+                        response.write(res.to_json)      
+                    rescue
+                        response.status = 404
+                        response['Content-Type'] = 'application/json'
+                        res = {
+                            "error"=>"Error al añadir el grado"
+                        }
+                        response.write(res.to_json)
+                    end
+
                 end
 
             end
