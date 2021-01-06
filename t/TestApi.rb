@@ -24,7 +24,14 @@ class TestApi < Minitest::Test
     
     def test_raiz_ok
         get '/'    
-            res = '{"status":200}'
+            res = '{"status":"OK"}'
+            assert_equal(last_response.content_type, 'application/json')
+            assert_equal(last_response.body, res)
+    end
+
+    def test_status
+        get '/status'    
+            res = '{"status":"OK"}'
             assert_equal(last_response.content_type, 'application/json')
             assert_equal(last_response.body, res)
     end

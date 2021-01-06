@@ -27,7 +27,16 @@ class App < Roda
             response['Content-Type'] = 'application/json'
             body = 
                 {
-                    "status"=>200
+                    "status"=>"OK"
+                }
+            response.write(body.to_json)
+        end
+        r.on "status" do
+            response.status = 200
+            response['Content-Type'] = 'application/json'
+            body = 
+                {
+                    "status"=>"OK"
                 }
             response.write(body.to_json)
         end
