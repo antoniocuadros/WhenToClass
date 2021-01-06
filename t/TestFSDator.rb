@@ -133,7 +133,7 @@ class TestFSDator < Minitest::Test
         idg = @informatica.id
 
         @dator.añadeAsignatura(idg, @asignatura1)
-        assert_equal 3, @dator.todasAsignaturas(idg).length()
+        assert_equal 2, @dator.todasAsignaturas(idg).length()
         @dator.eliminaGrado(idg)
     end
 

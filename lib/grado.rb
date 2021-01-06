@@ -71,7 +71,16 @@ class Grado
 	#####################################################################################
 	def anadirAsignatura(asignatura)
 		if(asignatura.instance_of? Asignatura)
-			@asignaturas << asignatura
+			encontrado = false
+
+			for i in 0..@asignaturas.length() -1
+				if asignatura.id == @asignaturas[i].id
+					encontrado = true
+				end
+			end
+			if !encontrado
+				@asignaturas << asignatura
+			end
 		else
 			raise AsignaturaError, "Error: No se puede añadir, no es un objeto Asignatura"
 		end
