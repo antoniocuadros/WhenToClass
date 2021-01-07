@@ -49,6 +49,7 @@ class TestApi < Minitest::Test
             res = {"añadido"=>"0e78a27a1e605334c0ba"}
             res = res.to_json
             assert_equal(last_response.content_type, 'application/json')
+            assert_equal(last_response.location, '/grado/0e78a27a1e605334c0ba')
             assert_equal(last_response.body, res)
         FileUtils.rm_rf("../data/0e78a27a1e605334c0ba")
     end
