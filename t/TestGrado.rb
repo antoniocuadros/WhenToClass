@@ -125,6 +125,15 @@ class TestGrado < Minitest::Test
 		assert_equal "DAI", asig.siglas
 	end
 
+	#TEST4
+	#Si existe se devuelve la asignatura
+	def test_that_obtenerAsignatura_id_method_return_asignatura
+		@informatica.anadirAsignatura(@asignatura1)
+		assert_instance_of Asignatura, @informatica.obtenerAsignatura_id(@asignatura1.id)
+		asig = @informatica.obtenerAsignatura("Infraestructura Virtual")
+		assert_equal "Infraestructura Virtual", asig.nombre
+	end
+
 	#####################################################################################
 	#Tests que comprueban el correcto comportamiento del método eliminarAsignatura
 	#
@@ -154,6 +163,15 @@ class TestGrado < Minitest::Test
 	def test_that_eliminarAsignatura_siglas_method_borra_si_existe
 		@informatica.anadirAsignatura(@asignatura1)
 		@informatica.eliminarAsignatura("IV")
+		assert_equal 0, @informatica.contarAsignaturas(), "Fallo al borrar elemento"
+	end
+
+	
+	#TEST2
+	#Se comprueba que se borra un elemento que existe
+	def test_that_eliminarAsignatura_id_method_borra_si_existe
+		@informatica.anadirAsignatura(@asignatura1)
+		@informatica.eliminarAsignatura_id(@asignatura1.id)
 		assert_equal 0, @informatica.contarAsignaturas(), "Fallo al borrar elemento"
 	end
 
