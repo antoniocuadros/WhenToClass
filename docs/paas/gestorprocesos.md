@@ -9,7 +9,9 @@ Inicialmente se probó con **ProcMan** pensado para aplicaciones Ruby, un gestor
 
 Seguidamente se probó con **PM2** también open-source y puede consultarse su repositorio [en el siguiente enlace](https://github.com/Unitech/pm2). Está pensado inicialmente para Node.js pero que como veremos a continuación también puede ser utilizado para nuestro proyecto en Ruby, consta con soporte para Linux, Windows y macOS. Su instalación también es muy sencilla. 
 
-A diferencia de procman, en este caso para lanzar y parar aplicaciones nos encontramos con una sintaxis mucho más sencilla como por ejemplo la que hemos utilizado en nuestro gestor de tareas para la tarea `rake start` que contiene el siguiente comando `pm2 start 'rackup config.ru' --name 'api-whentoclass'` o la tarea `rake stop` que contiene lo siguiente: `pm2 stop api-whentoclass`. Como podemos ver es una sintaxis muy sencilla y fácil de entender.
+A diferencia de procman, en este caso para lanzar y parar aplicaciones nos encontramos con una sintaxis mucho más sencilla como por ejemplo la que hemos utilizado en nuestro gestor de tareas para la tarea `rake start` que contiene el siguiente comando `pm2 start 'rackup config.ru' --name 'api-whentoclass'` o la tarea `rake stop` que contiene lo siguiente: `pm2 stop api-whentoclass`. Podemos observar que se usa el comando rackup para iniciar el servidor, esto es debido a que comentamos en microservicios, mi microframework, Roda, hace uso de rack que se define a si mismo en su documentación como 'una interfaz modular de servidor web Ruby' que encapsula de forma muy sencilla todas las peticiones y respuestas HTTP y además la gran mayoría de (micro)frameworks de Ruby lo soportan como por ejemplo Hanami, Padrino, Sinatra y Roda entre otros.  
+
+Como podemos ver es una sintaxis muy sencilla y fácil de entender.
 
 Adicionalmente en PM2 contamos con más opciones y muy interesantes como `pm2 ls` que devuelve de forma muy clara y atractiva la lista de aplicaciones iniciadas con PM2 y el estado en el que se encuentra entre otros datos.
 
