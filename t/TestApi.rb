@@ -203,6 +203,7 @@ class TestApi < Minitest::Test
             res = res.to_json
             assert_equal last_response.status, 200
             assert_equal(last_response.content_type, 'application/json')
+            assert_equal(last_response.location, '/grado/0e78a27a1e605334c0ba/asignatura/50bbd28fa87ba567f7bd')
             assert_equal(last_response.body, res)
         FileUtils.rm_rf("../data/0e78a27a1e605334c0ba")
     end
