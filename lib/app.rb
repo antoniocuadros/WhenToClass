@@ -221,6 +221,8 @@ class App < Roda
                                 #Preparamos la respuesta
                                 response.status = 200
                                 response['Content-Type'] = 'application/json'
+                                response['Location'] = '/grado/' + id + '/asignatura/' + parsed.id
+                                
                                 res = {
                                     "añadido"=>parsed.id
                                 }
