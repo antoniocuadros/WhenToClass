@@ -12,4 +12,4 @@ rescue
 end
 
 
-Rack::Handler.default.run(App, :Port => port)
+Rack::Handler.default.run(App)
