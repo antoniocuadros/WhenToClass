@@ -63,6 +63,26 @@ class Grado
 		#devuelve nil si no se obtiene
 		return asignatura
 	end
+
+	def obtenerAsignatura_id(id)
+		encontrado = false
+		asignatura = nil
+		i = 0
+		
+		while i < @asignaturas.length() and !encontrado																								#Si no es sigla, buscamos por nombre (nos han proporcionado nombre)
+			if(@asignaturas[i].id == id)
+				encontrado = true
+				asignatura = @asignaturas[i]
+			end
+			i +=1
+		end
+
+		if !encontrado
+			raise "No existe la asignatura"
+		end
+		#devuelve nil si no se obtiene
+		return asignatura
+	end
 	
 	#####################################################################################
 	#
@@ -109,6 +129,22 @@ class Grado
 			i +=1
 		end
 	
+	end
+
+	def eliminarAsignatura_id(id)
+		i = 0
+		encontrado = false
+		while i < @asignaturas.length() and !encontrado
+			if(@asignaturas[i].id == id)
+				encontrado = true
+				@asignaturas.delete_at(i)
+			end
+			i +=1
+		end
+
+		if !encontrado
+			raise "No existe la asignatura"
+		end
 	end
 
 	#####################################################################################
