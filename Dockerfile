@@ -9,7 +9,11 @@ RUN adduser -D usuario
 RUN apk update &&\
     apk add --no-cache ruby=2.7.1-r3 \
     ruby-bundler=2.1.4-r1 \
-    ruby-rake=2.7.1-r3
+    ruby-rake=2.7.1-r3 \
+    --update npm \
+    curl
+
+RUN npm install pm2 -g
 
 
 #Para evitar problemas al hacer gem install desde usuario
@@ -20,8 +24,10 @@ RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
 
 #Necesario para crear datos, no se pueden crear archivos en la carpeta donde se monta
 RUN mkdir /logs
+RUN mkdir /data
 RUN mkdir /data_test
 RUN chmod a+w /logs
+RUN chmod a+w /data
 RUN chmod a+w /data_test
 
 #Traemos los ficheros de dependencias
