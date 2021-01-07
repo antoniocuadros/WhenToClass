@@ -222,7 +222,7 @@ class App < Roda
                                 response.status = 200
                                 response['Content-Type'] = 'application/json'
                                 response['Location'] = '/grado/' + id + '/asignatura/' + parsed.id
-                                
+
                                 res = {
                                     "añadido"=>parsed.id
                                 }
@@ -303,7 +303,7 @@ class App < Roda
                     end
                 end
 
-                                # put /grado
+                # put /grado
                 # curl --header "Content-Type:application/json" --request PUT --data '{"id":"123","asignaturas":[],"nombre_grado":"informatica", "enlace_grado":"hola"}' http://localhost:9777/grado/123
                 r.put do
                     begin
@@ -315,6 +315,7 @@ class App < Roda
                         }
                         response.status = 200
                         response['Content-Type'] = 'application/json'
+                        response['Location'] = '/grado/' + id2
                         response.write(res.to_json)      
                     rescue
                         response.status = 404
