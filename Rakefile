@@ -48,6 +48,7 @@ end
 Rake::TestTask.new do |t|
 	t.name = "testIntegracion"
 	t.test_files = FileList['t/TestApi.rb']
+	t.warning = false 
 end
 
 Rake::TestTask.new do |t|
