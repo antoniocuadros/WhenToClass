@@ -21,3 +21,30 @@ Como también indica su documentación la cual es muy extensa y útil ya que pro
 
 
 Por todo lo comentado y debido a que me ha parecido más complicada la sintaxis de ProcMan así como por poseer una documentación bastante más pobre y que PM2 está constantemente recibiendo actualizaciones ya que en su repostorio vemos cambios frecuentes, por ejemplo en este momento el último cambio ocurrió hace 22 días, me he decidido a utilizar PM2.
+
+De esta manera al hacer rake start se inicia el proceso de la api y obtenemos la siguiente salida:
+
+```
+[PM2] Spawning PM2 daemon with pm2_home=/home/antculap/.pm2
+[PM2] PM2 Successfully daemonized
+[PM2] Starting /usr/bin/bash in fork_mode (1 instance)
+[PM2] Done.
+┌────┬────────────────────┬──────────┬──────┬───────────┬──────────┬──────────┐
+│ id │ name               │ mode     │ ↺    │ status    │ cpu      │ memory   │
+├────┼────────────────────┼──────────┼──────┼───────────┼──────────┼──────────┤
+│ 0  │ api-whentoclass    │ fork     │ 0    │ online    │ 0%       │ 19.4mb   │
+└────┴────────────────────┴──────────┴──────┴───────────┴──────────┴──────────┘
+```
+
+
+Al hacer rake stop se para el proceso anterior y obtenemos la siguiente salida:
+
+```
+[PM2] Applying action stopProcessId on app [api-whentoclass](ids: [ 0 ])
+[PM2] [api-whentoclass](0) ✓
+┌────┬────────────────────┬──────────┬──────┬───────────┬──────────┬──────────┐
+│ id │ name               │ mode     │ ↺    │ status    │ cpu      │ memory   │
+├────┼────────────────────┼──────────┼──────┼───────────┼──────────┼──────────┤
+│ 0  │ api-whentoclass    │ fork     │ 0    │ stopped   │ 0%       │ 0b       │
+└────┴────────────────────┴──────────┴──────┴───────────┴──────────┴──────────┘
+```
