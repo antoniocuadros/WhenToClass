@@ -1,10 +1,13 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    bson (4.11.1)
     etcd (0.3.0)
       mixlib-log
     minitest (5.14.2)
     mixlib-log (3.0.9)
+    mongo (2.14.0)
+      bson (>= 4.8.2, < 5.0.0)
     rack (2.2.3)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -17,6 +20,7 @@ PLATFORMS
 DEPENDENCIES
   etcd
   minitest (~> 5.14)
+  mongo
   rack-test
   roda (~> 3.22)
 
