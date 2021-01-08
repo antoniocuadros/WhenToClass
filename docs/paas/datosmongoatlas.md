@@ -18,13 +18,19 @@ Posteriormente tenemos que indicar un proveedor de nube entre los que deja elegi
 
 Si lo hemos configurado correctamente nos llevará a nuestro panel de administración que tiene el siguiente aspecto:
 
-![img1]()
+![img1](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/paas/images/1.png)
 
 Ahora en el apartado connect obtenemos el string para poder conectarnos y creamos en el CLI de Heroku una variable de configuración por ejemplo llamada 'MONGODB_URI' de la siguiente forma:
 
 ```
-heroku config:set MONGODB_URI=""
+heroku config:set MONGODB_URI="..."
 ```
 
 Donde entre las comillas pondremos el string generado previamente. Si el comando ha tenido éxito en la web podremos ver la siguiente línea `antculap@gmail.com: Set MONGODB_URI config var`.
 
+
+Una vez hecho esto y en la api habiendo cambiado el dator por el nuevo MONGODator pasándole al constructor ENV['MONGO_URI'] ya tenemos funcionando la base de datos.
+
+Por ejemplo si hacemos un post a la aplicación ya desplegada en Heroku para añadir un grado con sus asignaturas vemos que efectivamente se nos almacena correctamente:
+
+![img1](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/paas/images/4.png)
