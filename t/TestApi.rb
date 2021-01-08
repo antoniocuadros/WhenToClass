@@ -390,16 +390,6 @@ class TestApi < Minitest::Test
         delete '/grado/0e78a27a1e605334c0ba' 
     end
 
-    #Test 2: Se obtienen grados vacios
-    def test_obtiene_todos_grados_ok2
-        #Probamos a consultar grados
-        get '/grados' 
-            res = []
-            res = res.to_json
-            assert_equal last_response.status, 200
-            assert_equal(last_response.content_type, 'application/json')
-            assert_equal(last_response.body, res)
-    end
 
     #####################################################################################
 	#Tests que comprueba que funciona correctamente el método para obtener todas las asignaturas

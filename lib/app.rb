@@ -4,6 +4,7 @@ require_relative "../lib/FSDator.rb"
 require_relative "../lib/gestorgrados.rb"
 require_relative "../lib/parse.rb"
 require_relative "middleware"
+require_relative "../lib/MONGODator.rb"
 
 class App < Roda
     ####################
@@ -15,10 +16,14 @@ class App < Roda
     ####################
     #Rutas
     route do |r|
+        if ENV['MONGODB_URI'] != nil
+            @dator = MONGODator.new(ENV['MONGODB_URI'])
+        else
+            @dator = FSDator.new("../data")
 
+        end
         ####################
         #Variables
-        @dator = FSDator.new("../data")
         @gestor = GestorGrados.new(@dator)
         @parse = Parse.new
         #Directorio Raíz
