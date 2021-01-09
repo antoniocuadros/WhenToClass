@@ -19,7 +19,7 @@ Como ya se ha comentado anteriormente, en la actualidad los estudiantes de Infor
 - Documentación sobre justificación plataforma PaaS y despliegue puede [consultarse aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/paas/justificacionpaas.md).
 - Documentación sobre funcionamiento correcto del despliegue en el PaaS y diseño del API puede [consultarse aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/paas/funcionamientocorrecto.md).
 - Documentación sobre gestor de procesos utilizado puede [consultarse aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/paas/gestorprocesos.md).
-- Documentación sobre base de datos utilizada puede [consultarse aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/paas/datosmongoatlas.md).
+- Documentación sobre base de datos utilizada y logs puede [consultarse aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/paas/datosmongoatlas.md).
 
 
 ### Documentación anterior
