@@ -1,7 +1,9 @@
 ## Descripción y justificación de las herramientas usadas para desplegar la aplicación en en PaaS
 
 ### Gestor de procesos utilizado
-Para consultar el gestor de procesos utilizado y el por qué de su elección consultar el [siguiente documento](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/paas/gestorprocesos.md).
+Se ha utilizado PM2 como gestor de procesos que arrancará y/o parará un servidor Rack. 
+Se han creado dos tareas en nuestro gestor de tareas que hacen uso de PM2, una tarea para iniciar el microservicio y otra para pararlo.
+La tarea start se utiliza en el fichero heroku.yml para arrancar el microservicio. Todos los detalles sobre la elección de PM2 y como se ha utilizado se encuentran en el [siguiente documento](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/paas/gestorprocesos.md).
 
 ### ¿Por qué Heroku?
 A la hora de desplegar mi microservicio he estado barajando tanto el uso de Openshift como de Heroku pero me he decidido por Heroku por los siguientes motivos:
