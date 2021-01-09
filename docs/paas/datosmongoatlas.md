@@ -1,4 +1,5 @@
-## Base de Datos
+## Base de Datos y Logs
+### Base de Datos
 
 Para llevar a cabo el almacenamiento y recuperación de la información de la que hace uso nuestra aplicación se ha seguido utilizando la jerarquía de clases comentada en el hito anterior, donde recordemos teníamos una clase Dator que definía todas las operaciones que debían ser implementadas para trabajar con datos persistentes, era una clase abstracta con métodos abstractos de tal forma que diversas clases podían implementar sus métodos de acceso y recuperación de información de diferentes formas de forma totalmente transparente para la api. Gracias a esta jerarquía conseguíamos los dos principios fundamentales a seguir a la hora de implementar persistencia:
 - Inyección de dependencias: se inyecta una dependencia, en nuestro caso se verá que para crear un objeto de la clase controladora, es necesario "inyectarle" el objeto que accede a los datos.
@@ -34,3 +35,14 @@ Una vez hecho esto y en la api habiendo cambiado el dator por el nuevo MONGODato
 Por ejemplo si hacemos un post a la aplicación ya desplegada en Heroku para añadir un grado con sus asignaturas vemos que efectivamente se nos almacena correctamente:
 
 ![img1](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/paas/images/4.png)
+
+### Logs
+Para acceder a los logs de nuestra aplicación se puede hacer uso del CLI de Heroku que proporciona en tiempo real los logs de nuestra aplicación mediante el comando `heroku logs --tail` y si por ejemplo hacemos una petición a /status obtenemos lo siguiente:
+
+
+```
+2021-01-09T11:12:04.365231+00:00 heroku[router]: at=info method=GET path="/status" host=whentoclass.herokuapp.com request_id=6e66e6d6-4c5b-4f3d-b2b1-3a370edfde5c fwd="2.138.45.192" dyno=web.1 connect=1ms service=443ms status=200 bytes=190 protocol=https
+2021-01-09T11:12:04.352782+00:00 app[web.1]: "09_01_2021 11:12:04 GET /status HTTP/1.1 200"
+```
+
+Donde la primera línea son los logs utilizados por defecto en Heroku mientras que la segunda línea es el log que creamos a través de un middleware nosotros para el hito anterior.
