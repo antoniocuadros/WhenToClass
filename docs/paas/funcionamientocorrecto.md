@@ -15,57 +15,65 @@ Fallo en la petición, se ha podido comunicar con el microservicio pero no exist
 ```
 response.status = 404
 ```
-### Todas las rutas de nuestra API
+### Todas las rutas de nuestra API y relación con HUs
 Nuestra API ha seguido las buenas prácticas comentadas en el hito anterior en el [siguiente documento](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/microservicios/rub2.md#rutas) en el apartado rutas, y se ha corregido con respecto al hito anterior que los POST ahora son PUT ya que se conoce el URI.
 
+[HU15](https://github.com/antoniocuadros/WhenToClass/issues/98) Como usuario del microservicio me gustaría comprobar que está disponible
 ```
 /status # Para comprobar si está activo
 ```
 
+[HU10](https://github.com/antoniocuadros/WhenToClass/issues/71) Como administrador de una universidad tendría que poder añadir, eliminar grados y consultarlos
 ```
 /grados # Para obtener (GET) todos los grados
 ```
 
+[HU10](https://github.com/antoniocuadros/WhenToClass/issues/71) Como administrador de una universidad tendría que poder añadir, eliminar grados y consultarlos
 ```
 /grado/$ID # Añadir (PUT) un grado
 ```
 
+[HU10](https://github.com/antoniocuadros/WhenToClass/issues/71) Como administrador de una universidad tendría que poder añadir, eliminar grados y consultarlos
 ```
 /grado/$ID # Eliminar (DELETE) un grado identificado por $ID
 ```
 
+[HU10](https://github.com/antoniocuadros/WhenToClass/issues/71) Como administrador de una universidad tendría que poder añadir, eliminar grados y consultarlos
 ```
 /grado/$ID # Consultar (GET) un grado identificado por $ID
 ```
 
+[HU4](https://github.com/antoniocuadros/WhenToClass/issues/28) Como usuario debo poder seleccionar, añadir y eliminar una asignatura
 ```
 /grado/$ID/asignatura/$ID2 # Consultar (GET) una asignatura identificada por $ID2 perteneciente al grado #$ID
 ```
 
+[HU4](https://github.com/antoniocuadros/WhenToClass/issues/28) Como usuario debo poder seleccionar, añadir y eliminar una asignatura
 ```
 /grado/$ID/asignatura/$ID2 # Eliminar (DELETE) una asignatura identificada por $ID2 perteneciente al grado #$ID
 ```
 
+[HU4](https://github.com/antoniocuadros/WhenToClass/issues/28) Como usuario debo poder seleccionar, añadir y eliminar una asignatura
 ```
 /grado/$ID/asignatura/$ID2 # Añade (PUT) una asignatura al grado #$ID
 ```
 
+[HU1](https://github.com/antoniocuadros/WhenToClass/issues/8) Como usuario, quiero obtener el horario de una asignatura 
 ```
 /grado/$ID/asignatura/$ID2/horario?grupo=X # Consulta (GET) el horario de una asignatura de un grado para un grupo de prácticas X.
 ```
 
+[HU6](https://github.com/antoniocuadros/WhenToClass/issues/47) Como usuario quiero poder obtener los enlaces de las clases online de una determinada asignatura
 ```
 /grado/$ID/asignatura/$ID2/enlace?grupo=X # Consulta (GET) el enlace de una clase online de una asignatura de un grado para un grupo de prácticas X.
 ```
 
-```
-/grado/$ID/asignatura/$ID2/enlace?grupo=X # Consulta (GET) el enlace de una clase online de una asignatura de un grado para un grupo de prácticas X.
-```
-
+[HU2](https://github.com/antoniocuadros/WhenToClass/issues/9) Como usuario, quiero poder consultar los turnos de presencialidad de un mes determinado y grupo de presencialidad de una asignatura.
 ```
 /grado/$ID/asignatura/$ID2/turno?turno=X&mes=Y # Consulta (GET) el turno de presencialidad de una asignatura de un grado para un turno X y un mes Y.
 ```
 
+[HU4](https://github.com/antoniocuadros/WhenToClass/issues/28) Como usuario debo poder seleccionar, añadir y eliminar una asignatura
 ```
 /grado/$ID/asignaturas # Obtiene (GET) todas las asignaturas de un grado identificado por $ID
 ```
@@ -95,3 +103,4 @@ Eliminamos la asignatura:
 Obtenemos el grado que ya no debe conteneder la asignatura:
 
 ![img6](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/paas/images/19.png)
+
