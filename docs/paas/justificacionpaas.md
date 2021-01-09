@@ -17,6 +17,7 @@ A la hora de desplegar mi microservicio he estado barajando tanto el uso de Open
 - Declaración e instalación de las dependencias de la aplicación de forma muy sencilla. En mi caso, se declaran en el gemfile y automáticamente al construir Heroku la aplicación ejecutará `bundle install` para instalar dichas dependencias.
 - Heroku posee una gran cantidad de addons entre ellos los más interesantes son aquellos de bases de datos y servicios de logs.
 - Sencilla definición de variables de configuración secretas, en mi caso se ha utilizado una que contiene el string de conexión a la base de datos.
+- Para iniciar nuestra aplicación leerá el archivo Procfile pudiendo definir en dicho archivo la tarea a realizar (en nuestro caso tarea rake start) ya que hace uso de foreman.
 
 #### ¿Estados Unidos o Europa?
 Se ha probado a desplegar tanto la aplcación en Europa como en Estados Unidos obteniendo muchos mejores resultados de latencia en Europa. Lo podemos ver gracias a los logs:
