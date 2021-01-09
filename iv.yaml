@@ -10,3 +10,14 @@ test:
 taskfile: Rakefile
 URL: https://when-to-class.vercel.app/api/enlace?asignatura=IV&m=p&d=m
 make: rake
+PaaS: https://whentoclasseurope.herokuapp.com/
+recurso:
+  nombre:grado
+  metodo: PUT
+  payload:
+    - id: 0e78a27a1e605334c0ba
+    - asignaturas: []
+    - nombre_grado: Ingeniería Informática
+    - enlace_grado: https://grados.ugr.es/informatica/
+  IDs:
+    - 0e78a27a1e605334c0ba
