@@ -6,3 +6,4 @@ gem "roda", "~> 3.22"
 gem "rack-test"
 gem 'etcd'
 gem 'mongo'
+gem 'foreman'

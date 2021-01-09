@@ -4,6 +4,7 @@ GEM
     bson (4.11.1)
     etcd (0.3.0)
       mixlib-log
+    foreman (0.87.2)
     minitest (5.14.2)
     mixlib-log (3.0.9)
     mongo (2.14.0)
@@ -19,6 +20,7 @@ PLATFORMS
 
 DEPENDENCIES
   etcd
+  foreman
   minitest (~> 5.14)
   mongo
   rack-test
