@@ -1,1 +1,1 @@
-web: rake start 
+web: rackup config.ru
