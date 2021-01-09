@@ -13,6 +13,22 @@ A la hora de desplegar mi microservicio he estado barajando tanto el uso de Open
 - Heroku posee una gran cantidad de addons entre ellos los más interesantes son aquellos de bases de datos y servicios de logs.
 - Sencilla definición de variables de configuración secretas, en mi caso se ha utilizado una que contiene el string de conexión a la base de datos.
 
+#### ¿Estados Unidos o Europa?
+Se ha probado a desplegar tanto la aplcación en Europa como en Estados Unidos obteniendo muchos mejores resultados de latencia en Europa. Lo podemos ver gracias a los logs:
+
+Estados Unidos:
+```
+2021-01-09T11:12:04.365231+00:00 heroku[router]: at=info method=GET path="/status" host=whentoclass.herokuapp.com request_id=6e66e6d6-4c5b-4f3d-b2b1-3a370edfde5c fwd="2.138.45.192" dyno=web.1 connect=1ms service=443ms status=200 bytes=190 protocol=https
+2021-01-09T11:12:04.352782+00:00 app[web.1]: "09_01_2021 11:12:04 GET /status HTTP/1.1 200"
+```
+
+Europa:
+```
+2021-01-09T11:29:00.762010+00:00 heroku[router]: at=info method=GET path="/status" host=whentoclasseurope.herokuapp.com request_id=290b9234-0d91-4122-9c50-48e711c5a8ea fwd="2.138.45.192" dyno=web.1 connect=0ms service=174ms status=200 bytes=190 protocol=https
+2021-01-09T11:29:00.762170+00:00 app[web.1]: "09_01_2021 11:29:00 GET /status HTTP/1.1 200"
+```
+
+Como podemos ver la latencia en Estados Unidos ha sido de 443ms mientras que en Europa de 174ms eligiendo de esta manera alojarlo en Europa.
 
 ### Como desplegar esta aplicación
 El despliegue de la aplicación gracias al CLI de Heroku es muy sencillo, se deben seguir los siguientes pasos:
