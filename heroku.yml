@@ -1,2 +1,2 @@
 run:
-  web: rackup config.ru -p 5000
+  web: rake start 
