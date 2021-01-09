@@ -1,5 +1,10 @@
 ## Funcionamiento correcto del despliegue en el PaaS. No se puede devolver ningún status 500.
-Puede probarse lo que se va a comentar a continuación sobre la api alojada en el [siguiente enlace](https://whentoclass.herokuapp.com/).
+Puede probarse lo que se va a comentar a continuación sobre la api alojada en el siguiente enlace:
+
+Enlace API alojada en Estados Unidos: https://whentoclass.herokuapp.com/
+Enlace API alojada en Europa: https://whentoclasseurope.herokuapp.com/
+
+Comentar que nos quedaremos con la segunda debido a su menor latencia como se verá posteriormente
 
 ### Códigos de estado utilizados
 Cuando una operación tenga éxito, se adjuntará el código de estado: 200.
