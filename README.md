@@ -16,23 +16,10 @@ Como ya se ha comentado anteriormente, en la actualidad los estudiantes de Infor
 
 ## :hammer: Documentación
 ### PaaS
+- Documentación sobre justificación plataforma PaaS y despliegue puede [consultarse aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/paas/justificacionpaas.md).
 - Documentación sobre gestor de procesos utilizado puede [consultarse aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/paas/gestorprocesos.md).
 - Documentación sobre base de datos utilizada puede [consultarse aquí](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/paas/datosmongoatlas.md).
 
-#### Se han creado estos nuevos ficheros
-- [app.rb](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/app.rb): Microservicio.
-- [middleware.rb](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/middleware.rb): Middleware que se encarga de los logs.
-- [TestApi.rb ](https://github.com/antoniocuadros/WhenToClass/blob/master/t/TestApi.rb): Tests del microservicio.
-- [Dator.rb ](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/Dator.rb): Clase "abstracta" Dator.
-- [TestDator.rb](https://github.com/antoniocuadros/WhenToClass/blob/master/t/TestDator.rb): Tests de la clase Dator.
-- [FSDator.rb ](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/FSDator.rb): Clase FSDator.
-- [TestFSDator.rb](https://github.com/antoniocuadros/WhenToClass/blob/master/t/TestFSDator.rb): Tests de la clase FSDator.
-- [parse.rb](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/parse.rb): clase Parse.
-- [TestParse.rb](https://github.com/antoniocuadros/WhenToClass/blob/master/t/TestParse.rb): Tests de la clase Parse.
-
-Se ha refactorizado la clase GestorGrados:
-- [gestorgrados.rb ](https://github.com/antoniocuadros/WhenToClass/blob/master/lib/gestorgrados.rb)
-- [TestGestorGrados.rb](https://github.com/antoniocuadros/WhenToClass/blob/master/t/TestGestorGrados.rb)
 
 ### Documentación anterior
 Toda la documentación del proyecto se encuentra recogida en el [siguiente enlace](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/documentacion.md)
