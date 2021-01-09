@@ -12,12 +12,7 @@ end
 
 desc "Se inicia el microservicio"
 task :start do
-	exec "pm2 start 'rackup config.ru' --name 'api-whentoclass'"
-end
-
-desc "Se detiene el microservicio"
-task :stop do
-	exec "pm2 stop api-whentoclass"
+	exec "foreman start -f foreman_config"
 end
 
 desc "Se construye el proyecto"
