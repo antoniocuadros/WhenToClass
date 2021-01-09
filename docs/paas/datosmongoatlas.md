@@ -6,7 +6,7 @@ Para llevar a cabo el almacenamiento y recuperación de la información de la qu
 
 Gracias a esto vimos que creamos la clase FSDator que nos permitía trabajar con informción almacenada en un sistema de ficheros, pero para la realización de esta práctica se va a probar a trabajar con **MongoDB Atlas** ya que me ha llamado la atención, he visto que es muy utilizada, se aloja en la nube, posee una prueba gratuita y creo que podría resultarme útil aprender a manejarme con este tipo de bases de datos para el futuro. Debido a esto se ha tenido que crear un nuevo Dator llamado MONGODator que se encargará de acceder a nustra base de datos en MongoDB Atlas e implementar los métodos definidos en Dator pero ahora con esta base de datos en vez de con ficheros como hacíamos en FSDator.
 
-Para hacer uso de este servicio en la nube he necesitado acceder a su [página oficial](https://www.mongodb.com/cloud/atlas), registrarme, indicar el lenguaje que se va a utilizar (para posteriormente mostrarte tutoriales de dicho lenguaje), elegir el plan, en micaso el gratuito que incluye:
+Para hacer uso de este servicio en la nube he necesitado acceder a su [página oficial](https://www.mongodb.com/cloud/atlas), registrarme, indicar el lenguaje que se va a utilizar (para posteriormente mostrarte tutoriales de dicho lenguaje), elegir el plan, en mi caso el gratuito que incluye:
 
 ```
 Clúster de reparación automática de alta disponibilidad
