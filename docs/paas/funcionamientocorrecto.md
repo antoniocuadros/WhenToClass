@@ -15,7 +15,9 @@ Fallo en la petición, se ha podido comunicar con el microservicio pero no exist
 ```
 response.status = 404
 ```
-#### Todas las rutas de nuestra API
+### Todas las rutas de nuestra API
+Nuestra API ha seguido las buenas prácticas comentadas en el hito anterior en el [siguiente documento](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/microservicios/rub2.md#rutas) en el apartado rutas, y se ha corregido con respecto al hito anterior que los POST ahora son PUT ya que se conoce el URI.
+
 ```
 /status # Para comprobar si está activo
 ```
@@ -68,6 +70,28 @@ response.status = 404
 /grado/$ID/asignaturas # Obtiene (GET) todas las asignaturas de un grado identificado por $ID
 ```
 
-De esta forma podemos ver que funciona por ejemplo pidiéndole todos los grados previamente añadidos con PUT a la url /grado/$ID:
+### Nuestra API en funcionamiento, ejemplos
 
-![img1](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/paas/images/14.png)
+Probamos la ruta /status:
+![img1](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/paas/images/15.png)
+
+Añadimos un grado:
+![img2](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/paas/images/16.png)
+
+Añadimos una asignatura:
+![img4](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/paas/images/17.png)
+
+Obtenemos todos los grados añadidos:
+
+![img3](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/paas/images/14.png)
+
+Obtenemos el enlace de la clase online de la asignatura añadida:
+![img7](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/paas/images/20.png)
+
+Eliminamos la asignatura:
+
+![img5](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/paas/images/18.png)
+
+Obtenemos el grado que ya no debe conteneder la asignatura:
+
+![img6](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/paas/images/19.png)
