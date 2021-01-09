@@ -36,6 +36,33 @@ Por ejemplo si hacemos un post a la aplicación ya desplegada en Heroku para añ
 
 ![img1](https://github.com/antoniocuadros/WhenToClass/blob/master/docs/paas/images/4.png)
 
+#### Prueba prestaciones con ab
+En este apartado se muestran los resultados de hacer una pequeña prueba con ab lanzando 50 peticiones a https://whentoclasseurope.herokuapp.com/grados de tal forma que tenga que acceder a la base de datos para recuperar información con un total de 5 'usuarios' concurrentes. Para ello se ha utilizado la orden: 
+```
+ab -n50 -c5  https://whentoclasseurope.herokuapp.com/grados
+```
+Se han realizado 3 ejecuciones y se han obtenido los siguientes resultados de media:
+
+Peticiones completadas y fallidas:
+
+```
+Complete requests:      50
+Failed requests:        0
+```
+Peticiones por segundo:
+
+```
+Requests per second:    6.44
+```
+
+Tiempo por petición (ms):
+
+```
+Time per request:       155.219
+```
+
+De esta forma podemos ver que pese a estar utilizando el plan gratuito de Heroku como de MongoDB Atlas, tenemos unos resultados aceptables.
+
 ### Logs
 Para acceder a los logs de nuestra aplicación se puede hacer uso del CLI de Heroku que proporciona en tiempo real los logs de nuestra aplicación mediante el comando `heroku logs --tail` y si por ejemplo hacemos una petición a /status obtenemos lo siguiente:
 
