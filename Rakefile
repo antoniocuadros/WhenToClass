@@ -10,7 +10,7 @@ task :install do
 	exec "bundle install"
 end
 
-desc "Se inicia el microservicio"
+desc "Se inicia el microservicio haciendo uso de foreman"
 task :start do
 	exec "foreman start -f foreman_config"
 end
