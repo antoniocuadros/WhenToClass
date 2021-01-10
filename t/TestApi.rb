@@ -420,6 +420,7 @@ class TestApi < Minitest::Test
     #####################################################################################
     #Test 1: Se obtienen grados correctamente
     def test_obtiene_todos_grados_ok
+    MONGODator.stub(:new, FSDator.new("../data")) do
         a_anadir = @grado
         #Añadimos para poder consultar grados
         put '/grado/0e78a27a1e605334c0ba', a_anadir.to_json    
@@ -432,6 +433,7 @@ class TestApi < Minitest::Test
             assert_equal(last_response.content_type, 'application/json')
             assert_equal(last_response.body, res)
         delete '/grado/0e78a27a1e605334c0ba' 
+    end
     end
 
 
