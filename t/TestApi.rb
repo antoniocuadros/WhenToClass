@@ -235,7 +235,7 @@ class TestApi < Minitest::Test
 
     #Test 2: falla al añadir asignatura
     def test_añade_asignatura_falla
-    end
+    MONGODator.stub(:new, FSDator.new("../data")) do
         #Probamos a añadir
         a_anadir = @asignatura
         put '/grado/0e78a27a1e605334c0ba/asignatura/50bbd28fa87ba567f7bd', a_anadir.to_json 
