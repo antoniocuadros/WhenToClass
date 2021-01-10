@@ -16,12 +16,7 @@ class App < Roda
     ####################
     #Rutas
     route do |r|
-        if ENV['MONGODB_URI'] != nil
             @dator = MONGODator.new(ENV['MONGODB_URI'])
-        else
-            @dator = FSDator.new("../data")
-
-        end
         ####################
         #Variables
         @gestor = GestorGrados.new(@dator)
