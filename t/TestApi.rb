@@ -255,6 +255,7 @@ class TestApi < Minitest::Test
     #####################################################################################
     #Test 1: Se obtiene horario de la asignatura correctamente
     def test_obtiene_horario_asignatura_ok
+    MONGODator.stub(:new, FSDator.new("../data")) do
         a_anadir = @grado
         #Añadimos para poder consultar horario
         put '/grado/0e78a27a1e605334c0ba', a_anadir.to_json    
@@ -268,9 +269,11 @@ class TestApi < Minitest::Test
             assert_equal(last_response.body, res)
         delete '/grado/0e78a27a1e605334c0ba' 
     end
+    end
 
     #Test 2: Si no se pasan argumentos falla
     def test_obtiene_horario_asignatura_parametros_falla
+    MONGODator.stub(:new, FSDator.new("../data")) do
         a_anadir = @grado
         #Añadimos para poder consultar horario
         put '/grado/0e78a27a1e605334c0ba', a_anadir.to_json    
@@ -284,9 +287,11 @@ class TestApi < Minitest::Test
             assert_equal(last_response.body, res)
         delete '/grado/0e78a27a1e605334c0ba' 
     end
+    end
 
     #Test 3: Si no existe grado o asignatura falla
     def test_obtiene_horario_asignatura_falla
+    MONGODator.stub(:new, FSDator.new("../data")) do    
         #Probamos a consultar horario
         get '/grado/0e78a27a1e605334c0ba/asignatura/50bbd28fa87ba567f7bd/horario?grupo=P1'
             res = {"error"=>"No se ha encontrado el grado o asignatura"}
@@ -294,6 +299,7 @@ class TestApi < Minitest::Test
             assert_equal last_response.status, 404
             assert_equal(last_response.content_type, 'application/json')
             assert_equal(last_response.body, res)
+    end
     end
 
     #####################################################################################
