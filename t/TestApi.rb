@@ -48,6 +48,7 @@ class TestApi < Minitest::Test
 	#####################################################################################
     #Test 1: añade correctamente
     def test_anadir_grado_ok
+    MONGODator.stub(:new, FSDator.new("../data")) do
         a_anadir = @grado
         put '/grado/0e78a27a1e605334c0ba', a_anadir.to_json    
             res = {"añadido"=>"0e78a27a1e605334c0ba"}
@@ -56,6 +57,7 @@ class TestApi < Minitest::Test
             assert_equal(last_response.location, '/grado/0e78a27a1e605334c0ba')
             assert_equal(last_response.body, res)
         delete '/grado/0e78a27a1e605334c0ba' 
+    end
     end
 
 
@@ -68,6 +70,7 @@ class TestApi < Minitest::Test
 	#####################################################################################
     #Test 1: Eliminar correctamente
     def test_eliminar_grado_ok
+    MONGODator.stub(:new, FSDator.new("../data")) do
         a_anadir = @grado
         #Añadimos para poder borrar
         put '/grado/0e78a27a1e605334c0ba', a_anadir.to_json    
@@ -80,15 +83,18 @@ class TestApi < Minitest::Test
             assert_equal(last_response.content_type, 'application/json')
             assert_equal(last_response.body, res)
     end
+    end
 
     #Test 2: Eliminar falla si no existe lo que se quiere borrar
     def test_eliminar_grado_falla
+    MONGODator.stub(:new, FSDator.new("../data")) do
         delete '/grado/123' 
             res = {"error"=>"No existe el grado"}
             res = res.to_json
             assert_equal last_response.status, 404
             assert_equal(last_response.content_type, 'application/json')
             assert_equal(last_response.body, res)
+    end
     end
 
     #####################################################################################
@@ -99,6 +105,7 @@ class TestApi < Minitest::Test
     #####################################################################################
     #Test 1: Se consulta correctamente
     def test_consultar_grado_ok
+    MONGODator.stub(:new, FSDator.new("../data")) do
         a_anadir = @grado
         #Añadimos para poder consultar
         put '/grado/0e78a27a1e605334c0ba', a_anadir.to_json    
@@ -112,9 +119,11 @@ class TestApi < Minitest::Test
             assert_equal(last_response.body, res)
         delete '/grado/0e78a27a1e605334c0ba' 
     end
+    end
 
     #Test 2: Se consulta erroneamente
     def test_consultar_grado_falla
+    MONGODator.stub(:new, FSDator.new("../data")) do
         #Probamos a consultar
         get '/grado/0e78a27a1e605334c0ba' 
             res = {"error"=>"No existe el grado"}
@@ -122,6 +131,7 @@ class TestApi < Minitest::Test
             assert_equal last_response.status, 404
             assert_equal(last_response.content_type, 'application/json')
             assert_equal(last_response.body, res)
+    end
     end
 
     #####################################################################################
