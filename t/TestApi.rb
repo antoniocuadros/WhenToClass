@@ -23,17 +23,21 @@ class TestApi < Minitest::Test
     end
     
     def test_raiz_ok
+    MONGODator.stub(:new, FSDator.new("../data")) do
         get '/'    
             res = '{"status":"OK"}'
             assert_equal(last_response.content_type, 'application/json')
             assert_equal(last_response.body, res)
     end
+    end
 
     def test_status
+    MONGODator.stub(:new, FSDator.new("../data")) do
         get '/status'    
             res = '{"status":"OK"}'
             assert_equal(last_response.content_type, 'application/json')
             assert_equal(last_response.body, res)
+    end
     end
 
     #####################################################################################
