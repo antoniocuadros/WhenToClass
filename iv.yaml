@@ -15,10 +15,10 @@ recurso:
   nombre: grado
   metodo: PUT
   payload:
-    - id: 0e78a27a1e605334c0ba
-    - asignaturas: []
-    - nombre_grado: Ingeniería Informática
-    - enlace_grado: https://grados.ugr.es/informatica/
+    id: 0e78a27a1e605334c0ba
+    asignaturas: []
+    nombre_grado: Ingeniería Informática
+    enlace_grado: https://grados.ugr.es/informatica/
   IDs:
     - 0e78a27a1e605334c0ba
    
