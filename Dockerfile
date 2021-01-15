@@ -11,7 +11,12 @@ RUN apk update &&\
     ruby-bundler=2.1.4-r1 \
     ruby-rake=2.7.1-r3 \
     --update npm \
-    curl 
+    curl \
+    --virtual build-dependencies \
+    build-base
+
+RUN npm install pm2 -g
+
 
 #Para evitar problemas al hacer gem install desde usuario
 ENV GEM_HOME /usr/local/bundle
