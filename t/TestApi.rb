@@ -225,7 +225,7 @@ class TestApi < Minitest::Test
         put '/grados/0e78a27a1e605334c0ba/asignatura/50bbd28fa87ba567f7bd', a_anadir.to_json 
             res = {"añadido"=>"50bbd28fa87ba567f7bd"}
             res = res.to_json
-            assert_equal last_response.status, 200
+            assert_equal last_response.status, 201
             assert_equal(last_response.content_type, 'application/json')
             assert_equal(last_response.location, '/grados/0e78a27a1e605334c0ba/asignatura/50bbd28fa87ba567f7bd')
             assert_equal(last_response.body, res)
