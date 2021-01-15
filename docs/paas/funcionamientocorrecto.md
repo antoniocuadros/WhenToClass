@@ -16,6 +16,13 @@ Para éxito:
 response.status = 200
                         
 ```
+
+Para éxito al crear recurso:
+```
+response.status = 201
+                        
+```
+
 Fallo en la petición, se ha podido comunicar con el microservicio pero no existe el recurso que se está solicitando.
 ```
 response.status = 404
