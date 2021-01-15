@@ -247,6 +247,7 @@ class App < Roda
                 # get /grado/$ID
                 r.get do
                     begin
+                        id = id.to_s
                         grado = @gestor.obtenerGrado(id)
                         jsongrado = @parse.gradoToJSON(grado)
                         response.status = 200
