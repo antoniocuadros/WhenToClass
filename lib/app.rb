@@ -291,12 +291,13 @@ class App < Roda
                         grado = JSON.parse(r.body.read)
                         parsed = @parse.jsonToGrado(grado)
                         id2 = @gestor.AnadirGrado(parsed)
+                        id2 = id2.to_s
                         res = {
-                            "añadido"=>id2
+                            "añadido"=>id2.to_s
                         }
                         response.status = 200
                         response['Content-Type'] = 'application/json'
-                        response['Location'] = '/grados/' + id2
+                        response['Location'] = '/grados/' + id2.to_s
                         response.write(res.to_json)      
                     rescue
                         response.status = 404
