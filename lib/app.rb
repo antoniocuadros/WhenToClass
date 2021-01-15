@@ -295,7 +295,7 @@ class App < Roda
                         res = {
                             "añadido"=>id2.to_s
                         }
-                        response.status = 200
+                        response.status = 201
                         response['Content-Type'] = 'application/json'
                         response['Location'] = '/grados/' + id2.to_s
                         response.write(res.to_json)      
