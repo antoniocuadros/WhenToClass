@@ -41,29 +41,9 @@ class App < Roda
             response.write(body.to_json)
         end
 
-        # /grados
-        r.on "grados" do
-            # GET /grados
-            # curl --request GET http://localhost:9292/grados
-            r.get do
-                #obtenemos todos los grados
-                grados = Array.new
-                grados = @gestor.todosGrados()
-                gradosjson = Array.new
-                #los pasamos a JSON
-                for i in 0..grados.length()-1
-                    gradosjson.push(@parse.gradoToJSON(grados[i]))
-                end
-
-                #preparamos la respuesta
-                response.status = 200
-                response['Content-Type'] = 'application/json'
-                response.write(gradosjson.to_json)
-            end
-        end
 
         # /grado
-        r.on "grado" do
+        r.on "grados" do
             # /grado/$ID
             r.on String do |id|
                 
@@ -221,7 +201,7 @@ class App < Roda
                                 #Preparamos la respuesta
                                 response.status = 200
                                 response['Content-Type'] = 'application/json'
-                                response['Location'] = '/grado/' + id + '/asignatura/' + parsed.id
+                                response['Location'] = '/grados/' + id + '/asignatura/' + parsed.id
 
                                 res = {
                                     "añadido"=>parsed.id
@@ -315,7 +295,7 @@ class App < Roda
                         }
                         response.status = 200
                         response['Content-Type'] = 'application/json'
-                        response['Location'] = '/grado/' + id2
+                        response['Location'] = '/grados/' + id2
                         response.write(res.to_json)      
                     rescue
                         response.status = 404
@@ -329,6 +309,22 @@ class App < Roda
                 end
 
             end
+            r.get do
+                #obtenemos todos los grados
+                grados = Array.new
+                grados = @gestor.todosGrados()
+                gradosjson = Array.new
+                #los pasamos a JSON
+                for i in 0..grados.length()-1
+                    gradosjson.push(@parse.gradoToJSON(grados[i]))
+                end
+
+                #preparamos la respuesta
+                response.status = 200
+                response['Content-Type'] = 'application/json'
+                response.write(gradosjson.to_json)
+            end
+
         end
     end
 end
