@@ -199,7 +199,7 @@ class App < Roda
                                 @gestor.añadeAsignatura(id ,parsed)
         
                                 #Preparamos la respuesta
-                                response.status = 200
+                                response.status = 201
                                 response['Content-Type'] = 'application/json'
                                 response['Location'] = '/grados/' + id + '/asignatura/' + parsed.id
 
