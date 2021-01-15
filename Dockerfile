@@ -11,12 +11,7 @@ RUN apk update &&\
     ruby-bundler=2.1.4-r1 \
     ruby-rake=2.7.1-r3 \
     --update npm \
-    curl \
-    --virtual build-dependencies \
-    build-base
-
-RUN npm install pm2 -g
-
+    curl 
 
 #Para evitar problemas al hacer gem install desde usuario
 ENV GEM_HOME /usr/local/bundle
@@ -37,9 +32,6 @@ COPY Gemfile Gemfile.lock /home/usuario/
 
 RUN chmod a+w /home/usuario/Gemfile.lock
 RUN chmod a+w /home/usuario
-
-#cambiamos usuario
-USER usuario
 
 WORKDIR /home/usuario/
 
